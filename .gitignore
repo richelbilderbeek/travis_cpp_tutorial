@@ -27,3 +27,10 @@
 *.out
 *.app
 *.lyx~
+cpp11_qmake_gcov/
+cpp11_qmake_boost_gcov_bigger_project/
+cpp11_qmake_boost_gcov
+qmake_gcov/
+cpp11_qmake_boost_gcov/
+qmake_gprof/
+qmake_gcov_bigger_project/
