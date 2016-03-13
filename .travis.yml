@@ -1,0 +1,11 @@
+sudo: false
+
+script: 
+ - git clone https://github.com/richelbilderbeek/qmake_gcov
+ - git clone https://github.com/richelbilderbeek/cpp11_qmake_boost_gcov
+ - git clone https://github.com/richelbilderbeek/cpp11_qmake_boost_gcov_bigger_project
+ - git clone https://github.com/richelbilderbeek/cpp11_qmake_gcov
+ - git clone https://github.com/richelbilderbeek/qmake-cpp11
+ - git clone https://github.com/richelbilderbeek/qmake_gcov
+ - git clone https://github.com/richelbilderbeek/qmake_gcov_bigger_project
+ - git clone https://github.com/richelbilderbeek/qmake_gprof
