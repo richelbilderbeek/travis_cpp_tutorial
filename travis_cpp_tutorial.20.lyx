@@ -235,6 +235,22 @@ Travis CI is a continuous integration (hence the 'CI' in its name) tool
 \end_layout
 
 \begin_layout Paragraph
+Boost
+\end_layout
+
+\begin_layout Standard
+Boost is a collection of C++ libraries.
+\end_layout
+
+\begin_layout Paragraph
+Boost.Test
+\end_layout
+
+\begin_layout Standard
+Boost.Test is a C++ testing framework within the Boost libraries.
+\end_layout
+
+\begin_layout Paragraph
 gcov
 \end_layout
 
@@ -271,6 +287,82 @@ This tutorial is not intended to be perfect yet.
  For that, I need help and feedback from the community.
  All referenced feedback is welcome, as well as any constructive feedback.
  
+\end_layout
+
+\begin_layout Section
+Setting up the basic build
+\end_layout
+
+\begin_layout Standard
+The basic build is more than just a collection of files.
+ It needs to be set up.
+ This chapter shows how to do so.
+\end_layout
+
+\begin_layout Itemize
+Create a GitHub online
+\end_layout
+
+\begin_layout Itemize
+Bring the git repository to your local computer
+\end_layout
+
+\begin_layout Itemize
+Create a Qt Creator project
+\end_layout
+
+\begin_layout Itemize
+Create the build bash scripts
+\end_layout
+
+\begin_layout Subsection
+Create a GitHub online
+\end_layout
+
+\begin_layout Paragraph
+What is GitHub?
+\end_layout
+
+\begin_layout Standard
+GitHub is a site that creates websites around projects.
+ It is said to host the project.
+ This project contains one, but usually a collection of files, which is
+ called a repository.
+ GitHub also keeps track of the history of the project, which is also called
+ version control.
+ GitHub uses git as a version control software.
+ In short: GitHub hosts git repositories.
+\end_layout
+
+\begin_layout Paragraph
+Register
+\end_layout
+
+\begin_layout Standard
+Before you can create a new repository, you must register
+\end_layout
+
+\begin_layout Standard
+where git repositories are hosted.
+ It gives a git project a website where the files can be viewed.
+ Next to this, there is a project page for issues like bug reports and feature
+ requests.
+\end_layout
+
+\begin_layout Paragraph
+Creating a repository
+\end_layout
+
+\begin_layout Subsection
+Bring the git repository to your local computer
+\end_layout
+
+\begin_layout Subsection
+Create a Qt Creator project
+\end_layout
+
+\begin_layout Subsection
+Create the build bash scripts
 \end_layout
 
 \begin_layout Section
@@ -621,7 +713,661 @@ The script that Travis will run, which is running the generated executable
 \end_layout
 
 \begin_layout Section
+Extending the build by one step
+\end_layout
+
+\begin_layout Standard
+The following chapter describe how to extend the build in one direction.
+ These are:
+\end_layout
+
+\begin_layout Itemize
+Use of C++11: see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp11"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Use of C++14: see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp14"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Use of Boost: see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98_boost"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Use of Boost.Test: see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98_boost_test"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Use of gcov: see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98_gcov"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Use of gprof: see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98_gprof"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Use of C++11
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp11"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this example, the basic build (chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+) is extended by using C++11.
+ 
+\end_layout
+
+\begin_layout Standard
+The chapter has the following specs:
+\end_layout
+
+\begin_layout Itemize
+Build system: qmake 
+\end_layout
+
+\begin_layout Itemize
+C++ compiler: gcc 
+\end_layout
+
+\begin_layout Itemize
+C++ version: C++11 
+\end_layout
+
+\begin_layout Itemize
+Libraries: STL only
+\end_layout
+
+\begin_layout Itemize
+Code coverage: none 
+\end_layout
+
+\begin_layout Itemize
+Source: one single file, main.cpp
+\end_layout
+
+\begin_layout Standard
+The single C++ source file used is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp11/main.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+main.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All the file does is to create an empty graph, from the Boost.Graph library.
+ It will not compile without the Boost libraries absent.
+\end_layout
+
+\begin_layout Standard
+This single file is compiled with qmake from the following Qt Creator project
+ file:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp11/travis_qmake_gcc_cpp11.pro"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+travis_qmake_gcc_cpp98.pro
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp11"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Qt Creator project file has the same lines as the basic project in chapter
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The bash build script to build this, run this and measure the code coverage:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp11/build.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bash script has the same lines as the basic project in chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Setting up Travis is done by the following .travis.yml:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp11/.travis.yml"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+.travis.yml
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This .travis.yml file has one new feature:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+addons:
+\end_layout
+
+\begin_layout Plain Layout
+
+  apt:
+\end_layout
+
+\begin_layout Plain Layout
+
+    packages: libboost-all-dev
+\end_layout
+
+\end_inset
+
+This makes Travis aware that you want to use the aptitude package 'libboost-all-
+dev'.
+ Note that this code cannot be put on one line: it has to be indented similar
+ to this
+\end_layout
+
+\begin_layout Subsection
+Use of C++14
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp14"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Adding the Boost libraries
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp98_boost"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this example, the basic build (chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+) is extended by also using the Boost libraries.
+ 
+\end_layout
+
+\begin_layout Standard
+The chapter has the following specs:
+\end_layout
+
+\begin_layout Itemize
+Build system: qmake 
+\end_layout
+
+\begin_layout Itemize
+C++ compiler: gcc 
+\end_layout
+
+\begin_layout Itemize
+C++ version: C++98 
+\end_layout
+
+\begin_layout Itemize
+Libraries: STL and Boost
+\end_layout
+
+\begin_layout Itemize
+Code coverage: none 
+\end_layout
+
+\begin_layout Itemize
+Source: one single file, main.cpp
+\end_layout
+
+\begin_layout Standard
+The single C++ source file used is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_boost/main.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+main.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All the file does is to create an empty graph, from the Boost.Graph library.
+ It will not compile without the Boost libraries absent.
+\end_layout
+
+\begin_layout Standard
+This single file is compiled with qmake from the following Qt Creator project
+ file:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_boost/travis_qmake_gcc_cpp98_boost.pro"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+travis_qmake_gcc_cpp98.pro
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98_boost.pro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Qt Creator project file has the same lines as the basic project in chapter
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The bash build script to build this, run this and measure the code coverage:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_boost/build.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bash script has the same lines as the basic project in chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Setting up Travis is done by the following .travis.yml:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_boost/.travis.yml"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+.travis.yml
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This .travis.yml file has one new feature:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+addons:
+\end_layout
+
+\begin_layout Plain Layout
+
+  apt:
+\end_layout
+
+\begin_layout Plain Layout
+
+    packages: libboost-all-dev
+\end_layout
+
+\end_inset
+
+This makes Travis aware that you want to use the aptitude package 'libboost-all-
+dev'.
+ Note that this code cannot be put on one line: it has to be indented similar
+ to this
+\end_layout
+
+\begin_layout Subsection
+Adding a testing framework
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp98_boost_test"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Adding code coverage
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp98_gcov"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -894,6 +1640,21 @@ after_success: codecov
 \end_inset
 
 After the script has run successfully, codecov is called
+\end_layout
+
+\begin_layout Subsection
+Adding profiling
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp98_gprof"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Extending the build by multiple steps
 \end_layout
 
 \end_body
