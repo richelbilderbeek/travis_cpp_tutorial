@@ -1,0 +1,548 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Travis C++ tutorial
+\end_layout
+
+\begin_layout Author
+Richèl Bilderbeek
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename TravisCIBig.png
+	lyxscale 50
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+This is a Travis C++ tutorial, version 0.1
+\end_layout
+
+\begin_layout Subsection
+License
+\end_layout
+
+\begin_layout Standard
+This tutorial is licensed under Creative Commons license 4.0.
+ All C++ code is licensed under GPL 3.0.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename CC-BY-SA_icon.svg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Creative Commons license 4.0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Feedback
+\end_layout
+
+\begin_layout Standard
+This tutorial is not intended to be perfect yet.
+ For that, I need help and feedback from the community.
+ All referenced feedback is welcome, as well as any constructive feedback.
+ 
+\end_layout
+
+\begin_layout Section
+The basic build
+\end_layout
+
+\begin_layout Standard
+The basic build has the following specs:
+\end_layout
+
+\begin_layout Itemize
+Build system: qmake 
+\end_layout
+
+\begin_layout Itemize
+C++ compiler: gcc 
+\end_layout
+
+\begin_layout Itemize
+C++ version: C++98 
+\end_layout
+
+\begin_layout Itemize
+Libraries: STL only 
+\end_layout
+
+\begin_layout Itemize
+Code coverage: none 
+\end_layout
+
+\begin_layout Itemize
+Source: one single file, main.cpp
+\end_layout
+
+\begin_layout Standard
+First I will show the single file this build is about:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98/main.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+main.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This single file is compiled with qmake from the Qt Creator project file
+ 'travis_qmake_gcc_cpp98.pro', as shown here:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98/travis_qmake_gcc_cpp98.pro"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+travis_qmake_gcc_cpp98.pro
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98.pro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bash build script to build this is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98/build.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Setting up Travis:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98/.travis.yml"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+.travis.yml
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Adding code coverage using gcov
+\end_layout
+
+\begin_layout Standard
+The basic build has the following specs:
+\end_layout
+
+\begin_layout Itemize
+Build system: qmake 
+\end_layout
+
+\begin_layout Itemize
+C++ compiler: gcc 
+\end_layout
+
+\begin_layout Itemize
+C++ version: C++98 
+\end_layout
+
+\begin_layout Itemize
+Libraries: STL only 
+\end_layout
+
+\begin_layout Itemize
+Code coverage: none 
+\end_layout
+
+\begin_layout Itemize
+Source: one single file, main.cpp
+\end_layout
+
+\begin_layout Standard
+First I will show the single file this build is about:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_gcov/main.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+main.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This single file is compiled with qmake from the Qt Creator project file
+ 'travis_qmake_gcc_cpp98.pro', as shown here:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_gcov/travis_qmake_gcc_cpp98_gcov.pro"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+travis_qmake_gcc_cpp98.pro
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98_gcov.pro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bash build script to build this is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_gcov/build.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Setting up Travis:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_gcov/.travis.yml"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+.travis.yml
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
