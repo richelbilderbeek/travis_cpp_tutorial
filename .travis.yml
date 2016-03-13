@@ -4,6 +4,7 @@ addons:
   apt:
     packages:
     - lyx
+    - texlive
 
 script: 
  - ./build.sh
