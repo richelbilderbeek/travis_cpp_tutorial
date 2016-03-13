@@ -152,6 +152,127 @@ Creative Commons license 4.0
 \end_layout
 
 \begin_layout Subsection
+Continuous integration
+\end_layout
+
+\begin_layout Standard
+Collaboration can be scary: the other(s)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+if not you
+\end_layout
+
+\end_inset
+
+ may break the project worked on.
+ The project can be of any type, not only programming, but also collaborative
+ writing.
+\end_layout
+
+\begin_layout Standard
+A good first step ensuring a pleasant experience is to use a version control
+ system.
+ A version control system keeps track of the changes in the project and
+ allows for looking back in the project history when something has been
+ broken.
+ 
+\end_layout
+
+\begin_layout Standard
+The next step is to use an online version control repository, which makes
+ the code easily accessible for all contributors.
+ The online version control repository may also offer additional collaborative
+ tools, like a place where to submit bug reports, define project milestones
+ and allowing external people to submit requests, bug reports or patches.
+\end_layout
+
+\begin_layout Standard
+Up until here, it is possible to submit a change that breaks the build.
+ 
+\end_layout
+
+\begin_layout Standard
+A continuous integration tools checks what is submitted to the project and
+ possibly rejects it when it does not satisfy the tests and/or requirements
+ of the project.
+ Instead of manually proofreading and/or testing the submission and mailing
+ the contributor his/her addition is rejected is cumbersome at least.
+ A continuous integration tool will do this for you.
+\end_layout
+
+\begin_layout Standard
+Now, if someone changes you project, you can rest assured that his/her submissio
+n does not break the project.
+ Enjoy!
+\end_layout
+
+\begin_layout Subsection
+Tool used
+\end_layout
+
+\begin_layout Paragraph
+git
+\end_layout
+
+\begin_layout Standard
+git is a version control system.
+ It tracks the changes made in the project and allows for viewing the project
+ its history.
+ 
+\end_layout
+
+\begin_layout Paragraph
+GitHub
+\end_layout
+
+\begin_layout Standard
+GitHub is a site where git repositories are hosted.
+ It gives a git project a website where the files can be viewed.
+ Next to this, there is a project page for issues like bug reports and feature
+ requests.
+\end_layout
+
+\begin_layout Paragraph
+Travis CI
+\end_layout
+
+\begin_layout Standard
+Travis CI is a continuous integration (hence the 'CI' in its name) tool
+ that plays well with GitHub.
+ It is activated when someone uploads his/her code to the GitHub.
+\end_layout
+
+\begin_layout Paragraph
+gcov
+\end_layout
+
+\begin_layout Standard
+gcov is a GNU tool to measur the code coverage of (among others) C++ code.
+ It can be actived from a Travis script.
+\end_layout
+
+\begin_layout Paragraph
+Codecov
+\end_layout
+
+\begin_layout Standard
+Codecov is a tool to display a gcov code coverage result, that plays well
+ with GitHub.
+ It can be actived from a Travis script.
+\end_layout
+
+\begin_layout Paragraph
+gprof
+\end_layout
+
+\begin_layout Standard
+gprof is a GNU tool to profile (among others) C++ code.
+ It can be actived from a Travis script.
+\end_layout
+
+\begin_layout Subsection
 Feedback
 \end_layout
 
@@ -164,6 +285,13 @@ This tutorial is not intended to be perfect yet.
 
 \begin_layout Section
 The basic build
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -234,8 +362,45 @@ main.cpp
 \end_layout
 
 \begin_layout Standard
-This single file is compiled with qmake from the Qt Creator project file
- 'travis_qmake_gcc_cpp98.pro', as shown here:
+All the code does is display the text 'Hello world'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Hello world
+\end_layout
+
+\end_inset
+
+, which is a traditional start for many programming languages.
+ The code is written in C++98
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+C++98
+\end_layout
+
+\end_inset
+
+.
+ It does not use features from the newer C++ standards.
+ It will not compile under plain C.
+\end_layout
+
+\begin_layout Standard
+This single file is compiled with qmake from the following Qt Creator project
+ file
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Qt Creator project file
+\end_layout
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
@@ -281,6 +446,13 @@ name "alg:travis_qmake_gcc_cpp98.pro"
 \end_layout
 
 \begin_layout Standard
+This Qt Creator project file has a typical setup for a standard console
+ application, except that, in the last line, the warning level is set the
+ the highest level, even making a warning break the build.
+ This forces collaborators to write tidy code.
+\end_layout
+
+\begin_layout Standard
 The bash build script to build this is:
 \end_layout
 
@@ -320,7 +492,57 @@ build.sh
 \end_layout
 
 \begin_layout Standard
-Setting up Travis:
+This build script calls 'qmake'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+qmake
+\end_layout
+
+\end_inset
+
+ to create a makefile
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Makefile
+\end_layout
+
+\end_inset
+
+.
+ Then 'make'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+make
+\end_layout
+
+\end_inset
+
+ is called to compile the makefile.
+ Finally, the created executable 'travis_qmake_gcc_cpp98' is run.
+ There is a potential error in the first and last step: the Qt Creator project
+ file may be incorrect, or the executable will crash, possibly due to a
+ failed test.
+\end_layout
+
+\begin_layout Standard
+Setting up Travis is done by the following .travis.yml
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+the filename starts with a dot.
+ This means it is a hidden file
+\end_layout
+
+\end_inset
+
+ file:
 \end_layout
 
 \begin_layout Standard
@@ -358,8 +580,70 @@ lstparams "breaklines=true,language={C++}"
 
 \end_layout
 
+\begin_layout Standard
+This .travis.yml file has the following elements:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+language: cpp
+\end_layout
+
+\end_inset
+
+The main programming language of this project is C++
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+compiler: gcc
+\end_layout
+
+\end_inset
+
+The C++ code will be compiled by GCC
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+script: ./travis_qmake_gcc_cpp98
+\end_layout
+
+\end_inset
+
+The script that Travis will run, which is running the generated executable
+ called 'travis_qmake_gcc_cpp98'.
+\end_layout
+
 \begin_layout Section
-Adding code coverage using gcov
+Adding code coverage
+\end_layout
+
+\begin_layout Standard
+In this example, the basic build (chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+) is extended by calling gcov and using codecov to show the code coverage.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -391,7 +675,7 @@ Source: one single file, main.cpp
 \end_layout
 
 \begin_layout Standard
-First I will show the single file this build is about:
+The single C++ source file used is:
 \end_layout
 
 \begin_layout Standard
@@ -430,8 +714,13 @@ main.cpp
 \end_layout
 
 \begin_layout Standard
-This single file is compiled with qmake from the Qt Creator project file
- 'travis_qmake_gcc_cpp98.pro', as shown here:
+This file openly contains some dead code, so we expect to observe a code
+ coverage less than 100%.
+\end_layout
+
+\begin_layout Standard
+This single file is compiled with qmake from the following Qt Creator project
+ file:
 \end_layout
 
 \begin_layout Standard
@@ -477,7 +766,14 @@ name "alg:travis_qmake_gcc_cpp98_gcov.pro"
 \end_layout
 
 \begin_layout Standard
-The bash build script to build this is:
+The Qt Creator project file has two new lines.
+ The first of those adds two compiler flags, which cause the code to be
+ compiled in such a way to gcov can work with it.
+ The second line links the gcov library to the project.
+\end_layout
+
+\begin_layout Standard
+The bash build script to build this, run this and measure the code coverage:
 \end_layout
 
 \begin_layout Standard
@@ -516,7 +812,13 @@ build.sh
 \end_layout
 
 \begin_layout Standard
-Setting up Travis:
+The new step is after having run the executable, where gcov is run on the
+ only source file.
+ The text 'gcov' has generated is then shown using 'cat'.
+\end_layout
+
+\begin_layout Standard
+Setting up Travis is done by the following .travis.yml:
 \end_layout
 
 \begin_layout Standard
@@ -552,6 +854,56 @@ lstparams "breaklines=true,language={C++}"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+This .travis.yml file has some new features: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+sudo: true
+\end_layout
+
+\end_inset
+
+Travis will give super user rights to the script.
+ This will slow the build time, but it is inevitable for the next step
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+before_install: sudo pip install codecov
+\end_layout
+
+\end_inset
+
+Travis will use pip to install codecov using super user rights
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+after_success: codecov
+\end_layout
+
+\end_inset
+
+After the script has run successfully, codecov is called
 \end_layout
 
 \end_body
