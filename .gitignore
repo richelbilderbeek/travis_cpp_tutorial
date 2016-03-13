@@ -34,3 +34,4 @@ qmake_gcov/
 cpp11_qmake_boost_gcov/
 qmake_gprof/
 qmake_gcov_bigger_project/
+travis_qmake_gcc_cpp98_gcov/
