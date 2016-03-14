@@ -74,9 +74,17 @@ Richèl Bilderbeek
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename TravisCIBig.png
+	filename CppLogo.jpg
 	lyxscale 50
 	width 50text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TravisCIBig.png
+	lyxscale 50
+	width 28text%
 
 \end_inset
 
@@ -277,6 +285,35 @@ gprof
 \begin_layout Standard
 gprof is a GNU tool to profile (among others) C++ code.
  It can be actived from a Travis script.
+\end_layout
+
+\begin_layout Subsection
+This tutorial
+\end_layout
+
+\begin_layout Standard
+This tutorial is available online at 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/richelbilderbeek/travis_cpp_tutorial
+\end_layout
+
+\end_inset
+
+.
+ Of course, it is checked by Travis that 
+\end_layout
+
+\begin_layout Itemize
+all the setups described work
+\end_layout
+
+\begin_layout Itemize
+this document can be converted to PDF.
+ For this it needs the files from all of these setups
 \end_layout
 
 \begin_layout Subsection
