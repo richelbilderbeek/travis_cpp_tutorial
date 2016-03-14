@@ -9,5 +9,4 @@ install:
   - sudo apt-get install -qq texlive
 
 script: 
- - lyx --version
  - ./build.sh

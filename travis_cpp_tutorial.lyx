@@ -1728,11 +1728,345 @@ pp
 \end_layout
 
 \begin_layout Standard
-This project
+This project use four types of builds and each of these produces a different
+ file.
+ These files are used to let Travis check if the executable were built correctly.
+ An overview of builds and files are shown in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Types-of-builds"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
-The single C++ source file used is:
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exe
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Debug
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+exe_debug.txt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+test_debug.txt
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Release
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+exe_release.txt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+test_debug.txt
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Types of builds and the file they will create
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Types-of-builds"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The function
+\end_layout
+
+\begin_layout Standard
+First the function that is (1) tested by the test build (2) called by the
+ real build, is shown here:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp11_boost_test/my_functions.h"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+my_function.h
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This header file has the #include guards and the declaration of the function
+ 'add'.
+ It takes two integer values as an argument and returns an int.
+\end_layout
+
+\begin_layout Standard
+Its definition is shown here:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp11_boost_test/my_functions.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+my_function.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Perhaps it was expected that 'add' adds the two integers
+\end_layout
+
+\begin_layout Subsubsection
+Test build
+\end_layout
+
+\begin_layout Standard
+The test build' is the build that tests the function.
+ It does not have a 'main.cpp' as the exe build has, but uses 'test_my_functions.c
+pp' as its main source file.
+ This can be seen in the Qt Creator project file:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp11_boost_test/travis_qmake_gcc_cpp11_boost_test_test.pro"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+travis_qmake_gcc_cpp11_boost_test_test.pro
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note how this Qt Creator project file links to the Boost unit test framework.
+\end_layout
+
+\begin_layout Standard
+Its main source file is shown here:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp11_boost_test/test_my_functions.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+test_my_functions.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It uses the Boost.Test framework to automatically generate a test suites.
+ Next to testing the function 'add', also a file is created, so Travis can
+ verify there has been built both a debug and release mode.
+\end_layout
+
+\begin_layout Subsubsection
+Exe build
+\end_layout
+
+\begin_layout Standard
+The 'exe' build' is the build that uses the function.
 \end_layout
 
 \begin_layout Standard
@@ -1771,8 +2105,8 @@ main.cpp
 \end_layout
 
 \begin_layout Standard
-This file openly contains some dead code, so we expect to observe a code
- coverage less than 100%.
+Next to using the function 'add', also a file is created, so Travis can
+ verify there has been built both a debug and release mode.
 \end_layout
 
 \begin_layout Standard
@@ -1790,7 +2124,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_boost_test/travis_qmake_gcc_cpp11_boost_test_test.pro"
+filename "travis_qmake_gcc_cpp11_boost_test/travis_qmake_gcc_cpp11_boost_test_exe.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -1802,10 +2136,10 @@ lstparams "breaklines=true,language={C++}"
 \begin_inset Caption
 
 \begin_layout Plain Layout
-travis_qmake_gcc_cpp11_boost_test_test.pro
+travis_qmake_gcc_cpp11_boost_test_exe.pro
 \begin_inset CommandInset label
 LatexCommand label
-name "alg:travis_qmake_gcc_cpp11_boost_test_test.pro"
+name "alg:travis_qmake_gcc_cpp11_boost_test_exe.pro"
 
 \end_inset
 
@@ -1823,10 +2157,12 @@ name "alg:travis_qmake_gcc_cpp11_boost_test_test.pro"
 \end_layout
 
 \begin_layout Standard
-The Qt Creator project file has two new lines.
- The first of those adds two compiler flags, which cause the code to be
- compiled in such a way to gcov can work with it.
- The second line links the gcov library to the project.
+Note how this Qt Creator project file does not link to the Boost unit test
+ framework.
+\end_layout
+
+\begin_layout Subsubsection
+Build script
 \end_layout
 
 \begin_layout Standard
@@ -1872,6 +2208,10 @@ build.sh
 The new step is after having run the executable, where gcov is run on the
  only source file.
  The text 'gcov' has generated is then shown using 'cat'.
+\end_layout
+
+\begin_layout Subsubsection
+Travis script
 \end_layout
 
 \begin_layout Standard
