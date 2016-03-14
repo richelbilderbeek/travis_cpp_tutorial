@@ -1,12 +1,12 @@
 sudo: true
 
 before_install:
-  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-  - sudo apt-get update -qq
+  - sudo add-apt-repository ppa:lyx-devel/release
+  - sudo apt-get update
 
 install: 
-  - sudo apt-get install -qq lyx
-  - sudo apt-get install -qq texlive
+  - sudo apt-get install lyx
+  - sudo apt-get install texlive
 
 script: 
  - lyx --version
