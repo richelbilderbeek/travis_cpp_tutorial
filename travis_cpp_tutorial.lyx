@@ -372,23 +372,345 @@ GitHub is a site that creates websites around projects.
  In short: GitHub hosts git repositories.
 \end_layout
 
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GitHub-homepage"
+
+\end_inset
+
+ shows the GitHub homepage, 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename GitHubHomepage.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The GitHub homepage, 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GitHub-homepage"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 Register
 \end_layout
 
 \begin_layout Standard
-Before you can create a new repository, you must register
+Before you can create a new repository, you must register.
+ Registration is free for open source projects, with an unlimited
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+the maximum I have observed is a person that has 350
+\end_layout
+
+\end_inset
+
+ amount of public repositories.
 \end_layout
 
 \begin_layout Standard
-where git repositories are hosted.
- It gives a git project a website where the files can be viewed.
- Next to this, there is a project page for issues like bug reports and feature
- requests.
+From the GitHub homepage, 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com
+\end_layout
+
+\end_inset
+
+ (see figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GitHub-homepage"
+
+\end_inset
+
+), click the top right button labeled 'Sign up'.
+ This will take you to the 'Join GitHub' page (see figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GitHub-join"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename GitHubJoin.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The join GitHub page
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GitHub-join"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Filling this in should be as easy.
+ After filling this in, you are taken to your GitHub profile page (figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GitHub-profile"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename GitHubProfile.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+A GitHub profile page
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GitHub-profile"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
 Creating a repository
+\end_layout
+
+\begin_layout Standard
+From your GitHub profile page (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GitHub-profile"
+
+\end_inset
+
+), click on the plus ('Create new ...') at the top right, then click 'New repositor
+y' (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GitHub-create-repository"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename GitHubCreateRepository.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Create a GitHub repository
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GitHub-create-repository"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Do check 'Initialize this repository with a README', add a .gitignore with
+ 'C++' and add a licence like 'GPL 3.0'.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename GitHubCreatedRepository.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Created a GitHub repository
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GitHub-created-repository"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You have now created your own online version controlled repository (figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GitHub-created-repository"
+
+\end_inset
+
+)!
 \end_layout
 
 \begin_layout Subsection
