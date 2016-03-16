@@ -3376,7 +3376,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_rcpp/build.sh"
+filename "travis_qmake_gcc_cpp98_rcpp/build_cpp.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -3388,7 +3388,7 @@ lstparams "breaklines=true,language={bash}"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-build.sh
+build_cpp.sh
 \end_layout
 
 \end_inset
