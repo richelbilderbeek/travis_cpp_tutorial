@@ -11,3 +11,6 @@ install:
 
 script:
  - ./build.sh
+
+after_script:
+ - ls
