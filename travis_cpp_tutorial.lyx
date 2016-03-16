@@ -4,7 +4,16 @@
 \begin_header
 \textclass article
 \begin_preamble
-
+\usepackage[hidelinks,
+  bookmarksnumbered=true,
+  unicode=true,
+  pdftitle={Travis C++ tutorial},
+  pdfauthor={Richèl Bilderbeek}
+  ]{hyperref}
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{pgf}
+\usetikzlibrary{arrows,automata}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -219,7 +228,7 @@ git
 git is a version control system.
  It tracks the changes made in the project and allows for viewing the project
  its history.
- 
+ git is discussed in more detail in chapter [TODO].
 \end_layout
 
 \begin_layout Paragraph
@@ -231,6 +240,7 @@ GitHub is a site where git repositories are hosted.
  It gives a git project a website where the files can be viewed.
  Next to this, there is a project page for issues like bug reports and feature
  requests.
+ GitHub is discussed in more detail in chapter [TODO].
 \end_layout
 
 \begin_layout Paragraph
@@ -241,6 +251,7 @@ Travis CI
 Travis CI is a continuous integration (hence the 'CI' in its name) tool
  that plays well with GitHub.
  It is activated when someone uploads his/her code to the GitHub.
+ Travis CI is discussed in more detail in chapter [TODO].
 \end_layout
 
 \begin_layout Paragraph
@@ -249,6 +260,7 @@ Boost
 
 \begin_layout Standard
 Boost is a collection of C++ libraries.
+ Boost is discussed in more detail in chapter [TODO].
 \end_layout
 
 \begin_layout Paragraph
@@ -266,6 +278,7 @@ gcov
 \begin_layout Standard
 gcov is a GNU tool to measur the code coverage of (among others) C++ code.
  It can be actived from a Travis script.
+ gcov is discussed in more detail in chapter [TODO].
 \end_layout
 
 \begin_layout Paragraph
@@ -276,6 +289,7 @@ Codecov
 Codecov is a tool to display a gcov code coverage result, that plays well
  with GitHub.
  It can be actived from a Travis script.
+ Codecov is discussed in more detail in chapter [TODO].
 \end_layout
 
 \begin_layout Paragraph
@@ -285,6 +299,25 @@ gprof
 \begin_layout Standard
 gprof is a GNU tool to profile (among others) C++ code.
  It can be actived from a Travis script.
+ gprof is discussed in more detail in chapter [TODO].
+\end_layout
+
+\begin_layout Paragraph
+Rcpp
+\end_layout
+
+\begin_layout Standard
+Rcpp is an R package that allows mixing R and C++ code.
+ Rcpp is discussed in more detail in chapter [TODO].
+\end_layout
+
+\begin_layout Paragraph
+Rcpp11
+\end_layout
+
+\begin_layout Standard
+Rcpp is an R package that allows mixing R and C++11 code.
+ Rcpp11 is discussed in more detail in chapter [TODO].
 \end_layout
 
 \begin_layout Subsection
@@ -370,6 +403,10 @@ GitHub is a site that creates websites around projects.
  version control.
  GitHub uses git as a version control software.
  In short: GitHub hosts git repositories.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Standard
@@ -717,6 +754,52 @@ reference "fig:GitHub-created-repository"
 Bring the git repository to your local computer
 \end_layout
 
+\begin_layout Paragraph
+What is git?
+\end_layout
+
+\begin_layout Standard
+git is a version control system.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Git-Logo-2Color.png
+	lyxscale 10
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+git logo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Using git
+\end_layout
+
 \begin_layout Standard
 Go to the terminal and type the following line to download your repository:
 \end_layout
@@ -764,6 +847,18 @@ A new folder called '[your_repository]' is created where you should work
 
 \begin_layout Subsection
 Create a Qt Creator project
+\end_layout
+
+\begin_layout Paragraph
+What is Qt Creator?
+\end_layout
+
+\begin_layout Standard
+Qt Creator is a C++ IDE
+\end_layout
+
+\begin_layout Paragraph
+Creating a new project
 \end_layout
 
 \begin_layout Subsection
@@ -1364,6 +1459,17 @@ reference "sub:travis_qmake_gcc_cpp98_gprof"
 
 \end_layout
 
+\begin_layout Itemize
+Use of Rcpp: see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98_rcpp"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Use of C++11
 \begin_inset CommandInset label
@@ -1385,6 +1491,18 @@ reference "sec:travis_qmake_gcc_cpp98"
 
 ) is extended by using C++11.
  
+\end_layout
+
+\begin_layout Paragraph
+What is C++11?
+\end_layout
+
+\begin_layout Standard
+C++11 is a C++ standard
+\end_layout
+
+\begin_layout Paragraph
+Specifications
 \end_layout
 
 \begin_layout Standard
@@ -1717,8 +1835,16 @@ reference "sec:travis_qmake_gcc_cpp98"
  
 \end_layout
 
+\begin_layout Paragraph
+What is C++14?
+\end_layout
+
 \begin_layout Standard
-The chapter has the following specs:
+C++14 is a C++ standard.
+\end_layout
+
+\begin_layout Paragraph
+Specifications
 \end_layout
 
 \begin_layout Itemize
@@ -1991,8 +2117,49 @@ reference "sec:travis_qmake_gcc_cpp98"
  
 \end_layout
 
+\begin_layout Paragraph
+What is Boost?
+\end_layout
+
 \begin_layout Standard
-The chapter has the following specs:
+Boost is a collection of C++ libraries
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Boost_logo.png
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Boost logo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Specifications
 \end_layout
 
 \begin_layout Itemize
@@ -2289,6 +2456,59 @@ reference "sec:travis_qmake_gcc_cpp98"
  
 \end_layout
 
+\begin_layout Paragraph
+What is gcov?
+\end_layout
+
+\begin_layout Standard
+gcov is a tool that works with GCC to analyse code coverage
+\end_layout
+
+\begin_layout Paragraph
+What is Codecov?
+\end_layout
+
+\begin_layout Standard
+Codecov works nice with GitHub and give nicer reports
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Codecov.png
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Codecov logo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Specifications
+\end_layout
+
 \begin_layout Standard
 The basic build has the following specs:
 \end_layout
@@ -2570,6 +2790,695 @@ name "sub:travis_qmake_gcc_cpp98_gprof"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Adding Rcpp
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp98_rcpp"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this example, the basic build (chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+) is extended by also using the Rcpp library/package.
+ 
+\end_layout
+
+\begin_layout Paragraph
+What is R?
+\end_layout
+
+\begin_layout Standard
+R is a programming language.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Rlogo.png
+	lyxscale 10
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+R logo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+What is Rcpp?
+\end_layout
+
+\begin_layout Standard
+Rcpp is a package that allows to call C++ code from R 
+\end_layout
+
+\begin_layout Paragraph
+Specifications
+\end_layout
+
+\begin_layout Standard
+The chapter has the following specs:
+\end_layout
+
+\begin_layout Itemize
+Build system: qmake 
+\end_layout
+
+\begin_layout Itemize
+C++ compiler: gcc 
+\end_layout
+
+\begin_layout Itemize
+C++ version: C++98 
+\end_layout
+
+\begin_layout Itemize
+Libraries: STL and Rcpp
+\end_layout
+
+\begin_layout Itemize
+Code coverage: none 
+\end_layout
+
+\begin_layout Itemize
+Source: one single file, main.cpp
+\end_layout
+
+\begin_layout Standard
+The build will be complex: I will show the C++ build and the R build seperately
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (0,0) circle (4);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (4,0) circle (4);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[align=center] at (-1, 2) { $C++$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+node[align=center] at (-2, 0) { $main.cpp$ 
+\backslash
+
+\backslash
+ $domagic.pro$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+node[align=center] at (2, 0) { $do
+\backslash
+_magic
+\backslash
+_cpp.h$ 
+\backslash
+
+\backslash
+ $do
+\backslash
+_magic
+\backslash
+_cpp.cpp$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[align=center] at (5, 2) { $R$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[align=center] at (6, 0) { $do
+\backslash
+_magic
+\backslash
+_r.R$ 
+\backslash
+
+\backslash
+ $test-do
+\backslash
+_magic.R$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Venn diagram of the files uses in this build
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+C++ and R: the C++ function
+\end_layout
+
+\begin_layout Standard
+Both C++ and R use this function.
+ It is called 'do_magic_cpp'.
+ It is declared in the header file 'do_magic_cpp.h', as shown here:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_rcpp/src/do_magic_cpp.h"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+src/do_magic_cpp.h
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The header file consists solely of #include guards and the declaration of
+ the function 'do_magic_cpp'.
+\end_layout
+
+\begin_layout Standard
+The function 'do_magic_cpp' is implemented in the implementation file 'do_magic_
+cpp.cpp', as shown here:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_rcpp/src/do_magic_cpp.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+src/do_magic_cpp.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This implementation file has gotten rather elaborate, thanks to Rcpp and
+ documentation.
+ This is because it has to be callable from both C++ and R and satisfy the
+ requirement from both languages.
+\end_layout
+
+\begin_layout Subsubsection
+C++: main source file
+\end_layout
+
+\begin_layout Standard
+The C++ program has a normal main function:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_rcpp/main.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+main.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All it does is a simple test of the 'do_magic_cpp' function.
+\end_layout
+
+\begin_layout Subsubsection
+C++: Qt Creator project file
+\end_layout
+
+\begin_layout Standard
+This single file is compiled with qmake from the following Qt Creator project
+ file:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_rcpp/domagic.pro"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+domagic.pro
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:domagic.pro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The name of the Qt Creator project file is 'domagic' as it follows the same
+ naming as the R project.
+ It add the R and Rcpp and src folders to its include path and links to
+ R.
+\end_layout
+
+\begin_layout Subsubsection
+R: the R function
+\end_layout
+
+\begin_layout Standard
+The R function 'do_magic_r' calls the C++ function 'do_magic_cpp':
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_rcpp/R/do_magic_r.R"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+R/do_magic_r.R
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:do_magic_r.R"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Next to this, it is just Roxygen2 documentation
+\end_layout
+
+\begin_layout Subsubsection
+R: The R tests
+\end_layout
+
+\begin_layout Standard
+R allows for easy testing using the 'testthat' package.
+ A test file looks as such:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_rcpp/tests/testthat/test-do_magic.R"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+tests/testthat/test-do_magic_r.R
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:test-do_magic_r.R"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The tests call both the R and C++ functions with certain inputs and checks
+ if the output matches the expectations.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+The build script
+\end_layout
+
+\begin_layout Standard
+The bash build script is empty.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_rcpp/build.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is empty, because we set Travis CI to do the testing from R its point
+ of view.
+ The C++ code has to be tested manually.
+ I do not know how to do both, if you do know, please send me an email.
+\end_layout
+
+\begin_layout Subsubsection
+The Travis script
+\end_layout
+
+\begin_layout Standard
+Setting up Travis is done by the following .travis.yml:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_rcpp/.travis.yml"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+.travis.yml
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This .travis.yml file is completely different than others:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+language: r
+\end_layout
+
+\end_inset
+
+Travis has to work with R code
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+warnings_are_errors: true
+\end_layout
+
+\end_inset
+
+Travis will give an error when a warning is emitted.
+ This enforces clean coding
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+sudo: required
+\end_layout
+
+\end_inset
+
+Travis will need sudo.
+ This will slow down the build
 \end_layout
 
 \begin_layout Section
@@ -3788,6 +4697,16 @@ after_success: codecov
 \end_inset
 
 After the script has run successfully, codecov is called
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset index_print
+LatexCommand printindex
+type "idx"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
