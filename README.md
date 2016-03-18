@@ -18,17 +18,20 @@ Statuses of the repositories used that are successfull:
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_boost.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_boost) [travis_qmake_gcc_cpp11_boost](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_boost)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_boost_test.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_boost_test) [travis_qmake_gcc_cpp11_boost_test](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_boost_test)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_rcpp.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_rcpp) [travis_qmake_gcc_cpp11_rcpp](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_rcpp)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_sfml.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_sfml) [travis_qmake_gcc_cpp11_sfml](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_sfml)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14) [travis_qmake_gcc_cpp14](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_boost.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_boost) [travis_qmake_gcc_cpp14_boost](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_boost)
 
-Statuses of the repositories used that fail (for now):
+Statuses of the repositories that are known to fail:
 
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_rcpp.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_rcpp) [travis_qmake_gcc_cpp14_rcpp](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_rcpp)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17) [travis_qmake_gcc_cpp17](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp17)
 
-Statuses of the repositories that do not exist yet:
+Statuses of the repositories that do not exist yet (read: my TODO list):
 
- * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_sfml.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_sfml) [travis_qmake_gcc_cpp11_sfml](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_sfml)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_qt.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_qt) [travis_qmake_gcc_cpp98_qt](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_qt)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_qt.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_qt) [travis_qmake_gcc_cpp11_qt](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_qt)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_qt.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_qt) [travis_qmake_gcc_cpp14_qt](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_qt)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_sfml.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_sfml) [travis_qmake_gcc_cpp14_sfml](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_sfml)
 
 ## Tools explored
