@@ -1,5 +1,5 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass article
@@ -24,13 +24,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
-\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -41,24 +41,15 @@
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
-\use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
-\cite_engine_type default
-\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -123,7 +114,7 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-This is a Travis C++ tutorial, version 0.1
+This is a Travis C++ tutorial, version 0.2.
 \end_layout
 
 \begin_layout Subsection
@@ -152,7 +143,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Creative Commons license 4.0
@@ -226,107 +217,32 @@ n does not break the project.
 \end_layout
 
 \begin_layout Subsection
-Tool used
-\end_layout
-
-\begin_layout Paragraph
-git
+Tutorial style
 \end_layout
 
 \begin_layout Standard
-git is a version control system.
- It tracks the changes made in the project and allows for viewing the project
- its history.
- git is discussed in more detail in chapter [TODO].
+This tutorial is aimed at the beginner.
 \end_layout
 
 \begin_layout Paragraph
-GitHub
+Introduction of new terms and tools
 \end_layout
 
 \begin_layout Standard
-GitHub is a site where git repositories are hosted.
- It gives a git project a website where the files can be viewed.
- Next to this, there is a project page for issues like bug reports and feature
- requests.
- GitHub is discussed in more detail in chapter [TODO].
+All terms and tools are introduced shortly once, by a 'What is' paragraph.
+ This allows a beginner to have a general idea about what the term/tool
+ is, without going in-depth.
+ Also, this allows for those more knowledgeable to skim the paragraph.
 \end_layout
 
 \begin_layout Paragraph
-Travis CI
+Repetitiveness
 \end_layout
 
 \begin_layout Standard
-Travis CI is a continuous integration (hence the 'CI' in its name) tool
- that plays well with GitHub.
- It is activated when someone uploads his/her code to the GitHub.
- Travis CI is discussed in more detail in chapter [TODO].
-\end_layout
-
-\begin_layout Paragraph
-Boost
-\end_layout
-
-\begin_layout Standard
-Boost is a collection of C++ libraries.
- Boost is discussed in more detail in chapter [TODO].
-\end_layout
-
-\begin_layout Paragraph
-Boost.Test
-\end_layout
-
-\begin_layout Standard
-Boost.Test is a C++ testing framework within the Boost libraries.
-\end_layout
-
-\begin_layout Paragraph
-gcov
-\end_layout
-
-\begin_layout Standard
-gcov is a GNU tool to measur the code coverage of (among others) C++ code.
- It can be actived from a Travis script.
- gcov is discussed in more detail in chapter [TODO].
-\end_layout
-
-\begin_layout Paragraph
-Codecov
-\end_layout
-
-\begin_layout Standard
-Codecov is a tool to display a gcov code coverage result, that plays well
- with GitHub.
- It can be actived from a Travis script.
- Codecov is discussed in more detail in chapter [TODO].
-\end_layout
-
-\begin_layout Paragraph
-gprof
-\end_layout
-
-\begin_layout Standard
-gprof is a GNU tool to profile (among others) C++ code.
- It can be actived from a Travis script.
- gprof is discussed in more detail in chapter [TODO].
-\end_layout
-
-\begin_layout Paragraph
-Rcpp
-\end_layout
-
-\begin_layout Standard
-Rcpp is an R package that allows mixing R and C++ code.
- Rcpp is discussed in more detail in chapter [TODO].
-\end_layout
-
-\begin_layout Paragraph
-Rcpp11
-\end_layout
-
-\begin_layout Standard
-Rcpp is an R package that allows mixing R and C++11 code.
- Rcpp11 is discussed in more detail in chapter [TODO].
+To allow skimming, most chapters follow the same structure.
+ Sometimes the exact same wording is used.
+ This is counteracted by referring to earlier chapters.
 \end_layout
 
 \begin_layout Subsection
@@ -346,7 +262,7 @@ https://github.com/richelbilderbeek/travis_cpp_tutorial
 \end_inset
 
 .
- Of course, it is checked by Travis that 
+ Of course, it is checked by Travis that:
 \end_layout
 
 \begin_layout Itemize
@@ -355,7 +271,7 @@ all the setups described work
 
 \begin_layout Itemize
 this document can be converted to PDF.
- For this it needs the files from all of these setups
+ For this, it needs the files from all of these setups
 \end_layout
 
 \begin_layout Subsection
@@ -413,6 +329,16 @@ Create a GitHub online
 
 \begin_layout Paragraph
 What is GitHub?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+GitHub
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -462,7 +388,7 @@ status open
 \begin_inset Graphics
 	filename GitHubHomepage.png
 	lyxscale 50
-	width 100text%
+	width 50text%
 
 \end_inset
 
@@ -470,7 +396,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 The GitHub homepage, 
@@ -506,6 +432,16 @@ name "fig:GitHub-homepage"
 
 \begin_layout Paragraph
 Register
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+GitHub, registration
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -515,7 +451,7 @@ Before you can create a new repository, you must register.
 status open
 
 \begin_layout Plain Layout
-the maximum I have observed is a person that has 350
+the maximum I have observed is a person that has 350 repositories
 \end_layout
 
 \end_inset
@@ -564,7 +500,7 @@ status open
 \begin_inset Graphics
 	filename GitHubJoin.png
 	lyxscale 50
-	width 100text%
+	width 50text%
 
 \end_inset
 
@@ -572,7 +508,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 The join GitHub page
@@ -618,7 +554,7 @@ status open
 \begin_inset Graphics
 	filename GitHubProfile.png
 	lyxscale 50
-	width 100text%
+	width 50text%
 
 \end_inset
 
@@ -626,7 +562,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 A GitHub profile page
@@ -651,6 +587,16 @@ name "fig:GitHub-profile"
 
 \begin_layout Paragraph
 Creating a repository
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+GitHub, creating a repository
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -682,7 +628,7 @@ status open
 \begin_inset Graphics
 	filename GitHubCreateRepository.png
 	lyxscale 50
-	width 100text%
+	width 50text%
 
 \end_inset
 
@@ -690,7 +636,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Create a GitHub repository
@@ -728,7 +674,7 @@ status open
 \begin_inset Graphics
 	filename GitHubCreatedRepository.png
 	lyxscale 50
-	width 100text%
+	width 50text%
 
 \end_inset
 
@@ -736,7 +682,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Created a GitHub repository
@@ -777,6 +723,16 @@ Bring the git repository to your local computer
 
 \begin_layout Paragraph
 What is git?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+git
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -801,7 +757,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 git logo
@@ -843,7 +799,7 @@ git clone https://github.com/[your_name]/[your_repository]
 \begin_layout Standard
 Replace '[your_name]' and '[your_repository]' by your GitHub username and
  the repository name.
- For example, to download this tutorial:
+ For example, to download this tutorial its repsoitory:
 \end_layout
 
 \begin_layout Standard
@@ -872,6 +828,16 @@ Create a Qt Creator project
 
 \begin_layout Paragraph
 What is Qt Creator?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Qt Creator
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -880,10 +846,163 @@ Qt Creator is a C++ IDE
 
 \begin_layout Paragraph
 Creating a new project
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Qt Creator, create new project
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Project will have some defaults: GCC.
+\end_layout
+
+\begin_layout Paragraph
+What is a Qt Creator project file?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Qt Creator project file
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A Qt Creator project file contains the information how a Qt Creator project
+ must be built.
+ It commonly has the .pro
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+.pro
+\end_layout
+
+\end_inset
+
+ file extension.
+\end_layout
+
+\begin_layout Paragraph
+What is qmake?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+qmake
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+qmake is a tool to create makefiles.
+\end_layout
+
+\begin_layout Paragraph
+What is GCC?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+GCC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+GCC, the GNU Compiler Collection, is a collection of compilers, among other,
+ the C++ compiler called g++.
+\end_layout
+
+\begin_layout Paragraph
+What is g++?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+g++
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+g++ is the C++ compiler that is part of the GCC.
+\end_layout
+
+\begin_layout Paragraph
+What is C++98?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+C++98
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+C++98 is the first C++ standard in 1998.
+\end_layout
+
+\begin_layout Paragraph
+What is the STL?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+STL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The STL, the Standard Template Library, is the C++ standard library.
 \end_layout
 
 \begin_layout Subsection
 Create the build bash scripts
+\end_layout
+
+\begin_layout Paragraph
+What is bash?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+bash
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+'bash' is a shell scripting language
 \end_layout
 
 \begin_layout Section
@@ -952,7 +1071,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -1082,7 +1201,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98.pro
@@ -1161,8 +1280,9 @@ QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
 
 \end_inset
 
-The project is checked for all warnings.
- A warning is treated as an error.
+The project is checked with all warnings ('-Wall'), with extra warnings
+ ('-Wextra') and with the Effective C++ advices ('-Weffc++') enforced.
+ A warning is treated as an error ('-Werror').
  This forces you to write tidy code.
 \end_layout
 
@@ -1189,7 +1309,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -1339,7 +1459,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -1386,7 +1506,7 @@ compiler: gcc
 
 \end_inset
 
-The C++ code will be compiled by GCC
+The C++ code will be compiled by the GCC
 \end_layout
 
 \begin_layout Itemize
@@ -1396,17 +1516,24 @@ status open
 
 \begin_layout Plain Layout
 
-script: ./travis_qmake_gcc_cpp98
+script: ./build.sh
 \end_layout
 
 \end_inset
 
-The script that Travis will run, which is running the generated executable
- called 'travis_qmake_gcc_cpp98'.
+The script that Travis will run.
+ In this case, it will execute the 'build.sh' bash script.
 \end_layout
 
 \begin_layout Section
 Extending the build by one step
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Extending-the-build-by-one-step"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1516,6 +1643,16 @@ reference "sec:travis_qmake_gcc_cpp98"
 
 \begin_layout Paragraph
 What is C++11?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+C++11
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1577,7 +1714,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -1596,7 +1733,7 @@ main.cpp
 \begin_layout Standard
 This is a C++11 version of a 'Hello world' program.
  The keyword 'noexcept' does not exist in C++98 and it will fail to compile.
- This code will compile under C++14.
+ This code will compile under newer versions of C++.
 \end_layout
 
 \begin_layout Standard
@@ -1623,7 +1760,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11.pro
@@ -1668,10 +1805,32 @@ status open
 QMAKE_CXX = g++-5
 \end_layout
 
+\end_inset
+
+Set the C++ compiler to use g++ version 5, which is a newer version than
+ currently used by default
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
 \begin_layout Plain Layout
 
 QMAKE_LINK = g++-5
 \end_layout
+
+\end_inset
+
+Set the C++ linker to use g++ version 5, which is a newer version than currently
+ used by default
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
 
 \begin_layout Plain Layout
 
@@ -1680,8 +1839,8 @@ QMAKE_CC = g++5
 
 \end_inset
 
-Set the C++ compiler, linker and C compiler to use g++ version 5, which
- is a newer version than currently used by default
+Set the C compiler to use g++ version 5, which is a newer version than currently
+ used by default
 \end_layout
 
 \begin_layout Itemize
@@ -1722,7 +1881,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -1772,7 +1931,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -1802,10 +1961,34 @@ status open
 before_install:
 \end_layout
 
+\end_inset
+
+The following events will take place before installation
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
 \begin_layout Plain Layout
 
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 \end_layout
+
+\end_inset
+
+A new apt repository is added.
+ The '-y' explicitly states that we are sure we want to do this.
+ Without the '-y' flag, Travis will be prompted if it is sure it wants to
+ add this repository.
+ This would break the build.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
 
 \begin_layout Plain Layout
 
@@ -1814,8 +1997,9 @@ before_install:
 
 \end_inset
 
-A new apt repository is added.
- Then the current apt repository is updated
+After adding the new apt repository, then the current repositories need
+ to be updated updated.
+ The '-qq' means that this happens quietly; with the least amount of output.
 \end_layout
 
 \begin_layout Itemize
@@ -1915,7 +2099,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -1959,7 +2143,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp14.pro
@@ -1983,19 +2167,34 @@ name "alg:travis_qmake_gcc_cpp14"
 \end_layout
 
 \begin_layout Standard
-The Qt Creator project file has the same lines as the basic project in chapter
+The Qt Creator project file has the same lines as the C++11 build in chapter
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98"
+reference "sub:travis_qmake_gcc_cpp11"
 
 \end_inset
 
-.
+, except for that it uses one different QMAKE_CXXFLAGS item:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+QMAKE_CXXFLAGS += -std=c++14
+\end_layout
+
+\end_inset
+
+Compile under C++14
 \end_layout
 
 \begin_layout Standard
-The bash build script to build this, run this and measure the code coverage:
+The bash build script to build and run this:
 \end_layout
 
 \begin_layout Standard
@@ -2017,7 +2216,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -2034,14 +2233,14 @@ build.sh
 \end_layout
 
 \begin_layout Standard
-The bash script has the same lines as the basic project in chapter 
+The bash script has the same lines as the C++11 build in chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98"
+reference "sub:travis_qmake_gcc_cpp11"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -2067,7 +2266,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -2084,35 +2283,14 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Standard
-This .travis.yml file has one new feature:
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-addons:
-\end_layout
-
-\begin_layout Plain Layout
-
-  apt:
-\end_layout
-
-\begin_layout Plain Layout
-
-    packages: libboost-all-dev
-\end_layout
+This .travis.yml file is the same as the C++11 build in chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp11"
 
 \end_inset
 
-This makes Travis aware that you want to use the aptitude package 'libboost-all-
-dev'.
- Note that this code cannot be put on one line: it has to be indented similar
- to this
+
 \end_layout
 
 \begin_layout Subsection
@@ -2163,7 +2341,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Boost logo
@@ -2230,7 +2408,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -2248,7 +2426,7 @@ main.cpp
 
 \begin_layout Standard
 All the file does is to create an empty graph, from the Boost.Graph library.
- It will not compile without the Boost libraries absent.
+ It will only compile when the Boost libraries are present.
 \end_layout
 
 \begin_layout Standard
@@ -2275,7 +2453,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_boost.pro
@@ -2311,7 +2489,7 @@ reference "sec:travis_qmake_gcc_cpp98"
 \end_layout
 
 \begin_layout Standard
-The bash build script to build this, run this and measure the code coverage:
+The bash build script to build and run this:
 \end_layout
 
 \begin_layout Standard
@@ -2333,7 +2511,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -2383,7 +2561,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -2510,7 +2688,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Codecov logo
@@ -2581,7 +2759,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -2638,7 +2816,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_gcov.pro
@@ -2662,10 +2840,37 @@ name "alg:travis_qmake_gcc_cpp98_gcov.pro"
 \end_layout
 
 \begin_layout Standard
-The Qt Creator project file has two new lines.
- The first of those adds two compiler flags, which cause the code to be
- compiled in such a way to gcov can work with it.
- The second line links the gcov library to the project.
+The Qt Creator project file has two new lines:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
+\end_layout
+
+\end_inset
+
+Let the C++ compiler add coverage information
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+LIBS += -lgcov
+\end_layout
+
+\end_inset
+
+Link against the gcov library
 \end_layout
 
 \begin_layout Standard
@@ -2691,7 +2896,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -2708,9 +2913,37 @@ build.sh
 \end_layout
 
 \begin_layout Standard
-The new step is after having run the executable, where gcov is run on the
- only source file.
- The text 'gcov' has generated is then shown using 'cat'.
+The new step is after having run the executable, 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+gcov main.cpp
+\end_layout
+
+\end_inset
+
+Let gcov create a coverage report
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cat main.cpp.gcov
+\end_layout
+
+\end_inset
+
+Show the file 'main.cpp.gcov', which contains the coverage of 'main.cpp'
 \end_layout
 
 \begin_layout Standard
@@ -2736,7 +2969,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -2862,7 +3095,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 R logo
@@ -2915,7 +3148,7 @@ Code coverage: none
 \end_layout
 
 \begin_layout Itemize
-Source: one single file, main.cpp
+Source: multiple files
 \end_layout
 
 \begin_layout Standard
@@ -3028,7 +3261,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -3073,7 +3306,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 src/do_magic_cpp.h
@@ -3118,7 +3351,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 src/do_magic_cpp.cpp
@@ -3168,7 +3401,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -3216,7 +3449,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 domagic.pro
@@ -3244,6 +3477,17 @@ The name of the Qt Creator project file is 'domagic' as it follows the same
  naming as the R project.
  It add the R and Rcpp and src folders to its include path and links to
  R.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Replace '/home/p230198' by '~' or HOME or something
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -3273,7 +3517,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 R/do_magic_r.R
@@ -3328,7 +3572,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 tests/testthat/test-do_magic_r.R
@@ -3385,7 +3629,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_cpp.sh
@@ -3435,7 +3679,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -3550,7 +3794,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 SFML logo
@@ -3617,7 +3861,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -3662,7 +3906,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_sfml.pro
@@ -3720,7 +3964,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -3770,7 +4014,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -3910,7 +4154,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -3946,7 +4190,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_boost/travis_qmake_gcc_cpp11_boost.pro"
+filename "travis_qmake_gcc_cpp11_boost/travis_qmake_gcc_cpp11_boost.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -3955,7 +4199,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_boost.pro
@@ -3991,7 +4235,7 @@ reference "sec:travis_qmake_gcc_cpp98"
 \end_layout
 
 \begin_layout Standard
-The bash build script to build this, run this and measure the code coverage:
+The bash build script to build and run this:
 \end_layout
 
 \begin_layout Standard
@@ -4013,7 +4257,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -4063,7 +4307,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -4080,35 +4324,17 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Standard
-This .travis.yml file has one new feature:
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
+This .travis.yml file has ...
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-addons:
-\end_layout
-
-\begin_layout Plain Layout
-
-  apt:
-\end_layout
-
-\begin_layout Plain Layout
-
-    packages: libboost-all-dev
+TODO
 \end_layout
 
 \end_inset
 
-This makes Travis aware that you want to use the aptitude package 'libboost-all-
-dev'.
- Note that this code cannot be put on one line: it has to be indented similar
- to this
+
 \end_layout
 
 \begin_layout Subsection
@@ -4185,7 +4411,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -4221,7 +4447,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_boost/travis_qmake_gcc_cpp14_boost.pro"
+filename "travis_qmake_gcc_cpp14_boost/travis_qmake_gcc_cpp14_boost.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -4230,7 +4456,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp14_boost.pro
@@ -4266,7 +4492,7 @@ reference "sec:travis_qmake_gcc_cpp98"
 \end_layout
 
 \begin_layout Standard
-The bash build script to build this, run this and measure the code coverage:
+The bash build script to build and run this:
 \end_layout
 
 \begin_layout Standard
@@ -4288,7 +4514,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -4338,7 +4564,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -4355,35 +4581,17 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Standard
-This .travis.yml file has one new feature:
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
+This .travis.yml file has ...
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-addons:
-\end_layout
-
-\begin_layout Plain Layout
-
-  apt:
-\end_layout
-
-\begin_layout Plain Layout
-
-    packages: libboost-all-dev
+TODO
 \end_layout
 
 \end_inset
 
-This makes Travis aware that you want to use the aptitude package 'libboost-all-
-dev'.
- Note that this code cannot be put on one line: it has to be indented similar
- to this
+
 \end_layout
 
 \begin_layout Section
@@ -4404,18 +4612,6 @@ name "sub:travis_qmake_gcc_cpp11_boost_test"
 \begin_layout Standard
 Adding only a testing framework does not work: it will not compile in C++98.
  Instead, this is covered in 
-\end_layout
-
-\begin_layout Standard
-In this example, the basic build (chapter 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98"
-
-\end_inset
-
-) is extended by calling gcov and using codecov to show the code coverage.
- 
 \end_layout
 
 \begin_layout Standard
@@ -4450,7 +4646,163 @@ pp
 \begin_layout Standard
 This project use four types of builds and each of these produces a different
  file.
- These files are used to let Travis check if the executable were built correctly.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (0,0) circle (4);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (4,0) circle (4);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[align=center] at (-1.5, 2) { $travis
+\backslash
+_qmake$ 
+\backslash
+
+\backslash
+ $
+\backslash
+_gcc
+\backslash
+_cpp11$ 
+\backslash
+
+\backslash
+ $
+\backslash
+_boost
+\backslash
+_test.pro$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+node[align=center] at (-2, 0) { $main.cpp$ 
+\backslash
+
+\backslash
+ };
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+node[align=center] at (2, 0) { $my
+\backslash
+_function.h$ 
+\backslash
+
+\backslash
+ $my
+\backslash
+_function.cpp$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[align=center] at (5.5, 2) { $travis
+\backslash
+_qmake$ 
+\backslash
+
+\backslash
+ $
+\backslash
+_gcc
+\backslash
+_cpp11$ 
+\backslash
+
+\backslash
+ $
+\backslash
+_boost.pro$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[align=center] at (6, 0) { $main
+\backslash
+_test.cpp$ 
+\backslash
+
+\backslash
+ $my
+\backslash
+_function
+\backslash
+_test.cpp$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Venn diagram of the files uses in this build
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These files are used to let Travis check if the executable were built correctly.
  An overview of builds and files are shown in table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4471,10 +4823,10 @@ status open
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -4570,7 +4922,7 @@ test_debug.txt
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Types of builds and the file they will create
@@ -4621,7 +4973,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_function.h
@@ -4666,7 +5018,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_function.cpp
@@ -4716,7 +5068,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_boost_test_test.pro
@@ -4750,7 +5102,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_boost_test/test_my_functions.cpp"
+filename "travis_qmake_gcc_cpp11_boost_test/main_test.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -4759,10 +5111,10 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
-test_my_functions.cpp
+main_test.cpp
 \end_layout
 
 \end_inset
@@ -4776,9 +5128,53 @@ test_my_functions.cpp
 \end_layout
 
 \begin_layout Standard
-It uses the Boost.Test framework to automatically generate a test suites.
- Next to testing the function 'add', also a file is created, so Travis can
- verify there has been built both a debug and release mode.
+It uses the Boost.Test framework to automatically generate a main function
+ and test suite.
+ An empty file is created, so Travis can verify there has been built both
+ a debug and release mode.
+\end_layout
+
+\begin_layout Standard
+Its main testing file file is shown here:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp11_boost_test/my_functions_test.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+my_functions_test.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It tests the function 'add'.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4808,7 +5204,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -4844,7 +5240,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_boost_test/travis_qmake_gcc_cpp11_boost_test_exe.pro"
+filename "travis_qmake_gcc_cpp11_boost_test/travis_qmake_gcc_cpp11_boost_test.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -4853,13 +5249,13 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
-travis_qmake_gcc_cpp11_boost_test_exe.pro
+travis_qmake_gcc_cpp11_boost_test.pro
 \begin_inset CommandInset label
 LatexCommand label
-name "alg:travis_qmake_gcc_cpp11_boost_test_exe.pro"
+name "alg:travis_qmake_gcc_cpp11_boost_test.pro"
 
 \end_inset
 
@@ -4886,7 +5282,7 @@ Build script
 \end_layout
 
 \begin_layout Standard
-The bash build script to build this, run this and measure the code coverage:
+The bash build script to build, test and run this:
 \end_layout
 
 \begin_layout Standard
@@ -4908,7 +5304,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -4925,9 +5321,8 @@ build.sh
 \end_layout
 
 \begin_layout Standard
-The new step is after having run the executable, where gcov is run on the
- only source file.
- The text 'gcov' has generated is then shown using 'cat'.
+In this script both projects are compiled in both debug and release mode.
+ All four exectables are run.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4957,7 +5352,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -4974,53 +5369,17 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Standard
-This .travis.yml file has some new features: 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
+This .travis.yml file has ...
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-
-sudo: true
+TODO
 \end_layout
 
 \end_inset
 
-Travis will give super user rights to the script.
- This will slow the build time, but it is inevitable for the next step
-\end_layout
 
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-before_install: sudo pip install codecov
-\end_layout
-
-\end_inset
-
-Travis will use pip to install codecov using super user rights
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-after_success: codecov
-\end_layout
-
-\end_inset
-
-After the script has run successfully, codecov is called
 \end_layout
 
 \begin_layout Standard
