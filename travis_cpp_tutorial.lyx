@@ -287,6 +287,18 @@ Kevin Ushey, for getting Rcpp11 and C++11 to work
 \end_layout
 
 \begin_layout Subsection
+Collaboration
+\end_layout
+
+\begin_layout Standard
+I welcome collaboration for this tutorial, especially in getting the scripts
+ as clean as possible.
+ If you want to help scraping off some lines, I will be happy to make you
+ a collaborator of some GitHubs.
+ 
+\end_layout
+
+\begin_layout Subsection
 Feedback
 \end_layout
 
@@ -844,6 +856,39 @@ Qt Creator
 Qt Creator is a C++ IDE
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Qt_Creator_logo.png
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Qt creator logo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 Creating a new project
 \begin_inset Index idx
@@ -927,6 +972,39 @@ GCC
 \begin_layout Standard
 GCC, the GNU Compiler Collection, is a collection of compilers, among other,
  the C++ compiler called g++.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename GNU_Compiler_Collection_logo.png
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+GCC logo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -1586,7 +1664,18 @@ reference "sub:travis_qmake_gcc_cpp98_boost_test"
 \end_layout
 
 \begin_layout Itemize
-Use of gcov: see chapter 
+Use of clang: see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_clang_cpp98"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Use of gcov and Codecov: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:travis_qmake_gcc_cpp98_gcov"
@@ -1608,10 +1697,54 @@ reference "sub:travis_qmake_gcc_cpp98_gprof"
 \end_layout
 
 \begin_layout Itemize
+Use of Qt: see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98_qt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
 Use of Rcpp: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:travis_qmake_gcc_cpp98_rcpp"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Use of SFML: see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98_sfml"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Use of Urho3D: see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98_urho3d"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Use of Wt: see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98_wt"
 
 \end_inset
 
@@ -2653,6 +2786,315 @@ reference "sub:travis_qmake_gcc_cpp11_boost_test"
 \end_layout
 
 \begin_layout Subsection
+Use of clang
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_clang_cpp98"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this example, the basic build (chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+) is compiled by the clang compiler.
+ 
+\end_layout
+
+\begin_layout Paragraph
+What is clang?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+clang
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+clang is a C++ compiler
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename LLVM_Logo.svg
+	lyxscale 25
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+clang logo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Specifications
+\end_layout
+
+\begin_layout Itemize
+Build system: qmake 
+\end_layout
+
+\begin_layout Itemize
+C++ compiler: clang 
+\end_layout
+
+\begin_layout Itemize
+C++ version: C++98 
+\end_layout
+
+\begin_layout Itemize
+Libraries: STL
+\end_layout
+
+\begin_layout Itemize
+Code coverage: none 
+\end_layout
+
+\begin_layout Itemize
+Source: one single file, main.cpp
+\end_layout
+
+\begin_layout Standard
+The single C++ source file used is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_clang_cpp98/main.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+main.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All the file does is ...
+\end_layout
+
+\begin_layout Standard
+This single file is compiled with qmake from the following Qt Creator project
+ file:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_clang_cpp98/travis_qmake_clang_cpp98.pro"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+travis_qmake_clang_cpp98.pro
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_clang_cpp98.pro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Qt Creator project file has the same lines as the basic project in chapter
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The bash build script to build and run this:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_clang_cpp98/build.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bash script has the same lines as the basic project in chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Setting up Travis is done by the following .travis.yml:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_clang_cpp98/.travis.yml"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+.travis.yml
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This .travis.yml file has ...
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Adding code coverage
 \begin_inset CommandInset label
 LatexCommand label
@@ -3415,6 +3857,304 @@ name "sub:travis_qmake_gcc_cpp98_gprof"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Adding the Qt library
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp98_qt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this example, the basic build (chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+) is extended by also using the Qt library.
+\end_layout
+
+\begin_layout Paragraph
+What is Qt?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Qt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Qt (pronounce cute') is a library to create C++ GUI's.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Qt_logo_2015.svg
+	lyxscale 10
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Qt logo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Specifications
+\end_layout
+
+\begin_layout Itemize
+Build system: qmake 
+\end_layout
+
+\begin_layout Itemize
+C++ compiler: gcc 
+\end_layout
+
+\begin_layout Itemize
+C++ version: C++98 
+\end_layout
+
+\begin_layout Itemize
+Libraries: STL and Qt
+\end_layout
+
+\begin_layout Itemize
+Code coverage: none 
+\end_layout
+
+\begin_layout Itemize
+Source: one single file, main.cpp
+\end_layout
+
+\begin_layout Standard
+The single C++ source file used is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_qt/main.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+main.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All the file does is to create an empty graph, from the Boost.Graph library.
+ It will not compile without the SFML libraries absent.
+\end_layout
+
+\begin_layout Standard
+This single file is compiled with qmake from the following Qt Creator project
+ file:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_qt/travis_qmake_gcc_cpp98_qt.pro"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+travis_qmake_gcc_cpp98_qt.pro
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98_qt.pro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Qt Creator project file has the same lines as the basic project in chapter
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The bash build script to build this, run this and measure the code coverage:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_qt/build.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bash script has the same lines as the basic project in chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Setting up Travis is done by the following .travis.yml:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_qt/.travis.yml"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+.travis.yml
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This .travis.yml file has ...
 \end_layout
 
 \begin_layout Subsection
@@ -4451,10 +5191,10 @@ This makes Travis install the needed package.
 \end_layout
 
 \begin_layout Subsection
-Adding the Wt library
+Adding the Urho3D library
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:travis_qmake_gcc_cpp98_wt-1"
+name "sub:travis_qmake_gcc_cpp98_urho3d"
 
 \end_inset
 
@@ -4465,7 +5205,305 @@ name "sub:travis_qmake_gcc_cpp98_wt-1"
 In this example, the basic build (chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98-1"
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+) is extended by also using the Urho3D library.
+\end_layout
+
+\begin_layout Paragraph
+What is Urho3D?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Urho3D
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Urho3D is a library to create C++ 3D games.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Urho3D_logo.png
+	lyxscale 50
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Urho3D logo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Specifications
+\end_layout
+
+\begin_layout Itemize
+Build system: qmake 
+\end_layout
+
+\begin_layout Itemize
+C++ compiler: gcc 
+\end_layout
+
+\begin_layout Itemize
+C++ version: C++98 
+\end_layout
+
+\begin_layout Itemize
+Libraries: STL and Urho3D
+\end_layout
+
+\begin_layout Itemize
+Code coverage: none 
+\end_layout
+
+\begin_layout Itemize
+Source: one single file, main.cpp
+\end_layout
+
+\begin_layout Standard
+The single C++ source file used is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_urho3d/main.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+main.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All the file does is to create an empty graph, from the Boost.Graph library.
+ It will not compile without the SFML libraries absent.
+\end_layout
+
+\begin_layout Standard
+This single file is compiled with qmake from the following Qt Creator project
+ file:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_urho3d/travis_qmake_gcc_cpp98_urho3d.pro"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+travis_qmake_gcc_cpp98_urho3d.pro
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98_urho3d.pro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Qt Creator project file has the same lines as the basic project in chapter
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The bash build script to build this, run this and measure the code coverage:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_urho3d/build.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bash script has the same lines as the basic project in chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Setting up Travis is done by the following .travis.yml:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_urho3d/.travis.yml"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+.travis.yml
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This .travis.yml file has ...
+\end_layout
+
+\begin_layout Subsection
+Adding the Wt library
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp98_wt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this example, the basic build (chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
 
 \end_inset
 
@@ -4648,7 +5686,7 @@ The Qt Creator project file has the same lines as the basic project in chapter
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98-1"
+reference "sec:travis_qmake_gcc_cpp98"
 
 \end_inset
 
@@ -4698,7 +5736,7 @@ build.sh
 The bash script has the same lines as the basic project in chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98-1"
+reference "sec:travis_qmake_gcc_cpp98"
 
 \end_inset
 
