@@ -22,6 +22,7 @@ git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_wt
 git clone https://github.com/richelbilderbeek/travis_qmake_clang_cpp14
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_boost
+git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_boost_test
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_gcov
 #git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_sfml
 #git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_urho3d
