@@ -18,6 +18,7 @@ Statuses of the repositories used that are successfull:
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11) [travis_qmake_gcc_cpp11](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_boost.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_boost) [travis_qmake_gcc_cpp11_boost](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_boost)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_boost_test.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_boost_test) [travis_qmake_gcc_cpp11_boost_test](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_boost_test)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_gcov.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_gcov) [travis_qmake_gcc_cpp11_gcov](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_gcov)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_rcpp.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_rcpp) [travis_qmake_gcc_cpp11_rcpp](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_rcpp)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_sfml.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_sfml) [travis_qmake_gcc_cpp11_sfml](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_sfml)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14) [travis_qmake_gcc_cpp14](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14)
@@ -37,6 +38,7 @@ Statuses of the repositories that do not exist yet (read: my TODO list):
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_wt.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp11_wt) [travis_qmake_gcc_cpp11_wt](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_wt)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_qt.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_qt) [travis_qmake_gcc_cpp14_qt](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_qt)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp14.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp14) [travis_qmake_clang_cpp14](https://github.com/richelbilderbeek/travis_qmake_clang_cpp14)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_gcov.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_gcov) [travis_qmake_gcc_cpp14_gcov](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_gcov)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_sfml.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_sfml) [travis_qmake_gcc_cpp14_sfml](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_sfml)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_wt.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_wt) [travis_qmake_gcc_cpp14_wt](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_wt)
 
@@ -61,6 +63,7 @@ In alphabetical order
 ## More complex programs
 
  * [![Build Status](https://travis-ci.org/richelbilderbeek/beastscriptr.svg?branch=master)](https://travis-ci.org/richelbilderbeek/beastscriptr) [beastscriptr](https://github.com/richelbilderbeek/beastscriptr)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/BeerWanter.svg?branch=master)](https://travis-ci.org/richelbilderbeek/BeerWanter) [BeerWanter](https://github.com/richelbilderbeek/BeerWanter)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/Boenken.svg?branch=master)](https://travis-ci.org/richelbilderbeek/Boenken) [Boenken](https://github.com/richelbilderbeek/Boenken)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/BoostGraphTutorial.svg?branch=master)](https://travis-ci.org/richelbilderbeek/BoostGraphTutorial) [BoostGraphTutorial](https://github.com/richelbilderbeek/BoostGraphTutorial)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/CityOfThieves.svg?branch=master)](https://travis-ci.org/richelbilderbeek/CityOfThieves) [CityOfThieves](https://github.com/richelbilderbeek/CityOfThieves)

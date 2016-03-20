@@ -2705,6 +2705,166 @@ Codecov logo
 \end_layout
 
 \begin_layout Paragraph
+Build overview
+\end_layout
+
+\begin_layout Standard
+This will be a more complex build, consisting of two projects:
+\end_layout
+
+\begin_layout Itemize
+The regular project that just runs the code
+\end_layout
+
+\begin_layout Itemize
+The project that measures code coverage
+\end_layout
+
+\begin_layout Standard
+The filenames are shown in this figure:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (0,0) circle (4);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (4,0) circle (4);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[align=center] at (-1.5, 2) { $travis
+\backslash
+_qmake$ 
+\backslash
+
+\backslash
+ $
+\backslash
+_gcc
+\backslash
+_cpp98$ 
+\backslash
+
+\backslash
+ $
+\backslash
+_gcov.pro$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[align=center] at (-2, 0) { $main.cpp$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[align=center] at (2, 0) { $do
+\backslash
+_magic.h$ 
+\backslash
+
+\backslash
+ $do
+\backslash
+_magic.cpp$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[align=center] at (5.5, 2) { $travis
+\backslash
+_qmake$ 
+\backslash
+
+\backslash
+ $
+\backslash
+_gcc
+\backslash
+_cpp98$ 
+\backslash
+
+\backslash
+ $
+\backslash
+_gcov
+\backslash
+_gcov.pro$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[align=center] at (6, 0) { $main
+\backslash
+_gcov.cpp$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Venn diagram of the files uses in this build
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
 Specifications
 \end_layout
 
@@ -2729,15 +2889,101 @@ Libraries: STL only
 \end_layout
 
 \begin_layout Itemize
-Code coverage: none 
+Code coverage: yes 
 \end_layout
 
 \begin_layout Itemize
-Source: one single file, main.cpp
+Source: multiple files
+\end_layout
+
+\begin_layout Paragraph
+Common files
 \end_layout
 
 \begin_layout Standard
-The single C++ source file used is:
+Both builds use the following code:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_gcov/do_magic.h"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+do_magic.h
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And its implementation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_gcov/do_magic.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+do_magic.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Normal build main function
+\end_layout
+
+\begin_layout Standard
+The C++ source file used by the normal build is:
 \end_layout
 
 \begin_layout Standard
@@ -2775,25 +3021,12 @@ main.cpp
 
 \end_layout
 
-\begin_layout Standard
-This file openly contains some dead code, so we expect to observe a code
- coverage less than 100%.
+\begin_layout Paragraph
+Normal build Qt Crator project file
 \end_layout
 
 \begin_layout Standard
-There are multiple Qt Creator project files:
-\end_layout
-
-\begin_layout Itemize
-the true executable: _exe
-\end_layout
-
-\begin_layout Itemize
-the executable that measures code coverage
-\end_layout
-
-\begin_layout Standard
-This single file is compiled with qmake from the following Qt Creator project
+This normal is compiled with qmake from the following Qt Creator project
  file:
 \end_layout
 
@@ -2823,6 +3056,100 @@ travis_qmake_gcc_cpp98_gcov.pro
 \begin_inset CommandInset label
 LatexCommand label
 name "alg:travis_qmake_gcc_cpp98_gcov.pro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Code coverage main function
+\end_layout
+
+\begin_layout Standard
+The C++ source file used by the normal build is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_gcov/main_gcov.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+main.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Code coverage build Qt Crator project file
+\end_layout
+
+\begin_layout Standard
+This normal is compiled with qmake from the following Qt Creator project
+ file:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_gcov/travis_qmake_gcc_cpp98_gcov_gcov.pro"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+travis_qmake_gcc_cpp98_gcov.pro
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98_gcov_gcov.pro"
 
 \end_inset
 
@@ -2923,7 +3250,7 @@ status open
 
 \begin_layout Plain Layout
 
-gcov main.cpp
+gcov main_gcov.cpp
 \end_layout
 
 \end_inset
@@ -2938,12 +3265,16 @@ status open
 
 \begin_layout Plain Layout
 
-cat main.cpp.gcov
+cat main_gcov.cpp.gcov
 \end_layout
 
 \end_inset
 
 Show the file 'main.cpp.gcov', which contains the coverage of 'main.cpp'
+\end_layout
+
+\begin_layout Paragraph
+Travis script
 \end_layout
 
 \begin_layout Standard
