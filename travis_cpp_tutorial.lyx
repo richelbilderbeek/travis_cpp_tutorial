@@ -2042,6 +2042,16 @@ reference "sec:travis_qmake_gcc_cpp98"
 
 \begin_layout Paragraph
 What is C++14?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+C++14
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2318,6 +2328,16 @@ reference "sec:travis_qmake_gcc_cpp98"
 
 \begin_layout Paragraph
 What is Boost?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Boost
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2657,6 +2677,16 @@ reference "sec:travis_qmake_gcc_cpp98"
 
 \begin_layout Paragraph
 What is gcov?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+gcov
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2665,6 +2695,16 @@ gcov is a tool that works with GCC to analyse code coverage
 
 \begin_layout Paragraph
 What is Codecov?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Codecov
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3402,6 +3442,16 @@ reference "sec:travis_qmake_gcc_cpp98"
 
 \begin_layout Paragraph
 What is R?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+R
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3444,6 +3494,16 @@ R logo
 
 \begin_layout Paragraph
 What is Rcpp?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Rcpp
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4101,6 +4161,16 @@ reference "sec:travis_qmake_gcc_cpp98"
 
 \begin_layout Paragraph
 What is SFML?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SFML
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4929,6 +4999,26 @@ TODO
 Extending the build by multiple steps
 \end_layout
 
+\begin_layout Standard
+The following chapter describe how to extend the build in two directions.
+ These are:
+\end_layout
+
+\begin_layout Itemize
+Use of C++11, Boost and Boost.Test: see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp11_boost_test"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Use of C++11, Boost, Boost.Test and gcov: see chapter 
+\end_layout
+
 \begin_layout Subsection
 C++11, Boost and Boost.Test
 \begin_inset CommandInset label
@@ -4941,43 +5031,20 @@ name "sub:travis_qmake_gcc_cpp11_boost_test"
 \end_layout
 
 \begin_layout Standard
-Adding only a testing framework does not work: it will not compile in C++98.
- Instead, this is covered in 
+This project consists out of two projects:
+\end_layout
+
+\begin_layout Itemize
+travis_qmake_gcc_cpp11_boost_test.pro: the real code
+\end_layout
+
+\begin_layout Itemize
+travis_qmake_gcc_cpp11_boost_test_test.pro: the tests
 \end_layout
 
 \begin_layout Standard
-The basic build has the following specs:
-\end_layout
-
-\begin_layout Itemize
-Build system: qmake 
-\end_layout
-
-\begin_layout Itemize
-C++ compiler: gcc 
-\end_layout
-
-\begin_layout Itemize
-C++ version: C++11
-\end_layout
-
-\begin_layout Itemize
-Libraries: STL and Boost, demonstrating Boost.Test
-\end_layout
-
-\begin_layout Itemize
-Code coverage: none 
-\end_layout
-
-\begin_layout Itemize
-Source: multiple files: main.cpp, my_function.h, my_function.cpp, test_my_function.c
-pp
-\end_layout
-
-\begin_layout Standard
-This project use four types of builds and each of these produces a different
- file.
- 
+Both projects center around a function called 'add', which is located in
+ the 'my_function.h' and 'my_function.cpp' files, as shown here:
 \end_layout
 
 \begin_layout Standard
@@ -5133,147 +5200,40 @@ Venn diagram of the files uses in this build
 \end_layout
 
 \begin_layout Standard
-These files are used to let Travis check if the executable were built correctly.
- An overview of builds and files are shown in table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Types-of-builds"
+Both of these are compiled both in release and debug mode.
+\end_layout
 
-\end_inset
-
-:
+\begin_layout Paragraph
+Specifics
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="3">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+The basic build has the following specs:
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Exe
+\begin_layout Itemize
+Build system: qmake 
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Test
+\begin_layout Itemize
+C++ compiler: gcc 
 \end_layout
 
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Debug
+\begin_layout Itemize
+C++ version: C++11
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-exe_debug.txt
+\begin_layout Itemize
+Libraries: STL and Boost, demonstrating Boost.Test
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-test_debug.txt
+\begin_layout Itemize
+Code coverage: none 
 \end_layout
 
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Release
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-exe_release.txt
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-test_debug.txt
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Types of builds and the file they will create
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Types-of-builds"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+\begin_layout Itemize
+Source: multiple files: main.cpp, my_function.h, my_function.cpp, test_my_function.c
+pp
 \end_layout
 
 \begin_layout Subsubsection
