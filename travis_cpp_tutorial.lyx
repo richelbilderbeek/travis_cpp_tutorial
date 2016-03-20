@@ -4001,8 +4001,7 @@ main.cpp
 \end_layout
 
 \begin_layout Standard
-All the file does is to create an empty graph, from the Boost.Graph library.
- It will not compile without the SFML libraries absent.
+All the file does ...
 \end_layout
 
 \begin_layout Standard
@@ -7001,6 +7000,656 @@ TODO
 \end_layout
 
 \begin_layout Subsection
+C++11 and Rcpp
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp11_rcpp"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this example, the basic build (chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:travis_qmake_gcc_cpp98"
+
+\end_inset
+
+) is extended by also using the Rcpp library/package.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Specifications
+\end_layout
+
+\begin_layout Standard
+The chapter has the following specs:
+\end_layout
+
+\begin_layout Itemize
+Build system: qmake 
+\end_layout
+
+\begin_layout Itemize
+C++ compiler: gcc 
+\end_layout
+
+\begin_layout Itemize
+C++ version: C++11
+\end_layout
+
+\begin_layout Itemize
+Libraries: STL and Rcpp
+\end_layout
+
+\begin_layout Itemize
+Code coverage: none 
+\end_layout
+
+\begin_layout Itemize
+Source: multiple files
+\end_layout
+
+\begin_layout Standard
+The build will be complex: I will show the C++ build and the R build seperately
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (0,0) circle (4);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (4,0) circle (4);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[align=center] at (-1, 2) { $C++$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+node[align=center] at (-2, 0) { $main.cpp$ 
+\backslash
+
+\backslash
+ $domagic.pro$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+node[align=center] at (2, 0) { $do
+\backslash
+_magic
+\backslash
+_cpp.h$ 
+\backslash
+
+\backslash
+ $do
+\backslash
+_magic
+\backslash
+_cpp.cpp$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[align=center] at (5, 2) { $R$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[align=center] at (6, 0) { $do
+\backslash
+_magic
+\backslash
+_r.R$ 
+\backslash
+
+\backslash
+ $test-do
+\backslash
+_magic.R$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Venn diagram of the files uses in this build
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+C++ and R: the C++ function
+\end_layout
+
+\begin_layout Standard
+Both C++ and R use this function.
+ It is called 'do_magic_cpp'.
+ It is declared in the header file 'do_magic_cpp.h', as shown here:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp11_rcpp/src/do_magic_cpp.h"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+src/do_magic_cpp.h
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The header file consists solely of #include guards and the declaration of
+ the function 'do_magic_cpp'.
+\end_layout
+
+\begin_layout Standard
+The function 'do_magic_cpp' is implemented in the implementation file 'do_magic_
+cpp.cpp', as shown here:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp11_rcpp/src/do_magic_cpp.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+src/do_magic_cpp.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This implementation file has gotten rather elaborate, thanks to Rcpp and
+ documentation.
+ This is because it has to be callable from both C++ and R and satisfy the
+ requirement from both languages.
+\end_layout
+
+\begin_layout Subsubsection
+C++: main source file
+\end_layout
+
+\begin_layout Standard
+The C++ program has a normal main function:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp11_rcpp/main.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+main.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All it does is a simple test of the 'do_magic_cpp' function.
+\end_layout
+
+\begin_layout Subsubsection
+C++: Qt Creator project file
+\end_layout
+
+\begin_layout Standard
+This single file is compiled with qmake from the following Qt Creator project
+ file:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp11_rcpp/domagic.pro"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+domagic.pro
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp11_rcpp_domagic.pro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The name of the Qt Creator project file is 'domagic' as it follows the same
+ naming as the R project.
+ It add the R and Rcpp and src folders to its include path and links to
+ R.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Replace '/home/p230198' by '~' or HOME or something
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+R: the R function
+\end_layout
+
+\begin_layout Standard
+The R function 'do_magic_r' calls the C++ function 'do_magic_cpp':
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp11_rcpp/R/do_magic_r.R"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+R/do_magic_r.R
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp11_rcpp_do_magic_r.R"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Next to this, it is just Roxygen2 documentation
+\end_layout
+
+\begin_layout Subsubsection
+R: The R tests
+\end_layout
+
+\begin_layout Standard
+R allows for easy testing using the 'testthat' package.
+ A test file looks as such:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp11_rcpp/tests/testthat/test-do_magic.R"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+tests/testthat/test-do_magic_r.R
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp11_rcpp_test-do_magic_r.R"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The tests call both the R and C++ functions with certain inputs and checks
+ if the output matches the expectations.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+The build script
+\end_layout
+
+\begin_layout Standard
+The bash build script is empty.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp11_rcpp/build.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is empty, because we set Travis CI to do the testing from R its point
+ of view.
+ The C++ code has to be tested manually.
+ I do not know how to do both, if you do know, please send me an email.
+\end_layout
+
+\begin_layout Subsubsection
+The Travis script
+\end_layout
+
+\begin_layout Standard
+Setting up Travis is done by the following .travis.yml:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp11_rcpp/.travis.yml"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+.travis.yml
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This .travis.yml file is completely different than others:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+language: r
+\end_layout
+
+\end_inset
+
+Travis has to work with R code
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+warnings_are_errors: true
+\end_layout
+
+\end_inset
+
+Travis will give an error when a warning is emitted.
+ This enforces clean coding
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+sudo: required
+\end_layout
+
+\end_inset
+
+Travis will need sudo.
+ This will slow down the build
+\end_layout
+
+\begin_layout Subsection
 C++14 and Boost libraries
 \begin_inset CommandInset label
 LatexCommand label
@@ -7945,21 +8594,36 @@ TODO
 
 \end_layout
 
+\begin_layout Subsection
+C++14 and Rcpp
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp14_rcpp"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Does not work yet.
+\end_layout
+
 \begin_layout Section
 Extending the build by multiple steps
 \end_layout
 
 \begin_layout Standard
-The following chapter describe how to extend the build in two directions.
+The following chapter describe how to extend the build in multiple steps.
  These are:
 \end_layout
 
 \begin_layout Itemize
-Use of C++11, Boost, Boost.Test and gcov: see chapter 
+Use of C++11, Boost.Test and gcov: see chapter 
 \end_layout
 
 \begin_layout Subsection
-C++11, Boost, Boost.Test and gcov
+C++11, Boost.Test and gcov
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:travis_qmake_gcc_cpp11_boost_test_gcov"
