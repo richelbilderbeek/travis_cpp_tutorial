@@ -1,5 +1,5 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass article
@@ -24,13 +24,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
-\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -41,24 +41,15 @@
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
-\use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
-\cite_engine_type default
-\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -92,7 +83,7 @@ Richèl Bilderbeek
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename CppLogo.jpg
+	filename images/CppLogo.jpg
 	lyxscale 50
 	width 50text%
 
@@ -100,7 +91,7 @@ Richèl Bilderbeek
 
 
 \begin_inset Graphics
-	filename TravisCIBig.png
+	filename images/TravisCIBig.png
 	lyxscale 50
 	width 28text%
 
@@ -144,7 +135,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename CC-BY-SA_icon.svg
+	filename images/CC-BY-SA_icon.svg
 
 \end_inset
 
@@ -152,7 +143,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Creative Commons license 4.0
@@ -407,7 +398,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename GitHubHomepage.png
+	filename images/GitHubHomepage.png
 	lyxscale 50
 	width 50text%
 
@@ -417,7 +408,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 The GitHub homepage, 
@@ -519,7 +510,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename GitHubJoin.png
+	filename images/GitHubJoin.png
 	lyxscale 50
 	width 50text%
 
@@ -529,7 +520,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 The join GitHub page
@@ -573,7 +564,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename GitHubProfile.png
+	filename images/GitHubProfile.png
 	lyxscale 50
 	width 50text%
 
@@ -583,7 +574,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 A GitHub profile page
@@ -647,7 +638,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename GitHubCreateRepository.png
+	filename images/GitHubCreateRepository.png
 	lyxscale 50
 	width 50text%
 
@@ -657,7 +648,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Create a GitHub repository
@@ -693,7 +684,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename GitHubCreatedRepository.png
+	filename images/GitHubCreatedRepository.png
 	lyxscale 50
 	width 50text%
 
@@ -703,7 +694,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Created a GitHub repository
@@ -768,7 +759,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Git-Logo-2Color.png
+	filename images/Git-Logo-2Color.png
 	lyxscale 10
 	width 25text%
 
@@ -778,7 +769,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 git logo
@@ -873,7 +864,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Qt_Creator_logo.png
+	filename images/Qt_Creator_logo.png
 	width 25text%
 
 \end_inset
@@ -882,7 +873,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Qt creator logo
@@ -991,7 +982,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename GNU_Compiler_Collection_logo.png
+	filename images/GNU_Compiler_Collection_logo.png
 	width 25text%
 
 \end_inset
@@ -1000,7 +991,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 GCC logo
@@ -1158,7 +1149,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -1288,7 +1279,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98.pro
@@ -1396,7 +1387,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -1546,7 +1537,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -1856,7 +1847,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -1902,7 +1893,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11.pro
@@ -2023,7 +2014,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -2073,7 +2064,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -2251,7 +2242,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -2295,7 +2286,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp14.pro
@@ -2368,7 +2359,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -2418,7 +2409,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -2494,7 +2485,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Boost_logo.png
+	filename images/Boost_logo.png
 	width 25text%
 
 \end_inset
@@ -2503,7 +2494,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Boost logo
@@ -2570,7 +2561,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -2615,7 +2606,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_boost.pro
@@ -2673,7 +2664,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -2723,7 +2714,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -2843,7 +2834,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename LLVM_Logo.svg
+	filename images/LLVM_Logo.svg
 	lyxscale 25
 	width 25text%
 
@@ -2853,7 +2844,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 clang logo
@@ -2920,7 +2911,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -2964,7 +2955,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_clang_cpp98.pro
@@ -3022,7 +3013,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -3072,7 +3063,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -3170,7 +3161,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Codecov.png
+	filename images/Codecov.png
 	width 25text%
 
 \end_inset
@@ -3179,7 +3170,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Codecov logo
@@ -3339,7 +3330,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -3414,7 +3405,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 do_magic.h
@@ -3453,7 +3444,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 do_magic.cpp
@@ -3496,7 +3487,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -3540,7 +3531,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_gcov.pro
@@ -3590,7 +3581,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -3634,7 +3625,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_gcov.pro
@@ -3714,7 +3705,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -3791,7 +3782,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -3916,7 +3907,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Qt_logo_2015.svg
+	filename images/Qt_logo_2015.svg
 	lyxscale 10
 	width 25text%
 
@@ -3926,7 +3917,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Qt logo
@@ -3993,7 +3984,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -4037,7 +4028,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_qt.pro
@@ -4095,7 +4086,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -4145,7 +4136,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -4214,7 +4205,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Rlogo.png
+	filename images/Rlogo.png
 	lyxscale 10
 	width 25text%
 
@@ -4224,7 +4215,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 R logo
@@ -4400,7 +4391,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -4445,7 +4436,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 src/do_magic_cpp.h
@@ -4490,7 +4481,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 src/do_magic_cpp.cpp
@@ -4540,7 +4531,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -4588,7 +4579,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 domagic.pro
@@ -4630,6 +4621,50 @@ TODO: Replace '/home/p230198' by '~' or HOME or something
 \end_layout
 
 \begin_layout Subsubsection
+The C++ build script
+\end_layout
+
+\begin_layout Standard
+The C++ build script is the regular canon of qmake, make and executable
+ call.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_rcpp/build_cpp.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build_cpp.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 R: the R function
 \end_layout
 
@@ -4656,7 +4691,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 R/do_magic_r.R
@@ -4711,7 +4746,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 tests/testthat/test-do_magic_r.R
@@ -4741,12 +4776,12 @@ The tests call both the R and C++ functions with certain inputs and checks
 \end_layout
 
 \begin_layout Subsubsection
-The build script
+The R script to install packages
 \end_layout
 
 \begin_layout Standard
-The bash build script is empty.
- 
+The C++ build script is the regular canon of qmake, make and executable
+ call.
 \end_layout
 
 \begin_layout Standard
@@ -4759,7 +4794,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_rcpp/build_cpp.sh"
+filename "travis_qmake_gcc_cpp98_rcpp/install_r_packages.R"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -4768,7 +4803,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_cpp.sh
@@ -4782,13 +4817,6 @@ build_cpp.sh
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-It is empty, because we set Travis CI to do the testing from R its point
- of view.
- The C++ code has to be tested manually.
- I do not know how to do both, if you do know, please send me an email.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4818,7 +4846,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -4835,54 +4863,8 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Standard
-This .travis.yml file is completely different than others:
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-language: r
-\end_layout
-
-\end_inset
-
-Travis has to work with R code
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-warnings_are_errors: true
-\end_layout
-
-\end_inset
-
-Travis will give an error when a warning is emitted.
- This enforces clean coding
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-sudo: required
-\end_layout
-
-\end_inset
-
-Travis will need sudo.
- This will slow down the build
+This .travis.yml file is longer than usual, as it both compiles and runs the
+ C++ and R code.
 \end_layout
 
 \begin_layout Subsection
@@ -4934,7 +4916,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename SFML Logo.svg
+	filename images/SFML Logo.svg
 	width 25text%
 
 \end_inset
@@ -4943,7 +4925,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 SFML logo
@@ -5010,7 +4992,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -5055,7 +5037,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_sfml.pro
@@ -5113,7 +5095,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -5163,7 +5145,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -5246,7 +5228,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename Urho3D_logo.png
+	filename images/Urho3D_logo.png
 	lyxscale 50
 	width 25text%
 
@@ -5256,7 +5238,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Urho3D logo
@@ -5323,7 +5305,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 mastercontrol.cpp
@@ -5368,7 +5350,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_urho3d.pro
@@ -5426,7 +5408,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -5476,7 +5458,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -5544,7 +5526,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename WtLogo.png
+	filename images/WtLogo.png
 	lyxscale 50
 	width 25text%
 
@@ -5554,7 +5536,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Wt logo
@@ -5621,7 +5603,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -5666,7 +5648,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_wt.pro
@@ -5724,7 +5706,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -5774,7 +5756,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -5910,7 +5892,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -5955,7 +5937,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_boost.pro
@@ -6013,7 +5995,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -6063,7 +6045,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -6261,7 +6243,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -6342,7 +6324,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_function.h
@@ -6387,7 +6369,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_function.cpp
@@ -6437,7 +6419,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_boost_test_test.pro
@@ -6480,7 +6462,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main_test.cpp
@@ -6526,7 +6508,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_functions_test.cpp
@@ -6573,7 +6555,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -6618,7 +6600,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_boost_test.pro
@@ -6673,7 +6655,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -6721,7 +6703,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -6825,7 +6807,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -6870,7 +6852,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_clang_cpp11.pro
@@ -6928,7 +6910,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -6978,7 +6960,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -7175,7 +7157,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -7250,7 +7232,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 do_magic.h
@@ -7289,7 +7271,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 do_magic.cpp
@@ -7332,7 +7314,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -7376,7 +7358,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_gcov.pro
@@ -7426,7 +7408,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -7470,7 +7452,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_gcov.pro
@@ -7550,7 +7532,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -7627,7 +7609,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -7766,7 +7748,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -7810,7 +7792,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_qt.pro
@@ -7868,7 +7850,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -7918,7 +7900,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -8103,7 +8085,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -8148,7 +8130,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 src/do_magic_cpp.h
@@ -8193,7 +8175,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 src/do_magic_cpp.cpp
@@ -8243,7 +8225,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -8291,7 +8273,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 domagic.pro
@@ -8359,7 +8341,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 R/do_magic_r.R
@@ -8414,7 +8396,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 tests/testthat/test-do_magic_r.R
@@ -8471,7 +8453,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -8521,7 +8503,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -8661,7 +8643,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -8705,7 +8687,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_sfml.pro
@@ -8763,7 +8745,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -8813,7 +8795,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -8906,7 +8888,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 mastercontrol.cpp
@@ -8950,7 +8932,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_urho3d.pro
@@ -9008,7 +8990,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -9058,7 +9040,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -9155,7 +9137,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -9199,7 +9181,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_wt.pro
@@ -9257,7 +9239,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -9307,7 +9289,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -9401,7 +9383,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -9446,7 +9428,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp14_boost.pro
@@ -9504,7 +9486,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -9554,7 +9536,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -9748,7 +9730,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -9829,7 +9811,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_function.h
@@ -9874,7 +9856,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_function.cpp
@@ -9924,7 +9906,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp14_boost_test_test.pro
@@ -9967,7 +9949,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main_test.cpp
@@ -10013,7 +9995,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_functions_test.cpp
@@ -10060,7 +10042,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -10105,7 +10087,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp14_boost_test.pro
@@ -10160,7 +10142,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_normal_release.sh
@@ -10199,7 +10181,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_test.sh
@@ -10242,7 +10224,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -10485,7 +10467,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -10543,7 +10525,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_boost_test_gcov_test.pro
@@ -10607,7 +10589,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_test.sh
@@ -10655,7 +10637,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
