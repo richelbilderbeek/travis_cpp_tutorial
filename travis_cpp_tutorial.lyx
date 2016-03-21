@@ -4652,7 +4652,9 @@ lstparams "breaklines=true,language={bash}"
 
 \begin_layout Plain Layout
 build_cpp.sh
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98_rcpp_build_cpp.sh"
 
 \end_inset
 
@@ -4662,6 +4664,15 @@ build_cpp.sh
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This scipt ...
 \end_layout
 
 \begin_layout Subsubsection
@@ -4865,6 +4876,44 @@ lstparams "breaklines=true,language={C++}"
 \begin_layout Standard
 This .travis.yml file is longer than usual, as it both compiles and runs the
  C++ and R code.
+\end_layout
+
+\begin_layout Subsubsection
+fatal error: Rcpp.h: No such file or directory
+\end_layout
+
+\begin_layout Standard
+Add these line to the .travis.yml file to find Rcpp.h:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+after_failure:
+\end_layout
+
+\begin_layout Plain Layout
+
+ # fatal error: Rcpp.h: No such file or directory
+\end_layout
+
+\begin_layout Plain Layout
+
+ - find / -name 'Rcpp.h'
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You can then add the folder found to the INCLUDEPATHS of the Qt Create project
+ file.
 \end_layout
 
 \begin_layout Subsection
@@ -5279,25 +5328,53 @@ Code coverage: none
 \end_layout
 
 \begin_layout Itemize
-Source: one single file, main.cpp
+Source: multiple files
 \end_layout
 
 \begin_layout Standard
-The single C++ source file used is:
+The C++ source files are too big to show here.
+ Their names are:
+\end_layout
+
+\begin_layout Itemize
+cameramaster.h 
+\end_layout
+
+\begin_layout Itemize
+cameramaster.cpp
+\end_layout
+
+\begin_layout Itemize
+inputmaster.h
+\end_layout
+
+\begin_layout Itemize
+inputmaster.cpp
+\end_layout
+
+\begin_layout Itemize
+mastercontrol.h
+\end_layout
+
+\begin_layout Itemize
+mastercontrol.cpp
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float algorithm
-placement H
+The files will work together to create the following 3D world:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_urho3d/mastercontrol.cpp"
-lstparams "breaklines=true,language={C++}"
+\begin_inset Graphics
+	filename images/travis_qmake_gcc_cpp98_urho3d.png
+	lyxscale 50
+	width 25text%
 
 \end_inset
 
@@ -5308,7 +5385,7 @@ lstparams "breaklines=true,language={C++}"
 \begin_inset Caption
 
 \begin_layout Plain Layout
-mastercontrol.cpp
+Screenshot of travis_qmake_gcc_cpp98_urho3d
 \end_layout
 
 \end_inset
@@ -5322,12 +5399,7 @@ mastercontrol.cpp
 \end_layout
 
 \begin_layout Standard
-All the file does is to create an empty graph, from the Boost.Graph library.
- It will not compile without the SFML libraries absent.
-\end_layout
-
-\begin_layout Standard
-This single file is compiled with qmake from the following Qt Creator project
+The files are compiled with qmake from the following Qt Creator project
  file:
 \end_layout
 
@@ -8106,8 +8178,9 @@ C++ and R: the C++ function
 \end_layout
 
 \begin_layout Standard
-Both C++ and R use this function.
- It is called 'do_magic_cpp'.
+This Travis CI project is centered around the function 'do_magic_cpp'.
+ I use the extension '_cpp' to indicate it is a C++ function.
+ The function 'do_magic_cpp' is used by both C++ and R.
  It is declared in the header file 'do_magic_cpp.h', as shown here:
 \end_layout
 
@@ -8149,6 +8222,8 @@ src/do_magic_cpp.h
 \begin_layout Standard
 The header file consists solely of #include guards and the declaration of
  the function 'do_magic_cpp'.
+ The C++11 keyword 'noexcept' will make the build fail to compile under
+ C++98, but will compile under C++11 and later versions of C++.
 \end_layout
 
 \begin_layout Standard
@@ -8192,10 +8267,47 @@ src/do_magic_cpp.cpp
 \end_layout
 
 \begin_layout Standard
-This implementation file has gotten rather elaborate, thanks to Rcpp and
- documentation.
- This is because it has to be callable from both C++ and R and satisfy the
- requirement from both languages.
+This source file is very simple.
+ Most lines are dedicates to the C++ roxygen2 documentation.
+ Omitting this documentation will fail the R package to build, as this documenta
+tion is mandatory 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Test this
+\end_layout
+
+\end_inset
+
+.
+ Note that 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// [[Rcpp::export]]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+needs to written exactly as such
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Test this
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -8297,21 +8409,193 @@ name "alg:travis_qmake_gcc_cpp11_rcpp_domagic.pro"
 \end_layout
 
 \begin_layout Standard
-The name of the Qt Creator project file is 'domagic' as it follows the same
- naming as the R project.
- It add the R and Rcpp and src folders to its include path and links to
- R.
- 
-\begin_inset Note Note
+Here is what the sections do:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
 status open
 
 \begin_layout Plain Layout
-TODO: Replace '/home/p230198' by '~' or HOME or something
+
+# Shared C++11 files
+\end_layout
+
+\begin_layout Plain Layout
+
+INCLUDEPATH += src
+\end_layout
+
+\begin_layout Plain Layout
+
+SOURCES += src/do_magic_cpp.cpp
+\end_layout
+
+\begin_layout Plain Layout
+
+HEADERS += src/do_magic_cpp.h
+\end_layout
+
+\end_inset
+
+These files are shared by the C++11 and R project
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+# Rcpp, adapted from script from Dirk Eddelbuettel and Romain Francois
+\end_layout
+
+\begin_layout Plain Layout
+
+R_HOME = $$system(R RHOME)
+\end_layout
+
+\begin_layout Plain Layout
+
+RCPPINCL = $$system($$R_HOME/bin/Rscript -e 
+\backslash
+"Rcpp:::CxxFlags
+\backslash
+(
+\backslash
+)
+\backslash
+")
+\end_layout
+
+\begin_layout Plain Layout
+
+INCLUDEPATH += RCPPINCL
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# Rcpp does not play nice with -Weffc++
+\end_layout
+
+\begin_layout Plain Layout
+
+QMAKE_CXXFLAGS += -Wall -Wextra -Werror
+\end_layout
+
+\end_inset
+
+Let Rcpp be found by and compile cleanly.
+ To do so, the '-Weffc++' warnings have to be omitted
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+# C++11-only files
+\end_layout
+
+\begin_layout Plain Layout
+
+SOURCES += main.cpp
+\end_layout
+
+\end_inset
+
+This contains the main function that is only used by the C++11-only build
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+# R
+\end_layout
+
+\begin_layout Plain Layout
+
+LIBS += -lR
+\end_layout
+
+\end_inset
+
+Link to the R language libraries
+\end_layout
+
+\begin_layout Subsubsection
+C++: build script
+\end_layout
+
+\begin_layout Standard
+The C++ bash build script is straightforward.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp11_rcpp/build_cpp.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build_cpp.sh
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This script is already described in the C++98 and Rcpp chapter (chapter
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98_rcpp"
+
+\end_inset
+
+, algorithm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:travis_qmake_gcc_cpp98_rcpp_build_cpp.sh"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsubsection
@@ -8365,7 +8649,19 @@ name "alg:travis_qmake_gcc_cpp11_rcpp_do_magic_r.R"
 \end_layout
 
 \begin_layout Standard
-Next to this, it is just Roxygen2 documentation
+Must lines are dedicated to Roxygen2 documentation.
+ Omitting this documentation will fail the R package to build, as this documenta
+tion is mandatory
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Test this
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -8422,16 +8718,12 @@ name "alg:travis_qmake_gcc_cpp11_rcpp_test-do_magic_r.R"
 \begin_layout Standard
 The tests call both the R and C++ functions with certain inputs and checks
  if the output matches the expectations.
- 
+ It may be a good idea to only call the R function from here, and move the
+ C++ function tests to a C++ testing suite like Boost.Test.
 \end_layout
 
 \begin_layout Subsubsection
-The build script
-\end_layout
-
-\begin_layout Standard
-The bash build script is empty.
- 
+R: script to install packages
 \end_layout
 
 \begin_layout Standard
@@ -8444,7 +8736,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_rcpp/build.sh"
+filename "travis_qmake_gcc_cpp11_rcpp/install_r_packages.R"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -8456,7 +8748,7 @@ lstparams "breaklines=true,language={bash}"
 \begin_inset Caption
 
 \begin_layout Plain Layout
-build.sh
+install_r_packages.sh
 \end_layout
 
 \end_inset
@@ -8470,10 +8762,11 @@ build.sh
 \end_layout
 
 \begin_layout Standard
-It is empty, because we set Travis CI to do the testing from R its point
- of view.
- The C++ code has to be tested manually.
- I do not know how to do both, if you do know, please send me an email.
+To compile the C++ code, Rcpp needs to be installed.
+ The R package needs the other packages to work.
+ An R code repository from the UK was used: without supply an R code repository,
+ Travis will be asked to pick one, which it cannot.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -8520,7 +8813,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Standard
-This .travis.yml file is completely different than others:
+This .travis.yml file is rather extensive:
 \end_layout
 
 \begin_layout Itemize
@@ -8530,12 +8823,22 @@ status open
 
 \begin_layout Plain Layout
 
-language: r
+sudo: true
+\end_layout
+
+\begin_layout Plain Layout
+
+language: cpp
+\end_layout
+
+\begin_layout Plain Layout
+
+compiler: gcc
 \end_layout
 
 \end_inset
 
-Travis has to work with R code
+The default language used has to be C++
 \end_layout
 
 \begin_layout Itemize
@@ -8545,13 +8848,32 @@ status open
 
 \begin_layout Plain Layout
 
-warnings_are_errors: true
+before_install:
+\end_layout
+
+\begin_layout Plain Layout
+
+ - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test # C++11
+\end_layout
+
+\begin_layout Plain Layout
+
+ - sudo add-apt-repository -y ppa:marutter/rrutter # R
+\end_layout
+
+\begin_layout Plain Layout
+
+ - sudo apt-get update -qq
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
 
-Travis will give an error when a warning is emitted.
- This enforces clean coding
+Before installation, Travis has to add to apt repositories, one for C++11
+ and one for the R version used by CRAN
 \end_layout
 
 \begin_layout Itemize
@@ -8561,13 +8883,108 @@ status open
 
 \begin_layout Plain Layout
 
-sudo: required
+install: 
+\end_layout
+
+\begin_layout Plain Layout
+
+ - sudo apt-get install -qq g++-5  # C++11
+\end_layout
+
+\begin_layout Plain Layout
+
+ - sudo apt-get install -qq r-base r-base-dev  # R
+\end_layout
+
+\begin_layout Plain Layout
+
+ - sudo apt-get install -qq lyx texlive  # pdflatex, used by knitr
+\end_layout
+
+\begin_layout Plain Layout
+
+ - sudo Rscript install_r_packages.R  # Rcpp
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
 
-Travis will need sudo.
- This will slow down the build
+Travis has to install the prerequisites for C++11, R, pdflatex (used by
+ R's knitr) and some R packages
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+script: 
+\end_layout
+
+\begin_layout Plain Layout
+
+ # C++
+\end_layout
+
+\begin_layout Plain Layout
+
+ - ./build_cpp.sh
+\end_layout
+
+\begin_layout Plain Layout
+
+ # R wants all non-R files gone...
+\end_layout
+
+\begin_layout Plain Layout
+
+ - ./clean.sh
+\end_layout
+
+\begin_layout Plain Layout
+
+ - rm .gitignore
+\end_layout
+
+\begin_layout Plain Layout
+
+ - rm src/.gitignore
+\end_layout
+
+\begin_layout Plain Layout
+
+ - rm .travis.yml
+\end_layout
+
+\begin_layout Plain Layout
+
+ - rm -rf .git
+\end_layout
+
+\begin_layout Plain Layout
+
+ - rm -rf ..Rcheck
+\end_layout
+
+\begin_layout Plain Layout
+
+ # Now R is ready to go
+\end_layout
+
+\begin_layout Plain Layout
+
+ - R CMD check .
+\end_layout
+
+\end_inset
+
+The script consists out of a build and run of the C++11 code, cleaning up
+ for R, then building an R package
 \end_layout
 
 \begin_layout Subsection
