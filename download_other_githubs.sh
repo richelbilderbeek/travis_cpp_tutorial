@@ -7,6 +7,7 @@ git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_boost_test
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_boost_test_gcov
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_gcov
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_qt
+git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_qt_qtest
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_rcpp
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_sfml
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_urho3d
@@ -19,6 +20,7 @@ git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_boost_test
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_boost_test_gcov
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_gcov
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_qt
+git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_qt_qtest
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_sfml
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_rcpp
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_urho3d
@@ -31,8 +33,7 @@ git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_boost_test
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_boost_test_gcov
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_gcov
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_qt
+git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_qt_qtest
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_sfml
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_urho3d
-
 #git clone https://github.com/richelbilderbeek/qmake_gprof
-lyx -f --export pdf2 travis_cpp_tutorial.lyx

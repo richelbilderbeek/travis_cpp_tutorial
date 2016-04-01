@@ -12,7 +12,8 @@ install:
   - sudo apt-get install -qq qtikz
 
 script:
- - ./build.sh
+ - ./download_other_githubs.sh
+ - ./build_pdf.sh
 
 after_script:
  - ls

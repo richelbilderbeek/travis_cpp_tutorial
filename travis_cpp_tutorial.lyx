@@ -245,6 +245,22 @@ To allow skimming, most chapters follow the same structure.
  This is counteracted by referring to earlier chapters.
 \end_layout
 
+\begin_layout Paragraph
+From Travis to source
+\end_layout
+
+\begin_layout Standard
+Every build, I start from Travis CI its point of view: 'What do I have to
+ do?'.
+ Usually Travis CI has to call at least one build bash script.
+ After describing the Travis file, I will show those build files.
+ Those build files usually invoke Qt Creator project files, which in turn
+ combine source files to executables.
+ It may feel that the best is saved for last, but I'd disagree: this is
+ a Travis tutorial.
+ I also think it makes up for a better narrative, to go from big to small.
+\end_layout
+
 \begin_layout Subsection
 This tutorial
 \end_layout
@@ -355,9 +371,13 @@ GitHub
 
 \begin_layout Standard
 GitHub is a site that creates websites around projects.
- It is said to host the project.
- This project contains one, but usually a collection of files, which is
- called a repository.
+ It is said to host these projects.
+ Each project contains at least one, but usually multiple files.
+ These files can be put on your own hard disc, USB stick, or other storage
+ devices.
+ They could also be put at a central place, which is called a repository,
+ so potentially others can also access these.
+ GitHub is such a file repository.
  GitHub also keeps track of the history of the project, which is also called
  version control.
  GitHub uses git as a version control software.
@@ -400,7 +420,7 @@ status open
 \begin_inset Graphics
 	filename images/GitHubHomepage.png
 	lyxscale 50
-	width 50text%
+	width 100text%
 
 \end_inset
 
@@ -512,7 +532,7 @@ status open
 \begin_inset Graphics
 	filename images/GitHubJoin.png
 	lyxscale 50
-	width 50text%
+	width 100text%
 
 \end_inset
 
@@ -566,7 +586,7 @@ status open
 \begin_inset Graphics
 	filename images/GitHubProfile.png
 	lyxscale 50
-	width 50text%
+	width 100text%
 
 \end_inset
 
@@ -640,7 +660,7 @@ status open
 \begin_inset Graphics
 	filename images/GitHubCreateRepository.png
 	lyxscale 50
-	width 50text%
+	width 100text%
 
 \end_inset
 
@@ -686,7 +706,7 @@ status open
 \begin_inset Graphics
 	filename images/GitHubCreatedRepository.png
 	lyxscale 50
-	width 50text%
+	width 100text%
 
 \end_inset
 
@@ -749,6 +769,8 @@ git
 
 \begin_layout Standard
 git is a version control system.
+ It allows you keep a history of a file its content in time.
+ It is the more convenient alternative of making copies before each modification.
 \end_layout
 
 \begin_layout Standard
@@ -758,6 +780,104 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=4cm, semithick
+]   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tikzstyle{every state}=[]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[state] (A)              {main.cpp};   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[state] (B) [below of=A] {main.cpp};   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[state] (C) [below of=B] {main.cpp};   
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+path (A) edge [bend right] node {revision 1} (B)
+\end_layout
+
+\begin_layout Plain Layout
+
+      (B) edge [bend right] node {revision 2} (C)
+\end_layout
+
+\begin_layout Plain Layout
+
+  ; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Multiple versions of main.cpp.
+ git allows to always go back to each version of main
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Git-Logo-2Color.png
 	lyxscale 10
@@ -811,7 +931,10 @@ git clone https://github.com/[your_name]/[your_repository]
 \begin_layout Standard
 Replace '[your_name]' and '[your_repository]' by your GitHub username and
  the repository name.
- For example, to download this tutorial its repsoitory:
+ A new folder called '[your_repository]' is created where you should work
+ in.
+ For example, to download this tutorial its repository to a folder called
+ 'travis_cpp_tutorial':
 \end_layout
 
 \begin_layout Standard
@@ -827,11 +950,6 @@ git clone https://github.com/richelbilderbeek/travis_cpp_tutorial
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-A new folder called '[your_repository]' is created where you should work
- in.
 \end_layout
 
 \begin_layout Subsection
@@ -863,6 +981,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Qt_Creator_logo.png
 	width 25text%
@@ -909,6 +1028,13 @@ Project will have some defaults: GCC.
 
 \begin_layout Paragraph
 What is a Qt Creator project file?
+\begin_inset CommandInset label
+LatexCommand label
+name "par:What-is-a-Qt-Creator-project-file?"
+
+\end_inset
+
+
 \begin_inset Index idx
 status open
 
@@ -937,8 +1063,87 @@ status open
  file extension.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+Two big circles: 'C++ Project' and 'executable'
+\end_layout
+
+\begin_layout Plain Layout
+Within first circle: two smaller circles: .cpp and .h
+\end_layout
+
+\begin_layout Plain Layout
+Arrow from first to second circle with text 'compiler, linker'
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Overview of converting a C++ project to an executable
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+.cpp -- compiler --> .o
+\end_layout
+
+\begin_layout Plain Layout
+.h --(dotted line)--> same .o
+\end_layout
+
+\begin_layout Plain Layout
+.o -- linker --> executable
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+From files to executable
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 What is qmake?
+\begin_inset CommandInset label
+LatexCommand label
+name "par:What-is-qmake?"
+
+\end_inset
+
+
 \begin_inset Index idx
 status open
 
@@ -955,8 +1160,100 @@ qmake
 qmake is a tool to create makefiles.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+Two upper circles: '.pro' -> 'Makefile'
+\end_layout
+
+\begin_layout Plain Layout
+Two lower circles: '.cpp' and '.h', both -> to .pro, both dotted line to 'Makefile'
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+What qmake does
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+What is make?
+\begin_inset CommandInset label
+LatexCommand label
+name "par:What-is-make?"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+make
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+make is a tool that reads a makefile and creates an executable
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+'Makefile' --[make]> 'executable'
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+What make does
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 What is GCC?
+\begin_inset CommandInset label
+LatexCommand label
+name "par:What-is-GCC?"
+
+\end_inset
+
+
 \begin_inset Index idx
 status open
 
@@ -981,6 +1278,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/GNU_Compiler_Collection_logo.png
 	width 25text%
@@ -1009,6 +1307,13 @@ GCC logo
 
 \begin_layout Paragraph
 What is g++?
+\begin_inset CommandInset label
+LatexCommand label
+name "par:What-is-g++?"
+
+\end_inset
+
+
 \begin_inset Index idx
 status open
 
@@ -1027,6 +1332,13 @@ g++ is the C++ compiler that is part of the GCC.
 
 \begin_layout Paragraph
 What is C++98?
+\begin_inset CommandInset label
+LatexCommand label
+name "par:What-is-C++98?"
+
+\end_inset
+
+
 \begin_inset Index idx
 status open
 
@@ -1067,6 +1379,13 @@ Create the build bash scripts
 
 \begin_layout Paragraph
 What is bash?
+\begin_inset CommandInset label
+LatexCommand label
+name "par:What-is-bash?"
+
+\end_inset
+
+
 \begin_inset Index idx
 status open
 
@@ -1095,89 +1414,99 @@ name "sec:travis_qmake_gcc_cpp98"
 \end_layout
 
 \begin_layout Standard
-The basic build has the following specs:
+This basic build consists of a 'Hello World' program, written in C++98.
+ It uses the Qt Creator default settings: Qt Creator will create a Qt Creator
+ project file, which in turn will use GCC.
 \end_layout
 
 \begin_layout Itemize
-Build system: qmake 
+What is a C++98 'Hello world' program? See chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:A-C++98-Hello-World-Program"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-C++ compiler: gcc 
+The Travis build file.
+ See chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98-travis.yml"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-C++ version: C++98 
+The build script.
+ See chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Libraries: STL only 
+The Qt Creator project file.
+ See chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98.pro"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Code coverage: none 
+The source file.
+ See chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98-main.cpp"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Source: one single file, main.cpp
-\end_layout
+\begin_layout Subsection
+What is a C++98 'Hello world' program?
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:A-C++98-Hello-World-Program"
 
-\begin_layout Itemize
-Functionality: Show the text 'Hello world' on screen
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-First I will show the single C++ file this build is about:
+A 'Hello World' program shows the text 'Hello world' on the screen.
+ It is a minimal program.
+ Its purpose is to show that all machinery is in place to create an executable
+ from C++ source code.
+ 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98/main.cpp"
-lstparams "breaklines=true,language={C++}"
+A listing of a 'Hello world' program is shown at algorithm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:travis_qmake_gcc_cpp98-main.cpp"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-main.cpp
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-All the code does is display the text 'Hello world'
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-Hello world
-\end_layout
-
-\end_inset
-
-, which is a traditional start for many programming languages.
- In more details:
+.
+ Here I go through each line:
 \end_layout
 
 \begin_layout Itemize
@@ -1228,294 +1557,47 @@ n";
 Show the text 'Hello world' on screen and go to the next line
 \end_layout
 
+\begin_layout Subsection
+The Travis file
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp98-travis.yml"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-The code is written in C++98
+Travis CI is set up by a file called '.travis.yml'.
+ The filename starts with a dot, which means it is a hidden file on UNIX
+ systems.
+ The extension 'yml'
 \begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
-C++98
+yml
+\end_layout
+
+\end_inset
+
+ is an abbreviation of 'Yet another Markup Language'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Yet Another Markup Language
 \end_layout
 
 \end_inset
 
 .
- It does not use features from the newer C++ standards, but can be compiled
- under these newer standards.
- It will not compile under plain C.
 \end_layout
 
 \begin_layout Standard
-This single file is compiled with qmake from the following Qt Creator project
- file
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-Qt Creator project file
-\end_layout
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98/travis_qmake_gcc_cpp98.pro"
-lstparams "breaklines=true,language={C++}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-travis_qmake_gcc_cpp98.pro
-\begin_inset CommandInset label
-LatexCommand label
-name "alg:travis_qmake_gcc_cpp98.pro"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This Qt Creator project file has the following elements
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-TEMPLATE = app
-\end_layout
-
-\begin_layout Plain Layout
-
-CONFIG += console
-\end_layout
-
-\begin_layout Plain Layout
-
-CONFIG -= app_bundle qt
-\end_layout
-
-\end_inset
-
-This is a typical setup for a standard console application
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-SOURCES += main.cpp
-\end_layout
-
-\end_inset
-
-The file 'main.cpp' is a source file, that has to be compiled
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
-\end_layout
-
-\end_inset
-
-The project is checked with all warnings ('-Wall'), with extra warnings
- ('-Wextra') and with the Effective C++ advices ('-Weffc++') enforced.
- A warning is treated as an error ('-Werror').
- This forces you to write tidy code.
-\end_layout
-
-\begin_layout Standard
-The bash build script to build this is:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98/build.sh"
-lstparams "breaklines=true,language={bash}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-build.sh
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This build script calls 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-#!/bin/bash
-\end_layout
-
-\end_inset
-
-This line indicates the script is a bash script
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-qmake
-\end_layout
-
-\end_inset
-
-'qmake'
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-qmake
-\end_layout
-
-\end_inset
-
- is called to create a makefile
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-Makefile
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-make
-\end_layout
-
-\end_inset
-
-'make'
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-make
-\end_layout
-
-\end_inset
-
- is called to compile the makefile
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-./travis_qmake_gcc_cpp98
-\end_layout
-
-\end_inset
-
-The created executable 'travis_qmake_gcc_cpp98' is run
-\end_layout
-
-\begin_layout Standard
-There is a potential error in the first and last step: the Qt Creator project
- file may be incorrect, or the executable will crash, possibly due to a
- failed test.
-\end_layout
-
-\begin_layout Standard
-Setting up Travis is done by the following .travis.yml
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-the filename starts with a dot.
- This means it is a hidden file
-\end_layout
-
-\end_inset
-
- file:
+The '.travis.yml' file to build and run a 'Hello world' program looks like
+ this:
 \end_layout
 
 \begin_layout Standard
@@ -1584,7 +1666,14 @@ compiler: gcc
 
 \end_inset
 
-The C++ code will be compiled by the GCC
+The C++ code will be compiled by the GCC (What is GCC? See chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:What-is-GCC?"
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Itemize
@@ -1594,13 +1683,487 @@ status open
 
 \begin_layout Plain Layout
 
-script: ./build.sh
+script: 
+\end_layout
+
+\begin_layout Plain Layout
+
+  - ./build.sh
+\end_layout
+
+\begin_layout Plain Layout
+
+  - ./travis_qmake_gcc_cpp98
 \end_layout
 
 \end_inset
 
 The script that Travis will run.
- In this case, it will execute the 'build.sh' bash script.
+ In this case, it will execute the 'build.sh' bash script, that should build
+ the excutable.
+ Then, the (hopefully) created executable called 'travis_qmake_gcc_cpp98'
+ is run
+\end_layout
+
+\begin_layout Standard
+This build script can fail in in two places:
+\end_layout
+
+\begin_layout Enumerate
+The bash script can fail, which is discussed in chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The executable can return an error code.
+ A 'Hello World' program is intended to return the error code for 'everything
+ went fine'.
+ Other programs in this tutorial return error codes depending on test cases.
+ It may also be that dynamically linked libraries cannot be found, which
+ crashes the program at startup
+\end_layout
+
+\begin_layout Subsection
+The build bash script
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp98-build.sh"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bash build script used to build the executable of a 'Hello world' program
+ looks like this:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98/build.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This build script calls: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#!/bin/bash
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+#!/bin/bash
+\end_layout
+
+\end_inset
+
+This line indicates the script is a bash script.
+ The '#!', (also called the 'shebang'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+shebang
+\end_layout
+
+\end_inset
+
+) is a directive to use the executable at the absolute path following it.
+ In this script, 'bash' is used, which resides in the '/bin' folder
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+qmake
+\end_layout
+
+\end_inset
+
+'qmake'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+qmake
+\end_layout
+
+\end_inset
+
+ is called to create a makefile
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Makefile
+\end_layout
+
+\end_inset
+
+ (What is 'qmake'? See chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:What-is-qmake?"
+
+\end_inset
+
+) from the only Qt Creator project file.
+ In this build, the name of this project file is ommitted, as there is only
+ one, but there are chapters in this tutorial where the project name is
+ mentioned explicitly
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+make
+\end_layout
+
+\end_inset
+
+'make'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+make
+\end_layout
+
+\end_inset
+
+ is called to compile the makefile (What is 'make'? See chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:What-is-make?"
+
+\end_inset
+
+).
+ In this build, 'make' is called without any arguments, but there are chapters
+ in this tutorial where 'make' is called with arguments
+\end_layout
+
+\begin_layout Standard
+This bash script can fail in two places: 
+\end_layout
+
+\begin_layout Enumerate
+If the Qt Creator project file is incorrectly formed, 'qmake' will fail,
+ and as it cannot create a valid makefile
+\end_layout
+
+\begin_layout Enumerate
+If the Qt Creator project file is incomplete (for example: by omitting libraries
+), 'make' will fail.
+ 'qmake' has created a makefile, after which 'make' finds out that it cannot
+ create an executable with that makefile
+\end_layout
+
+\begin_layout Subsection
+Qt Creator project file
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp98.pro"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following Qt Creator project file is used in this 'Hello world' build:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98/travis_qmake_gcc_cpp98.pro"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+travis_qmake_gcc_cpp98.pro
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98.pro"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This Qt Creator project file has the following elements:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SOURCES += main.cpp
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SOURCES
+\end_layout
+
+\end_inset
+
+The file 'main.cpp' is a source file, that has to be compiled
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+QMAKE_CXXFLAGS
+\end_layout
+
+\end_inset
+
+The project is checked with all warnings ('-Wall'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+-Wall
+\end_layout
+
+\end_inset
+
+), with extra warnings ('-Wextra'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+-Wextra
+\end_layout
+
+\end_inset
+
+) and with the Effective C++ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "meyers2005effective"
+
+\end_inset
+
+ advices ('-Weffc++'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+-Weffc++
+\end_layout
+
+\end_inset
+
+) enforced.
+ A warning is treated as an error ('-Werror'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+-Werror
+\end_layout
+
+\end_inset
+
+).
+ This forces you (and your collaborators) to write tidy code.
+\end_layout
+
+\begin_layout Subsection
+C++ source file
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp98-main.cpp"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The single C++ source file used in this 'Hello world' build is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98/main.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+main.cpp
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98-main.cpp"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All the code does is display the text 'Hello world'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Hello world
+\end_layout
+
+\end_inset
+
+, which is a traditional start for many programming languages.
+ See 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:A-C++98-Hello-World-Program"
+
+\end_inset
+
+ for a line-by-line explanation.
+ The code is written in C++98 (What is C++98? See chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:What-is-C++98?"
+
+\end_inset
+
+).
+ It does not use features from the newer C++ standards, but can be compiled
+ under these newer standards.
+ It will not compile under plain C.
 \end_layout
 
 \begin_layout Section
@@ -1617,6 +2180,10 @@ name "sec:Extending-the-build-by-one-step"
 \begin_layout Standard
 The following chapter describe how to extend the build in one direction.
  These are:
+\end_layout
+
+\begin_layout Itemize
+Use a debug and release build: see chapter 
 \end_layout
 
 \begin_layout Itemize
@@ -1705,6 +2272,10 @@ reference "sub:travis_qmake_gcc_cpp98_qt"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+Use of QTest: see chapter
 \end_layout
 
 \begin_layout Itemize
@@ -2484,6 +3055,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Boost_logo.png
 	width 25text%
@@ -2833,6 +3405,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/LLVM_Logo.svg
 	lyxscale 25
@@ -3160,6 +3733,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Codecov.png
 	width 25text%
@@ -3906,6 +4480,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Qt_logo_2015.svg
 	lyxscale 10
@@ -4204,6 +4779,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Rlogo.png
 	lyxscale 10
@@ -4964,6 +5540,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/SFML Logo.svg
 	width 25text%
@@ -5276,6 +5853,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/Urho3D_logo.png
 	lyxscale 50
@@ -5371,6 +5949,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/travis_qmake_gcc_cpp98_urho3d.png
 	lyxscale 50
@@ -5597,6 +6176,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/WtLogo.png
 	lyxscale 50
@@ -5891,6 +6471,543 @@ reference "sub:travis_qmake_gcc_cpp14_boost"
 \end_layout
 
 \begin_layout Subsection
+Qt and QTest
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Qt-and-QTest"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This build is about a Qt dialog.
+ and test if it closes.
+\end_layout
+
+\begin_layout Subsubsection
+What is QTest?
+\end_layout
+
+\begin_layout Standard
+QTest is the Qt testing framework
+\end_layout
+
+\begin_layout Subsubsection
+The Travis file
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_qt_qtest/.travis.yml"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+.travis.yml
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Creates a testing executable, runs it, then creates a normal executable.
+ The normal executable is not run, as it requires user input.
+ This means that on Travis CI, it would run forever, wouldn't Travis CI
+ detect this and indicate a failure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+https://docs.travis-ci.com/user/gui-and-headless-browsers
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The build bash scrips
+\end_layout
+
+\begin_layout Standard
+Building the test:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_qt_qtest/build_test.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build_test.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Building the normal executable:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_qt_qtest/build_normal.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build_normal.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The Qt Creator project files
+\end_layout
+
+\begin_layout Standard
+The test:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_qt_qtest/travis_qmake_gcc_cpp98_qt_qtest_test.pro"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+travis_qmake_gcc_cpp98_qt_qtest_test.pro
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98_qt_qtest_test"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The normal:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand verbatiminput
+filename "travis_qmake_gcc_cpp98_qt_qtest/travis_qmake_gcc_cpp98_qt_qtest.pro"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+travis_qmake_gcc_cpp98_qt_qtest.pro
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98_qt_qtest"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The source files
+\end_layout
+
+\begin_layout Standard
+These are the shared sources:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_qt_qtest/my_dialog.h"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+my_dialog.h
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98_qt_qtest-my_dialog.h"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_qt_qtest/my_dialog.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+my_dialog.cpp
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98_qt_qtest-my_dialog.cpp"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The main function of the normal executable:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_qt_qtest/qtmain.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+qtmain.cpp
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98_qt_qtest-qtmain.cpp"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The main function that starts the QTests:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_qt_qtest/qtmain_test.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+qtmain_test.cpp
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98_qt_qtest-qtmain_test.cpp"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The header file for the QTests:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_qt_qtest/my_dialog_test.h"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+my_dialog_test.h
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98_qt_qtest-my_dialog_test.h"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The implementation file for the QTests:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "travis_qmake_gcc_cpp98_qt_qtest/my_dialog_test.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+my_dialog_test.cpp
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:travis_qmake_gcc_cpp98_qt_qtest-my_dialog_test.cpp"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 C++11 and Boost libraries
 \begin_inset CommandInset label
 LatexCommand label
@@ -6160,6 +7277,18 @@ name "sub:travis_qmake_gcc_cpp11_boost_test"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Boost.Test works great for console applications.
+ If you use a GUI library like Qt, using QTest is easier (see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Qt-and-QTest"
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Standard
@@ -11078,6 +12207,17 @@ status open
 \begin_layout Plain Layout
 TODO
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "travis_cpp_tutorial"
+options "bibtotoc,plain"
 
 \end_inset
 
