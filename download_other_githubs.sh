@@ -1,4 +1,5 @@
 #!/bin/bash
+cd ..
 git clone https://github.com/richelbilderbeek/travis_qmake_clang_cpp98
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_bpp

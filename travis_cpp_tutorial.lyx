@@ -1610,7 +1610,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98/.travis.yml"
+filename "../travis_qmake_gcc_cpp98/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -1755,7 +1755,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98/build.sh"
+filename "../travis_qmake_gcc_cpp98/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -1941,7 +1941,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98/travis_qmake_gcc_cpp98.pro"
+filename "../travis_qmake_gcc_cpp98/travis_qmake_gcc_cpp98.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -2101,7 +2101,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98/main.cpp"
+filename "../travis_qmake_gcc_cpp98/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -2409,7 +2409,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11/main.cpp"
+filename "../travis_qmake_gcc_cpp11/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -2455,7 +2455,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11/travis_qmake_gcc_cpp11.pro"
+filename "../travis_qmake_gcc_cpp11/travis_qmake_gcc_cpp11.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -2576,7 +2576,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11/build.sh"
+filename "../travis_qmake_gcc_cpp11/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -2626,7 +2626,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11/.travis.yml"
+filename "../travis_qmake_gcc_cpp11/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -2804,7 +2804,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp14/main.cpp"
+filename "../travis_qmake_gcc_cpp14/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -2848,7 +2848,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp14/travis_qmake_gcc_cpp14.pro"
+filename "../travis_qmake_gcc_cpp14/travis_qmake_gcc_cpp14.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -2921,7 +2921,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp14/build.sh"
+filename "../travis_qmake_gcc_cpp14/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -2971,7 +2971,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp14/.travis.yml"
+filename "../travis_qmake_gcc_cpp14/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -3124,7 +3124,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_boost/main.cpp"
+filename "../travis_qmake_gcc_cpp98_boost/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -3169,7 +3169,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_boost/travis_qmake_gcc_cpp98_boost.pro"
+filename "../travis_qmake_gcc_cpp98_boost/travis_qmake_gcc_cpp98_boost.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -3227,7 +3227,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_boost/build.sh"
+filename "../travis_qmake_gcc_cpp98_boost/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -3277,7 +3277,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_boost/.travis.yml"
+filename "../travis_qmake_gcc_cpp98_boost/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -3475,7 +3475,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_clang_cpp98/main.cpp"
+filename "../travis_qmake_clang_cpp98/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -3519,7 +3519,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_clang_cpp98/travis_qmake_clang_cpp98.pro"
+filename "../travis_qmake_clang_cpp98/travis_qmake_clang_cpp98.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -3577,7 +3577,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_clang_cpp98/build.sh"
+filename "../travis_qmake_clang_cpp98/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -3627,7 +3627,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_clang_cpp98/.travis.yml"
+filename "../travis_qmake_clang_cpp98/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -3970,7 +3970,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_gcov/do_magic.h"
+filename "../travis_qmake_gcc_cpp98_gcov/do_magic.h"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -4009,7 +4009,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_gcov/do_magic.cpp"
+filename "../travis_qmake_gcc_cpp98_gcov/do_magic.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -4052,7 +4052,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_gcov/main.cpp"
+filename "../travis_qmake_gcc_cpp98_gcov/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -4096,7 +4096,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_gcov/travis_qmake_gcc_cpp98_gcov.pro"
+filename "../travis_qmake_gcc_cpp98_gcov/travis_qmake_gcc_cpp98_gcov.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -4146,7 +4146,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_gcov/main_gcov.cpp"
+filename "../travis_qmake_gcc_cpp98_gcov/main_gcov.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -4190,7 +4190,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_gcov/travis_qmake_gcc_cpp98_gcov_gcov.pro"
+filename "../travis_qmake_gcc_cpp98_gcov/travis_qmake_gcc_cpp98_gcov_gcov.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -4270,7 +4270,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_gcov/build.sh"
+filename "../travis_qmake_gcc_cpp98_gcov/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -4347,7 +4347,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_gcov/.travis.yml"
+filename "../travis_qmake_gcc_cpp98_gcov/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -4550,7 +4550,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_qt/main.cpp"
+filename "../travis_qmake_gcc_cpp98_qt/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -4594,7 +4594,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_qt/travis_qmake_gcc_cpp98_qt.pro"
+filename "../travis_qmake_gcc_cpp98_qt/travis_qmake_gcc_cpp98_qt.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -4652,7 +4652,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_qt/build.sh"
+filename "../travis_qmake_gcc_cpp98_qt/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -4702,7 +4702,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_qt/.travis.yml"
+filename "../travis_qmake_gcc_cpp98_qt/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -5003,7 +5003,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_rcpp/src/do_magic_cpp.h"
+filename "../travis_qmake_gcc_cpp98_rcpp/src/do_magic_cpp.h"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -5048,7 +5048,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_rcpp/src/do_magic_cpp.cpp"
+filename "../travis_qmake_gcc_cpp98_rcpp/src/do_magic_cpp.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -5098,7 +5098,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_rcpp/main.cpp"
+filename "../travis_qmake_gcc_cpp98_rcpp/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -5146,7 +5146,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_rcpp/domagic.pro"
+filename "../travis_qmake_gcc_cpp98_rcpp/domagic.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -5215,7 +5215,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_rcpp/build_cpp.sh"
+filename "../travis_qmake_gcc_cpp98_rcpp/build_cpp.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -5269,7 +5269,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_rcpp/R/do_magic_r.R"
+filename "../travis_qmake_gcc_cpp98_rcpp/R/do_magic_r.R"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -5324,7 +5324,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_rcpp/tests/testthat/test-do_magic.R"
+filename "../travis_qmake_gcc_cpp98_rcpp/tests/testthat/test-do_magic.R"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -5381,7 +5381,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_rcpp/install_r_packages.R"
+filename "../travis_qmake_gcc_cpp98_rcpp/install_r_packages.R"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -5424,7 +5424,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_rcpp/.travis.yml"
+filename "../travis_qmake_gcc_cpp98_rcpp/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -5609,7 +5609,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_sfml/main.cpp"
+filename "../travis_qmake_gcc_cpp98_sfml/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -5654,7 +5654,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_sfml/travis_qmake_gcc_cpp98_sfml.pro"
+filename "../travis_qmake_gcc_cpp98_sfml/travis_qmake_gcc_cpp98_sfml.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -5712,7 +5712,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_sfml/build.sh"
+filename "../travis_qmake_gcc_cpp98_sfml/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -5762,7 +5762,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_sfml/.travis.yml"
+filename "../travis_qmake_gcc_cpp98_sfml/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -5992,7 +5992,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_urho3d/travis_qmake_gcc_cpp98_urho3d.pro"
+filename "../travis_qmake_gcc_cpp98_urho3d/travis_qmake_gcc_cpp98_urho3d.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -6050,7 +6050,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_urho3d/build.sh"
+filename "../travis_qmake_gcc_cpp98_urho3d/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -6100,7 +6100,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_urho3d/.travis.yml"
+filename "../travis_qmake_gcc_cpp98_urho3d/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -6246,7 +6246,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_wt/main.cpp"
+filename "../travis_qmake_gcc_cpp98_wt/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -6291,7 +6291,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_wt/travis_qmake_gcc_cpp98_wt.pro"
+filename "../travis_qmake_gcc_cpp98_wt/travis_qmake_gcc_cpp98_wt.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -6349,7 +6349,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_wt/build.sh"
+filename "../travis_qmake_gcc_cpp98_wt/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -6399,7 +6399,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_wt/.travis.yml"
+filename "../travis_qmake_gcc_cpp98_wt/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -6508,7 +6508,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_qt_qtest/.travis.yml"
+filename "../travis_qmake_gcc_cpp98_qt_qtest/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -6571,7 +6571,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_qt_qtest/build_test.sh"
+filename "../travis_qmake_gcc_cpp98_qt_qtest/build_test.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -6610,7 +6610,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_qt_qtest/build_normal.sh"
+filename "../travis_qmake_gcc_cpp98_qt_qtest/build_normal.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -6653,7 +6653,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_qt_qtest/travis_qmake_gcc_cpp98_qt_qtest_test.pro"
+filename "../travis_qmake_gcc_cpp98_qt_qtest/travis_qmake_gcc_cpp98_qt_qtest_test.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -6699,7 +6699,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp98_qt_qtest/travis_qmake_gcc_cpp98_qt_qtest.pro"
+filename "../travis_qmake_gcc_cpp98_qt_qtest/travis_qmake_gcc_cpp98_qt_qtest.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -6749,7 +6749,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_qt_qtest/my_dialog.h"
+filename "../travis_qmake_gcc_cpp98_qt_qtest/my_dialog.h"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -6791,7 +6791,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_qt_qtest/my_dialog.cpp"
+filename "../travis_qmake_gcc_cpp98_qt_qtest/my_dialog.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -6837,7 +6837,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_qt_qtest/qtmain.cpp"
+filename "../travis_qmake_gcc_cpp98_qt_qtest/qtmain.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -6883,7 +6883,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_qt_qtest/qtmain_test.cpp"
+filename "../travis_qmake_gcc_cpp98_qt_qtest/qtmain_test.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -6929,7 +6929,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_qt_qtest/my_dialog_test.h"
+filename "../travis_qmake_gcc_cpp98_qt_qtest/my_dialog_test.h"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -6975,7 +6975,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp98_qt_qtest/my_dialog_test.cpp"
+filename "../travis_qmake_gcc_cpp98_qt_qtest/my_dialog_test.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7072,7 +7072,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_boost/main.cpp"
+filename "../travis_qmake_gcc_cpp11_boost/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7117,7 +7117,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_boost/travis_qmake_gcc_cpp11_boost.pro"
+filename "../travis_qmake_gcc_cpp11_boost/travis_qmake_gcc_cpp11_boost.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7175,7 +7175,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_boost/build.sh"
+filename "../travis_qmake_gcc_cpp11_boost/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -7225,7 +7225,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_boost/.travis.yml"
+filename "../travis_qmake_gcc_cpp11_boost/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7516,7 +7516,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_boost_test/my_functions.h"
+filename "../travis_qmake_gcc_cpp11_boost_test/my_functions.h"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7561,7 +7561,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_boost_test/my_functions.cpp"
+filename "../travis_qmake_gcc_cpp11_boost_test/my_functions.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7611,7 +7611,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_boost_test/travis_qmake_gcc_cpp11_boost_test_test.pro"
+filename "../travis_qmake_gcc_cpp11_boost_test/travis_qmake_gcc_cpp11_boost_test_test.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7654,7 +7654,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_boost_test/main_test.cpp"
+filename "../travis_qmake_gcc_cpp11_boost_test/main_test.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7700,7 +7700,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_boost_test/my_functions_test.cpp"
+filename "../travis_qmake_gcc_cpp11_boost_test/my_functions_test.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7747,7 +7747,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_boost_test/main.cpp"
+filename "../travis_qmake_gcc_cpp11_boost_test/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7792,7 +7792,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_boost_test/travis_qmake_gcc_cpp11_boost_test.pro"
+filename "../travis_qmake_gcc_cpp11_boost_test/travis_qmake_gcc_cpp11_boost_test.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7847,7 +7847,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_boost_test/build.sh"
+filename "../travis_qmake_gcc_cpp11_boost_test/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -7895,7 +7895,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_boost_test/.travis.yml"
+filename "../travis_qmake_gcc_cpp11_boost_test/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7999,7 +7999,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_clang_cpp11/main.cpp"
+filename "../travis_qmake_clang_cpp11/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -8044,7 +8044,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_clang_cpp11/travis_qmake_clang_cpp11.pro"
+filename "../travis_qmake_clang_cpp11/travis_qmake_clang_cpp11.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -8102,7 +8102,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_clang_cpp11/build.sh"
+filename "../travis_qmake_clang_cpp11/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -8152,7 +8152,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_clang_cpp11/.travis.yml"
+filename "../travis_qmake_clang_cpp11/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -8424,7 +8424,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_gcov/do_magic.h"
+filename "../travis_qmake_gcc_cpp11_gcov/do_magic.h"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -8463,7 +8463,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_gcov/do_magic.cpp"
+filename "../travis_qmake_gcc_cpp11_gcov/do_magic.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -8506,7 +8506,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_gcov/main.cpp"
+filename "../travis_qmake_gcc_cpp11_gcov/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -8550,7 +8550,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_gcov/travis_qmake_gcc_cpp11_gcov.pro"
+filename "../travis_qmake_gcc_cpp11_gcov/travis_qmake_gcc_cpp11_gcov.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -8600,7 +8600,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_gcov/main_gcov.cpp"
+filename "../travis_qmake_gcc_cpp11_gcov/main_gcov.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -8644,7 +8644,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_gcov/travis_qmake_gcc_cpp11_gcov_gcov.pro"
+filename "../travis_qmake_gcc_cpp11_gcov/travis_qmake_gcc_cpp11_gcov_gcov.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -8724,7 +8724,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_gcov/build.sh"
+filename "../travis_qmake_gcc_cpp11_gcov/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -8801,7 +8801,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_gcov/.travis.yml"
+filename "../travis_qmake_gcc_cpp11_gcov/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -8940,7 +8940,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_qt/main.cpp"
+filename "../travis_qmake_gcc_cpp11_qt/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -8984,7 +8984,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_qt/travis_qmake_gcc_cpp11_qt.pro"
+filename "../travis_qmake_gcc_cpp11_qt/travis_qmake_gcc_cpp11_qt.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -9042,7 +9042,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_qt/build.sh"
+filename "../travis_qmake_gcc_cpp11_qt/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -9092,7 +9092,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_qt/.travis.yml"
+filename "../travis_qmake_gcc_cpp11_qt/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -9323,7 +9323,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_rcpp/src/do_magic_cpp.h"
+filename "../travis_qmake_gcc_cpp11_rcpp/src/do_magic_cpp.h"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -9370,7 +9370,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_rcpp/src/do_magic_cpp.cpp"
+filename "../travis_qmake_gcc_cpp11_rcpp/src/do_magic_cpp.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -9457,7 +9457,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_rcpp/main.cpp"
+filename "../travis_qmake_gcc_cpp11_rcpp/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -9505,7 +9505,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_rcpp/domagic.pro"
+filename "../travis_qmake_gcc_cpp11_rcpp/domagic.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -9683,7 +9683,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_rcpp/build_cpp.sh"
+filename "../travis_qmake_gcc_cpp11_rcpp/build_cpp.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -9745,7 +9745,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_rcpp/R/do_magic_r.R"
+filename "../travis_qmake_gcc_cpp11_rcpp/R/do_magic_r.R"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -9812,7 +9812,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_rcpp/tests/testthat/test-do_magic.R"
+filename "../travis_qmake_gcc_cpp11_rcpp/tests/testthat/test-do_magic.R"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -9865,7 +9865,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_rcpp/install_r_packages.R"
+filename "../travis_qmake_gcc_cpp11_rcpp/install_r_packages.R"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -9916,7 +9916,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_rcpp/.travis.yml"
+filename "../travis_qmake_gcc_cpp11_rcpp/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -10180,7 +10180,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_sfml/main.cpp"
+filename "../travis_qmake_gcc_cpp11_sfml/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -10224,7 +10224,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_sfml/travis_qmake_gcc_cpp11_sfml.pro"
+filename "../travis_qmake_gcc_cpp11_sfml/travis_qmake_gcc_cpp11_sfml.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -10282,7 +10282,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_sfml/build.sh"
+filename "../travis_qmake_gcc_cpp11_sfml/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -10332,7 +10332,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_sfml/.travis.yml"
+filename "../travis_qmake_gcc_cpp11_sfml/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -10425,7 +10425,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_urho3d/mastercontrol.cpp"
+filename "../travis_qmake_gcc_cpp11_urho3d/mastercontrol.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -10469,7 +10469,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_urho3d/travis_qmake_gcc_cpp11_urho3d.pro"
+filename "../travis_qmake_gcc_cpp11_urho3d/travis_qmake_gcc_cpp11_urho3d.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -10527,7 +10527,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_urho3d/build.sh"
+filename "../travis_qmake_gcc_cpp11_urho3d/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -10577,7 +10577,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_urho3d/.travis.yml"
+filename "../travis_qmake_gcc_cpp11_urho3d/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -10674,7 +10674,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_wt/main.cpp"
+filename "../travis_qmake_gcc_cpp11_wt/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -10718,7 +10718,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_wt/travis_qmake_gcc_cpp11_wt.pro"
+filename "../travis_qmake_gcc_cpp11_wt/travis_qmake_gcc_cpp11_wt.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -10776,7 +10776,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_wt/build.sh"
+filename "../travis_qmake_gcc_cpp11_wt/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -10826,7 +10826,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_wt/.travis.yml"
+filename "../travis_qmake_gcc_cpp11_wt/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -10920,7 +10920,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp14_boost/main.cpp"
+filename "../travis_qmake_gcc_cpp14_boost/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -10965,7 +10965,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp14_boost/travis_qmake_gcc_cpp14_boost.pro"
+filename "../travis_qmake_gcc_cpp14_boost/travis_qmake_gcc_cpp14_boost.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -11023,7 +11023,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp14_boost/build.sh"
+filename "../travis_qmake_gcc_cpp14_boost/build.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -11073,7 +11073,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp14_boost/.travis.yml"
+filename "../travis_qmake_gcc_cpp14_boost/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -11348,7 +11348,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp14_boost_test/my_functions.h"
+filename "../travis_qmake_gcc_cpp14_boost_test/my_functions.h"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -11393,7 +11393,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp14_boost_test/my_functions.cpp"
+filename "../travis_qmake_gcc_cpp14_boost_test/my_functions.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -11443,7 +11443,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp14_boost_test/travis_qmake_gcc_cpp14_boost_test_test.pro"
+filename "../travis_qmake_gcc_cpp14_boost_test/travis_qmake_gcc_cpp14_boost_test_test.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -11486,7 +11486,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp14_boost_test/main_test.cpp"
+filename "../travis_qmake_gcc_cpp14_boost_test/main_test.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -11532,7 +11532,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp14_boost_test/my_functions_test.cpp"
+filename "../travis_qmake_gcc_cpp14_boost_test/my_functions_test.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -11579,7 +11579,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp14_boost_test/main.cpp"
+filename "../travis_qmake_gcc_cpp14_boost_test/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -11624,7 +11624,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp14_boost_test/travis_qmake_gcc_cpp14_boost_test.pro"
+filename "../travis_qmake_gcc_cpp14_boost_test/travis_qmake_gcc_cpp14_boost_test.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -11679,7 +11679,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp14_boost_test/build_normal_release.sh"
+filename "../travis_qmake_gcc_cpp14_boost_test/build_normal_release.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -11718,7 +11718,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp14_boost_test/build_test.sh"
+filename "../travis_qmake_gcc_cpp14_boost_test/build_test.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -11761,7 +11761,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp14_boost_test/.travis.yml"
+filename "../travis_qmake_gcc_cpp14_boost_test/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -12062,7 +12062,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_boost_test_gcov/travis_qmake_gcc_cpp11_boost_test_gcov_test.pro"
+filename "../travis_qmake_gcc_cpp11_boost_test_gcov/travis_qmake_gcc_cpp11_boost_test_gcov_test.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -12126,7 +12126,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "travis_qmake_gcc_cpp11_boost_test_gcov/build_test.sh"
+filename "../travis_qmake_gcc_cpp11_boost_test_gcov/build_test.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -12174,7 +12174,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "travis_qmake_gcc_cpp11_boost_test_gcov/.travis.yml"
+filename "../travis_qmake_gcc_cpp11_boost_test_gcov/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
