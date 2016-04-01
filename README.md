@@ -7,8 +7,6 @@
 
 Tutorial how to use Travis CI with C++.
 
-
-
 Statuses of the repositories used that are successfull, or that I haven't done yet:
 
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp98.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp98) [travis_qmake_clang_cpp98](https://github.com/richelbilderbeek/travis_qmake_clang_cpp98)
@@ -95,6 +93,7 @@ In alphabetical order
  * GitHub: GitHub is a site where git repositories are hosted. It gives a git project a website where the files can be viewed. Next to this, there is a project page for issues like bug reports and feature requests
  * gprof: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
  * Qt: a C++ GUI library
+ * QTest: the Qt testing framework
  * Rcpp: Rcpp is an R package that allows mixing R and C++ code
  * Rcpp11: Rcpp is an R package that allows mixing R and C++11 code
  * SFML: a C++ multimedia library

@@ -6482,8 +6482,57 @@ name "sub:Qt-and-QTest"
 \end_layout
 
 \begin_layout Standard
-This build is about a Qt dialog.
- and test if it closes.
+This build is about a Qt dialog that displays an image (using a Qt resource).
+ When the key 'x' is pressed, it should close.
+\end_layout
+
+\begin_layout Standard
+The normal build is just that application.
+ 
+\end_layout
+
+\begin_layout Standard
+The test build tests if the application indeed closes upon a press of the
+ 'x' key.
+ Its primary output is test report.
+ During the test, the dialog will show up shortly.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/p230198/GitHubs/travis_qmake_gcc_cpp98_qt_qtest/travis_qmake_gcc_cpp98_qt_qtest.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The application
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -6492,6 +6541,33 @@ What is QTest?
 
 \begin_layout Standard
 QTest is the Qt testing framework
+\end_layout
+
+\begin_layout Subsubsection
+Do not use Boost.Test to test graphical Qt aplications
+\end_layout
+
+\begin_layout Standard
+The Boost.Test library (see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp11_boost_test"
+
+\end_inset
+
+) works great with console (that is: non-graphical) applications.
+ But is is tedious to let it test graphical Qt classes.
+ 
+\end_layout
+
+\begin_layout Standard
+Why is this tedious? Because Qt has its own Qt way, that works best in that
+ way.
+ QTest will process the QApplication event queue and have many priviliges.
+ Using Boost.Test will make you reponsible to do yourself what Qt normally
+ does for you in the back, such as emptying the QApplication event queue.
+ Next to this, you will have to make some member functions public (e.g.
+ keyPressEvent) to allow your tests to use these.
 \end_layout
 
 \begin_layout Subsubsection
@@ -6534,23 +6610,33 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Standard
-Creates a testing executable, runs it, then creates a normal executable.
- The normal executable is not run, as it requires user input.
- This means that on Travis CI, it would run forever, wouldn't Travis CI
- detect this and indicate a failure.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
+Because this application uses graphics, we need to start a virtual X server
+ on Travis CI (see 
+\begin_inset Flex URL
+status collapsed
 
 \begin_layout Plain Layout
+
 https://docs.travis-ci.com/user/gui-and-headless-browsers
 \end_layout
 
 \end_inset
 
+), before the tests run.
+ 
+\end_layout
 
+\begin_layout Standard
+In the script, the testing executable is created and run.
+ The test results will be visible in Travis CI.
+ 
+\end_layout
+
+\begin_layout Standard
+After the test, the normal executable is created.
+ The normal executable is not run, as it requires user input.
+ This means that on Travis CI, it would run forever, wouldn't Travis CI
+ detect this and indicate a failure.
 \end_layout
 
 \begin_layout Subsubsection
@@ -6558,7 +6644,9 @@ The build bash scrips
 \end_layout
 
 \begin_layout Standard
-Building the test:
+There need to be two bash scripts, one for building the testing executable,
+ one for building the normal program.
+ Both are as short as can be:
 \end_layout
 
 \begin_layout Standard
@@ -6594,10 +6682,6 @@ build_test.sh
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Building the normal executable:
 \end_layout
 
 \begin_layout Standard
@@ -6640,7 +6724,14 @@ The Qt Creator project files
 \end_layout
 
 \begin_layout Standard
-The test:
+There need to be two Qt Creator scripts, one for building the testing executable
+, one for building the normal program.
+ Both are as short as can be.
+ The only difference is that the testing project file uses 'QT += testlib'.
+\end_layout
+
+\begin_layout Standard
+Test:
 \end_layout
 
 \begin_layout Standard
@@ -6686,7 +6777,7 @@ name "alg:travis_qmake_gcc_cpp98_qt_qtest_test"
 \end_layout
 
 \begin_layout Standard
-The normal:
+Normal:
 \end_layout
 
 \begin_layout Standard
@@ -6735,8 +6826,12 @@ name "alg:travis_qmake_gcc_cpp98_qt_qtest"
 The source files
 \end_layout
 
+\begin_layout Paragraph
+The dialog
+\end_layout
+
 \begin_layout Standard
-These are the shared sources:
+This is the source of dialog:
 \end_layout
 
 \begin_layout Standard
@@ -6782,6 +6877,10 @@ name "alg:travis_qmake_gcc_cpp98_qt_qtest-my_dialog.h"
 \end_layout
 
 \begin_layout Standard
+The only added line, is the 'keyPressEvent'.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float algorithm
 placement H
 wide false
@@ -6824,7 +6923,15 @@ name "alg:travis_qmake_gcc_cpp98_qt_qtest-my_dialog.cpp"
 \end_layout
 
 \begin_layout Standard
-The main function of the normal executable:
+Here we can see that when 'x' is pressed, the application will close.
+\end_layout
+
+\begin_layout Paragraph
+The main function of the normal executable
+\end_layout
+
+\begin_layout Standard
+Most graphical Qt applications have this main function:
 \end_layout
 
 \begin_layout Standard
@@ -6870,7 +6977,17 @@ name "alg:travis_qmake_gcc_cpp98_qt_qtest-qtmain.cpp"
 \end_layout
 
 \begin_layout Standard
-The main function that starts the QTests:
+This main is given as default when creating a new graphical Qt application.
+\end_layout
+
+\begin_layout Paragraph
+The main function of the testing executable
+\end_layout
+
+\begin_layout Standard
+The QTest framework collects all tests and calls these within a QTest-generated
+ main function.
+ This leaves us little left to write (which is awesome):
 \end_layout
 
 \begin_layout Standard
@@ -6915,8 +7032,13 @@ name "alg:travis_qmake_gcc_cpp98_qt_qtest-qtmain_test.cpp"
 
 \end_layout
 
+\begin_layout Paragraph
+The class for the tests
+\end_layout
+
 \begin_layout Standard
-The header file for the QTests:
+Here comes in the QTest architecture: for each test suite we will have to
+ create a class:
 \end_layout
 
 \begin_layout Standard
@@ -6962,7 +7084,24 @@ name "alg:travis_qmake_gcc_cpp98_qt_qtest-my_dialog_test.h"
 \end_layout
 
 \begin_layout Standard
-The implementation file for the QTests:
+Here we create a class called 'my_dialog_test'.
+ The fit into the QTest framework each test suite
+\end_layout
+
+\begin_layout Itemize
+must be a derived class from QObject
+\end_layout
+
+\begin_layout Itemize
+the header file must include the 'QtTest' header file
+\end_layout
+
+\begin_layout Standard
+where each member function is a tests.
+\end_layout
+
+\begin_layout Standard
+The implementation of each test can be seen in the implementation file:
 \end_layout
 
 \begin_layout Standard
@@ -7005,6 +7144,13 @@ name "alg:travis_qmake_gcc_cpp98_qt_qtest-my_dialog_test.cpp"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The 'QVERIFY' macro is used by the QTest framework to do a single check,
+ which will end up in the test report.
+ The QTest has some priviliges, as it can directly click keys on the form,
+ also when the 'keyPressEvent' isn't public.
 \end_layout
 
 \begin_layout Subsection
