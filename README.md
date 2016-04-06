@@ -118,7 +118,12 @@ In alphabetical order
  * [![Build Status](https://travis-ci.org/richelbilderbeek/BoostGraphTutorial.svg?branch=master)](https://travis-ci.org/richelbilderbeek/BoostGraphTutorial) [BoostGraphTutorial](https://github.com/richelbilderbeek/BoostGraphTutorial)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/Brainweaver.svg?branch=master)](https://travis-ci.org/richelbilderbeek/Brainweaver) [Brainweaver](https://github.com/richelbilderbeek/Brainweaver)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/CaesarCipher.svg?branch=master)](https://travis-ci.org/richelbilderbeek/CaesarCipher) [CaesarCipher](https://github.com/richelbilderbeek/CaesarCipher)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/CellularAutomatonZero.svg?branch=master)](https://travis-ci.org/richelbilderbeek/CellularAutomatonZero) [CellularAutomatonZero](https://github.com/richelbilderbeek/CellularAutomatonZero)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/CityOfThieves.svg?branch=master)](https://travis-ci.org/richelbilderbeek/CityOfThieves) [CityOfThieves](https://github.com/richelbilderbeek/CityOfThieves)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/CodeToHtml.svg?branch=master)](https://travis-ci.org/richelbilderbeek/CodeToHtml) [CodeToHtml](https://github.com/richelbilderbeek/CodeToHtml)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/ConnectThree.svg?branch=master)](https://travis-ci.org/richelbilderbeek/ConnectThree) [ConnectThree](https://github.com/richelbilderbeek/ConnectThree)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/Corridor.svg?branch=master)](https://travis-ci.org/richelbilderbeek/Corridor) [Corridor](https://github.com/richelbilderbeek/Corridor)
+ * Now only a selection of my GitHubs...
  * [![Build Status](https://travis-ci.org/richelbilderbeek/DasWahreSchlagerfest.svg?branch=master)](https://travis-ci.org/richelbilderbeek/DasWahreSchlagerfest) [DasWahreSchlagerfest](https://github.com/richelbilderbeek/DasWahreSchlagerfest)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/distancer.svg?branch=master)](https://travis-ci.org/richelbilderbeek/distancer) [distancer](https://github.com/richelbilderbeek/distancer)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/FunctionPlotter.svg?branch=master)](https://travis-ci.org/richelbilderbeek/FunctionPlotter) [FunctionPlotter](https://github.com/richelbilderbeek/FunctionPlotter)
