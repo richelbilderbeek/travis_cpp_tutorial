@@ -7,6 +7,7 @@ before_install:
 install:
   - sudo apt-get install -qq lyx
   - sudo apt-get install -qq texlive
+  - sudo apt-get install -qq texlive-fonts-extra
   - sudo apt-get install -qq pgf
   - sudo apt-get install -qq graphviz
   - sudo apt-get install -qq qtikz
