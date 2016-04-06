@@ -123,6 +123,7 @@ In alphabetical order
  * [![Build Status](https://travis-ci.org/richelbilderbeek/distancer.svg?branch=master)](https://travis-ci.org/richelbilderbeek/distancer) [distancer](https://github.com/richelbilderbeek/distancer)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/FunctionPlotter.svg?branch=master)](https://travis-ci.org/richelbilderbeek/FunctionPlotter) [FunctionPlotter](https://github.com/richelbilderbeek/FunctionPlotter)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/InvestigateMyClickWinners.svg?branch=master)](https://travis-ci.org/richelbilderbeek/InvestigateMyClickWinners) [InvestigateMyClickWinners](https://github.com/richelbilderbeek/InvestigateMyClickWinners)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/Pixelator.svg?branch=master)](https://travis-ci.org/richelbilderbeek/Pixelator) [Pixelator](https://github.com/richelbilderbeek/Pixelator)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/PreDickAdvocaTor.svg?branch=master)](https://travis-ci.org/richelbilderbeek/PreDickAdvocaTor) [PreDickAdvocaTor](https://github.com/richelbilderbeek/PreDickAdvocaTor)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/RibiClasses.svg?branch=master)](https://travis-ci.org/richelbilderbeek/RibiClasses) [RibiClasses](https://github.com/richelbilderbeek/RibiClasses)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/RosindellEtAl2008.svg?branch=master)](https://travis-ci.org/richelbilderbeek/RosindellEtAl2008) [RosindellEtAl2008](https://github.com/richelbilderbeek/RosindellEtAl2008)
@@ -137,5 +138,4 @@ In alphabetical order
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_r_tutorial.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_r_tutorial) [travis_r_tutorial](https://github.com/richelbilderbeek/travis_r_tutorial)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/VijfJaarRichel.svg?branch=master)](https://travis-ci.org/richelbilderbeek/VijfJaarRichel) [VijfJaarRichel](https://github.com/richelbilderbeek/VijfJaarRichel)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/Zork.svg?branch=master)](https://travis-ci.org/richelbilderbeek/Zork) [Zork](https://github.com/richelbilderbeek/Zork)
-
  * [many more]
