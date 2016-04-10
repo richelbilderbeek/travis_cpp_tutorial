@@ -4363,162 +4363,6 @@ reference "sec:travis_qmake_gcc_cpp98"
  
 \end_layout
 
-\begin_layout Standard
-This will be a more complex build, consisting of two projects:
-\end_layout
-
-\begin_layout Itemize
-The regular project that just runs the code
-\end_layout
-
-\begin_layout Itemize
-The project that measures code coverage
-\end_layout
-
-\begin_layout Standard
-The filenames are shown in this figure:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{tikzpicture}
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-draw (0,0) circle (4);
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-draw (4,0) circle (4);
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-node[align=center] at (-1.5, 2) { $travis
-\backslash
-_qmake$ 
-\backslash
-
-\backslash
- $
-\backslash
-_gcc
-\backslash
-_cpp98$ 
-\backslash
-
-\backslash
- $
-\backslash
-_gcov.pro$ };
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-node[align=center] at (-2, 0) { $main.cpp$ };
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-node[align=center] at (2, 0) { $do
-\backslash
-_magic.h$ 
-\backslash
-
-\backslash
- $do
-\backslash
-_magic.cpp$ };
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-node[align=center] at (5.5, 2) { $travis
-\backslash
-_qmake$ 
-\backslash
-
-\backslash
- $
-\backslash
-_gcc
-\backslash
-_cpp98$ 
-\backslash
-
-\backslash
- $
-\backslash
-_gcov
-\backslash
-_gcov.pro$ };
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-node[align=center] at (6, 0) { $main
-\backslash
-_gcov.cpp$ };
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{tikzpicture}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Venn diagram of the files uses in this build
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsubsection
 What is gcov?
 \begin_inset Index idx
@@ -4643,7 +4487,7 @@ status open
 
 \begin_layout Plain Layout
 
-sudo: true
+sudo: require
 \end_layout
 
 \end_inset
@@ -4687,7 +4531,7 @@ The build bash scrips
 \end_layout
 
 \begin_layout Standard
-The bash build script to build this, run this and measure the code coverage:
+The bash build script to build this:
 \end_layout
 
 \begin_layout Standard
@@ -4726,37 +4570,51 @@ build.sh
 \end_layout
 
 \begin_layout Standard
-The new step is after having run the executable, 
+This build scripy is identical to the basic build its build script.
+ 
 \end_layout
 
-\begin_layout Itemize
-\begin_inset listings
-inline false
+\begin_layout Standard
+The bash build to measure the code coverage:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "/home/p230198/GitHubs/travis_qmake_gcc_cpp98_gcov/get_code_cov.sh"
+lstparams "breaklines=true,language={bash}"
 
-gcov main_gcov.cpp
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+get_code_cov.sh
 \end_layout
 
 \end_inset
 
-Let gcov create a coverage report
-\end_layout
 
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-cat main_gcov.cpp.gcov
 \end_layout
 
 \end_inset
 
-Show the file 'main.cpp.gcov', which contains the coverage of 'main.cpp'
+
+\end_layout
+
+\begin_layout Standard
+This script ...
 \end_layout
 
 \begin_layout Subsubsection
@@ -4887,6 +4745,12 @@ main.cpp
 
 \end_layout
 
+\begin_layout Standard
+It defines a function called 'do_magic'.
+ It is called for the value two, but not for the value 42.
+ Due to this, we expect to see an incomplete code coverage.
+\end_layout
+
 \begin_layout Subsection
 Adding profiling
 \begin_inset CommandInset label
@@ -4942,11 +4806,12 @@ Qt
 \end_layout
 
 \begin_layout Standard
-Qt (pronounce cute') is a library to create C++ GUI's.
+Qt (pronounce 'cute') is a library to create C++ GUI's.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -5062,7 +4927,34 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Standard
-This .travis.yml file ...
+This .travis.yml file starts xvfb before the script.
+ In the script, it builds the code first, before running the resulting executabl
+e.
+\end_layout
+
+\begin_layout Subsubsection
+What is xvfb?
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:What-is-xvfb?"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+xvfb
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+xvfb is the vitual X server.
 \end_layout
 
 \begin_layout Subsubsection
@@ -5070,7 +4962,7 @@ The build bash scrips
 \end_layout
 
 \begin_layout Standard
-The bash build script to build this, run this and measure the code coverage:
+The bash build script to build this:
 \end_layout
 
 \begin_layout Standard
@@ -5109,14 +5001,27 @@ build.sh
 \end_layout
 
 \begin_layout Standard
-The bash script has the same lines as the basic project in chapter 
+The bash script is close to the bash script of the basic build (see chapter
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98"
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
+
+\end_inset
+
+).
+ Instead of calling 'qmake', however, it explicitly calls 'qmake-qt4'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+qmake-qt4
+\end_layout
 
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -5124,8 +5029,7 @@ The Qt Creator project files
 \end_layout
 
 \begin_layout Standard
-This single file is compiled with qmake from the following Qt Creator project
- file:
+This project is compiled from the following Qt Creator project file:
 \end_layout
 
 \begin_layout Standard
@@ -7291,6 +7195,170 @@ reference "sub:travis_qmake_gcc_cpp14_boost"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Subsection
+debug with gcov and release without
+\end_layout
+
+\begin_layout Standard
+This will be a more complex build, consisting of two projects:
+\end_layout
+
+\begin_layout Itemize
+The regular project that just runs the code
+\end_layout
+
+\begin_layout Itemize
+The project that measures code coverage
+\end_layout
+
+\begin_layout Standard
+The filenames are shown in this figure:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (0,0) circle (4);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+draw (4,0) circle (4);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[align=center] at (-1.5, 2) { $travis
+\backslash
+_qmake$ 
+\backslash
+
+\backslash
+ $
+\backslash
+_gcc
+\backslash
+_cpp98$ 
+\backslash
+
+\backslash
+ $
+\backslash
+_gcov.pro$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[align=center] at (-2, 0) { $main.cpp$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[align=center] at (2, 0) { $do
+\backslash
+_magic.h$ 
+\backslash
+
+\backslash
+ $do
+\backslash
+_magic.cpp$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[align=center] at (5.5, 2) { $travis
+\backslash
+_qmake$ 
+\backslash
+
+\backslash
+ $
+\backslash
+_gcc
+\backslash
+_cpp98$ 
+\backslash
+
+\backslash
+ $
+\backslash
+_gcov
+\backslash
+_gcov.pro$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node[align=center] at (6, 0) { $main
+\backslash
+_gcov.cpp$ };
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Venn diagram of the files uses in this build
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
