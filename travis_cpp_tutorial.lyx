@@ -123,7 +123,7 @@ License
 
 \begin_layout Standard
 This tutorial is licensed under Creative Commons license 4.0.
- All C++ code is licensed under GPL 3.0.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -134,6 +134,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/CC-BY-SA_icon.svg
 
@@ -147,6 +148,44 @@ status open
 
 \begin_layout Plain Layout
 Creative Commons license 4.0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All C++ code is licensed under GPL 3.0.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/gplv3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+GPL 3.0
 \end_layout
 
 \end_inset
@@ -412,6 +451,7 @@ https://github.com
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -524,6 +564,7 @@ reference "fig:GitHub-join"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -578,6 +619,7 @@ reference "fig:GitHub-profile"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -652,6 +694,7 @@ reference "fig:GitHub-create-repository"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -698,6 +741,7 @@ Do check 'Initialize this repository with a README', add a .gitignore with
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -872,6 +916,7 @@ Multiple versions of main.cpp.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -976,6 +1021,7 @@ Qt Creator is a C++ IDE
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1399,6 +1445,7 @@ GCC, the GNU Compiler Collection, is a collection of compilers, among other,
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1989,7 +2036,15 @@ reference "par:What-is-qmake?"
 ) from the only Qt Creator project file.
  In this build, the name of this project file is ommitted, as there is only
  one, but there are chapters in this tutorial where the project name is
- mentioned explicitly
+ mentioned explicitly.
+ Note that currently, qmake uses Qt4 (What is Qt4? see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:What-is-Qt4?"
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Itemize
@@ -2501,6 +2556,26 @@ This example shows how to use Travis to create a debug and release build.
 
 \begin_layout Subsubsection
 What are debug and release builds?
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+debug build
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+release build
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2658,7 +2733,8 @@ build_release.sh
 \end_layout
 
 \begin_layout Standard
-The only difference is the added extra parameter to 'make'.
+The only difference is the added extra parameter to 'make', which is 'debug'
+ for the debug build, and 'release' for the release build.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2666,7 +2742,8 @@ The Qt Creator project file
 \end_layout
 
 \begin_layout Standard
-The Qt Creator 
+The Qt Creator project file has to allow for the two different builds.
+ It does so as follows:
 \end_layout
 
 \begin_layout Standard
@@ -2712,7 +2789,7 @@ name "alg:travis_qmake_gcc_cpp98_debug_and_release.pro"
 \end_layout
 
 \begin_layout Standard
-The Qt Creator project file has ...
+Next to setting 'main.cpp' as the only source file, these lines are new:
 \end_layout
 
 \begin_layout Itemize
@@ -2773,7 +2850,27 @@ status open
 \end_inset
 
 .
- This, among others, will remove all assert statements
+ This, among others, will remove all assert
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+assert, remove
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+remove assert
+\end_layout
+
+\end_inset
+
+ statements
 \end_layout
 
 \begin_layout Subsubsection
@@ -2950,6 +3047,42 @@ status open
 
 \begin_layout Plain Layout
 
+sudo: require
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+sudo
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+sudo: require
+\end_layout
+
+\end_inset
+
+For this build, we need super user rights.
+ When you need super user rights, the build will be slower.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
 before_install:
 \end_layout
 
@@ -2965,15 +3098,15 @@ status open
 
 \begin_layout Plain Layout
 
-  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
 \end_layout
 
 \end_inset
 
 A new apt repository is added.
- The '-y' explicitly states that we are sure we want to do this.
- Without the '-y' flag, Travis will be prompted if it is sure it wants to
- add this repository.
+ The '--yes' explicitly states that we are sure we want to do this.
+ Without the '--yes' flag, Travis will be prompted if it is sure it wants
+ to add this repository.
  This would break the build.
 \end_layout
 
@@ -2984,7 +3117,7 @@ status open
 
 \begin_layout Plain Layout
 
-  - sudo apt-get update -qq
+sudo apt-get update -qq
 \end_layout
 
 \end_inset
@@ -3018,7 +3151,8 @@ The build bash scrips
 \end_layout
 
 \begin_layout Standard
-The bash build script is identical to described in chapter 
+The bash build script is identical to the basic build script, as described
+ in chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:travis_qmake_gcc_cpp98-build.sh"
@@ -3243,8 +3377,42 @@ It will show the text 'Hello world' on screen.
 \end_layout
 
 \begin_layout Standard
-The keyword 'noexcept' does not exist in C++98 and it will fail to compile.
+The keyword 'noexcept' (What is noexcept? See chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:What-is-noexcept?"
+
+\end_inset
+
+) does not exist in C++98 and it will fail to compile.
  This code will compile under newer versions of C++.
+\end_layout
+
+\begin_layout Subsubsection
+What is noexcept?
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:What-is-noexcept?"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+noexcept
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+'noexcept' is a C++11 keyword.
+ It is used to specify that a (member) function will not throw an exception.
+ Would that function throw an exception anyhow, the program is terminated.
 \end_layout
 
 \begin_layout Subsection
@@ -3394,14 +3562,14 @@ build.sh
 \end_layout
 
 \begin_layout Standard
-The bash script has the same lines as the C++11 build in chapter 
+The bash script is identical to the basic build script (see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:travis_qmake_gcc_cpp11"
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
 
 \end_inset
 
-
+)
 \end_layout
 
 \begin_layout Subsubsection
@@ -3723,10 +3891,10 @@ build.sh
 \end_layout
 
 \begin_layout Standard
-The bash script has the same lines as the basic project in chapter 
+The bash script is identical to the basic build script as in chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98"
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
 
 \end_inset
 
@@ -3789,7 +3957,7 @@ The Qt Creator project file has the same lines as the basic project in chapter
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98"
+reference "sub:travis_qmake_gcc_cpp98.pro"
 
 \end_inset
 
@@ -3840,8 +4008,13 @@ main.cpp
 \end_layout
 
 \begin_layout Standard
-All the file does is to create an empty graph, from the Boost.Graph library.
+All the file does is display the version of Boost on the screens.
  It will only compile when the Boost libraries are present.
+ 
+\end_layout
+
+\begin_layout Standard
+Currently, on Travis CI, the default Boost version is 1.46.1.
 \end_layout
 
 \begin_layout Subsection
@@ -3987,18 +4160,8 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Standard
-This .travis.yml file has ...
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO
-\end_layout
-
-\end_inset
-
-
+This .travis.yml file uses the package clang (without needing sudo), compiles
+ the program and then runs it.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4045,10 +4208,11 @@ build.sh
 \end_layout
 
 \begin_layout Standard
-The bash script has the same lines as the basic project in chapter 
+The bash script is identical to the basic bash script as described in chapter
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98"
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
 
 \end_inset
 
@@ -4758,6 +4922,13 @@ reference "sec:travis_qmake_gcc_cpp98"
 
 \begin_layout Paragraph
 What is Qt?
+\begin_inset CommandInset label
+LatexCommand label
+name "par:What-is-Qt?"
+
+\end_inset
+
+
 \begin_inset Index idx
 status open
 
@@ -4828,6 +4999,23 @@ name "sub:travis_qmake_gcc_cpp98_qt4"
 
 \begin_layout Subsubsection
 What is Qt4?
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:What-is-Qt4?"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Qt4
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -5136,6 +5324,23 @@ name "sub:travis_qmake_gcc_cpp98_qt5"
 
 \begin_layout Subsubsection
 What is Qt5?
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:What-is-Qt5?"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Qt5
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
