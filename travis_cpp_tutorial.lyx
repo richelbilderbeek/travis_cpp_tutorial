@@ -7157,8 +7157,21 @@ Extending the build by two steps
 \end_layout
 
 \begin_layout Standard
-The following chapter describe how to extend the build in two directions.
- These are:
+You will probably want to combine the single ingredients in the previous
+ chapters.
+ This will also result in more complex project setups.
+ In this chapter, such setups will be described:
+\end_layout
+
+\begin_layout Itemize
+Use of gcov in debug mode only: see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Use-of-gcov-in-debug-mode-only"
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -7199,7 +7212,14 @@ reference "sub:travis_qmake_gcc_cpp14_boost"
 \end_layout
 
 \begin_layout Subsection
-debug with gcov and release without
+Use of gcov in debug mode only
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Use-of-gcov-in-debug-mode-only"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7207,11 +7227,11 @@ This will be a more complex build, consisting of two projects:
 \end_layout
 
 \begin_layout Itemize
-The regular project that just runs the code
+The release build that just runs the code
 \end_layout
 
 \begin_layout Itemize
-The project that measures code coverage
+The debug build that measures code coverage
 \end_layout
 
 \begin_layout Standard
