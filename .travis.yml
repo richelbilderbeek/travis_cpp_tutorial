@@ -11,6 +11,7 @@ install:
   - sudo apt-get install -qq pgf
   - sudo apt-get install -qq graphviz
   - sudo apt-get install -qq qtikz
+  - sudo apt-get install -qq tlmgr
   - sudo tlmgr pgf ms
 
 script:
