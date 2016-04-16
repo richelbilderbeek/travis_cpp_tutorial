@@ -8,13 +8,18 @@ install:
   - sudo apt-get install -qq lyx
   - sudo apt-get install -qq texlive
   - sudo apt-get install -qq texlive-fonts-extra
+  - sudo apt-get install -qq babel
   - sudo apt-get install -qq pgf
   - sudo apt-get install -qq graphviz
   - sudo apt-get install -qq qtikz
 
 script:
- - ./download_other_githubs.sh
- - ./build_pdf.sh
+  - ./download_other_githubs.sh
+  - ./build_pdf.sh
 
 after_script:
- - ls
+  - ls
+
+after_failure:
+  # Which babel to install?
+  - apt-cache search babel | egrep "^babel"
