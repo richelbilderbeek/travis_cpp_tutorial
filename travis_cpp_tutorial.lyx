@@ -15177,6 +15177,104 @@ Troubleshooting
 \end_layout
 
 \begin_layout Subsection
+sudo apt-get install gcov-5 failed and exited with 100 during .
+\end_layout
+
+\begin_layout Standard
+Or in full:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+The command "sudo -E apt-get -yq --no-install-suggests --no-install-recommends
+ --force-yes install gcov-5" failed and exited with 100 during .
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It means Travis-CI cannot find the package 'gcov-5' in the 'addons' section.
+\end_layout
+
+\begin_layout Standard
+Comment out the addons section and add this to the Travis script:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+apt-cache search "gcov" | egrep "^gcov"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+One can then observe that 'gcov' is absent.
+ It is part of g++.
+\end_layout
+
+\begin_layout Subsection
+Cannot find the correct version of a package
+\end_layout
+
+\begin_layout Standard
+Comment out the addons section and add this to the Travis script:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ - apt-cache search "g++" | egrep "^gcc"
+\end_layout
+
+\begin_layout Plain Layout
+
+ - apt-cache search "g++" | egrep "^g
+\backslash
++
+\backslash
++"
+\end_layout
+
+\begin_layout Plain Layout
+
+ - apt-cache search "gcov" | egrep "^gcov"
+\end_layout
+
+\begin_layout Plain Layout
+
+ - apt-cache search "libboost"| egrep "^libboost"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This will cause Travis to search the aptitude packages.
+\end_layout
+
+\begin_layout Subsection
 fatal error: Rcpp.h: No such file or directory
 \end_layout
 
