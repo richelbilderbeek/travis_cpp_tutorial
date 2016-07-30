@@ -100,15 +100,15 @@ Statuses of the repositories used that are successfull, or that I haven't done y
 
 In alphabetical order
 
- * Bio++: C++ biology libraries
- * Boost: Boost is a collection of C++ libraries.
- * Boost.Test: Boost.Test is a C++ testing framework within the Boost libraries.
+ * Bio++: C++ biology libraries 
+ * Boost: Boost is a collection of C++ libraries ([homepage](http://www.boost.org/))
+ * Boost.Test: Boost.Test is a C++ testing framework within the Boost libraries
  * Codecov: Codecov is a tool to display a gcov code coverage result, that plays well with GitHub. It can be actived from a Travis script
  * gcov: gcov is a GNU tool to measur the code coverage of (among others) C++ code. It can be actived from a Travis script
  * git: git is a version control system. It tracks the changes made in the project and allows for viewing the project its history
  * GitHub: GitHub is a site where git repositories are hosted. It gives a git project a website where the files can be viewed. Next to this, there is a project page for issues like bug reports and feature requests
  * gprof: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
- * OCLint: a linter
+ * OCLint: static code analyis ([homepage](http://oclint.org/)) ([GitHub](https://github.com/oclint/oclint))
  * Qt: a C++ GUI library
  * QTest: the Qt testing framework
  * Rcpp: Rcpp is an R package that allows mixing R and C++ code
