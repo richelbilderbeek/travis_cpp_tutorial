@@ -46,6 +46,7 @@ Statuses of the repositories used that are successfull, or that I haven't done y
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_debug_and_release.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_debug_and_release) [travis_qmake_gcc_cpp98_debug_and_release](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_debug_and_release)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_debug_gcov.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_debug_gcov) [travis_qmake_gcc_cpp98_debug_gcov](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_debug_gcov)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_gcov.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_gcov) [travis_qmake_gcc_cpp98_gcov](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_gcov)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_oclint.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_oclint) [travis_qmake_gcc_cpp98_oclint](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_oclint)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_qt.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_qt) [travis_qmake_gcc_cpp98_qt](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_qt)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_qt4.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_qt4) [travis_qmake_gcc_cpp98_qt4](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_qt4)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_qt5.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_qt5) [travis_qmake_gcc_cpp98_qt5](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_qt5)
@@ -107,6 +108,7 @@ In alphabetical order
  * git: git is a version control system. It tracks the changes made in the project and allows for viewing the project its history
  * GitHub: GitHub is a site where git repositories are hosted. It gives a git project a website where the files can be viewed. Next to this, there is a project page for issues like bug reports and feature requests
  * gprof: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
+ * OCLint: a linter
  * Qt: a C++ GUI library
  * QTest: the Qt testing framework
  * Rcpp: Rcpp is an R package that allows mixing R and C++ code
