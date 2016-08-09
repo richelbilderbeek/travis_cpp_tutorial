@@ -13,6 +13,7 @@ git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_qt
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_qt_qtest
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_rcpp
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_sfml
+git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_sloccount
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_urho3d
 git clone https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_wt
 git clone https://github.com/richelbilderbeek/travis_qmake_clang_cpp11
