@@ -21,3 +21,13 @@ script:
 
 after_script:
   - ls
+  - kpsewhich tkz-graph.sty
+
+
+
+after_success:
+  - echo "success"
+ 
+after_failure:
+  - echo "failure"
+  - kpsewhich tkz-graph.sty
