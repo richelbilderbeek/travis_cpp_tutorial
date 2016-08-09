@@ -17,6 +17,7 @@ install:
 
 script:
   - ./download_other_githubs.sh
+  - kpsewhich tkz-graph.sty
   - ./build_pdf.sh
 
 after_script:
