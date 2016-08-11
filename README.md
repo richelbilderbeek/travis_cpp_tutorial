@@ -9,6 +9,7 @@ Tutorial how to use Travis CI with C++.
 
 Statuses of the repositories used that are successfull, or that I haven't done yet:
 
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_gcc_cpp98.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_gcc_cpp98) [travis_gcc_cpp98](https://github.com/richelbilderbeek/travis_gcc_cpp98)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp98.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp98) [travis_qmake_clang_cpp98](https://github.com/richelbilderbeek/travis_qmake_clang_cpp98)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp98_boost.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp98_boost) [travis_qmake_clang_cpp98_boost](https://github.com/richelbilderbeek/travis_qmake_clang_cpp98_boost)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp98_boost_test.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp98_boost_test) [travis_qmake_clang_cpp98_boost_test](https://github.com/richelbilderbeek/travis_qmake_clang_cpp98_boost_test)
