@@ -5279,7 +5279,50 @@ The source files
 \end_layout
 
 \begin_layout Standard
-The single C++ source file used is copied from 
+There are two source files compiled, one of which has correct style.
+\end_layout
+
+\begin_layout Standard
+The correct-style C++ source file used is just a 'Hello World' program:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../travis_qmake_gcc_cpp98_oclint/main_correct.cpp"
+lstparams "breaklines=true,language={C++}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+main_correct.cpp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The smelly C++ source file used is copied from 
 \begin_inset Flex URL
 status collapsed
 
@@ -5303,7 +5346,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_oclint/main.cpp"
+filename "../travis_qmake_gcc_cpp98_oclint/main_incorrect.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -5315,7 +5358,7 @@ lstparams "breaklines=true,language={C++}"
 \begin_inset Caption
 
 \begin_layout Plain Layout
-main.cpp
+main_incorrect.cpp
 \end_layout
 
 \end_inset
