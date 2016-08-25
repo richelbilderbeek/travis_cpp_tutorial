@@ -5113,6 +5113,36 @@ status open
 Let OCLint check the code
 \end_layout
 
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cat log_correct.txt
+\end_layout
+
+\end_inset
+
+Let Travis show the log of a file that passes OCLint
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cat log_correct.txt
+\end_layout
+
+\end_inset
+
+Let Travis show the log of a file that does not pass OCLint
+\end_layout
+
 \begin_layout Subsubsection
 The build bash scrips
 \end_layout
@@ -5207,8 +5237,195 @@ do_oclint.sh
 \end_layout
 
 \begin_layout Standard
-Note that I set the maximum number of tolerated errors to zero.
- In the smelly code of this example, Travis should report an error.
+Here I call OCLint with these parameters:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+-o log_correct.txt
+\end_layout
+
+\end_inset
+
+Write the output to the file 'log_correct.txt'
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+-max-priority-1 0
+\end_layout
+
+\end_inset
+
+Tolerate zero high-priority warnings
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+-max-priority-2 0
+\end_layout
+
+\end_inset
+
+Tolerate zero medium-priority warnings
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+-max-priority-3 0
+\end_layout
+
+\end_inset
+
+Tolerate zero low-priority warnings
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+main_correct.cpp
+\end_layout
+
+\end_inset
+
+All the files to be analysed
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+--
+\end_layout
+
+\end_inset
+
+After this are the compiler settings
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+-c
+\end_layout
+
+\end_inset
+
+?no idea, please email me if you do
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+> /dev/null
+\end_layout
+
+\end_inset
+
+Do not show other output of OCLint, by sending to the void of '/dev/null'
+ instead
+\end_layout
+
+\begin_layout Standard
+Additionally, I analyse the log files using 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+success=`egrep "FilesWithViolations=0 P1=0 P2=0 P3=0" log_correct.txt | wc
+ -l`
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In more detail, this means:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+success=`[...]`
+\end_layout
+
+\end_inset
+
+The variable 'success' get assigned the outcome of the part between backticks
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+egrep "[regex]" log_correct.txt
+\end_layout
+
+\end_inset
+
+Search through the file 'log_correct.txt' for the regular expression '[regex]'
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+| wc -l
+\end_layout
+
+\end_inset
+
+The result of the egrep is piped to a word count ('wc') by line '-l'.
+ If egrep found the regex, the line count will be 1, yet 0 otherwise
 \end_layout
 
 \begin_layout Subsubsection
