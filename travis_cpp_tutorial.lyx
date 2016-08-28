@@ -5247,12 +5247,12 @@ status open
 
 \begin_layout Plain Layout
 
--o log_correct.txt
+-o oclint.log
 \end_layout
 
 \end_inset
 
-Write the output to the file 'log_correct.txt'
+Write the output to the file 'oclint.log'
 \end_layout
 
 \begin_layout Itemize
@@ -5262,52 +5262,7 @@ status open
 
 \begin_layout Plain Layout
 
--max-priority-1 0
-\end_layout
-
-\end_inset
-
-Tolerate zero high-priority warnings
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
--max-priority-2 0
-\end_layout
-
-\end_inset
-
-Tolerate zero medium-priority warnings
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
--max-priority-3 0
-\end_layout
-
-\end_inset
-
-Tolerate zero low-priority warnings
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-main_correct.cpp
+main.cpp
 \end_layout
 
 \end_inset
@@ -5343,22 +5298,6 @@ status open
 \end_inset
 
 ?no idea, please email me if you do
-\end_layout
-
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-> /dev/null
-\end_layout
-
-\end_inset
-
-Do not show other output of OCLint, by sending to the void of '/dev/null'
- instead
 \end_layout
 
 \begin_layout Standard
@@ -5404,12 +5343,12 @@ status open
 
 \begin_layout Plain Layout
 
-egrep "[regex]" log_correct.txt
+egrep "[regex]" oclint.log
 \end_layout
 
 \end_inset
 
-Search through the file 'log_correct.txt' for the regular expression '[regex]'
+Search through the file 'oclint.log' for the regular expression '[regex]'
 \end_layout
 
 \begin_layout Itemize
@@ -5496,11 +5435,7 @@ The source files
 \end_layout
 
 \begin_layout Standard
-There are two source files compiled, one of which has correct style.
-\end_layout
-
-\begin_layout Standard
-The correct-style C++ source file used is just a 'Hello World' program:
+The C++ source file used is just a 'Hello World' program:
 \end_layout
 
 \begin_layout Standard
@@ -5513,7 +5448,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_oclint/main_correct.cpp"
+filename "../travis_qmake_gcc_cpp98_oclint/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -5525,7 +5460,7 @@ lstparams "breaklines=true,language={C++}"
 \begin_inset Caption
 
 \begin_layout Plain Layout
-main_correct.cpp
+main.cpp
 \end_layout
 
 \end_inset
@@ -5536,60 +5471,6 @@ main_correct.cpp
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-The smelly C++ source file used is copied from 
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://docs.oclint.org/en/stable/intro/tutorial.html#something-smells-here
-\end_layout
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_oclint/main_incorrect.cpp"
-lstparams "breaklines=true,language={C++}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-main_incorrect.cpp
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This code is intendedly smelly.
 \end_layout
 
 \begin_layout Subsection
