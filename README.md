@@ -118,6 +118,7 @@ Statuses of the repositories used that are successfull, or that I haven't done y
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_debug_gcov.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_debug_gcov) [travis_qmake_gcc_cpp14_debug_gcov](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_debug_gcov)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_gcov.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_gcov) [travis_qmake_gcc_cpp14_gcov](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_gcov)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_gprof.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_gprof) [travis_qmake_gcc_cpp14_gprof](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_gprof)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_gsl.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_gsl) [travis_qmake_gcc_cpp14_gsl](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_gsl)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_oclint.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_oclint) [travis_qmake_gcc_cpp14_oclint](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_oclint)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_rcpp.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_rcpp) [travis_qmake_gcc_cpp14_rcpp](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_rcpp) (know to fail)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_sfml.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_sfml) [travis_qmake_gcc_cpp14_sfml](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_sfml)
@@ -143,11 +144,13 @@ In alphabetical order
  * Boost: Boost is a collection of C++ libraries ([homepage](http://www.boost.org/))
  * Boost.Test: Boost.Test is a C++ testing framework within the Boost libraries
  * Codecov: Codecov is a tool to display a gcov code coverage result, that plays well with GitHub. It can be actived from a Travis script
- * gcov: gcov is a GNU tool to measur the code coverage of (among others) C++ code. It can be actived from a Travis script
- * git: git is a version control system. It tracks the changes made in the project and allows for viewing the project its history
+ * `gcov`: gcov is a GNU tool to measur the code coverage of (among others) C++ code. It can be actived from a Travis script
+ * `git`: git is a version control system. It tracks the changes made in the project and allows for viewing the project its history
  * GitHub: GitHub is a site where git repositories are hosted. It gives a git project a website where the files can be viewed. Next to this, there is a project page for issues like bug reports and feature requests
- * gprof: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
- * OCLint: static code analyis ([homepage](http://oclint.org/)) ([GitHub](https://github.com/oclint/oclint))
+ * `gprof`: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
+ * GSL: [Microsoft implementation of the Guidelines Support Library](https://github.com/Microsoft/GSL)
+ * `OCLint`: static code analyis ([homepage](http://oclint.org/)) ([GitHub](https://github.com/oclint/oclint))
+ * `perf`: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
  * Qt: a C++ GUI library
  * QTest: the Qt testing framework
  * Rcpp: Rcpp is an R package that allows mixing R and C++ code
