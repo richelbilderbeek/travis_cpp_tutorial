@@ -165,6 +165,14 @@ In alphabetical order
  * Urho3D: a C++ game engine
  * Wt: a C++ web application library
 
+## Other Travis CI examples
+
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_convert.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_convert) [travis_convert](https://github.com/richelbilderbeek/travis_convert)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_cowsay.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_cowsay) [travis_cowsay](https://github.com/richelbilderbeek/travis_cowsay)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_example_pipeline.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_example_pipeline) [travis_example_pipeline](https://github.com/richelbilderbeek/travis_example_pipeline)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_proselint.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_proselint) [travis_proselint](https://github.com/richelbilderbeek/travis_proselint)
+
+
 ## More complex C++ programs
 
  * [![Build Status](https://travis-ci.org/richelbilderbeek/AsciiArter.svg?branch=master)](https://travis-ci.org/richelbilderbeek/AsciiArter) [![codecov.io](https://codecov.io/github/richelbilderbeek/AsciiArter/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/AsciiArter?branch=master) [AsciiArter](https://github.com/richelbilderbeek/AsciiArter)
