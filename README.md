@@ -7,7 +7,9 @@
 
 Tutorial how to use Travis CI with C++.
 
-Statuses of the repositories used that are successfull, or that I haven't done yet:
+## Statuses
+
+Statuses of the repositories used that are successfull, or that I haven't done yet
 
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_arduino.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_arduino) [travis_arduino](https://github.com/richelbilderbeek/travis_arduino)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_arduino_oclint.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_arduino_oclint) [travis_arduino_oclint](https://github.com/richelbilderbeek/travis_arduino_oclint)
@@ -228,3 +230,11 @@ In alphabetical order
  * [![Build Status](https://travis-ci.org/richelbilderbeek/VisualAbc.svg?branch=master)](https://travis-ci.org/richelbilderbeek/VisualAbc) [![codecov.io](https://codecov.io/github/richelbilderbeek/VisualAbc/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/VisualAbc?branch=master) [VisualAbc](https://github.com/richelbilderbeek/VisualAbc)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/Zork.svg?branch=master)](https://travis-ci.org/richelbilderbeek/Zork) [Zork](https://github.com/richelbilderbeek/Zork)
  * [many more]
+
+## Contributing 
+
+Great! See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Code of conduct
+
+This project follows the [Contributor Covenant][http://contributor-covenant.org]. See [code_of_conduct.md](code_of_conduct.md).
