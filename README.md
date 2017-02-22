@@ -174,6 +174,7 @@ In alphabetical order
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_convert.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_convert) [travis_convert](https://github.com/richelbilderbeek/travis_convert)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_cowsay.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_cowsay) [travis_cowsay](https://github.com/richelbilderbeek/travis_cowsay)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_example_pipeline.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_example_pipeline) [travis_example_pipeline](https://github.com/richelbilderbeek/travis_example_pipeline)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_lyx.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_lyx) [travis_lyx](https://github.com/richelbilderbeek/travis_lyx)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_proselint.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_proselint) [travis_proselint](https://github.com/richelbilderbeek/travis_proselint)
 
 
