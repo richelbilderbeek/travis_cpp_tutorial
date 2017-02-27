@@ -142,7 +142,7 @@ Statuses of the repositories used that are successfull, or that I haven't done y
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_qt5_qtsvg.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_qt5_qtsvg) [travis_qmake_gcc_cpp14_qt5_qtsvg](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_qt5_qtsvg)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_urho3d.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_urho3d) [travis_qmake_gcc_cpp14_urho3d](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_urho3d)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_wt.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_wt) [travis_qmake_gcc_cpp14_wt](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_wt)
- * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17) [travis_qmake_gcc_cpp17](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp17) (know to fail)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17) [travis_qmake_gcc_cpp17](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp17)
 
 ## Tools explored
 
