@@ -224,10 +224,12 @@ In alphabetical order
  * [![Build Status](https://travis-ci.org/richelbilderbeek/TestConceptMap.svg?branch=master)](https://travis-ci.org/richelbilderbeek/TestConceptMap) [TestConceptMap](https://github.com/richelbilderbeek/TestConceptMap)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/TestRoundedRectItem.svg?branch=master)](https://travis-ci.org/richelbilderbeek/TestRoundedRectItem) [TestRoundedRectItem](https://github.com/richelbilderbeek/TestRoundedRectItem)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/TestRoundedEditRectItem.svg?branch=master)](https://travis-ci.org/richelbilderbeek/TestRoundedEditRectItem) [TestRoundedEditRectItem](https://github.com/richelbilderbeek/TestRoundedEditRectItem)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/TestTriangle.svg?branch=master)](https://travis-ci.org/richelbilderbeek/TestTriangle) [TestTriangle](https://github.com/richelbilderbeek/TestTriangle)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/TicTacToe.svg?branch=master)](https://travis-ci.org/richelbilderbeek/TicTacToe) [TicTacToe](https://github.com/richelbilderbeek/TicTacToe)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_r_minimal.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_r_minimal) [travis_r_minimal](https://github.com/richelbilderbeek/travis_r_minimal)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_r_tutorial.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_r_tutorial) [travis_r_tutorial](https://github.com/richelbilderbeek/travis_r_tutorial)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/Treesearcher.svg?branch=master)](https://travis-ci.org/richelbilderbeek/Treesearcher) [Treesearcher](https://github.com/richelbilderbeek/Treesearcher)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/Triangle.svg?branch=master)](https://travis-ci.org/richelbilderbeek/Triangle) [Triangle](https://github.com/richelbilderbeek/Triangle)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/VisualAbc.svg?branch=master)](https://travis-ci.org/richelbilderbeek/VisualAbc) [![codecov.io](https://codecov.io/github/richelbilderbeek/VisualAbc/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/VisualAbc?branch=master) [VisualAbc](https://github.com/richelbilderbeek/VisualAbc)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/Zork.svg?branch=master)](https://travis-ci.org/richelbilderbeek/Zork) [Zork](https://github.com/richelbilderbeek/Zork)
  * [many more]
