@@ -184,8 +184,8 @@ In alphabetical order
 
 ## More complex C++ programs
 
- * See [https://github.com/richelbilderbeek/games](my games GitHub)
- * See [https://github.com/richelbilderbeek/tools](my tools GitHub)
+ * See [my games GitHub](https://github.com/richelbilderbeek/games)
+ * See [my tools GitHub](https://github.com/richelbilderbeek/tools)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/BinaryNewickVector.svg?branch=master)](https://travis-ci.org/richelbilderbeek/BinaryNewickVector) [![codecov.io](https://codecov.io/github/richelbilderbeek/BinaryNewickVector/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/BinaryNewickVector?branch=master) [BinaryNewickVector](https://github.com/richelbilderbeek/BinaryNewickVector): works with binary frequency Newicks
  * [![Build Status](https://travis-ci.org/richelbilderbeek/boost_xpressive_example1.svg?branch=master)](https://travis-ci.org/richelbilderbeek/boost_xpressive_example1) [![codecov.io](https://codecov.io/github/richelbilderbeek/boost_xpressive_example1/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/boost_xpressive_example1?branch=master) [boost_xpressive_example1](https://github.com/richelbilderbeek/boost_xpressive_example1)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/boost_xpressive_example2.svg?branch=master)](https://travis-ci.org/richelbilderbeek/boost_xpressive_example2) [![codecov.io](https://codecov.io/github/richelbilderbeek/boost_xpressive_example2/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/boost_xpressive_example2?branch=master) [boost_xpressive_example2](https://github.com/richelbilderbeek/boost_xpressive_example2)
@@ -213,4 +213,4 @@ Great! See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Code of conduct
 
-This project follows the [Contributor Covenant][http://contributor-covenant.org]. See [code_of_conduct.md](code_of_conduct.md).
+This project follows the [Contributor Covenant](http://contributor-covenant.org). See [code_of_conduct.md](code_of_conduct.md).
