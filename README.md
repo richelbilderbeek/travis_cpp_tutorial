@@ -49,7 +49,8 @@ Statuses of the repositories used that are successfull, or that I haven't done y
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp14_sfml.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp14_sfml) [travis_qmake_clang_cpp14_sfml](https://github.com/richelbilderbeek/travis_qmake_clang_cpp14_sfml)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp14_wt.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp14_wt) [travis_qmake_clang_cpp14_wt](https://github.com/richelbilderbeek/travis_qmake_clang_cpp14_wt)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp14_urho3d.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp14_urho3d) [travis_qmake_clang_cpp14_urho3d](https://github.com/richelbilderbeek/travis_qmake_clang_cpp14_urho3d)
- * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp17.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17) [travis_qmake_gcc_cpp17](https://github.com/richelbilderbeek/travis_qmake_clang_cpp17)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp17.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp17) [travis_qmake_clang_cpp17](https://github.com/richelbilderbeek/travis_qmake_clang_cpp17)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp17_libfuzzer.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_clang_cpp17_libfuzzer) [travis_qmake_clang_cpp17_libfuzzer](https://github.com/richelbilderbeek/travis_qmake_clang_cpp17_libfuzzer)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98) [travis_qmake_gcc_cpp98](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_bpp.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_bpp) [travis_qmake_gcc_cpp98_bpp](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_bpp)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_boost.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp98_boost) [travis_qmake_gcc_cpp98_boost](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_boost)
@@ -162,13 +163,16 @@ In alphabetical order
  * Bio++: C++ biology libraries 
  * Boost: Boost is a collection of C++ libraries ([homepage](http://www.boost.org/))
  * Boost.Test: Boost.Test is a C++ testing framework within the Boost libraries
+ * `clang`: C++ compiler
  * Codecov: Codecov is a tool to display a gcov code coverage result, that plays well with GitHub. It can be actived from a Travis script
  * Coverity: a static code analysis tool
+ * `gcc`: GNU Compiler Collection, a collection of compilers, in this case, the C++ compiler called `g++`
  * `gcov`: gcov is a GNU tool to measur the code coverage of (among others) C++ code. It can be actived from a Travis script
  * `git`: git is a version control system. It tracks the changes made in the project and allows for viewing the project its history
  * GitHub: GitHub is a site where git repositories are hosted. It gives a git project a website where the files can be viewed. Next to this, there is a project page for issues like bug reports and feature requests
  * `gprof`: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
  * GSL: [Microsoft implementation of the Guidelines Support Library](https://github.com/Microsoft/GSL)
+ * libFuzzer: [a library for coverage-guided fuzz testing](http://llvm.org/docs/LibFuzzer.html)
  * `OCLint`: static code analyis ([homepage](http://oclint.org/)) ([GitHub](https://github.com/oclint/oclint))
  * `perf`: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
  * Qt: a C++ GUI library
