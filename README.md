@@ -5,9 +5,9 @@
 
 [![Build Status](https://travis-ci.org/richelbilderbeek/travis_cpp_tutorial.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_cpp_tutorial)
 
-[Tutorial](tutorial.md) how to use Travis CI with C++.
+Tutorial how to use Travis CI with C++.
 
- * View the [tutorial](tutorial.md) [PDF](travis_cpp_tutorial.pdf)
+ * View the [tutorial](tutorial.md) (screen friendly)
  * Download the [PDF](travis_cpp_tutorial.pdf)
  * Want to pick a minimal example? Go to [statuses](statuses.md) 
 
