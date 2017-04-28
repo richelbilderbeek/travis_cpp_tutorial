@@ -1,9 +1,7 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
-\save_transient_properties true
-\origin unavailable
 \textclass article
 \begin_preamble
 \usepackage{tikz}
@@ -17,16 +15,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_roman default
+\font_sans default
+\font_typewriter default
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100 100
-\font_tt_scale 100 100
+\font_sf_scale 100
+\font_tt_scale 100
+
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -37,24 +35,15 @@
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
-\use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
-\cite_engine_type default
-\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -149,7 +138,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Creative Commons license 4.0
@@ -187,7 +176,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 GPL 3.0
@@ -473,7 +462,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 The GitHub homepage, 
@@ -586,7 +575,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 The join GitHub page
@@ -641,7 +630,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 A GitHub profile page
@@ -716,7 +705,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Create a GitHub repository
@@ -763,7 +752,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Created a GitHub repository
@@ -898,7 +887,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Multiple versions of main.cpp.
@@ -939,7 +928,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 git logo
@@ -1043,7 +1032,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Qt creator logo
@@ -1134,7 +1123,7 @@ Arrow from first to second circle with text 'compiler, linker'
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Overview of converting a C++ project to an executable
@@ -1294,7 +1283,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 From files to executable.
@@ -1353,7 +1342,7 @@ Two lower circles: '.cpp' and '.h', both -> to .pro, both dotted line to 'Makefi
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 What qmake does
@@ -1402,11 +1391,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-'Makefile' –[make]> 'executable'
+'Makefile' --[make]> 'executable'
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 What make does
@@ -1467,7 +1456,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 GCC logo
@@ -1601,7 +1590,7 @@ This basic build consists of a 'Hello World' program, written in C++98.
 What is a C++98 'Hello world' program? See chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:A-C++98-Hello-World-Program"
+reference "sub:A-C++98-Hello-World-Program"
 
 \end_inset
 
@@ -1613,7 +1602,7 @@ The Travis build file.
  See chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98-travis.yml"
+reference "sub:travis_qmake_gcc_cpp98-travis.yml"
 
 \end_inset
 
@@ -1625,7 +1614,7 @@ The build script.
  See chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98-build.sh"
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
 
 \end_inset
 
@@ -1637,7 +1626,7 @@ The Qt Creator project file.
  See chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98.pro"
+reference "sub:travis_qmake_gcc_cpp98.pro"
 
 \end_inset
 
@@ -1649,7 +1638,7 @@ The source file.
  See chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98-main.cpp"
+reference "sub:travis_qmake_gcc_cpp98-main.cpp"
 
 \end_inset
 
@@ -1660,7 +1649,7 @@ reference "subsec:travis_qmake_gcc_cpp98-main.cpp"
 What is a C++98 'Hello world' program?
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:A-C++98-Hello-World-Program"
+name "sub:A-C++98-Hello-World-Program"
 
 \end_inset
 
@@ -1739,7 +1728,7 @@ Show the text 'Hello world' on screen and go to the next line
 The Travis file
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98-travis.yml"
+name "sub:travis_qmake_gcc_cpp98-travis.yml"
 
 \end_inset
 
@@ -1797,7 +1786,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -1866,12 +1855,7 @@ script:
 
 \begin_layout Plain Layout
 
-  - qmake
-\end_layout
-
-\begin_layout Plain Layout
-
-  - make
+  - ./build.sh
 \end_layout
 
 \begin_layout Plain Layout
@@ -1882,7 +1866,126 @@ script:
 \end_inset
 
 The script that Travis will run.
- 
+ In this case, it will execute the 'build.sh' bash script, that should build
+ the excutable.
+ Then, the (hopefully) created executable called 'travis_qmake_gcc_cpp98'
+ is run
+\end_layout
+
+\begin_layout Standard
+This build script can fail in in two places:
+\end_layout
+
+\begin_layout Enumerate
+The bash script can fail, which is discussed in chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The executable can return an error code.
+ A 'Hello World' program is intended to return the error code for 'everything
+ went fine'.
+ Other programs in this tutorial return error codes depending on test cases.
+ It may also be that dynamically linked libraries cannot be found, which
+ crashes the program at startup
+\end_layout
+
+\begin_layout Subsection
+The build bash script
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:travis_qmake_gcc_cpp98-build.sh"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bash build script used to build the executable of a 'Hello world' program
+ looks like this:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../travis_qmake_gcc_cpp98/build.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This build script calls: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#!/bin/bash
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+#!/bin/bash
+\end_layout
+
+\end_inset
+
+This line indicates the script is a bash script.
+ The '#!', (also called the 'shebang'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+shebang
+\end_layout
+
+\end_inset
+
+) is a directive to use the executable at the absolute path following it.
+ In this script, 'bash' is used, which resides in the '/bin' folder
 \end_layout
 
 \begin_layout Itemize
@@ -1931,7 +2034,7 @@ reference "par:What-is-qmake?"
  Note that currently, qmake uses Qt4 (What is Qt4? see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:What-is-Qt4?"
+reference "sub:What-is-Qt4?"
 
 \end_inset
 
@@ -1972,23 +2075,8 @@ reference "par:What-is-make?"
  in this tutorial where 'make' is called with arguments
 \end_layout
 
-\begin_layout Itemize
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-./travis_qmake_gcc_cpp98
-\end_layout
-
-\end_inset
-
-Run the created executable called 'travis_qmake_gcc_cpp98'
-\end_layout
-
 \begin_layout Standard
-This Travis script can fail in in multiple places:
+This bash script can fail in two places: 
 \end_layout
 
 \begin_layout Enumerate
@@ -2003,20 +2091,11 @@ If the Qt Creator project file is incomplete (for example: by omitting libraries
  create an executable with that makefile
 \end_layout
 
-\begin_layout Enumerate
-The executable can return an error code.
- A 'Hello World' program is intended to return the error code for 'everything
- went fine'.
- Other programs in this tutorial return error codes depending on test cases.
- It may also be that dynamically linked libraries cannot be found, which
- crashes the program at startup
-\end_layout
-
 \begin_layout Subsection
 Qt Creator project file
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98.pro"
+name "sub:travis_qmake_gcc_cpp98.pro"
 
 \end_inset
 
@@ -2046,7 +2125,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98.pro
@@ -2176,7 +2255,7 @@ status open
 C++ source file
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98-main.cpp"
+name "sub:travis_qmake_gcc_cpp98-main.cpp"
 
 \end_inset
 
@@ -2206,7 +2285,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -2244,7 +2323,7 @@ Hello world
  See 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:A-C++98-Hello-World-Program"
+reference "sub:A-C++98-Hello-World-Program"
 
 \end_inset
 
@@ -2282,7 +2361,7 @@ The following chapter describe how to extend the build in one direction.
 Use a debug and release build: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_debug_and_release"
+reference "sub:travis_qmake_gcc_cpp98_debug_and_release"
 
 \end_inset
 
@@ -2293,7 +2372,7 @@ reference "subsec:travis_qmake_gcc_cpp98_debug_and_release"
 Use of C++11: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp11"
+reference "sub:travis_qmake_gcc_cpp11"
 
 \end_inset
 
@@ -2304,7 +2383,7 @@ reference "subsec:travis_qmake_gcc_cpp11"
 Use of C++14: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp14"
+reference "sub:travis_qmake_gcc_cpp14"
 
 \end_inset
 
@@ -2315,7 +2394,7 @@ reference "subsec:travis_qmake_gcc_cpp14"
 Use of Boost: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_boost"
+reference "sub:travis_qmake_gcc_cpp98_boost"
 
 \end_inset
 
@@ -2326,7 +2405,7 @@ reference "subsec:travis_qmake_gcc_cpp98_boost"
 Use of Boost.Test: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_boost_test"
+reference "sub:travis_qmake_gcc_cpp98_boost_test"
 
 \end_inset
 
@@ -2337,7 +2416,7 @@ reference "subsec:travis_qmake_gcc_cpp98_boost_test"
 Use of clang: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_clang_cpp98"
+reference "sub:travis_qmake_clang_cpp98"
 
 \end_inset
 
@@ -2348,7 +2427,7 @@ reference "subsec:travis_qmake_clang_cpp98"
 Use of gcov and Codecov: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_gcov"
+reference "sub:travis_qmake_gcc_cpp98_gcov"
 
 \end_inset
 
@@ -2359,7 +2438,7 @@ reference "subsec:travis_qmake_gcc_cpp98_gcov"
 Use of gprof: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_gprof"
+reference "sub:travis_qmake_gcc_cpp98_gprof"
 
 \end_inset
 
@@ -2370,7 +2449,7 @@ reference "subsec:travis_qmake_gcc_cpp98_gprof"
 Use of Qt: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_qt"
+reference "sub:travis_qmake_gcc_cpp98_qt"
 
 \end_inset
 
@@ -2381,7 +2460,7 @@ reference "subsec:travis_qmake_gcc_cpp98_qt"
 Use of Qt4: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_qt"
+reference "sub:travis_qmake_gcc_cpp98_qt"
 
 \end_inset
 
@@ -2392,7 +2471,7 @@ reference "subsec:travis_qmake_gcc_cpp98_qt"
 Use of Qt5: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_qt"
+reference "sub:travis_qmake_gcc_cpp98_qt"
 
 \end_inset
 
@@ -2403,7 +2482,7 @@ reference "subsec:travis_qmake_gcc_cpp98_qt"
 Use of QTest: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_qtest"
+reference "sub:travis_qmake_gcc_cpp98_qtest"
 
 \end_inset
 
@@ -2414,7 +2493,7 @@ reference "subsec:travis_qmake_gcc_cpp98_qtest"
 Use of Rcpp: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_rcpp"
+reference "sub:travis_qmake_gcc_cpp98_rcpp"
 
 \end_inset
 
@@ -2425,7 +2504,7 @@ reference "subsec:travis_qmake_gcc_cpp98_rcpp"
 Use of SFML: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_sfml"
+reference "sub:travis_qmake_gcc_cpp98_sfml"
 
 \end_inset
 
@@ -2436,7 +2515,7 @@ reference "subsec:travis_qmake_gcc_cpp98_sfml"
 Use of Urho3D: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_urho3d"
+reference "sub:travis_qmake_gcc_cpp98_urho3d"
 
 \end_inset
 
@@ -2447,7 +2526,7 @@ reference "subsec:travis_qmake_gcc_cpp98_urho3d"
 Use of Wt: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_wt"
+reference "sub:travis_qmake_gcc_cpp98_wt"
 
 \end_inset
 
@@ -2458,7 +2537,7 @@ reference "subsec:travis_qmake_gcc_cpp98_wt"
 Use of debug and release build
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_debug_and_release"
+name "sub:travis_qmake_gcc_cpp98_debug_and_release"
 
 \end_inset
 
@@ -2539,7 +2618,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -2570,7 +2649,7 @@ Both build modes have their own build script.
  They are very similar to the one described in chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98-build.sh"
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
 
 \end_inset
 
@@ -2596,7 +2675,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_debug.sh
@@ -2631,7 +2710,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_release.sh
@@ -2680,7 +2759,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_debug_and_release.pro
@@ -2816,7 +2895,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -2843,7 +2922,7 @@ It will show in text the build type.
 Use of C++11
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp11"
+name "sub:travis_qmake_gcc_cpp11"
 
 \end_inset
 
@@ -2900,7 +2979,7 @@ In my examples, I typically use the C++11 'noexcept' keyword (What is noexcept?
  See chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:What-is-noexcept?"
+reference "sub:What-is-noexcept?"
 
 \end_inset
 
@@ -2912,7 +2991,7 @@ reference "subsec:What-is-noexcept?"
 What is noexcept?
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:What-is-noexcept?"
+name "sub:What-is-noexcept?"
 
 \end_inset
 
@@ -2994,7 +3073,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -3078,8 +3157,8 @@ sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
 \end_inset
 
 A new apt repository is added.
- The '–yes' explicitly states that we are sure we want to do this.
- Without the '–yes' flag, Travis will be prompted if it is sure it wants
+ The '--yes' explicitly states that we are sure we want to do this.
+ Without the '--yes' flag, Travis will be prompted if it is sure it wants
  to add this repository.
  This would break the build.
 \end_layout
@@ -3121,6 +3200,57 @@ In the script, the code is built and then run.
 \end_layout
 
 \begin_layout Subsubsection
+The build bash scrips
+\end_layout
+
+\begin_layout Standard
+The bash build script is identical to the basic build script, as described
+ in chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../travis_qmake_gcc_cpp11/build.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 The Qt Creator project file
 \end_layout
 
@@ -3150,7 +3280,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11.pro
@@ -3279,7 +3409,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -3303,7 +3433,7 @@ It will show the text 'Hello world' on screen.
 The keyword 'noexcept' (What is noexcept? See chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:What-is-noexcept?"
+reference "sub:What-is-noexcept?"
 
 \end_inset
 
@@ -3315,7 +3445,7 @@ reference "subsec:What-is-noexcept?"
 Use of C++14
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp14"
+name "sub:travis_qmake_gcc_cpp14"
 
 \end_inset
 
@@ -3387,7 +3517,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -3407,11 +3537,65 @@ lstparams "breaklines=true,language={C++}"
 This .travis.yml file is the same as the C++11 build in chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp11"
+reference "sub:travis_qmake_gcc_cpp11"
 
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsubsection
+The build bash scrips
+\end_layout
+
+\begin_layout Standard
+The bash build script to build and run this:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../travis_qmake_gcc_cpp14/build.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bash script is identical to the basic build script (see chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Subsubsection
@@ -3442,7 +3626,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp14.pro
@@ -3470,7 +3654,7 @@ The Qt Creator project file has the same lines as the C++11 build in chapter
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp11"
+reference "sub:travis_qmake_gcc_cpp11"
 
 \end_inset
 
@@ -3519,7 +3703,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -3543,7 +3727,7 @@ This is a simple C++14 program that will not compile under C++11.
 Adding Boost
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_boost"
+name "sub:travis_qmake_gcc_cpp98_boost"
 
 \end_inset
 
@@ -3599,7 +3783,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Boost logo
@@ -3642,7 +3826,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -3722,7 +3906,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -3742,7 +3926,7 @@ build.sh
 The bash script is identical to the basic build script as in chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98-build.sh"
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
 
 \end_inset
 
@@ -3777,7 +3961,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_boost.pro
@@ -3805,7 +3989,7 @@ The Qt Creator project file has the same lines as the basic project in chapter
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98.pro"
+reference "sub:travis_qmake_gcc_cpp98.pro"
 
 \end_inset
 
@@ -3839,7 +4023,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -3869,7 +4053,7 @@ Currently, on Travis CI, the default Boost version is 1.46.1.
 Adding Boost.Test
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_boost_test"
+name "sub:travis_qmake_gcc_cpp98_boost_test"
 
 \end_inset
 
@@ -3881,7 +4065,7 @@ Adding only a testing framework does not work: it will not compile in C++98.
  Instead, this is covered in chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp11_boost_test"
+reference "sub:travis_qmake_gcc_cpp11_boost_test"
 
 \end_inset
 
@@ -3892,7 +4076,7 @@ reference "subsec:travis_qmake_gcc_cpp11_boost_test"
 Use of clang
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_clang_cpp98"
+name "sub:travis_qmake_clang_cpp98"
 
 \end_inset
 
@@ -3949,7 +4133,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 clang logo
@@ -3992,7 +4176,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -4040,7 +4224,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -4061,7 +4245,7 @@ The bash script is identical to the basic bash script as described in chapter
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98-build.sh"
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
 
 \end_inset
 
@@ -4096,7 +4280,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_clang_cpp98.pro
@@ -4196,7 +4380,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -4231,7 +4415,7 @@ TODO
 Adding gcov and Codecov
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_gcov"
+name "sub:travis_qmake_gcc_cpp98_gcov"
 
 \end_inset
 
@@ -4305,7 +4489,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Codecov logo
@@ -4346,7 +4530,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Codecov report of this build
@@ -4396,7 +4580,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -4474,7 +4658,7 @@ The code coverage performed in this build mismatches with the goals of code
  Chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp11_debug_gcov"
+reference "sub:travis_qmake_gcc_cpp11_debug_gcov"
 
 \end_inset
 
@@ -4483,6 +4667,57 @@ reference "subsec:travis_qmake_gcc_cpp11_debug_gcov"
 
 \begin_layout Subsubsection
 The build bash scrips
+\end_layout
+
+\begin_layout Standard
+The bash build script to build this:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "../travis_qmake_gcc_cpp98_gcov/build.sh"
+lstparams "breaklines=true,language={bash}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+build.sh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bash script is identical to the basic bash script as described in chapter
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -4499,7 +4734,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "/home/p230198/GitHubs/travis_qmake_gcc_cpp98_gcov/get_code_cov"
+filename "/home/p230198/GitHubs/travis_qmake_gcc_cpp98_gcov/get_code_cov.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -4508,10 +4743,10 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
-get_code_cov
+get_code_cov.sh
 \end_layout
 
 \end_inset
@@ -4599,7 +4834,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_gcov.pro
@@ -4683,7 +4918,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -4717,7 +4952,7 @@ reference "fig:travis_qmake_gcc_cpp98_gcov_codecov"
 Adding OCLint
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_oclint"
+name "sub:travis_qmake_gcc_cpp98_oclint"
 
 \end_inset
 
@@ -4782,7 +5017,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -4935,7 +5170,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -4985,7 +5220,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 do_oclint.sh
@@ -5160,7 +5395,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_oclint.pro
@@ -5222,7 +5457,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -5242,7 +5477,7 @@ main.cpp
 Adding profiling
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_gprof"
+name "sub:travis_qmake_gcc_cpp98_gprof"
 
 \end_inset
 
@@ -5253,7 +5488,7 @@ name "subsec:travis_qmake_gcc_cpp98_gprof"
 Adding the Qt library
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_qt"
+name "sub:travis_qmake_gcc_cpp98_qt"
 
 \end_inset
 
@@ -5316,7 +5551,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Qt logo
@@ -5342,7 +5577,7 @@ At this moment, there are two versions of Qt: Qt4 and Qt5.
 Adding the Qt4 library
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_qt4"
+name "sub:travis_qmake_gcc_cpp98_qt4"
 
 \end_inset
 
@@ -5353,7 +5588,7 @@ name "subsec:travis_qmake_gcc_cpp98_qt4"
 What is Qt4?
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:What-is-Qt4?"
+name "sub:What-is-Qt4?"
 
 \end_inset
 
@@ -5408,7 +5643,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -5434,7 +5669,7 @@ e.
 What is xvfb?
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:What-is-xvfb?"
+name "sub:What-is-xvfb?"
 
 \end_inset
 
@@ -5482,7 +5717,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -5503,7 +5738,7 @@ The bash script is close to the bash script of the basic build (see chapter
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98-build.sh"
+reference "sub:travis_qmake_gcc_cpp98-build.sh"
 
 \end_inset
 
@@ -5549,7 +5784,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_qt4.pro
@@ -5686,7 +5921,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -5827,7 +6062,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_dialog.h
@@ -6084,7 +6319,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_dialog.cpp
@@ -6255,7 +6490,7 @@ A standard destructor, that deletes the user interface
 Adding the Qt5 library
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_qt5"
+name "sub:travis_qmake_gcc_cpp98_qt5"
 
 \end_inset
 
@@ -6266,7 +6501,7 @@ name "subsec:travis_qmake_gcc_cpp98_qt5"
 What is Qt5?
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:What-is-Qt5?"
+name "sub:What-is-Qt5?"
 
 \end_inset
 
@@ -6337,7 +6572,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -6358,7 +6593,7 @@ This .travis.yml file is an extension of when adding the Qt4 library (chapter
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_qt4"
+reference "sub:travis_qmake_gcc_cpp98_qt4"
 
 \end_inset
 
@@ -6449,7 +6684,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -6503,7 +6738,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_qt5.pro
@@ -6531,7 +6766,7 @@ The Qt Creator project file is similar to the one needed for the Qt4 library
  (chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_qt4"
+reference "sub:travis_qmake_gcc_cpp98_qt4"
 
 \end_inset
 
@@ -6586,7 +6821,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -6607,7 +6842,7 @@ This main function definition is close to identical to that of when using
  Qt4 (see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_qt4"
+reference "sub:travis_qmake_gcc_cpp98_qt4"
 
 \end_inset
 
@@ -6637,7 +6872,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_qt5_dialog.h
@@ -6658,7 +6893,7 @@ This header file is also close to identical to that of when using Qt4 (see
  chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_qt4"
+reference "sub:travis_qmake_gcc_cpp98_qt4"
 
 \end_inset
 
@@ -6688,7 +6923,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_qt5_dialog.cpp
@@ -6709,7 +6944,7 @@ This implementation file is also close to identical to that of when using
  Qt4 (see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_qt4"
+reference "sub:travis_qmake_gcc_cpp98_qt4"
 
 \end_inset
 
@@ -6755,7 +6990,7 @@ This is the Qt5 syntax of connecting QTimer its 'timeout' slot to my_qt5_dialog
 Adding QTest
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_qtest"
+name "sub:travis_qmake_gcc_cpp98_qtest"
 
 \end_inset
 
@@ -6767,7 +7002,7 @@ One cannot use QTest without Qt.
  Because this thus takes two steps, this is covered in chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Qt-and-QTest"
+reference "sub:Qt-and-QTest"
 
 \end_inset
 
@@ -6778,7 +7013,7 @@ reference "subsec:Qt-and-QTest"
 Adding Rcpp
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_rcpp"
+name "sub:travis_qmake_gcc_cpp98_rcpp"
 
 \end_inset
 
@@ -6835,7 +7070,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 R logo
@@ -6983,7 +7218,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -7026,7 +7261,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -7074,7 +7309,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_cpp.sh
@@ -7131,7 +7366,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_cpp.sh
@@ -7175,7 +7410,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 domagic.pro
@@ -7245,7 +7480,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 src/do_magic_cpp.h
@@ -7290,7 +7525,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 src/do_magic_cpp.cpp
@@ -7340,7 +7575,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -7387,7 +7622,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 R/do_magic_r.R
@@ -7438,7 +7673,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 tests/testthat/test-do_magic_r.R
@@ -7471,7 +7706,7 @@ The tests call both the R and C++ functions with certain inputs and checks
 Adding the SFML library
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_sfml"
+name "sub:travis_qmake_gcc_cpp98_sfml"
 
 \end_inset
 
@@ -7516,7 +7751,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_sfml screenshot
@@ -7577,7 +7812,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 SFML logo
@@ -7620,7 +7855,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -7697,7 +7932,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -7752,7 +7987,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_sfml.pro
@@ -7829,7 +8064,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -7859,7 +8094,7 @@ The reason the application is terminated, is because it must be run on Travis
 Adding SLOCcount
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_sloccount"
+name "sub:travis_qmake_gcc_cpp98_sloccount"
 
 \end_inset
 
@@ -7922,7 +8157,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -8000,7 +8235,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -8055,7 +8290,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_sloccount.pro
@@ -8099,7 +8334,7 @@ The single C++ source file used exactly the same as described in chater
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98-main.cpp"
+reference "sub:travis_qmake_gcc_cpp98-main.cpp"
 
 \end_inset
 
@@ -8125,7 +8360,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -8145,7 +8380,7 @@ main.cpp
 Adding the Urho3D library
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_urho3d"
+name "sub:travis_qmake_gcc_cpp98_urho3d"
 
 \end_inset
 
@@ -8201,7 +8436,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Urho3D logo
@@ -8245,7 +8480,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Screenshot of travis_qmake_gcc_cpp98_urho3d
@@ -8288,7 +8523,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -8350,7 +8585,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -8405,7 +8640,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_urho3d.pro
@@ -8489,7 +8724,7 @@ mastercontrol.cpp
 Adding the Wt library
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_wt"
+name "sub:travis_qmake_gcc_cpp98_wt"
 
 \end_inset
 
@@ -8545,7 +8780,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Wt logo
@@ -8588,7 +8823,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -8647,7 +8882,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -8702,7 +8937,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_wt.pro
@@ -8764,7 +8999,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -8809,7 +9044,7 @@ You will probably want to combine the single ingredients in the previous
 Use of gcov in debug mode only: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Use-of-gcov-in-debug-mode-only"
+reference "sub:Use-of-gcov-in-debug-mode-only"
 
 \end_inset
 
@@ -8824,7 +9059,7 @@ Use of Qt and QTest: see chapter
 Use of C++11 and Boost: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp11_boost"
+reference "sub:travis_qmake_gcc_cpp11_boost"
 
 \end_inset
 
@@ -8835,7 +9070,7 @@ reference "subsec:travis_qmake_gcc_cpp11_boost"
 Use of C++11 and Boost.Test: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp11_boost_test"
+reference "sub:travis_qmake_gcc_cpp11_boost_test"
 
 \end_inset
 
@@ -8846,7 +9081,7 @@ reference "subsec:travis_qmake_gcc_cpp11_boost_test"
 Use of C++14 and Boost: see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp14_boost"
+reference "sub:travis_qmake_gcc_cpp14_boost"
 
 \end_inset
 
@@ -8857,7 +9092,7 @@ reference "subsec:travis_qmake_gcc_cpp14_boost"
 Use of gcov in debug mode only
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Use-of-gcov-in-debug-mode-only"
+name "sub:Use-of-gcov-in-debug-mode-only"
 
 \end_inset
 
@@ -8868,7 +9103,7 @@ name "subsec:Use-of-gcov-in-debug-mode-only"
 In this example, the C++98 build with gcov (chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_gcov"
+reference "sub:travis_qmake_gcc_cpp98_gcov"
 
 \end_inset
 
@@ -9020,7 +9255,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -9063,7 +9298,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -9156,7 +9391,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_debug.sh
@@ -9199,7 +9434,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_release.sh
@@ -9246,7 +9481,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_debug_gcov.pro
@@ -9292,7 +9527,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_gcov.pro
@@ -9380,7 +9615,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 do_magic.h
@@ -9419,7 +9654,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 do_magic.cpp
@@ -9462,7 +9697,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -9505,7 +9740,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main_gcov.cpp
@@ -9529,7 +9764,7 @@ main_gcov.cpp
 Qt and QTest
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:Qt-and-QTest"
+name "sub:Qt-and-QTest"
 
 \end_inset
 
@@ -9570,7 +9805,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 The application
@@ -9621,7 +9856,7 @@ Do not use Boost.Test to test graphical Qt aplications
 The Boost.Test library (see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp11_boost_test"
+reference "sub:travis_qmake_gcc_cpp11_boost_test"
 
 \end_inset
 
@@ -9663,7 +9898,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -9738,7 +9973,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_test.sh
@@ -9773,7 +10008,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_normal.sh
@@ -9823,7 +10058,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_qt_qtest_test.pro
@@ -9869,7 +10104,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp98_qt_qtest.pro
@@ -9923,7 +10158,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_dialog.h
@@ -9969,7 +10204,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_dialog.cpp
@@ -10023,7 +10258,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 qtmain.cpp
@@ -10079,7 +10314,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 qtmain_test.cpp
@@ -10130,7 +10365,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_dialog_test.h
@@ -10193,7 +10428,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_dialog_test.cpp
@@ -10227,7 +10462,7 @@ The 'QVERIFY' macro is used by the QTest framework to do a single check,
 C++11 and Boost libraries
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp11_boost"
+name "sub:travis_qmake_gcc_cpp11_boost"
 
 \end_inset
 
@@ -10297,7 +10532,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -10342,7 +10577,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_boost.pro
@@ -10400,7 +10635,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -10450,7 +10685,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -10488,7 +10723,7 @@ TODO
 C++11 and Boost.Test
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp11_boost_test"
+name "sub:travis_qmake_gcc_cpp11_boost_test"
 
 \end_inset
 
@@ -10500,7 +10735,7 @@ Boost.Test works great for console applications.
  If you use a GUI library like Qt, using QTest is easier (see chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:Qt-and-QTest"
+reference "sub:Qt-and-QTest"
 
 \end_inset
 
@@ -10660,7 +10895,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -10741,7 +10976,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_function.h
@@ -10786,7 +11021,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_function.cpp
@@ -10836,7 +11071,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_boost_test_test.pro
@@ -10879,7 +11114,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main_test.cpp
@@ -10925,7 +11160,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_functions_test.cpp
@@ -10972,7 +11207,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -11017,7 +11252,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_boost_test.pro
@@ -11072,7 +11307,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -11120,7 +11355,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -11154,7 +11389,7 @@ TODO
 C++11 and clang
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_clang_cpp11"
+name "sub:travis_qmake_clang_cpp11"
 
 \end_inset
 
@@ -11224,7 +11459,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -11269,7 +11504,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_clang_cpp11.pro
@@ -11327,7 +11562,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -11377,7 +11612,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -11415,7 +11650,7 @@ TODO
 C++11 and gcov
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp11_gcov"
+name "sub:travis_qmake_gcc_cpp11_gcov"
 
 \end_inset
 
@@ -11426,7 +11661,7 @@ name "subsec:travis_qmake_gcc_cpp11_gcov"
 In this example, the C++98 build with gcov (chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_gcov"
+reference "sub:travis_qmake_gcc_cpp98_gcov"
 
 \end_inset
 
@@ -11461,7 +11696,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -11533,7 +11768,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -11572,7 +11807,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 get_code_cov.sh
@@ -11638,14 +11873,14 @@ The Qt Creator project files
 This Qt Creator project file is a mix from using only gcov (chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_gcov"
+reference "sub:travis_qmake_gcc_cpp98_gcov"
 
 \end_inset
 
 ) and using C++11 (chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_clang_cpp11"
+reference "sub:travis_qmake_clang_cpp11"
 
 \end_inset
 
@@ -11671,7 +11906,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_gcov.pro
@@ -11725,7 +11960,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -11753,7 +11988,7 @@ In this code, the function 'do_magic' is used for a single value, that is
 C++11 and Qt
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp11_qt"
+name "sub:travis_qmake_gcc_cpp11_qt"
 
 \end_inset
 
@@ -11822,7 +12057,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -11866,7 +12101,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_qt.pro
@@ -11924,7 +12159,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -11974,7 +12209,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -11998,7 +12233,7 @@ This .travis.yml file has ...
 C++11 and Rcpp
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp11_rcpp"
+name "sub:travis_qmake_gcc_cpp11_rcpp"
 
 \end_inset
 
@@ -12159,7 +12394,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -12205,7 +12440,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 src/do_magic_cpp.h
@@ -12252,7 +12487,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 src/do_magic_cpp.cpp
@@ -12339,7 +12574,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -12387,7 +12622,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 domagic.pro
@@ -12565,7 +12800,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_cpp.sh
@@ -12586,7 +12821,7 @@ This script is already described in the C++98 and Rcpp chapter (chapter
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98_rcpp"
+reference "sub:travis_qmake_gcc_cpp98_rcpp"
 
 \end_inset
 
@@ -12627,7 +12862,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 R/do_magic_r.R
@@ -12694,7 +12929,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 tests/testthat/test-do_magic_r.R
@@ -12747,7 +12982,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 install_r_packages.sh
@@ -12798,7 +13033,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -12993,7 +13228,7 @@ The script consists out of a build and run of the C++11 code, cleaning up
 C++11 and SFML
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp11_sfml"
+name "sub:travis_qmake_gcc_cpp11_sfml"
 
 \end_inset
 
@@ -13062,7 +13297,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -13106,7 +13341,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_sfml.pro
@@ -13164,7 +13399,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -13214,7 +13449,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -13238,7 +13473,7 @@ This .travis.yml file has ...
 C++11 and Urho3D
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp11_urho3d"
+name "sub:travis_qmake_gcc_cpp11_urho3d"
 
 \end_inset
 
@@ -13307,7 +13542,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 mastercontrol.cpp
@@ -13351,7 +13586,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_urho3d.pro
@@ -13409,7 +13644,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -13459,7 +13694,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -13483,7 +13718,7 @@ This .travis.yml file has ...
 C++11 and Wt
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp11_wt"
+name "sub:travis_qmake_gcc_cpp11_wt"
 
 \end_inset
 
@@ -13556,7 +13791,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -13600,7 +13835,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_wt.pro
@@ -13658,7 +13893,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -13708,7 +13943,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -13732,7 +13967,7 @@ This .travis.yml file has ...
 C++14 and Boost libraries
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp14_boost"
+name "sub:travis_qmake_gcc_cpp14_boost"
 
 \end_inset
 
@@ -13802,7 +14037,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -13847,7 +14082,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp14_boost.pro
@@ -13905,7 +14140,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build.sh
@@ -13955,7 +14190,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -13989,7 +14224,7 @@ TODO
 C++14 and Boost.Test
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp14_boost_test"
+name "sub:travis_qmake_gcc_cpp14_boost_test"
 
 \end_inset
 
@@ -14149,7 +14384,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -14230,7 +14465,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_function.h
@@ -14275,7 +14510,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_function.cpp
@@ -14325,7 +14560,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp14_boost_test_test.pro
@@ -14368,7 +14603,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main_test.cpp
@@ -14414,7 +14649,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 my_functions_test.cpp
@@ -14461,7 +14696,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -14506,7 +14741,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp14_boost_test.pro
@@ -14561,7 +14796,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_normal_release.sh
@@ -14600,7 +14835,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_test.sh
@@ -14643,7 +14878,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -14677,7 +14912,7 @@ TODO
 C++14 and Rcpp
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp14_rcpp"
+name "sub:travis_qmake_gcc_cpp14_rcpp"
 
 \end_inset
 
@@ -14705,7 +14940,7 @@ Use of C++11, Boost.Test and gcov: see chapter
 C++11 and use of gcov in debug mode only
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp11_debug_gcov"
+name "sub:travis_qmake_gcc_cpp11_debug_gcov"
 
 \end_inset
 
@@ -14862,7 +15097,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -14905,7 +15140,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml
@@ -14998,7 +15233,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_debug.sh
@@ -15041,7 +15276,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_release.sh
@@ -15088,7 +15323,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_debug_gcov.pro
@@ -15134,7 +15369,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_gcov.pro
@@ -15222,7 +15457,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 do_magic.h
@@ -15261,7 +15496,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 do_magic.cpp
@@ -15304,7 +15539,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main.cpp
@@ -15347,7 +15582,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 main_gcov.cpp
@@ -15367,7 +15602,7 @@ main_gcov.cpp
 C++11, Boost.Test and gcov
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp11_boost_test_gcov"
+name "sub:travis_qmake_gcc_cpp11_boost_test_gcov"
 
 \end_inset
 
@@ -15548,7 +15783,7 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 Venn diagram of the files uses in this build
@@ -15606,7 +15841,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 travis_qmake_gcc_cpp11_boost_test_gcov_test.pro
@@ -15670,7 +15905,7 @@ lstparams "breaklines=true,language={bash}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 build_test.sh
@@ -15718,7 +15953,7 @@ lstparams "breaklines=true,language={C++}"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
+\begin_inset Caption
 
 \begin_layout Plain Layout
 .travis.yml

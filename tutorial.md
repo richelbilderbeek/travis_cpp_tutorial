@@ -1,6 +1,6 @@
 # Travis C++ tutorial
 
- * [PDF](travis_cpp_tutorial.pdf)
+Instead of a screen-friendly version, 
 
-This is where the computer version tutorial will be
+ * [PDF](travis_cpp_tutorial.pdf)
 
