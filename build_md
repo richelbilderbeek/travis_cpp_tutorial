@@ -1,3 +1,3 @@
 #!/bin/bash
-lyx --export latex travis_cpp_tutorial.lyx
-pandoc --no-wrap -f latex -t markdown travis_cpp_tutorial.tex > travis_cpp_tutorial.md
+lyx --export pdflatex travis_cpp_tutorial.lyx
+pandoc --wrap=none -f latex -t markdown travis_cpp_tutorial.tex > travis_cpp_tutorial.md
