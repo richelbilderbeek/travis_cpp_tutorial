@@ -1,6 +1,6 @@
 # Travis C++ tutorial
 
-Instead of a screen-friendly version, the 
+The current PDF is not exactly screen-friendly. 
 
  * [PDF](travis_cpp_tutorial.pdf)
 
