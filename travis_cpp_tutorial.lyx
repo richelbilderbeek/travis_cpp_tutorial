@@ -4499,7 +4499,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "/home/p230198/GitHubs/travis_qmake_gcc_cpp98_gcov/get_code_cov"
+filename "../travis_qmake_gcc_cpp98_gcov/get_code_cov"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -5428,6 +5428,18 @@ lstparams "breaklines=true,language={C++}"
 This .travis.yml file starts xvfb before the script.
  In the script, it builds the code first, before running the resulting executabl
 e.
+ Instead of calling 'qmake', however, it explicitly calls 'qmake-qt4'
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+qmake-qt4
+\end_layout
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -5453,73 +5465,6 @@ xvfb
 
 \begin_layout Standard
 xvfb is the vitual X server.
-\end_layout
-
-\begin_layout Subsubsection
-The build bash scrips
-\end_layout
-
-\begin_layout Standard
-The bash build script to build this:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_qt4/build.sh"
-lstparams "breaklines=true,language={bash}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-build.sh
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The bash script is close to the bash script of the basic build (see chapter
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:travis_qmake_gcc_cpp98-build.sh"
-
-\end_inset
-
-).
- Instead of calling 'qmake', however, it explicitly calls 'qmake-qt4'
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-qmake-qt4
-\end_layout
-
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Subsubsection
@@ -6420,60 +6365,6 @@ status open
 
 Install all Qt5 apt packagess.
  I put these on three lines just for readability.
-\end_layout
-
-\begin_layout Subsubsection
-The build bash scrips
-\end_layout
-
-\begin_layout Standard
-The bash build script to build this:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_qt5/build.sh"
-lstparams "breaklines=true,language={bash}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-build.sh
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The bash script has the same lines as the basic project in chapter 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Subsubsection
@@ -9147,7 +9038,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_debug_gcov/build_debug.sh"
+filename "../travis_qmake_gcc_cpp98_debug_gcov/build_debug"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -9159,7 +9050,7 @@ lstparams "breaklines=true,language={bash}"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-build_debug.sh
+build_debug
 \end_layout
 
 \end_inset
@@ -9190,7 +9081,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_debug_gcov/build_release.sh"
+filename "../travis_qmake_gcc_cpp98_debug_gcov/build_release"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -9202,7 +9093,7 @@ lstparams "breaklines=true,language={bash}"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-build_release.sh
+build_release
 \end_layout
 
 \end_inset
@@ -13636,56 +13527,6 @@ reference "sec:travis_qmake_gcc_cpp98"
 \end_layout
 
 \begin_layout Standard
-The bash build script to build this, run this and measure the code coverage:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp11_wt/build.sh"
-lstparams "breaklines=true,language={bash}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-build.sh
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The bash script has the same lines as the basic project in chapter 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
 Setting up Travis is done by the following .travis.yml:
 \end_layout
 
@@ -13873,56 +13714,6 @@ name "alg:travis_qmake_gcc_cpp14_boost.pro"
 \begin_layout Standard
 The Qt Creator project file has the same lines as the basic project in chapter
  
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-The bash build script to build and run this:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp14_boost/build.sh"
-lstparams "breaklines=true,language={bash}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-build.sh
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The bash script has the same lines as the basic project in chapter 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:travis_qmake_gcc_cpp98"
@@ -14535,88 +14326,6 @@ Note how this Qt Creator project file does not link to the Boost unit test
 \end_layout
 
 \begin_layout Subsubsection
-Build script
-\end_layout
-
-\begin_layout Standard
-The bash build script to build and run the normal release in release mode:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp14_boost_test/build_normal_release.sh"
-lstparams "breaklines=true,language={bash}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-build_normal_release.sh
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The bash build script to compile in debug mode and run the tests:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp14_boost_test/build_test.sh"
-lstparams "breaklines=true,language={bash}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-build_test.sh
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
 Travis script
 \end_layout
 
@@ -14969,96 +14678,6 @@ after_success: codecov
 \end_inset
 
 After the script has run successfully, codecov is called
-\end_layout
-
-\begin_layout Subsubsection
-The build bash scrips
-\end_layout
-
-\begin_layout Standard
-The bash build script to build this, run this and measure the code coverage:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp11_debug_gcov/build_debug.sh"
-lstparams "breaklines=true,language={bash}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-build_debug.sh
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The new step is ...
-\end_layout
-
-\begin_layout Standard
-The bash build script to build this, run this and measure the code coverage:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp11_debug_gcov/build_release.sh"
-lstparams "breaklines=true,language={bash}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-build_release.sh
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This is ...
 \end_layout
 
 \begin_layout Subsubsection
