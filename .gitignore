@@ -36,3 +36,4 @@ images/SFML_Logo.pdf
 travis_cpp_tutorial.tex
 images/SFML Logo.pdf
 images/*.eps
+tmp.*
