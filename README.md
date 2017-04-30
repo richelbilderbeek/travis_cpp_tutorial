@@ -10,6 +10,7 @@ Tutorial how to use Travis CI with C++.
  * View the [tutorial](tutorial.md) (screen friendly)
  * Download the [PDF](travis_cpp_tutorial.pdf)
  * Want to pick a minimal example? Go to [statuses](statuses.md) 
+ * Want to see a setup with many of these tools combined? Go to [the_richel_setup](https://github.com/richelbilderbeek/the_richel_setup)
 
 ## Tools explored
 

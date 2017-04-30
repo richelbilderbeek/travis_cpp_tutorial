@@ -17,7 +17,7 @@ install:
   #- sudo tlmgr pgf ms
 
 script:
-  - ./download_other_githubs.sh
+  - ./download_other_githubs
   # - kpsewhich tkz-graph.sty
   # - ./build_pdf.sh
 
