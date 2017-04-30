@@ -28,7 +28,7 @@ In alphabetical order
  * GitHub: GitHub is a site where git repositories are hosted. It gives a git project a website where the files can be viewed. Next to this, there is a project page for issues like bug reports and feature requests
  * `gprof`: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
  * GSL: [Microsoft implementation of the Guidelines Support Library](https://github.com/Microsoft/GSL)
- * `helgrind`: detect memory leaks
+ * `helgrind`: [a thread error detector](http://valgrind.org/docs/manual/hg-manual.html)
  * libFuzzer: [a library for coverage-guided fuzz testing](http://llvm.org/docs/LibFuzzer.html)
  * `memcheck`: detect memory leaks
  * `OCLint`: static code analyis ([homepage](http://oclint.org/)) ([GitHub](https://github.com/oclint/oclint))
