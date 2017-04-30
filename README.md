@@ -27,7 +27,9 @@ In alphabetical order
  * GitHub: GitHub is a site where git repositories are hosted. It gives a git project a website where the files can be viewed. Next to this, there is a project page for issues like bug reports and feature requests
  * `gprof`: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
  * GSL: [Microsoft implementation of the Guidelines Support Library](https://github.com/Microsoft/GSL)
+ * `helgrind`: detect memory leaks
  * libFuzzer: [a library for coverage-guided fuzz testing](http://llvm.org/docs/LibFuzzer.html)
+ * `memcheck`: detect memory leaks
  * `OCLint`: static code analyis ([homepage](http://oclint.org/)) ([GitHub](https://github.com/oclint/oclint))
  * `perf`: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
  * Qt: a C++ GUI library
@@ -35,6 +37,7 @@ In alphabetical order
  * Rcpp: Rcpp is an R package that allows mixing R and C++ code
  * Rcpp11: Rcpp is an R package that allows mixing R and C++11 code
  * SFML: a C++ multimedia library
+ * SLOCcount: estimate the value of your code
  * Travis CI: Travis CI is a continuous integration (hence the 'CI' in its name) tool that plays well with GitHub. It is activated when someone uploads his/her code to the GitHub
  * Urho3D: a C++ game engine
  * Wt: a C++ web application library
