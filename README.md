@@ -12,7 +12,7 @@ Tutorial how to use Travis CI with C++.
  * Want to pick a minimal example? Go to [statuses](statuses.md) 
  * Want to see a setup with many of these tools combined? Go to [the_richel_setup](https://github.com/richelbilderbeek/the_richel_setup)
 
-## Tools explored
+## C++ tools explored
 
 In alphabetical order
 
@@ -42,6 +42,16 @@ In alphabetical order
  * Travis CI: Travis CI is a continuous integration (hence the 'CI' in its name) tool that plays well with GitHub. It is activated when someone uploads his/her code to the GitHub
  * Urho3D: a C++ game engine
  * Wt: a C++ web application library
+
+## Non-C++ tools explored
+
+In alphabetical order. Go to [statuses](statuses.md) to find these.
+
+ * `convert`: convert images using ImageMagick
+ * `cowsay`: an ASCII art cow displaying a message\
+ * `lyx`: convert LyX to PDF
+ * `proselint`: check your prose
+ * `shunit2`: bash script testing framework
 
 ## Statuses
 
