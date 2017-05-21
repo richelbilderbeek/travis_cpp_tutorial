@@ -20,6 +20,7 @@ In alphabetical order
  * Boost: Boost is a collection of C++ libraries ([homepage](http://www.boost.org/))
  * Boost.Test: Boost.Test is a C++ testing framework within the Boost libraries
  * `clang`: C++ compiler
+ * `CMake`: makefile generator
  * Codecov: Codecov is a tool to display a gcov code coverage result, that plays well with GitHub. It can be actived from a Travis script
  * Coverity: a static code analysis tool
  * `gcc`: GNU Compiler Collection, a collection of compilers, in this case, the C++ compiler called `g++`
@@ -33,6 +34,7 @@ In alphabetical order
  * `memcheck`: detect memory leaks
  * `OCLint`: static code analyis ([homepage](http://oclint.org/)) ([GitHub](https://github.com/oclint/oclint))
  * `perf`: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
+ * `qmake`: makefile generator for Qt projects
  * Qt: a C++ GUI library
  * QTest: the Qt testing framework
  * Rcpp: Rcpp is an R package that allows mixing R and C++ code
