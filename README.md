@@ -40,7 +40,8 @@ In alphabetical order
  * SFML: a C++ multimedia library
  * SLOCcount: estimate the value of your code
  * Travis CI: Travis CI is a continuous integration (hence the 'CI' in its name) tool that plays well with GitHub. It is activated when someone uploads his/her code to the GitHub
- * Urho3D: a C++ game engine
+ * Unreal Engine 4: a proprietary C++ game engine
+ * Urho3D: a free and open-source C++ game engine
  * Wt: a C++ web application library
 
 ## Non-C++ tools explored
