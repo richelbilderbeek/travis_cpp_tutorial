@@ -161,6 +161,12 @@ Statuses of the repositories used that are successfull, or that I haven't done y
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_cmake_gcc_cpp17.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_cmake_gcc_cpp17) [travis_cmake_gcc_cpp17](https://github.com/richelbilderbeek/travis_cmake_gcc_cpp17)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17) [travis_qmake_gcc_cpp17](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp17)
 
+## C
+
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_c98.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_c98) [travis_qmake_gcc_c98](https://github.com/richelbilderbeek/travis_qmake_gcc_c98)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_c11.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_c11) [travis_qmake_gcc_c11](https://github.com/richelbilderbeek/travis_qmake_gcc_c11)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_c14.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_c14) [travis_qmake_gcc_c14](https://github.com/richelbilderbeek/travis_qmake_gcc_c14)
+
 ## Other Travis CI examples
 
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_convert.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_convert) [travis_convert](https://github.com/richelbilderbeek/travis_convert)
