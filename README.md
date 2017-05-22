@@ -22,6 +22,7 @@ In alphabetical order
  * `clang`: C++ compiler
  * Codecov: Codecov is a tool to display a gcov code coverage result, that plays well with GitHub. It can be actived from a Travis script
  * Coverity: a static code analysis tool
+ * `cppcheck`: static code analysis
  * `gcc`: GNU Compiler Collection, a collection of compilers, in this case, the C++ compiler called `g++`
  * `gcov`: gcov is a GNU tool to measur the code coverage of (among others) C++ code. It can be actived from a Travis script
  * `git`: git is a version control system. It tracks the changes made in the project and allows for viewing the project its history
