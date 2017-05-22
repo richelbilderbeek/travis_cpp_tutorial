@@ -20,6 +20,7 @@ In alphabetical order
  * Boost: Boost is a collection of C++ libraries ([homepage](http://www.boost.org/))
  * Boost.Test: Boost.Test is a C++ testing framework within the Boost libraries
  * `clang`: C++ compiler
+ * `CMake`: makefile generator
  * Codecov: Codecov is a tool to display a gcov code coverage result, that plays well with GitHub. It can be actived from a Travis script
  * Coverity: a static code analysis tool
  * `cppcheck`: static code analysis
@@ -34,6 +35,7 @@ In alphabetical order
  * `memcheck`: detect memory leaks
  * `OCLint`: static code analyis ([homepage](http://oclint.org/)) ([GitHub](https://github.com/oclint/oclint))
  * `perf`: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
+ * `qmake`: makefile generator for Qt projects
  * Qt: a C++ GUI library
  * QTest: the Qt testing framework
  * Rcpp: Rcpp is an R package that allows mixing R and C++ code
@@ -41,7 +43,8 @@ In alphabetical order
  * SFML: a C++ multimedia library
  * SLOCcount: estimate the value of your code
  * Travis CI: Travis CI is a continuous integration (hence the 'CI' in its name) tool that plays well with GitHub. It is activated when someone uploads his/her code to the GitHub
- * Urho3D: a C++ game engine
+ * Unreal Engine 4: a proprietary C++ game engine
+ * Urho3D: a free and open-source C++ game engine
  * Wt: a C++ web application library
 
 ## Non-C++ tools explored
