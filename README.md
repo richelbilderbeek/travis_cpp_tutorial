@@ -51,10 +51,13 @@ In alphabetical order
 
 In alphabetical order. Go to [statuses](statuses.md) to find these.
 
+ * C: some C code examples
  * `convert`: convert images using ImageMagick
  * `cowsay`: an ASCII art cow displaying a message\
  * `lyx`: convert LyX to PDF
- * `proselint`: check your prose
+ * `proselint`: check your prose for style
+ * R: some R code examples
+ * `spell`: check your prose for spelling
  * `shunit2`: bash script testing framework
 
 ## Statuses

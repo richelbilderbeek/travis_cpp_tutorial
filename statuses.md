@@ -175,6 +175,7 @@ Statuses of the repositories used that are successfull, or that I haven't done y
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_lyx.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_lyx) [travis_lyx](https://github.com/richelbilderbeek/travis_lyx)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_proselint.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_proselint) [travis_proselint](https://github.com/richelbilderbeek/travis_proselint)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_shunit2.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_shunit2) [travis_shunit2](https://github.com/richelbilderbeek/travis_shunit2)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_spell.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_spell) [travis_spell](https://github.com/richelbilderbeek/travis_spell)
 
 ## More complex C++ programs
 
