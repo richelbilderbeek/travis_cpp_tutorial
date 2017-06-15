@@ -19,11 +19,13 @@ In alphabetical order
  * Bio++: C++ biology libraries 
  * Boost: Boost is a collection of C++ libraries ([homepage](http://www.boost.org/))
  * Boost.Test: Boost.Test is a C++ testing framework within the Boost libraries
+ * ChaiScript: embedded scripting language ([ChaiScript GitHub](https://github.com/ChaiScript/ChaiScript))
  * `clang`: C++ compiler
  * `CMake`: makefile generator
  * Codecov: Codecov is a tool to display a gcov code coverage result, that plays well with GitHub. It can be actived from a Travis script
  * Coverity: a static code analysis tool
  * `cppcheck`: static code analysis
+ * `fparser`: Warp's function parser
  * `gcc`: GNU Compiler Collection, a collection of compilers, in this case, the C++ compiler called `g++`
  * `gcov`: gcov is a GNU tool to measur the code coverage of (among others) C++ code. It can be actived from a Travis script
  * `git`: git is a version control system. It tracks the changes made in the project and allows for viewing the project its history
