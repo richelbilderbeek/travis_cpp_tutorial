@@ -36,6 +36,7 @@ In alphabetical order
  * GSL: [Microsoft implementation of the Guidelines Support Library](https://github.com/Microsoft/GSL)
  * `helgrind`: [a thread error detector](http://valgrind.org/docs/manual/hg-manual.html)
  * libFuzzer: [a library for coverage-guided fuzz testing](http://llvm.org/docs/LibFuzzer.html)
+ * `libnds`: Nintendo DS library
  * `memcheck`: detect memory leaks
  * `OCLint`: static code analyis ([homepage](http://oclint.org/)) ([GitHub](https://github.com/oclint/oclint))
  * `perf`: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
