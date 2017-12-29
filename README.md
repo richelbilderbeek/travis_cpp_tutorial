@@ -80,3 +80,4 @@ This project follows the [Contributor Covenant](http://contributor-covenant.org)
 ## Other Travis tutorials
 
  * [Travis R tutorial](https://github.com/richelbilderbeek/travis_r_tutorial)
+ * [General Travis tutorial](https://github.com/richelbilderbeek/travis_tutorial)
