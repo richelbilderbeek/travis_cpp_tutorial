@@ -14,7 +14,7 @@ Tutorial how to use Travis CI with C++.
  * Want to read a blog post about Travis CI? Go to [blog post about Travis CI](https://arne-mertz.de/2017/04/continuous-integration-travis-ci)
  * Want to hear a [CppCast](https://cppcast.com) episode about Travis CI? Go to [CppCast episode about Travis CI](http://cppcast.com/2017/06/richel-bilderbeek/)
 
-## C++ tools explored
+## C++ libraries and tools explored
 
 In alphabetical order
 
@@ -22,27 +22,28 @@ In alphabetical order
  * [Boost](https://github.com/richelbilderbeek/cpp/blob/master/content/CppBoost.md): Boost is a collection of C++ libraries ([homepage](http://www.boost.org/))
  * Boost.Test: Boost.Test is a C++ testing framework within the Boost libraries
  * ChaiScript: embedded scripting language ([ChaiScript GitHub](https://github.com/ChaiScript/ChaiScript))
- * `clang`: C++ compiler
- * `CMake`: makefile generator
- * [Boost](https://github.com/richelbilderbeek/cpp/blob/master/content/CppCodecov.md): Codecov is a webservice to display a `gcov` code coverage result, that plays well with GitHub. It can be actived from a Travis script
+ * [clang](https://github.com/richelbilderbeek/cpp/blob/master/content/CppClang.md): C++ compiler
+ * [CMake](https://github.com/richelbilderbeek/cpp/blob/master/content/CppCmake.md): makefile generator
+ * [Codecov](https://github.com/richelbilderbeek/cpp/blob/master/content/CppCodecov.md): Codecov is a webservice to display a `gcov` code coverage result, that plays well with GitHub. It can be actived from a Travis script
  * Coverity: a static code analysis tool [FAILS]
  * [cppcheck](https://github.com/richelbilderbeek/cpp/blob/master/content/CppCppcheck.md): static code analysis
  * `fparser`: Warp's function parser
- * `gcc`: GNU Compiler Collection, a collection of compilers, in this case, the C++ compiler called `g++`
+ * [GCC](https://github.com/richelbilderbeek/cpp/blob/master/content/CppGcc.md): GNU Compiler Collection, a collection of compilers, in this case, the C++ compiler called `g++`
  * [gcov](https://github.com/richelbilderbeek/cpp/blob/master/content/CppGcov.md): gcov is a GNU tool to measur the code coverage of (among others) C++ code. It can be actived from a Travis script
- * `git`: git is a version control system. It tracks the changes made in the project and allows for viewing the project its history
- * GitHub: GitHub is a site where git repositories are hosted. It gives a git project a website where the files can be viewed. Next to this, there is a project page for issues like bug reports and feature requests
- * `gprof`: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
- * GSL: [Microsoft implementation of the Guidelines Support Library](https://github.com/Microsoft/GSL)
- * `helgrind`: [a thread error detector](http://valgrind.org/docs/manual/hg-manual.html)
- * libFuzzer: [a library for coverage-guided fuzz testing](http://llvm.org/docs/LibFuzzer.html)
- * `libnds`: Nintendo DS library
- * `memcheck`: detect memory leaks
- * `OCLint`: static code analyis ([homepage](http://oclint.org/)) ([GitHub](https://github.com/oclint/oclint))
- * `perf`: gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
- * `qmake`: makefile generator for Qt projects
- * Qt: a C++ GUI library
+ * [git](https://github.com/richelbilderbeek/cpp/blob/master/content/CppGit.md): git is a version control system. It tracks the changes made in the project and allows for viewing the project its history
+ * [GitHub](https://github.com/richelbilderbeek/cpp/blob/master/content/CppGitHub.md): GitHub is a site where git repositories are hosted. It gives a git project a website where the files can be viewed. Next to this, there is a project page for issues like bug reports and feature requests
+ * [gprof](https://github.com/richelbilderbeek/cpp/blob/master/content/CppGprof.md): gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
+ * [GSL](https://github.com/richelbilderbeek/cpp/blob/master/content/CppGsl.md): [Microsoft implementation of the Guidelines Support Library](https://github.com/Microsoft/GSL)
+ * [helgrind](https://github.com/richelbilderbeek/cpp/blob/master/content/CppHelgrind.md): [a thread error detector](http://valgrind.org/docs/manual/hg-manual.html)
+ * [libFuzzer](https://github.com/richelbilderbeek/cpp/blob/master/content/CppLibFuzzer.md): [a library for coverage-guided fuzz testing](http://llvm.org/docs/LibFuzzer.html)
+ * [libnds](https://github.com/richelbilderbeek/cpp/blob/master/content/CppLibNds.md): Nintendo DS library
+ * [memcheck](https://github.com/richelbilderbeek/cpp/blob/master/content/CppMemcheck.md): detect memory leaks
+ * [OCLint](https://github.com/richelbilderbeek/cpp/blob/master/content/CppOclint.md): static code analyis ([homepage](http://oclint.org/)) ([GitHub](https://github.com/oclint/oclint))
+ * [perf](https://github.com/richelbilderbeek/cpp/blob/master/content/CppPerf.md): gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
+ * [qmake](https://github.com/richelbilderbeek/cpp/blob/master/content/CppQmake.md): makefile generator for Qt projects
+ * [Qt](https://github.com/richelbilderbeek/cpp/blob/master/content/CppQt.md): a C++ GUI library
  * QTest: the Qt testing framework
+ * [Qwt](https://github.com/richelbilderbeek/cpp/blob/master/content/CppQwt.md): a Qt charts/graphs library
  * Rcpp: Rcpp is an R package that allows mixing R and C++ code
  * Rcpp11: Rcpp is an R package that allows mixing R and C++11 code
  * SFML: a C++ multimedia library
@@ -58,7 +59,7 @@ In alphabetical order. Go to [statuses](statuses.md) to find these.
 
  * C: some C code examples
  * `convert`: convert images using ImageMagick
- * `cowsay`: an ASCII art cow displaying a message\
+ * `cowsay`: an ASCII art cow displaying a message
  * `lyx`: convert LyX to PDF
  * `proselint`: check your prose for style
  * R: some R code examples
