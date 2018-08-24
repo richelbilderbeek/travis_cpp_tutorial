@@ -35,3 +35,5 @@ images/Qt_logo_2015.pdf
 images/SFML_Logo.pdf
 travis_cpp_tutorial.tex
 images/SFML Logo.pdf
+images/*.eps
+tmp.*
