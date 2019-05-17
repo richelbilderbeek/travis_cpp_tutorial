@@ -73,3 +73,6 @@
 [submodule "travis_qmake_gcc_cpp98_wt"]
 	path = travis_qmake_gcc_cpp98_wt
 	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_wt
+[submodule "travis_qmake_gcc_cpp17"]
+	path = travis_qmake_gcc_cpp17
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp17
