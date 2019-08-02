@@ -12,7 +12,7 @@ install:
   #- sudo apt-get install -qq texlive*
   #- sudo apt-get install -qq texlive-latex-extra
   #- sudo apt-get install -qq texlive-fonts-extra
-  - sudo apt-get install -qq pgf
+  #- sudo apt-get install -qq pgf
   - sudo apt-get install -qq graphviz
   - sudo apt-get install -qq qtikz
   #- sudo apt-get install -qq tlmgr
