@@ -35,7 +35,6 @@ In alphabetical order
  * [gprof](https://github.com/richelbilderbeek/cpp/blob/master/content/CppGprof.md): gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
  * [GSL](https://github.com/richelbilderbeek/cpp/blob/master/content/CppGsl.md): [Microsoft implementation of the Guidelines Support Library](https://github.com/Microsoft/GSL)
  * [helgrind](https://github.com/richelbilderbeek/cpp/blob/master/content/CppHelgrind.md): [a thread error detector](http://valgrind.org/docs/manual/hg-manual.html)
- * [libFuzzer](https://github.com/richelbilderbeek/cpp/blob/master/content/CppLibFuzzer.md): [a library for coverage-guided fuzz testing](http://llvm.org/docs/LibFuzzer.html)
  * [libnds](https://github.com/richelbilderbeek/cpp/blob/master/content/CppLibNds.md): Nintendo DS library
  * [memcheck](https://github.com/richelbilderbeek/cpp/blob/master/content/CppMemcheck.md): detect memory leaks
  * [OCLint](https://github.com/richelbilderbeek/cpp/blob/master/content/CppOclint.md): static code analyis ([homepage](http://oclint.org/)) ([GitHub](https://github.com/oclint/oclint))
