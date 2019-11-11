@@ -39,7 +39,6 @@ In alphabetical order
  * [libnds](https://github.com/richelbilderbeek/cpp/blob/master/content/CppLibNds.md): Nintendo DS library
  * [memcheck](https://github.com/richelbilderbeek/cpp/blob/master/content/CppMemcheck.md): detect memory leaks
  * [OCLint](https://github.com/richelbilderbeek/cpp/blob/master/content/CppOclint.md): static code analyis ([homepage](http://oclint.org/)) ([GitHub](https://github.com/oclint/oclint))
- * [perf](https://github.com/richelbilderbeek/cpp/blob/master/content/CppPerf.md): gprof is a GNU tool to profile (among others) C++ code. It can be actived from a Travis script
  * [qmake](https://github.com/richelbilderbeek/cpp/blob/master/content/CppQmake.md): makefile generator for Qt projects
  * [Qt](https://github.com/richelbilderbeek/cpp/blob/master/content/CppQt.md): a C++ GUI library
  * QTest: the Qt testing framework
