@@ -77,6 +77,10 @@ Great! See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 This project follows the [Contributor Covenant](http://contributor-covenant.org). See [code_of_conduct.md](code_of_conduct.md).
 
+## Contributors
+
+ * [@rugk](https://github.com/rugk)
+
 ## Other Travis tutorials
 
  * [Travis R tutorial](https://github.com/richelbilderbeek/travis_r_tutorial)
