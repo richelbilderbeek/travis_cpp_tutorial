@@ -168,7 +168,7 @@ Statuses of the repositories used that are successfull, or that I haven't done y
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_wt.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp14_wt) [travis_qmake_gcc_cpp14_wt](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_wt)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_cmake_gcc_cpp17.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_cmake_gcc_cpp17) [travis_cmake_gcc_cpp17](https://github.com/richelbilderbeek/travis_cmake_gcc_cpp17)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17) [travis_qmake_gcc_cpp17](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp17)
- * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17_clang-format.svg?branch	=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17_clang-format) [travis_qmake_gcc_cpp17_clang-format](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp17_clang-format)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17_clang-format.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17_clang-format) [travis_qmake_gcc_cpp17_clang-format](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp17_clang-format)
  * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17_clang-tidy.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_qmake_gcc_cpp17_clang-tidy) [travis_qmake_gcc_cpp17_clang-tidy](https://github.com/richelbilderbeek/travis_qmake_gcc_cpp17_clang-tidy)
 
 ## C
