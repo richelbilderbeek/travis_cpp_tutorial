@@ -1,21 +1,37 @@
-site_name: Tutorial how to use Travis CI with C++
-repo_url: https://github.com/flywire/travis_cpp_tutorial/edit/Development/docs/Tutorial.md
+language: generic
+dist: bionic
+sudo: true
 
-theme:
-    name: material
-    
-markdown_extensions:
-    - toc:
-        permalink:
-    - admonition
-    - def_list
-    - nl2br
+before_install:
+  - sudo add-apt-repository -y ppa:lyx-devel/release
+  - sudo apt-get update -qq
 
-extra_css:
-    - css/extra.css
-    
-plugins:
-    - search
+install:
+  - sudo apt-get install -qq lyx
+  - sudo apt-get install -qq texlive
+  #- sudo apt-get install -qq texlive*
+  #- sudo apt-get install -qq texlive-latex-extra
+  #- sudo apt-get install -qq texlive-fonts-extra
+  #- sudo apt-get install -qq pgf
+  - sudo apt-get install -qq graphviz
+  - sudo apt-get install -qq qtikz
+  #- sudo apt-get install -qq tlmgr
+  #- sudo tlmgr pgf ms
 
-nav:
-    - 'Tutorial': 'Tutorial.md'
+script:
+  - ./download_other_githubs
+  # - kpsewhich tkz-graph.sty
+  # - ./build_pdf.sh
+
+after_script:
+  # - ls
+  # - kpsewhich tkz-graph.sty
+
+
+
+after_success:
+  - echo "success"
+ 
+after_failure:
+  - echo "failure"
+  - kpsewhich tkz-graph.sty
