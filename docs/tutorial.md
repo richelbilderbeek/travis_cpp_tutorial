@@ -113,6 +113,15 @@ Do check 'Initialize this repository with a README', add a .gitignore with 'C++'
 
 ![Alt text](/images/GitHubCreateRepository.png)
 
+blockdiag {
+    A [shape = circle, label = "main.cpp"];
+    B [shape = circle, label = "main.cpp"];
+    C [shape = circle, label = "main.cpp"];
+    A -> B [label = "revision 1"];
+    B -> C [label = "revision 2"];
+    A -> B -> C;
+}
+
 Figure 8: Multiple versions of main.cpp. git allows to always go back to each version of main
 
 ![Alt text](/images/)
@@ -154,6 +163,25 @@ Figure 10: Qt creator logo
 Figure 11: Overview of converting a C++ project to an executable
 
 ![Alt text](/images/)
+
+blockdiag {
+    A [shape = circle, label = "a.h"];
+    B [shape = circle, label = "a.cpp"];
+    C [shape = circle, label = "a.o"];
+    D [shape = circle, label = "executable"];
+    E [shape = circle, label = "b.h"];
+    F [shape = circle, label = "b.cpp"];
+    G [shape = circle, label = "b.o"];
+    A -> B [label = "#include", style = dashed];
+    B -> C [label = "compiler"];
+    C -> D [label = "linker"];
+    E -> F [label = "#include", style = dashed];
+    F -> G [label = "compiler"];
+    G -> D [label = "linker"];
+    // simple graph
+    A -> B -> C -> D;
+    E -> F -> G -> D;
+}
 
 Figure 12: From files to executable. The compiler converts source (.cpp) files to object (.o) files. The linker uses these object files to create one executable
 
