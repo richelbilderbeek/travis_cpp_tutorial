@@ -4,25 +4,23 @@
  
 April 29, 2017
 
-![Alt text](/images/CppLogo.jpg)
-
-![Alt text](/images/TravisCIBig.png "Big travis")
+![Alt text](/images/TravisCIBig.png "Big travis"){: style="height:150px"} ![Alt text](/images/cpp_logo.png){: style="height:150px"}
 
 ## Introduction
 
-This is a Travis C++ tutorial, version 0.3.
+This is a Travis C++ tutorial, version 0.4.
 
 ### License
 
 This tutorial is licensed under Creative Commons license 4.0.
 
-![Alt text](/images/CC-BY-SA_icon.png)
+![Alt text](/images/CC-BY-SA_icon.png){: style="width:150px"}
 
 Figure 1: Creative Commons license 4.0
 
 All C++ code is licensed under GPL 3.0.
 
-![Alt text](/images/gplv3.png)
+![Alt text](/images/gplv3.png){{: style="width:150px"}
 
 Figure 2: GPL 3.0
 
@@ -127,7 +125,7 @@ You have now created your own online version controlled repository (Figure 7)!
 
 **What is git?** git is a version control system. It allows you keep a history of a file its content in time. It is the more convenient alternative of making copies before each modification.
 
-![Alt text](/images/Git-Logo-2Color.png)
+![Alt text](/images/Git-Logo-2Color.png){: style="width:300px"}
 
 Figure 9: git logo
 
@@ -140,7 +138,7 @@ g i t cl o n e h t t p s : / / gi thub . com/ r i c h e l b i l d e r b e e k / 
 
 **What is Qt Creator?** Qt Creator is a C++ IDE
 
-![Alt text](/images/Qt_Creator_logo.png)
+![Alt text](/images/Qt_Creator_logo.png){: style="height:150px"}
 
 Figure 10: Qt creator logo
 
@@ -169,7 +167,7 @@ Figure 14: What make does
 
 **What is GCC?** GCC, the GNU Compiler Collection, is a collection of compilers, among other, the C++ compiler called g++.
 
-![Alt text](/images/GNU_Compiler_Collection_logo.png)
+![Alt text](/images/GNU_Compiler_Collection_logo.png){: style="height:150px"}
 
 Figure 15: GCC logo
 
