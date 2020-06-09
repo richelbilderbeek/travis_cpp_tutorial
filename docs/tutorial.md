@@ -4,7 +4,7 @@
  
 April 29, 2017
 
-![Alt text](/images/TravisCIBig.png "Big travis"){: style="height:150px"} ![Alt text](/images/cpp_logo.png){: style="height:150px"}
+[![Travis_logo](/images/TravisCIBig.png "Travis Continuous Integration (CI)"){{: style="height:150px"}](https://travis-ci.org/) [![cpp_logo](/images/cpp_logo.png "C++ programming language"){: style="height:150px"}](https://isocpp.org/)
 
 ## Introduction
 
@@ -14,13 +14,13 @@ This is a Travis C++ tutorial, version 0.4.
 
 This tutorial is licensed under Creative Commons license 4.0.
 
-![Alt text](/images/CC-BY-SA_icon.png){: style="width:150px"}
+[![CC-BY-SA_icon](/images/CC-BY-SA_icon.png "Attribution 4.0 International (CC BY 4.0)"){: style="width:150px"}](https://creativecommons.org/licenses/by/4.0/)
 
 Figure 1: Creative Commons license 4.0
 
 All C++ code is licensed under GPL 3.0.
 
-![Alt text](/images/gplv3.png){{: style="width:150px"}
+[![gplv3_logo](/images/gplv3.png "version 3 of the GNU General Public License"){{: style="width:150px"}](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 Figure 2: GPL 3.0
 
@@ -93,7 +93,7 @@ Figure 3 shows the GitHub homepage, https://github.com.
 
 From the GitHub homepage, https://github.com (see Figure 3), click the top right button labeled 'Sign up'. This will take you to the 'Join GitHub' page (see Figure 4).
 
-![Alt text](/images/GitHubJoin.png)
+[![Alt text](/images/GitHubJoin.png "GitHub")](https://github.com)
 
 Figure 4: The join GitHub page
 
@@ -125,7 +125,7 @@ You have now created your own online version controlled repository (Figure 7)!
 
 **What is git?** git is a version control system. It allows you keep a history of a file its content in time. It is the more convenient alternative of making copies before each modification.
 
-![Alt text](/images/Git-Logo-2Color.png){: style="width:300px"}
+[![git-logo](/images/Git-Logo-2Color.png "Git is a free and open source distributed version control system"){: style="width:200px"}](https://git-scm.com/)
 
 Figure 9: git logo
 
@@ -141,7 +141,7 @@ Replace '[username]' and '[repository]' with your GitHub username and the reposi
 
 **What is Qt Creator?** Qt Creator is a C++ IDE
 
-![Alt text](/images/Qt_Creator_logo.png){: style="height:150px"}
+[![Qt_Creator_logo](/images/Qt_Creator_logo.png "Qt Creator - A Cross-platform IDE for Application Development"){: style="height:150px"}](https://www.qt.io/product/development-tools)
 
 Figure 10: Qt creator logo
 
@@ -170,7 +170,7 @@ Figure 14: What make does
 
 **What is GCC?** GCC, the GNU Compiler Collection, is a collection of compilers, among other, the C++ compiler called g++.
 
-![Alt text](/images/GNU_Compiler_Collection_logo.png){: style="height:150px"}
+[![GCC_logo](/images/GNU_Compiler_Collection_logo.png "GCC - the GNU Compiler Collection"){: style="height:150px"}](https://gcc.gnu.org/)
 
 Figure 15: GCC logo
 
@@ -292,7 +292,7 @@ collaborators) to write tidy code.
 The single C++ source file used in this 'Hello world' build is:
 
 Algorithm 3 main.cpp
-```
+``` c++
 --8<-- "travis_qmake_gcc_cpp98\main.cpp"
 ```
 All the code does is display the text 'Hello world', which is a traditional start for many programming languages. See 3.1 for a line-by-line explanation. The code is written in C++98 (What is C++98? See chapter 2.3). It does not use features from the newer C++ standards, but can be compiled under these newer standards. It will not compile under plain C.

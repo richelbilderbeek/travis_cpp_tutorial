@@ -11,7 +11,8 @@ markdown_extensions:
     - admonition
     - def_list
     - nl2br
-    - pymdownx.snippets:
+    - pymdownx.magiclink
+    - pymdownx.snippets
     - attr_list
 
 extra_css:
