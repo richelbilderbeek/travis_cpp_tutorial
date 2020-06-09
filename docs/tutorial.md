@@ -42,7 +42,7 @@ Now, if someone changes you project, you can rest assured that his/her submissio
 
 This tutorial is aimed at the beginner.
 
-**Introduction of new terms and tools** All terms and tools are introduced shortly once, by a 'What is' paragraph. This allows a beginner to have a general idea about what the term/tool is, without going in-depth. Also, this allows for those more knowledgeable to skim the paragraph.
+**Introduction of new terms and tools** All terms and tools are introduced briefly once, by a 'What is' paragraph. This allows a beginner to have a general idea about what the term/tool is, without going in-depth. Also, this allows for those more knowledgeable to skim the paragraph.
 
 **Repetitiveness** To allow skimming, most chapters follow the same structure. Sometimes the exact same wording is used. This is counteracted by referring to earlier chapters.
 
@@ -50,7 +50,7 @@ This tutorial is aimed at the beginner.
 
 ### This tutorial
 
-This tutorial is available online at https://github.com/richelbilderbeek/ travis_cpp_tutorial. Of course, it is checked by Travis that:
+This tutorial is available online at https://github.com/richelbilderbeek/travis_cpp_tutorial . Of course, it is checked by Travis that:
 
 - all the setups described work
 - this document can be converted to PDF. For this, it needs the files from all of these setups
@@ -60,7 +60,7 @@ This tutorial is available online at https://github.com/richelbilderbeek/ travis
 These people contributed to this tutorial:
 
 - Kevin Ushey, for getting Rcpp11 and C++11 to work
-- flywire, for testing
+- flywire, for editing and testing
 
 ### Collaboration
 
@@ -93,19 +93,19 @@ Figure 3 shows the GitHub homepage, https://github.com.
 
 From the GitHub homepage, https://github.com (see Figure 3), click the top right button labeled 'Sign up'. This will take you to the 'Join GitHub' page (see Figure 4).
 
-![Alt text](/images/
+![Alt text](/images/GitHubJoin.png)
 
 Figure 4: The join GitHub page
 
 Filling this in should be as easy. After Filling this in, you are taken to your GitHub profile page (Figure 5).
 
-![Alt text](/images/GitHubJoin.png)
+![Alt text](/images/GitHubProfile.png)
 
 Figure 5: A GitHub profile page
 
 **Creating a repository** From your GitHub profile page (Figure 5), click on the plus ('Create new ...') at the top right, then click 'New repository' (Figure 6).
 
-![Alt text](/images/GitHubProfile.png)
+![Alt text](/images/GitHubCreateRepository.png)
 
 Figure 6: Create a GitHub repository
 
@@ -115,7 +115,7 @@ Do check 'Initialize this repository with a README', add a .gitignore with 'C++'
 
 Figure 8: Multiple versions of main.cpp. git allows to always go back to each version of main
 
-![Alt text](/images/GitHubCreatedRepository.png)
+![Alt text](/images/)
 
 Figure 7: Created a GitHub repository
 
@@ -130,9 +130,12 @@ You have now created your own online version controlled repository (Figure 7)!
 Figure 9: git logo
 
 **Using git** Go to the terminal and type the following line to download your repository:
-g i t cl o n e h t t p s : / / github . com / [ your_name ] / [ y o u r_ r e p o si t o r y ]
-Replace '[your_name]' and '[your_repository]' by your GitHub username and the repository name. A new folder called '[your_repository]' is created where you should work in. For example, to download this tutorial its repository to a folder called 'travis_cpp_tutorial':
-g i t cl o n e h t t p s : / / gi thub . com/ r i c h e l b i l d e r b e e k / t r a vi s_ c p p_ t u t o ri al
+
+`git clone https://github.com/[username]/[repository]`
+
+Replace '[username]' and '[repository]' with your GitHub username and the repository name. A new folder called '[repository]' is created where you should work in. For example, to download this tutorial its repository to a folder called 'travis_cpp_tutorial':
+
+`git clone https://github.com/richelbilderbeek/travis_cpp_tutorial`
 
 ### Create a Qt Creator project
 
@@ -197,15 +200,15 @@ A 'Hello World' program shows the text 'Hello world' on the screen. It is a mini
 
 A listing of a 'Hello world' program is shown at algorithm 3. Here I go through each line:
 
-- #i n cl u d e <i o s t re am>
+* `#include <iostream>`
 
 Read a header file called 'iostream'
 
-- i n t main ( ) { /∗ your code ∗/ }
+* `int main( ) { /* your code */ }`
 
 The 'main' function is the starting point of a C++ program. Its body is between curly braces
 
-- s t d : : c ou t << " H ell o world \n " ;
+* `std::cout << "Hello world\n" ;`
 
 Show the text 'Hello world' on screen and go to the next line
 
@@ -216,39 +219,41 @@ Travis CI is set up by a file called '.travis.yml'. The filename starts with a d
 The '.travis.yml' file to build and run a 'Hello world' program looks like this:
 
 Algorithm 1 .travis.yml
-language: cpp
-compiler: gcc
-script:
-- qmake
-- make
-- ./travis_qmake_gcc_cpp98
+```
+--8<-- "travis_qmake_gcc_cpp98\.travis.yml"
+```
 
 This .travis.yml file has the following elements:
 
-- l an gu a ge : cpp
+- `language: cpp`
 
 The main programming language of this project is C++
 
-- c om pil e r : gcc
+- `dist: xenial`
+
+!!! Note "Line not documented"
+
+- `compiler: gcc`
 
 The C++ code will be compiled by the GCC (What is GCC? See chapter 2.3)
-
+```
 - script:
   − qmake
   − make
-  − . / travis_qmake_gcc_cpp98
+  − ./travis_qmake_gcc_cpp98
+```
 
 The script that Travis will run.
 
-- qmake
+- `qmake`
 
 'qmake' is called to create a makefile (What is 'qmake'? See chapter 2.3) from the only Qt Creator project file. In this build, the name of this project file is ommitted, as there is only one, but there are chapters in this tutorial where the project name is mentioned explicitly. Note that currently, qmake uses Qt4 (What is Qt4? see chapter 4.11.1)
 
-- make
+- `make`
 
 'make' is called to compile the makefile (What is 'make'? See chapter 2.3). In this build, 'make' is called without any arguments, but there are chapters in this tutorial where 'make' is called with arguments
 
-- . / travis_qmake_gcc_cpp98
+- `./travis_qmake_gcc_cpp98`
 
 Run the created executable called 'travis_qmake_gcc_cpp98'
 
@@ -266,16 +271,16 @@ program at startup
 The following Qt Creator project file is used in this 'Hello world' build:
 
 Algorithm 2 travis_qmake_gcc_cpp98.pro
-SOURCES += main.cpp
-QMAKE_CXXFLAGS += -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -Weffc++ -Werror
-
+```
+--8<-- "travis_qmake_gcc_cpp98\travis_qmake_gcc_cpp98.pro"
+```
 This Qt Creator project file has the following elements:
 
-- SOURCES += main . cpp
+- `SOURCES += main . cpp`
 
 The file 'main.cpp' is a source file, that has to be compiled
 
-- QMAKE_CXXFLAGS += −Wall −Wextra −We f fc++ −Werror
+- `QMAKE_CXXFLAGS += −Wall −Wextra −We f fc++ −Werror`
 
 The project is checked with all warnings ('-Wall'), with extra warnings ('-
 Wextra') and with the Effective C++ [1] advices ('-Weffc++') enforced.
@@ -287,11 +292,9 @@ collaborators) to write tidy code.
 The single C++ source file used in this 'Hello world' build is:
 
 Algorithm 3 main.cpp
-#include <i o s t re am>
-int main ( ) {
-s t d : : c ou t << " H ell o world \n" ;
-}
-
+```
+--8<-- "travis_qmake_gcc_cpp98\main.cpp"
+```
 All the code does is display the text 'Hello world', which is a traditional start for many programming languages. See 3.1 for a line-by-line explanation. The code is written in C++98 (What is C++98? See chapter 2.3). It does not use features from the newer C++ standards, but can be compiled under these newer standards. It will not compile under plain C.
 
 ## Extending the build by one step
