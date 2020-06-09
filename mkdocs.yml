@@ -14,7 +14,9 @@ markdown_extensions:
     - pymdownx.magiclink
     - pymdownx.snippets
     - attr_list
-
+    - markdown_blockdiag:
+        format: svg
+        
 extra_css:
     - css/extra.css
     

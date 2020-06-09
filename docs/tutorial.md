@@ -113,22 +113,20 @@ Do check 'Initialize this repository with a README', add a .gitignore with 'C++'
 
 ![Alt text](/images/GitHubCreateRepository.png)
 
+Figure 7: Created a GitHub repository
+
+You have now created your own online version controlled repository (Figure 7)!
+
 blockdiag {
     A [shape = circle, label = "main.cpp"];
     B [shape = circle, label = "main.cpp"];
     C [shape = circle, label = "main.cpp"];
-    A -> B [label = "revision 1"];
-    B -> C [label = "revision 2"];
+    A -> B [label = "version1"];
+    B -> C [label = "version2"];
     A -> B -> C;
 }
 
 Figure 8: Multiple versions of main.cpp. git allows to always go back to each version of main
-
-![Alt text](/images/)
-
-Figure 7: Created a GitHub repository
-
-You have now created your own online version controlled repository (Figure 7)!
 
 ### Bring the git repository to your local computer
 
@@ -158,17 +156,17 @@ Figure 10: Qt creator logo
 
 **What is a Qt Creator project file?** A Qt Creator project file contains the information how a Qt Creator project must be built. It commonly has the .pro file extension.
 
+!!! Fail
+
 ![Alt text](/images/)
 
 Figure 11: Overview of converting a C++ project to an executable
-
-![Alt text](/images/)
 
 blockdiag {
     A [shape = circle, label = "a.h"];
     B [shape = circle, label = "a.cpp"];
     C [shape = circle, label = "a.o"];
-    D [shape = circle, label = "executable"];
+    D [shape = flowchart.terminator, label = "executable"];
     E [shape = circle, label = "b.h"];
     F [shape = circle, label = "b.cpp"];
     G [shape = circle, label = "b.o"];
@@ -186,6 +184,8 @@ blockdiag {
 Figure 12: From files to executable. The compiler converts source (.cpp) files to object (.o) files. The linker uses these object files to create one executable
 
 **What is qmake?** qmake is a tool to create makefiles.
+
+!!! Fail
 
 Two upper circles: '.pro' -> 'Makefile'
 Two lower circles: '.cpp' and '.h', both -> to .pro, both dotted line to 'Makefile'
@@ -259,7 +259,7 @@ The main programming language of this project is C++
 
 - `dist: xenial`
 
-!!! Note "Line not documented"
+!!! Fail "Line not documented"
 
 - `compiler: gcc`
 
