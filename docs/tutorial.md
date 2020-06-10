@@ -118,11 +118,9 @@ Figure 7: Created a GitHub repository
 You have now created your own online version controlled repository (Figure 7)!
 
 blockdiag {
-    A [shape = circle, label = "main.cpp"];
-    B [shape = circle, label = "main.cpp"];
-    C [shape = circle, label = "main.cpp"];
-    A -> B [label = "version1"];
-    B -> C [label = "version2"];
+    A [shape = flowchart.terminator,  label = "main.cpp", numbered = v1];
+    B [shape = flowchart.terminator,  label = "main.cpp", numbered = v2];
+    C [shape = flowchart.terminator,  label = "main.cpp", numbered = v3];
     A -> B -> C;
 }
 
