@@ -11,13 +11,18 @@ markdown_extensions:
     - admonition
     - def_list
     - nl2br
-    - pymdownx.snippets:
-
+    - pymdownx.magiclink
+    - pymdownx.snippets
+    - attr_list
+    - markdown_blockdiag:
+        format: svg
+        
 extra_css:
     - css/extra.css
     
 plugins:
     - search
-
+#    - enumerate-headings
+  
 nav:
     - Tutorial: index.md
