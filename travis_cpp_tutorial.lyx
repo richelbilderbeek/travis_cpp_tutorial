@@ -349,7 +349,15 @@ These people contributed to this tutorial:
 \end_layout
 
 \begin_layout Itemize
+https://github.com/flywire, mkdocs
+\end_layout
+
+\begin_layout Itemize
 Kevin Ushey, for getting Rcpp11 and C++11 to work
+\end_layout
+
+\begin_layout Itemize
+https://github.com/rugk, finding dead links
 \end_layout
 
 \begin_layout Subsection
