@@ -37,3 +37,7 @@ travis_cpp_tutorial.tex
 images/SFML Logo.pdf
 images/*.eps
 tmp.*
+travis_cpp_tutorial.aux
+travis_cpp_tutorial.idx
+travis_cpp_tutorial.log
+travis_cpp_tutorial.toc
