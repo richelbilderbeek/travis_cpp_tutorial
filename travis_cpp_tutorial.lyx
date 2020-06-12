@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -27,6 +27,8 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -56,6 +58,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -64,7 +67,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -96,7 +102,7 @@ Richèl Bilderbeek
 
 
 \begin_inset Graphics
-	filename images/TravisCIBig.png
+	filename docs/images/TravisCIBig.png
 	lyxscale 50
 	width 28text%
 
@@ -141,7 +147,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/CC-BY-SA_icon.svg
+	filename docs/images/CC-BY-SA_icon.png
 
 \end_inset
 
@@ -1006,8 +1012,43 @@ git clone https://github.com/richelbilderbeek/travis_cpp_tutorial
 Create a Qt Creator project
 \end_layout
 
+\begin_layout Standard
+Here we finally start working in C++, now that the version control has been
+ discussed.
+ This tutorial uses C++, mostly using the Qt Creator IDE (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:What-is-Qt-Creator"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and the qmake (section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:What-is-qmake?"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) build system.
+ Examples of using other IDEs or build systems can be found online, but
+ are not covered in this tutorial.
+\end_layout
+
 \begin_layout Paragraph
 What is Qt Creator?
+\begin_inset CommandInset label
+LatexCommand label
+name "par:What-is-Qt-Creator"
+
+\end_inset
+
+
 \begin_inset Index idx
 status open
 
@@ -1021,7 +1062,24 @@ Qt Creator
 \end_layout
 
 \begin_layout Standard
-Qt Creator is a C++ IDE
+Qt Creator is a C++ IDE.
+ An IDE (short for 'Intrated Development Environment') is the program in
+ which you program.
+ Other popular C++ IDE's are CLion, Code::Blocks, NetBeans, Visual Studio
+ and Visual Studio Code.
+ Qt Creator works on the three major platforms (Linux, Mac and Windows)
+ and it is free to use for open source development.
+ It uses both the qmake (see paragraph 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:What-is-qmake?"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and CMake build systems.
 \end_layout
 
 \begin_layout Standard
@@ -1046,7 +1104,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Qt creator logo
+Qt Creator logo
 \end_layout
 
 \end_inset
@@ -1074,7 +1132,252 @@ Qt Creator, create new project
 \end_layout
 
 \begin_layout Standard
-Project will have some defaults: GCC.
+Here we create a C++ console application in Qt Creator.
+\end_layout
+
+\begin_layout Standard
+Upon loading Qt Creator, the 'Welcome' screen is shows (see figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Qt-Creator-Welcome"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Here we select 'Create new project' to create a new project.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename docs/images/QtCreatorWelcome.png
+	lyxscale 25
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Qt-Creator-Welcome"
+
+\end_inset
+
+Qt Creator Welcome screen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the 'Create new project' dialog (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Qt-Creator-New-Project"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), we pick a C++ console application.
+ There are plenty of other options, but here we choose to show a minimal
+ example.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename docs/images/QtCreatorNewProject.png
+	lyxscale 25
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Qt-Creator-New-Project"
+
+\end_inset
+
+Qt Creator 'New Project' dialog
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the dialogs that follow, there is a 'Define build system' dialog (figure
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Qt-Creator-Define-Build-System"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) in which we pick qmake (more about qmake in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "par:What-is-qmake?"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ The other build system is CMake.
+ This tutorial does not show CMake examples, but there are some online examples
+ in which CMake is used.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename docs/images/QtCreatorSelectBuildSystem.png
+	lyxscale 25
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Qt-Creator-Define-Build-System"
+
+\end_inset
+
+Qt Creator 'Define Build System' dialog
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After some more dialogs, Qt Creator creates a 'Hello world' program for
+ us, as shown in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Qt-Creator-Hello-World"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In that same picture, at the top-left, we can see a file named 'untitled.pro',
+ which is our Qt Creator project file.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename docs/images/QtCreatorHelloWorld.png
+	lyxscale 25
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Qt-Creator-Hello-World"
+
+\end_inset
+
+Qt Creator 'Hello world' code.
+ At the left one can see the 'untitled.pro' Qt Creator project file
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -2144,6 +2447,7 @@ status open
 \begin_inset CommandInset citation
 LatexCommand cite
 key "meyers2005effective"
+literal "true"
 
 \end_inset
 
@@ -3939,7 +4243,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/LLVM_Logo.svg
+	filename docs/images/LLVM_Logo.png
 	lyxscale 25
 	width 25text%
 
@@ -5306,7 +5610,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/Qt_logo_2015.svg
+	filename docs/images/Qt_logo_2015.png
 	lyxscale 10
 	width 25text%
 
@@ -6908,7 +7212,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "../travis_qmake_gcc_cpp98_rcpp/.travis.yml"
+filename "travis_qmake_gcc_cpp11_rcpp/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -6956,7 +7260,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_rcpp/build_cpp.sh"
+filename "travis_qmake_gcc_cpp11_rcpp/build_cpp.sh"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -7013,7 +7317,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_rcpp/install_r_packages.R"
+filename "travis_qmake_gcc_cpp11_rcpp/install_r_packages.R"
 lstparams "breaklines=true,language={bash}"
 
 \end_inset
@@ -7057,7 +7361,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "../travis_qmake_gcc_cpp98_rcpp/domagic.pro"
+filename "travis_qmake_gcc_cpp11_rcpp/domagic.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7127,7 +7431,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_rcpp/src/do_magic_cpp.h"
+filename "travis_qmake_gcc_cpp11_rcpp/src/do_magic_cpp.h"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7172,7 +7476,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_rcpp/src/do_magic_cpp.cpp"
+filename "travis_qmake_gcc_cpp11_rcpp/src/do_magic_cpp.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7222,7 +7526,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_rcpp/main.cpp"
+filename "travis_qmake_gcc_cpp11_rcpp/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7269,7 +7573,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "../travis_qmake_gcc_cpp98_rcpp/R/do_magic_r.R"
+filename "travis_qmake_gcc_cpp11_rcpp/R/do_magic_r.R"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7320,7 +7624,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "../travis_qmake_gcc_cpp98_rcpp/tests/testthat/test-do_magic.R"
+filename "travis_qmake_gcc_cpp11_rcpp/tests/testthat/test-do_magic.R"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7459,7 +7763,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/SFML Logo.svg
+	filename docs/images/SFML_Logo.png
+	lyxscale 25
 	width 25text%
 
 \end_inset
@@ -7750,7 +8055,7 @@ The reason the application is terminated, is because it must be run on Travis
 Adding SLOCcount
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:travis_qmake_gcc_cpp98_sloccount"
+name "subsec:travis_qmake_gcc_cpp11_sloccount"
 
 \end_inset
 
@@ -7804,7 +8109,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "../travis_qmake_gcc_cpp98_sloccount/.travis.yml"
+filename "travis_qmake_gcc_cpp11_sloccount/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7865,60 +8170,6 @@ Go up one folder and measure the SLOCcount of this project, knowing it is
 \end_layout
 
 \begin_layout Subsubsection
-The build bash scrips
-\end_layout
-
-\begin_layout Standard
-The bash build script to build this:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_sloccount/build.sh"
-lstparams "breaklines=true,language={bash}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-build.sh
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The bash script has the same lines as the basic project in chapter 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection
 The Qt Creator project files
 \end_layout
 
@@ -7937,7 +8188,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "../travis_qmake_gcc_cpp98_sloccount/travis_qmake_gcc_cpp98_sloccount.pro"
+filename "travis_qmake_gcc_cpp11_sloccount/travis_qmake_gcc_cpp11_sloccount.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -7949,10 +8200,10 @@ lstparams "breaklines=true,language={C++}"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-travis_qmake_gcc_cpp98_sloccount.pro
+travis_qmake_gcc_cpp11_sloccount.pro
 \begin_inset CommandInset label
 LatexCommand label
-name "alg:travis_qmake_gcc_cpp98_sloccount.pro"
+name "alg:travis_qmake_gcc_cpp11_sloccount.pro"
 
 \end_inset
 
@@ -8007,7 +8258,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_sloccount/main.cpp"
+filename "travis_qmake_gcc_cpp11_sloccount/main.cpp"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -8082,7 +8333,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/Urho3D_logo.png
+	filename docs/images/Urho3D_logo.png
 	lyxscale 50
 	width 25text%
 
@@ -8126,7 +8377,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../travis_qmake_gcc_cpp98_urho3d/travis_qmake_gcc_cpp98_urho3d.png
+	filename /home/richel/GitHubs/travis_qmake_gcc_cpp11_urho3d/pics/travis_qmake_gcc_cpp11_urho3d.png
 	lyxscale 50
 	width 25text%
 
@@ -8139,7 +8390,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Screenshot of travis_qmake_gcc_cpp98_urho3d
+Screenshot of travis_qmake_gcc_cpp11_urho3d
 \end_layout
 
 \end_inset
@@ -8170,7 +8421,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "../travis_qmake_gcc_cpp98_urho3d/.travis.yml"
+filename "travis_qmake_gcc_cpp11_urho3d/.travis.yml"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -8215,60 +8466,6 @@ TODO: Let the application terminate after 10 secs
 \end_layout
 
 \begin_layout Subsubsection
-The build bash scrips
-\end_layout
-
-\begin_layout Standard
-The bash build script to build:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float algorithm
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset include
-LatexCommand lstinputlisting
-filename "../travis_qmake_gcc_cpp98_urho3d/build.sh"
-lstparams "breaklines=true,language={bash}"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-build.sh
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The bash script has the same lines as the basic project in chapter 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:travis_qmake_gcc_cpp98"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Subsubsection
 The Qt Creator project files
 \end_layout
 
@@ -8287,7 +8484,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand verbatiminput
-filename "../travis_qmake_gcc_cpp98_urho3d/travis_qmake_gcc_cpp98_urho3d.pro"
+filename "travis_qmake_gcc_cpp98_urho3d/travis_qmake_gcc_cpp98_urho3d.pro"
 lstparams "breaklines=true,language={C++}"
 
 \end_inset
@@ -15522,6 +15719,8 @@ options "bibtotoc,plain"
 \begin_inset CommandInset index_print
 LatexCommand printindex
 type "idx"
+name "Index"
+literal "true"
 
 \end_inset
 
