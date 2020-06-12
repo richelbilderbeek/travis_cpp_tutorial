@@ -76,3 +76,63 @@
 [submodule "travis_qmake_gcc_cpp17"]
 	path = travis_qmake_gcc_cpp17
 	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp17
+[submodule "travis_qmake_gcc_cpp11_bpp"]
+	path = travis_qmake_gcc_cpp11_bpp
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_bpp/
+[submodule "travis_qmake_gcc_cpp11_debug_gcov"]
+	path = travis_qmake_gcc_cpp11_debug_gcov
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_debug_gcov/
+[submodule "travis_qmake_gcc_cpp11_qt_qtest"]
+	path = travis_qmake_gcc_cpp11_qt_qtest
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_qt_qtest/
+[submodule "travis_qmake_gcc_cpp11_sloccount"]
+	path = travis_qmake_gcc_cpp11_sloccount
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp11_sloccount/
+[submodule "travis_qmake_gcc_cpp14_boost_test_gcov"]
+	path = travis_qmake_gcc_cpp14_boost_test_gcov
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_boost_test_gcov/
+[submodule "travis_qmake_gcc_cpp14_bpp"]
+	path = travis_qmake_gcc_cpp14_bpp
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_bpp/
+[submodule "travis_qmake_gcc_cpp14_qt"]
+	path = travis_qmake_gcc_cpp14_qt
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_qt/
+[submodule "travis_qmake_gcc_cpp14_qt_qtest"]
+	path = travis_qmake_gcc_cpp14_qt_qtest
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_qt_qtest/
+[submodule "travis_qmake_gcc_cpp14_sfml"]
+	path = travis_qmake_gcc_cpp14_sfml
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_sfml/
+[submodule "travis_qmake_gcc_cpp14_urho3d"]
+	path = travis_qmake_gcc_cpp14_urho3d
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp14_urho3d/
+[submodule "travis_qmake_gcc_cpp98_boost_test"]
+	path = travis_qmake_gcc_cpp98_boost_test
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_boost_test/
+[submodule "travis_qmake_gcc_cpp98_boost_test_gcov"]
+	path = travis_qmake_gcc_cpp98_boost_test_gcov
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_boost_test_gcov/
+[submodule "travis_qmake_gcc_cpp98_bpp"]
+	path = travis_qmake_gcc_cpp98_bpp
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_bpp/
+[submodule "travis_qmake_gcc_cpp98_debug_and_release"]
+	path = travis_qmake_gcc_cpp98_debug_and_release
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_debug_and_release/
+[submodule "travis_qmake_gcc_cpp98_debug_gcov"]
+	path = travis_qmake_gcc_cpp98_debug_gcov
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_debug_gcov/
+[submodule "travis_qmake_gcc_cpp98_oclint"]
+	path = travis_qmake_gcc_cpp98_oclint
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_oclint/
+[submodule "travis_qmake_gcc_cpp98_qt4"]
+	path = travis_qmake_gcc_cpp98_qt4
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_qt4/
+[submodule "travis_qmake_gcc_cpp98_qt5"]
+	path = travis_qmake_gcc_cpp98_qt5
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_qt5/
+[submodule "travis_qmake_gcc_cpp98_qt_qtest"]
+	path = travis_qmake_gcc_cpp98_qt_qtest
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_qt_qtest/
+[submodule "travis_qmake_gcc_cpp98_sloccount"]
+	path = travis_qmake_gcc_cpp98_sloccount
+	url = https://github.com/richelbilderbeek/travis_qmake_gcc_cpp98_sloccount/
