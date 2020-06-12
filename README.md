@@ -1,6 +1,6 @@
 # travis_cpp_tutorial
 
-Branch   |[![Travis CI logo](TravisCI.png)](https://travis-ci.org)                                                                                                    
+Branch   |[![Travis CI logo](docs/images/TravisCI.png)](https://travis-ci.org)                                                                                                    
 ---------|------------------------------------------------------------------------------------------------------------------------------------------------------------
 `master` |[![Build Status](https://travis-ci.org/richelbilderbeek/travis_cpp_tutorial.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_cpp_tutorial)
 `develop`|[![Build Status](https://travis-ci.org/richelbilderbeek/travis_cpp_tutorial.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/travis_cpp_tutorial)
