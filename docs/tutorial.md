@@ -1,4 +1,4 @@
-# Travis C++ tutorial
+Travis C++ tutorial
 
 **Richèl Bilderbeek**
  
@@ -6,11 +6,17 @@ April 29, 2017
 
 [![Travis_logo](/images/TravisCIBig.png "Travis Continuous Integration (CI)"){: style="height:150px"}](https://travis-ci.org/) [![cpp_logo](/images/cpp_logo.png "C++ programming language"){: style="height:150px"}](https://isocpp.org/)
 
-## Introduction
+<!---
+**Table of Contents**
+
+[TOC]
+-->
+
+# Introduction
 
 This is a Travis C++ tutorial, version 0.4.
 
-### License
+## License
 
 This tutorial is licensed under Creative Commons license 4.0.
 
@@ -24,13 +30,7 @@ All C++ code is licensed under GPL 3.0.
 
 Figure 2: GPL 3.0
 
----
-**Table of Contents**
-
-[TOC]
----
-
-### Continuous integration
+## Continuous integration
 
 Collaboration can be scary: the other(s)1 may break the project worked on. The project can be of any type, not only programming, but also collaborative writing.
 
@@ -44,7 +44,7 @@ A continuous integration tools checks what is submitted to the project and possi
 
 Now, if someone changes you project, you can rest assured that his/her submission does not break the project. Enjoy!
 
-### Tutorial style
+## Tutorial style
 
 This tutorial is aimed at the beginner.
 
@@ -52,31 +52,31 @@ This tutorial is aimed at the beginner.
 
 **Repetitiveness** To allow skimming, most chapters follow the same structure. Sometimes the exact same wording is used. This is counteracted by referring to earlier chapters.
 
-**From Travis to source** Every build, I start from Travis CI its point of view: 'What do I have to do?'. Usually Travis CI has to call at least one build bash script. After describing the Travis file, I will show those build files. Those build files usually invoke Qt Creator project files, which in turn combine source files to executables. It may feel that the best is saved for last, but I'd disagree: this is a Travis tutorial. I also think it makes up for a better narrative, to go from big to small.
+**From Travis to source** This tutorial takes you from the broad concepts to the fine detail. I start with: 'What do I have to do?'. Every build focuses on how to build a project using the Travis continuous integration service. Usually Travis CI has to call at least one build script which is described and then the build files are described. Those build files usually invoke Qt Creator project files, which in turn combine source files to executables. I think this approach builds a better understanding of the process.
 
-### This tutorial
+## This tutorial
 
 This tutorial is available online at https://github.com/richelbilderbeek/travis_cpp_tutorial . Of course, it is checked by Travis that:
 
 - all the setups described work
 - this document can be converted to PDF. For this, it needs the files from all of these setups
 
-### Acknowledgments
+## Acknowledgments
 
 These people contributed to this tutorial:
 
 - Kevin Ushey, for getting Rcpp11 and C++11 to work
 - flywire, for editing and testing
 
-### Collaboration
+## Collaboration
 
 I welcome collaboration for this tutorial, especially in getting the scripts as clean as possible. If you want to help scraping off some lines, I will be happy to make you a collaborator of some GitHubs.
 
-### Feedback
+## Feedback
 
 This tutorial is not intended to be perfect yet. For that, I need help and feedback from the community. All referenced feedback is welcome, as well as any constructive feedback
 
-## Setting up the basic build
+# Setting up the basic build
 
 The basic build is more than just a collection of files. It needs to be set up.
 
@@ -87,11 +87,11 @@ This chapter shows how to:
 - Create a Qt Creator project
 - Create the build bash scripts
 
-### Create a GitHub online
+## Create a GitHub online
 
 **What is GitHub?** GitHub is a site that creates websites around projects. It is said to host these projects. Each project contains at least one, but usually multiple files. These files can be put on your own hard disc, USB stick, or other storage devices. They could also be put at a central place, which is called a repository, so potentially others can also access these. GitHub is such a file repository. GitHub also keeps track of the history of the project, which is also called version control. GitHub uses git as a version control software. In short: GitHub hosts git repositories.
 
-![Alt text](/images/GitHubHomepage.png)
+![Alt text](/images/GitHubHomepage.png){:style="width:700px"}
 
 Figure 3 shows the GitHub homepage, https://github.com.
 
@@ -99,25 +99,25 @@ Figure 3 shows the GitHub homepage, https://github.com.
 
 From the GitHub homepage, https://github.com (see Figure 3), click the top right button labeled 'Sign up'. This will take you to the 'Join GitHub' page (see Figure 4).
 
-[![Alt text](/images/GitHubJoin.png "GitHub")](https://github.com)
+[![Alt text](/images/GitHubJoin.png "GitHub"){:style="width:700px"}](https://github.com)
 
 Figure 4: The join GitHub page
 
 Filling this in should be as easy. After Filling this in, you are taken to your GitHub profile page (Figure 5).
 
-![Alt text](/images/GitHubProfile.png)
+![Alt text](/images/GitHubProfile.png){:style="width:700px"}
 
 Figure 5: A GitHub profile page
 
 **Creating a repository** From your GitHub profile page (Figure 5), click on the plus ('Create new ...') at the top right, then click 'New repository' (Figure 6).
 
-![Alt text](/images/GitHubCreateRepository.png)
+![Alt text](/images/GitHubCreateRepository.png){:style="width:700px"}
 
 Figure 6: Create a GitHub repository
 
 Do check 'Initialize this repository with a README', add a .gitignore with 'C++' and add a licence like 'GPL 3.0'.
 
-![Alt text](/images/GitHubCreateRepository.png)
+![Alt text](/images/GitHubCreateRepository.png){:style="width:700px"}
 
 Figure 7: Created a GitHub repository
 
@@ -132,7 +132,7 @@ blockdiag {
 
 Figure 8: Multiple versions of main.cpp. git allows to always go back to each version of main
 
-### Bring the git repository to your local computer
+## Bring the git repository to your local computer
 
 **What is git?** git is a version control system. It allows you keep a history of a file its content in time. It is the more convenient alternative of making copies before each modification.
 
@@ -148,15 +148,41 @@ Replace '[username]' and '[repository]' with your GitHub username and the reposi
 
 `git clone https://github.com/richelbilderbeek/travis_cpp_tutorial`
 
-### Create a Qt Creator project
+## Create a Qt Creator project
 
-**What is Qt Creator?** Qt Creator is a C++ IDE
+Here we finally start working in C++, now that the version control has been discussed. This tutorial uses C++, mostly using the Qt Creator IDE (section 2.3) and the qmake (section 2.3) build system. Examples of using other IDEs or build systems can be found online, but are not covered in this tutorial.
+
+**What is Qt Creator?** Qt Creator is a C++ IDE. An IDE (short for 'Intrated Development Environment') is the program in which you program. Other popular C++ IDE's are CLion, Code::Blocks, NetBeans, Visual Studio and Visual Studio Code. Qt Creator works on the three major platforms (Linux, Mac and Windows) and it is free to use for open source development. It uses both the qmake (see paragraph 2.3) and CMake build systems.
+
+**Install IDE** Click the Qt creator logo and go through to download Qt for open source development then install it.
 
 [![Qt_Creator_logo](/images/Qt_Creator_logo.png "Qt Creator - A Cross-platform IDE for Application Development"){: style="height:150px"}](https://www.qt.io/product/development-tools)
 
 Figure 10: Qt creator logo
 
-**Creating a new project** Project will have some defaults: GCC.
+**Creating a new project** Here we create a C++ console application in Qt Creator. Upon loading Qt Creator, the 'Welcome' screen is shows (see figure 11). Here we select 'Create new project' to create a new project.
+
+![Alt text](/images/QtCreatorWelcome.png){:style="width:700px"}
+
+Figure 11: Qt Creator Welcome screen
+
+In the 'Create new project' dialog (figure 12), we pick a C++ console application. There are plenty of other options, but here we choose to show a minimal example.
+
+![Alt text](/images/QtCreatorNewProject.png){:style="width:400px"}
+
+Figure 12: Qt Creator 'New Project' dialog
+
+In the dialogs that follow, there is a 'Define build system' dialog (figure 13) in which we pick qmake (more about qmake in section 2.3). The other build system is CMake. This tutorial does not show CMake examples, but there are some online examples in which CMake is used.
+
+![Alt text](/images/QtCreatorSelectBuildSystem.png){:style="width:400px"}
+
+Figure 13: Qt Creator 'Define Build System' dialog
+
+After some more dialogs, Qt Creator creates a 'Hello world' program for us, as shown in figure 14. In that same picture, at the top-left, we can see a file named 'untitled.pro', which is our Qt Creator project file.
+
+![Alt text](/images/QtCreatorHelloWorld.png){:style="width:700px"}
+
+Figure 14: Qt Creator 'Hello world' code. At the left one can see the 'untitled.pro' Qt Creator project file
 
 **What is a Qt Creator project file?** A Qt Creator project file contains the information how a Qt Creator project must be built. It commonly has the .pro file extension.
 
@@ -212,11 +238,11 @@ Figure 15: GCC logo
 
 **What is the STL?** The STL, the Standard Template Library, is the C++ standard library.
 
-### Create the build bash scripts
+## Create the build bash scripts
 
 **What is bash?** 'bash' is a shell scripting language
 
-## The basic build
+# The basic build
 
 This basic build consists of a 'Hello World' program, written in C++98. It uses the Qt Creator default settings: Qt Creator will create a Qt Creator project file, which in turn will use GCC.
 
@@ -226,7 +252,7 @@ This basic build consists of a 'Hello World' program, written in C++98. It uses 
 - The Qt Creator project file. See chapter 3.3
 - The source file. See chapter 3.4
 
-### What is a C++98 'Hello world' program?
+## What is a C++98 'Hello world' program?
 
 A 'Hello World' program shows the text 'Hello world' on the screen. It is a minimal program. Its purpose is to show that all machinery is in place to create an executable from C++ source code.
 
@@ -244,7 +270,7 @@ The 'main' function is the starting point of a C++ program. Its body is between 
 
 Show the text 'Hello world' on screen and go to the next line
 
-### The Travis file
+## The Travis file
 
 Travis CI is set up by a file called '.travis.yml'. The filename starts with a dot, which means it is a hidden file on UNIX systems. The extension 'yml' is an abbreviation of 'Yet another Markup Language'.
 
@@ -255,6 +281,7 @@ Algorithm 1 .travis.yml
 --8<-- "travis_qmake_gcc_cpp98\.travis.yml"
 ```
 
+[//]: # (Algorithm matched to file)
 This .travis.yml file has the following elements:
 
 - `language: cpp`
@@ -298,7 +325,7 @@ in this tutorial return error codes depending on test cases. It may also
 be that dynamically linked libraries cannot be found, which crashes the
 program at startup
 
-### Qt Creator project
+## Qt Creator project
 
 The following Qt Creator project file is used in this 'Hello world' build:
 
@@ -306,6 +333,8 @@ Algorithm 2 travis_qmake_gcc_cpp98.pro
 ```
 --8<-- "travis_qmake_gcc_cpp98\travis_qmake_gcc_cpp98.pro"
 ```
+
+[//]: # (Algorithm matched to file)
 This Qt Creator project file has the following elements:
 
 - `SOURCES += main . cpp`
@@ -319,7 +348,7 @@ Wextra') and with the Effective C++ [1] advices ('-Weffc++') enforced.
 A warning is treated as an error ('-Werror'). This forces you (and your
 collaborators) to write tidy code.
 
-### C++ source file
+## C++ source file
 
 The single C++ source file used in this 'Hello world' build is:
 
@@ -327,9 +356,11 @@ Algorithm 3 main.cpp
 ``` c++
 --8<-- "travis_qmake_gcc_cpp98\main.cpp"
 ```
+
+[//]: # (Algorithm matched to file)
 All the code does is display the text 'Hello world', which is a traditional start for many programming languages. See 3.1 for a line-by-line explanation. The code is written in C++98 (What is C++98? See chapter 2.3). It does not use features from the newer C++ standards, but can be compiled under these newer standards. It will not compile under plain C.
 
-## Extending the build by one step
+# Extending the build by one step
 
 The following chapter describe how to extend the build in one direction. These are:
 
@@ -350,17 +381,17 @@ The following chapter describe how to extend the build in one direction. These a
 - Use of Urho3D: see chapter 4.17
 - Use of Wt: see chapter 4.18
 
-### Use of debug and release build
+## Use of debug and release build
 
 This example shows how to use Travis to create a debug and release build.
 
-#### What are debug and release builds?
+### What are debug and release builds?
 
 A debug build means that the executable is created in such a way that helps in debugging it. For example, assert statements are only present in debug builds.
 
 A release build means that the executable is created in a way that allows it to run quicker and have a smaller file size. For example, assert statements are removed from the source code in a release build.
 
-#### The Travis file
+### The Travis file
 
 The Travis file has to do more things now, as it has to to create and run two different builds.
 
@@ -370,18 +401,11 @@ Algorithm 4 .travis.yml
 ```
 --8<-- "travis_qmake_gcc_cpp98_debug_and_release\.travis.yml"
 ```
-language: cpp
-compiler: gcc
-script:
-- ./build_debug.sh
-- ./travis_qmake_gcc_cpp98_debug_and_release
-- ./clean.sh
-- ./build_release.sh
-- ./travis_qmake_gcc_cpp98_debug_and_release
 
+[//]: # (Algorithm matched to file)
 This .travis.yml file is rather self-explanatory: it builds a debug version, and runs it. After cleaning up, it builds a release version and runs it.
 
-#### The build bash scripts
+### The build bash scripts
 
 Both build modes have their own build script. They are very similar to the one described in chapter ??:
 
@@ -389,42 +413,28 @@ Algorithm 5 build_debug.sh
 ```
 --8<-- "travis_qmake_gcc_cpp98_debug_and_release\build_debug.sh"
 ```
-```
-#!/ bin/bash
-qmake travis_qmake_gcc_cpp98_debug_and_release . pro
-make debug
-```
+
+[//]: # (Algorithm matched to file)
 
 Algorithm 6 build_release.sh
 ```
 --8<-- "travis_qmake_gcc_cpp98_debug_and_release\build_release.sh"
 ```
-```
-#!/ bin/bash
-qmake travis_qmake_gcc_cpp98_debug_and_release . pro
-make release
-```
 
+[//]: # (Algorithm matched to file)
 The only difference is the added extra parameter to 'make', which is 'debug' for the debug build, and 'release' for the release build.
 
-#### The Qt Creator project file
+### The Qt Creator project file
 
 The Qt Creator project file has to allow for the two different builds. It does so
 as follows:
 
 Algorithm 7 travis_qmake_gcc_cpp98_debug_and_release.pro
 ```
---8<-- "travis_qmake_gcc_cpp98_debug_and_release\build_release.pro"
-```
-```
-SOURCES += main.cpp
-# Debug and release mode
-CONFIG += console debug_and_release
-CONFIG(release, debug|release) {
-DEFINES += NDEBUG
-}
+--8<-- "travis_qmake_gcc_cpp98_debug_and_release\travis_qmake_gcc_cpp98_debug_and_release.pro"
 ```
 
+[//]: # (Algorithm matched to file)
 Next to setting 'main.cpp' as the only source file, these lines are new:
 • CONFIG += console debug_and_release
 Create a debug and release makefiles
@@ -434,7 +444,7 @@ DEFINES += NDEBUG
 
 In the release makefile only, the preprocessor symbol 'NDEBUG' is #defined. This, among others, will remove all assert statements
 
-#### The source files
+### The source files
 
 This build uses a 'Hello world'-like program that shows and proves the mode in which it is built:
 
@@ -442,37 +452,25 @@ Algorithm 8 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_debug_and_release\main.cpp"
 ```
-```
-#include <cassert>
-#include <iostream>
-int main() {
-#ifdef NDEBUG
-std : : cout << "Release mode" << '\n ' ;
-assert(1==2);
-#else
-std : : cout << "Debug mode" << '\n ' ;
-assert(1+1==2);
-#endif
-}
-```
 
+[//]: # (Algorithm matched to file)
 It will show in text the build type. Next to this, an assert is called. In release mode, the known-to-be-false assert statement is removed. In debug mode, the known-to-be-true assert statement is left in.
 
-### Use of C++11
+## Use of C++11
 
 In this example, the basic build (chapter 3) is extended by using C++11, instead of C++98.
 
-#### What is C++11?
+### What is C++11?
 
 C++11 is the C++ standard formalized in 2011. Its working title was C++0x, as then it was assumed that the standard would be finished in 200x. C++11 is fully backwards compatible with C++98. One of the major new features of C++11 is the introduction of move semantics, which results in faster run-time code, by possibly reducing needless copies of objects.
 
 In my examples, I typically use the C++11 'noexcept' keyword (What is noexcept? See chapter 4.2.2).
 
-#### What is noexcept?
+### What is noexcept?
 
 'noexcept' is a C++11 keyword. It is a modifier that specifies that a (member) function will not throw an exception. Would that function throw an exception anyhow, the program is terminated.
 
-#### The Travis file
+### The Travis file
 
 The default Travis CI setup is not sufficient to use C++11 (yet). Travis CI by default uses a LTS ('Long Term Stable') repository, as these is the most stable and reliable. The version of g++ in that repository is version 4.6.3, which does not support C++11. To use C++11, we will ?rst add a fresher (less stable) repository. Then we can install g++-5,that does support C++11.
 
@@ -482,14 +480,8 @@ Algorithm 9 .travis.yml
 ```
 --8<-- "travis_qmake_gcc_cpp11\.travis.yml"
 ```
-language: cpp
-compiler: gcc
-dist: trusty
-script:
-- qmake
-- make
-- ./travis_qmake_gcc_cpp11
 
+[//]: # (Algorithm matched to file)
 This .travis.yml file has some new features:
 
 • sudo : require
@@ -509,7 +501,7 @@ Install g++-5, which is a newer version of GCC than is installed by default
 
 In the script, the code is built and then run.
 
-#### The Qt Creator project file
+### The Qt Creator project file
 
 The Qt Creator project file by default calls 'g++' with its default C++ standard.
 
@@ -544,7 +536,7 @@ Compile under C++11
 
 Except for this, all is just the same.
 
-#### The source files
+### The source files
 
 This build uses a 'Hello world'-like program that uses C++11:
 
@@ -552,30 +544,19 @@ Algorithm 11 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp11\main.cpp"
 ```
-```
-#include <iostream>
-// C++11
-void f () noexcept
-{
-std : : cout << "Hello world\n" ;
-}
-int main()
-{
-f () ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 It will show the text 'Hello world' on screen.
 
 The keyword 'noexcept' (What is noexcept? See chapter 4.2.2) does not exist in C++98 and it will fail to compile. This code will compile under newer versions of C++.
 
-### Use of C++14
+## Use of C++14
 
 In this example, the basic build (chapter 3) is extended by using C++14. What is C++14? C++14 is a C++ standard that was formalized in 2014. It is fully backwards compatible with C++11 and C++98. It does not have any major new features, and mostly extends C++11 features.
 
 In my examples, I usually add digit separators: instead of '1000', in C++14 one can write '1'000', using a single quote as a separator. This will not compile in C++11.
 
-#### The Travis file
+### The Travis file
 
 Setting up Travis is done by the following .travis.yml:
 
@@ -603,7 +584,7 @@ script:
 
 This .travis.yml file is the same as the C++11 build in chapter 4.2.
 
-#### The Qt Creator project files
+### The Qt Creator project files
 
 This single file is compiled with qmake from the following Qt Creator project file:
 
@@ -623,7 +604,7 @@ The Qt Creator project file has the same lines as the C++11 build in chapter 4.2
 • QMAKE_CXXFLAGS += −std=c++14
 Compile under C++14
 
-#### The source files
+### The source files
 
 The single C++ source file used is:
 
@@ -631,26 +612,15 @@ Algorithm 14 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp14\main.cpp"
 ```
-```
-#include <iostream>
-// C++14
-auto f () noexcept
-{
-return "Hello world\n" ;
-}
-int main()
-{
-std : : cout << f () ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 This is a simple C++14 program that will not compile under C++11.
 
-### Adding Boost
+## Adding Boost
 
 In this example, the basic build (chapter 3) is extended by also using the Boost libraries.
 
-#### What is Boost?
+### What is Boost?
 
 Boost is a collection of C++ libraries.
 
@@ -658,13 +628,14 @@ Boost is a collection of C++ libraries.
 
 Figure 16: Boost logo
 
-#### The Travis file
+### The Travis file
 
 Setting up Travis is done by the following .travis.yml:
 
 Algorithm 15 .travis.yml
 ```
 --8<-- "travis_qmake_gcc_cpp98_boost\.travis.yml"
+```
 ```
 language: cpp
 compiler: gcc
@@ -674,6 +645,7 @@ packages: libboost-all-dev
 script:
 - ./build.sh
 - ./travis_qmake_gcc_cpp98_boost
+```
 
 This .travis.yml file has one new feature:
 
@@ -684,7 +656,7 @@ This makes Travis aware that you want to use the aptitude package 'libboost-all-
 
 Using packages like this avoids using sudo, which speeds up the build. Not all packages can be used as such, however, but most are.
 
-#### The build bash scripts
+### The build bash scripts
 
 The bash build script to build and run this:
 
@@ -692,28 +664,23 @@ Algorithm 16 build.sh
 ```
 --8<-- "travis_qmake_gcc_cpp98_boost\build.sh"
 ```
-```
-#!/ bin/bash
-qmake
-make
-```
 
+[//]: # (Algorithm matched to file)
 The bash script is identical to the basic build script as in chapter ??.
 
-#### The Qt Creator project files
+### The Qt Creator project files
 
 This single file is compiled with qmake from the following Qt Creator project file:
 
 Algorithm 17 travis_qmake_gcc_cpp98_boost.pro
 ```
---8<-- "travis_qmake_gcc_cpp98_boost\build.sh"
+--8<-- "travis_qmake_gcc_cpp98_boost\travis_qmake_gcc_cpp98_boost.pro"
 ```
-SOURCES += main.cpp
-QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
 
+[//]: # (Algorithm matched to file)
 The Qt Creator project file has the same lines as the basic project in chapter 3.3.
 
-#### The source files
+### The source files
 
 The single C++ source file used is:
 
@@ -721,25 +688,19 @@ Algorithm 18 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_boost\main.cpp"
 ```
-```
-#include <iostream>
-#include <boost/version .hpp>
-int main() {
-std : : cout << BOOST_LIB_VERSION << '\n ' ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 All the file does is display the version of Boost on the screens. It will only compile when the Boost libraries are present. Currently, on Travis CI, the default Boost version is 1.46.1.
 
-### Adding Boost.Test
+## Adding Boost.Test
 
 Adding only a testing framework does not work: it will not compile in C++98. Instead, this is covered in chapter 5.4.
 
-### Use of clang
+## Use of clang
 
 In this example, the basic build (chapter 3) is compiled by the clang compiler.
 
-#### What is Clang?
+### What is Clang?
 
 clang is a C++ compiler
 
@@ -747,7 +708,7 @@ clang is a C++ compiler
 
 Figure 17: clang logo
 
-#### The Travis file
+### The Travis file
 
 Setting up Travis is done by the following .travis.yml:
 
@@ -755,18 +716,11 @@ Algorithm 19 .travis.yml
 ```
 --8<-- "travis_qmake_clang_cpp98\.travis.yml"
 ```
-language: cpp
-compiler: gcc
-addons:
-apt:
-packages: clang
-script:
-- ./build.sh
-- ./travis_qmake_clang_cpp98
 
+[//]: # (Algorithm matched to file)
 This .travis.yml file uses the package clang (without needing sudo), compiles the program and then runs it.
 
-#### The build bash scrip
+### The build bash scrip
 
 The bash build script to build this:
 
@@ -774,15 +728,11 @@ Algorithm 20 build.sh
 ```
 --8<-- "travis_qmake_clang_cpp98\build.sh"
 ```
-```
-#!/ bin/bash
-qmake
-make
-```
 
+[//]: # (Algorithm matched to file)
 The bash script is identical to the basic bash script as described in chapter ??.
 
-#### The Qt Creator project files
+### The Qt Creator project files
 
 This single file is compiled with qmake from the following Qt Creator project file:
 
@@ -790,16 +740,8 @@ Algorithm 21 travis_qmake_clang_cpp98.pro
 ```
 --8<-- "travis_qmake_clang_cpp98\travis_qmake_clang_cpp98.pro"
 ```
-```
-SOURCES += main.cpp
-# Compile at a high warning level, a warning is an error
-QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
-# clang
-QMAKE_CXX = clang++
-QMAKE_LINK = clang++
-QMAKE_CC = clang
-```
 
+[//]: # (Algorithm matched to file)
 The Qt Creator project file.. except for:
 • QMAKE_CXX = clang++
 Set the C++ compiler to use clang++
@@ -808,7 +750,7 @@ Set the C++ linker to use clang++
 • QMAKE_CC = clang
 Set the C compiler to use clang
 
-#### The source files
+### The source files
 
 The single C++ source file used is:
 
@@ -816,25 +758,20 @@ Algorithm 22 main.cpp
 ```
 --8<-- "travis_qmake_clang_cpp98\main.cpp"
 ```
-```
-#include <iostream>
-int main() {
-std : : cout << "Hello world\n" ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 This is just a 'Hello world' program, as discussed in detail in chapter .
 
-### Adding gcov and Codecov
+## Adding gcov and Codecov
 
 In this example, the basic build (chapter 3) is extended by calling gcov and
 using codecov to show the code coverage.
 
-#### What is gcov?
+### What is gcov?
 
 gcov is a tool that works with GCC to analyse code coverage
 
-#### What is Codecov?
+### What is Codecov?
 
 Codecov works nice with GitHub and give nicer reports
 
@@ -849,7 +786,7 @@ example:
 
 Figure 19: Codecov report of this build
 
-#### The Travis file
+### The Travis file
 
 Setting up Travis is done by the following .travis.yml:
 
@@ -857,20 +794,8 @@ Algorithm 23 .travis.yml
 ```
 --8<-- "travis_qmake_gcc_cpp98_gcov\.travis.yml"
 ```
-sudo: require
-language: cpp
-compiler: gcc
-before_install:
-- sudo pip install codecov
-script:
-- qmake travis_qmake_gcc_cpp98_gcov.pro
-- make
-- ./travis_qmake_gcc_cpp98_gcov
-- ./get_code_cov
-- codecov
-after_success:
-- bash <(curl -s https://codecov.io/bash)
 
+[//]: # (Algorithm matched to file)
 This .travis.yml file has some new features:
 
 • sudo : require
@@ -886,7 +811,7 @@ After the script has run successfully, codecov is called
 
 The code coverage performed in this build mismatches with the goals of code coverage. One of these goals is to test for unused ('dead') code. Code coverage fits better within a debug build, where all functions are tested with valid and invalid input. Chapter 6.1 shows a build in which code coverage is tested in debug mode only.
 
-#### The build bash scripts
+### The build bash scripts
 
 The bash build to measure the code coverage:
 
@@ -894,14 +819,8 @@ Algorithm 24 get_code_cov
 ```
 --8<-- "travis_qmake_gcc_cpp98_gcov\get_code_cov"
 ```
-```
-#!/ bin/bash
-for filename in ` find . | egrep '\.cpp ' `;
-do
-gcov −n −o . $filename > /dev/null ;
-done
-```
 
+[//]: # (Algorithm matched to file)
 This script uses gcov on all implementation files.
 Going into a bit more detail on the new lines:
 • for filename in ` find . | egrep '\.cpp ' `;
@@ -910,7 +829,7 @@ gcov −n −o . $filename > /dev/null ;
 done
 Find all filenames (in this folder and its subfolder) that end with '.cpp'. For each of these filenames, let 'gcov' work on it. The '-n' ?ag denotes 'no output please'. Because there is still some output, this output is sent to the void of '/dev/null'. The '-o .' means that the object files are in the same folder as this script
 
-#### The Qt Creator project files
+### The Qt Creator project files
 
 This normal is compiled with qmake from the following Qt Creator project file:
 
@@ -918,22 +837,15 @@ Algorithm 25 travis_qmake_gcc_cpp98_gcov.pro
 ```
 --8<-- "travis_qmake_gcc_cpp98_gcov\travis_qmake_gcc_cpp98_gcov.pro"
 ```
-```
-SOURCES += main.cpp
-# Compile with a high warning level, a warning is an error
-QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
-# gcov
-QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
-LIBS += -lgcov
-```
 
+[//]: # (Algorithm matched to file)
 The Qt Creator project file has two new lines:
 • QMAKE_CXXFLAGS += −fprofile −arcs −ftest −coverage
 Let the C++ compiler add coverage information
 • LIBS += −lgcov
 Link against the gcov library
 
-#### The source files
+### The source files
 
 The C++ source file used by the normal build is:
 
@@ -941,25 +853,11 @@ Algorithm 26 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_gcov\main.cpp"
 ```
-```
-#include <iostream>
-///Returns the value of x multiplied by 2,
-/// except for 42, which is multiplied by one
-int do_magic(const int x) {
-if (x == 42) {
-return 42;
-}
-return x ∗ 2;
-}
-int main() {
-std : : cout << do_magic(2) << '\n ' ;
-//Forgot to test do_magic(42)
-}
-```
 
+[//]: # (Algorithm matched to file)
 It defines a function called 'do_magic'. It is called for the value two, but not for the value 42. Due to this, we expect to see an incomplete code coverage. And this is indeed detected, as shown in Figure 19.
 
-### Adding OCLint
+## Adding OCLint
 
 In this example, the basic build (chapter 3) is extended by adding OCLint
 support. Because we intendedly use smelly code, this build is supposed to fail
@@ -967,13 +865,14 @@ due to (only) this.
 
 What is OCLint? OCLint is a static code analysis tool.
 
-#### The Travis file
+### The Travis file
 
 Setting up Travis is done by the following .travis.yml:
 
 Algorithm 27 .travis.yml
 ```
 --8<-- "travis_qmake_gcc_cpp98_oclint\.travis.yml"
+```
 ```
 language: cpp
 compiler: gcc
@@ -987,6 +886,7 @@ script:
 - ./build.sh
 - ./travis_qmake_gcc_cpp98_oclint
 - ./do_oclint.sh
+```
 
 This .travis.yml file has one new feature:
 • sudo add−apt−repository ppa : ubuntu−toolchain−r/ test −−yes
@@ -1005,7 +905,7 @@ Let Travis show the log of a file that passes OCLint
 • cat log_correct . txt
 Let Travis show the log of a file that does not pass OCLint
 
-#### The build bash scripts
+### The build bash scripts
 
 The bash build script to build this:
 
@@ -1013,12 +913,8 @@ Algorithm 28 build.sh
 ```
 --8<-- "travis_qmake_gcc_cpp98_oclint\build.sh"
 ```
-```
-#!/ bin/bash
-qmake
-make
-```
 
+[//]: # (Algorithm matched to file)
 The bash script has the same lines as the basic project in chapter 3.
 
 The script to let OCLint check the code:
@@ -1027,36 +923,8 @@ Algorithm 29 do_oclint.sh
 ```
 --8<-- "travis_qmake_gcc_cpp98_oclint\do_oclint.sh"
 ```
-```
-#!/ bin/bash
-cpp_files=` ls ∗.cpp `
-# Clean main should work
-./ oclint −0.10.3/ bin/ oclint −o oclint . log \
-$cpp_files −− −c
-cat oclint . log
-# Will be 0 if success
-# Will be 1 if f a i l
-f a i l =`egrep "Compiler Errors" oclint . log | wc −l `
-if [ $fail −eq 1 ] ;
-then
-echo "OCLint: Compiler error"
-exit 1
-else
-echo "OCLint: OK"
-fi
-# Will be 1 if success
-# Will be 0 if f a i l
-success=`egrep "FilesWithViolations=0 P1=0 P2=0 P3=0"
-oclint . log | wc −l `
-if [ $success −eq 1 ] ;
-then
-echo "OCLint: OK"
-else
-echo "OCLint: Fail"
-exit 1
-fi
-```
 
+[//]: # (Algorithm matched to file)
 Here I call OCLint with these parameters:
 • −o oclint . log
 Write the output to the file 'oclint.log'
@@ -1079,7 +947,7 @@ Search through the file 'oclint.log' for the regular expression '[regex]'
 The result of the egrep is piped to a word count ('wc') by line '-l'. If egrep
 found the regex, the line count will be 1, yet 0 otherwise
 
-#### The Qt Creator project files
+### The Qt Creator project files
 
 This single file is compiled with qmake from the following Qt Creator project file:
 
@@ -1087,12 +955,11 @@ Algorithm 30 travis_qmake_gcc_cpp98_oclint.pro
 ```
 --8<-- "travis_qmake_gcc_cpp98_oclint\travis_qmake_gcc_cpp98_oclint.pro"
 ```
-SOURCES += main.cpp
-QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
 
+[//]: # (Algorithm matched to file)
 The Qt Creator project file has the same lines as the basic project in chapter 3.
 
-#### The source files
+### The source files
 
 The C++ source file used is just a 'Hello World' program:
 
@@ -1100,17 +967,12 @@ Algorithm 31 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_oclint\main.cpp"
 ```
-```
-#include <iostream>
-int main()
-{
-std : : cout << "Hello world\n" ;
-}
-```
 
-### Adding profiling
+[//]: # (Algorithm matched to file)
 
-### Adding the Qt library
+## Adding profiling
+
+## Adding the Qt library
 
 In this example, the basic build (chapter 3) is extended by also using the Qt library.
 
@@ -1122,13 +984,13 @@ Figure 20: Qt logo
 
 At this moment, there are two versions of Qt: Qt4 and Qt5. The GNU/Linux version Travis CI uses has Qt4. When this GNU/Linux distro changes, Qt5 will be the new (next) default.
 
-### Adding the Qt4 library
+## Adding the Qt4 library
 
-#### What is Qt4?
+### What is Qt4?
 
 Qt4 is version 4 of the Qt library (What is Qt? see chapter 4.10).
 
-#### The Travis file
+### The Travis file
 
 Setting up Travis is done by the following .travis.yml:
 
@@ -1151,11 +1013,11 @@ script:
 
 This .travis.yml file starts xvfb before the script. In the script, it builds the code first, before running the resulting executable. Instead of calling 'qmake', however, it explicitly calls 'qmake-qt4'.
 
-#### What is xvfb?
+### What is xvfb?
 
 xvfb is the vitual X server.
 
-#### The Qt Creator project files
+### The Qt Creator project files
 
 This project is compiled from the following Qt Creator project file:
 
@@ -1192,7 +1054,7 @@ of 'my_dialog'
 Use a resource file. This resource file contains the picture that is on the
 form.
 
-#### The source files
+### The source files
 
 This project uses multiple source files. The main function is defined as such:
 
@@ -1200,22 +1062,12 @@ Algorithm 34 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt4\main.cpp"
 ```
-```
-#include <QApplication>
-#include "my_dialog .h"
-int main( int argc , char ∗argv [ ] )
-{
-QApplication a(argc , argv ) ;
-my_dialog d;
-d. show() ;
-return a . exec () ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 This is a standard implementation of the main function for a graphical Qt application.
 qwfq
 • #include <QApplication>
-#include "my_dialog .h"
+• #include "my_dialog .h"
 Read the headers of, respectively, the Qt QApplication class and our custom my_dialog class
 • int main( int argc , char ∗argv [ ] )
 This is one of the two official versions of main. This version takes into account the arguments supplied at startup of the application. For example, would this application be called with 'travis_qmake_gcc_cpp98_qt4 hello', the value of argc ('argument count') would be two and the array argv would be (thus) of size two with strings 'travis_qmake_gcc_cpp98_qt4' and 'hello'
@@ -1233,30 +1085,13 @@ Algorithm 35 my_dialog.h
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt4\my_dialog.h"
 ```
-```
-#ifndef MY_DIALOG_H
-#define MY_DIALOG_H
-#include <QDialog>
-namespace Ui {
-class my_dialog ;
-}
-class my_dialog : public QDialog
-{
-Q_OBJECT
-public :
-explicit my_dialog(QWidget ∗parent = 0) ;
-~my_dialog () ;
-private :
-Ui : : my_dialog ∗ui ;
-};
-#endif // MY_DIALOG_H
-```
 
+[//]: # (Algorithm matched to file)
 This header file is completely generated by Qt Creator.
 • #ifndef MY_DIALOG_H
-#define MY_DIALOG_H
+• #define MY_DIALOG_H
 //...
-#endif // MY_DIALOG_H
+• #endif // MY_DIALOG_H
 This is an #include guard. An #include guard ensures that this file is read only once per compilation unit. Every header file should have these [REF], although '#pragma once' is also a fine solution.
 • #include <QDialog>
 Read the Qt QDialog header file
@@ -1286,30 +1121,12 @@ Algorithm 36 my_dialog.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt4\my_dialog.cpp"
 ```
-```
-#include "my_dialog .h"
-#include "ui_my_dialog .h"
-#include <QTimer>
-my_dialog : : my_dialog(QWidget ∗parent ) :
-QDialog( parent ) ,
-ui (new Ui : : my_dialog)
-{
-ui−>setupUi ( this ) ;
-QTimer ∗ const timer (new QTimer( this ) ) ;
-connect (timer ,SIGNAL( timeout () ) , this ,SLOT( close () ) ) ;
-timer−>setInterval (1000) ;
-timer−>start () ;
-}
-my_dialog ::~ my_dialog ()
-{
-delete ui ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 Most of this code is generated by Qt, except for the addition of a timer that closes the dialog after one second:
 • #include "my_dialog .h"
-#include "ui_my_dialog .h"
-#include <QTimer>
+• #include "ui_my_dialog .h"
+• #include <QTimer>
 Read, respectively, the declaration of my_dialog, the declaration of the user interface of my_dialog, and the declaration of the Qt QTimer class
 • my_dialog : : my_dialog(QWidget ∗parent ) :
 QDialog( parent ) ,
@@ -1332,13 +1149,13 @@ delete ui ;
 
 A standard destructor, that deletes the user interface
 
-### Adding the Qt5 library
+## Adding the Qt5 library
 
-#### What is Qt5?
+### What is Qt5?
 
 Qt5 is version 5 of the Qt library (What is Qt? see chapter 4.10).
 
-#### The Travis file
+### The Travis file
 
 Qt5 is not the default Qt version in the current Travis CI GNU/Linux distro. Thanks to http://stackoverflow.com/questions/25737062/travis-ci-for-a-qt5-project#25743300 for showing how install Qt5 on Travis CI:
 
@@ -1384,7 +1201,7 @@ Update the current apt repositories, to be able to ?nd Qt5
 − sudo apt−get install qt5−default qttools5−dev−tools
 Install all Qt5 apt packagess. I put these on three lines just for readability.
 
-#### The Qt Creator project files
+### The Qt Creator project files
 
 This project compiled with qmake from the following Qt Creator project file:
 
@@ -1392,23 +1209,13 @@ Algorithm 38 travis_qmake_gcc_cpp98_qt5.pro
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt5\travis_qmake_gcc_cpp98_qt5.pro"
 ```
-```
-QT += core gui widgets
-# Use highest warning level, a warning is an error.
-# Cannot use -Weffc++ with Qt5
-QMAKE_CXXFLAGS += -Wall -Wextra -Werror
-SOURCES += main.cpp
-SOURCES += my_qt5_dialog.cpp
-FORMS += my_qt5_dialog.ui
-HEADERS += my_qt5_dialog.h
-RESOURCES += travis_qmake_gcc_cpp98_qt5.qrc
-```
 
+[//]: # (Algorithm matched to file)
 The Qt Creator project file is similar to the one needed for the Qt4 library (chapter 4.11), except for:
 • QT += core gui widgets
 Add 'core', 'gui' and (new) 'widgets' to the Qt configuration. One of the differences between Qt4 and Qt5 is that part of what was 'gui' has been moved to 'widgets'.
 
-#### The source files
+### The source files
 
 This project uses multiple source files.
 
@@ -1418,18 +1225,8 @@ Algorithm 39 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt5\main.cpp"
 ```
-```
-#include <QApplication>
-#include "my_qt5_dialog .h"
-int main( int argc , char ∗argv [ ] )
-{
-QApplication a(argc , argv ) ;
-my_qt5_dialog d;
-d. show() ;
-return a . exec () ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 This main function definition is close to identical to that of when using Qt4 (see chapter 4.11).
 The declaration of my_qt5_dialog is as such:
 
@@ -1437,25 +1234,8 @@ Algorithm 40 my_qt5_dialog.h
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt5\my_qt5_dialog.h"
 ```
-```
-#ifndef MY_DIALOG_H
-#define MY_DIALOG_H
-#include <QDialog>
-namespace Ui {
-class my_qt5_dialog ;
-}
-class my_qt5_dialog : public QDialog
-{
-Q_OBJECT
-public :
-explicit my_qt5_dialog(QWidget ∗parent = 0) ;
-~my_qt5_dialog () ;
-private :
-Ui : : my_qt5_dialog ∗ui ;
-};
-#endif // MY_DIALOG_H
-```
 
+[//]: # (Algorithm matched to file)
 This header file is also close to identical to that of when using Qt4 (see chapter 4.11).
 
 The implementation of my_qt5_dialog:
@@ -1464,29 +1244,8 @@ Algorithm 41 my_qt5_dialog.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt5\my_qt5_dialog.cpp"
 ```
-```
-#include "my_qt5_dialog .h"
-#include "ui_my_qt5_dialog .h"
-#include <QTimer>
-my_qt5_dialog : : my_qt5_dialog(QWidget ∗parent ) :
-QDialog( parent ) ,
-ui (new Ui : : my_qt5_dialog)
-{
-ui−>setupUi ( this ) ;
-QTimer ∗ const timer (new QTimer( this ) ) ;
-connect (
-timer ,&QTimer : : timeout ,
-this , &my_qt5_dialog : : close
-) ;
-timer−>setInterval (1000) ;
-timer−>start () ;
-}
-my_qt5_dialog ::~ my_qt5_dialog ()
-{
-delete ui ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 This implementation file is also close to identical to that of when using Qt4 (see chapter 4.11), except for this line:
 • connect (
 timer , &QTimer : : timeout ,
@@ -1494,11 +1253,11 @@ this , &my_qt5_dialog : : close
 );
 This is the Qt5 syntax of connecting QTimer its 'timeout' slot to my_qt5_dialog its 'close' slot. This syntax will not compile with Qt4. The new syntax has the benefit that during compilation it can be checked that the signals and slots exist (Qt4 emits a warning at runtime).
 
-### Adding QTest
+## Adding QTest
 
 One cannot use QTest without Qt. Because this thus takes two steps, this is covered in chapter 5.2.
 
-### Adding Rcpp
+## Adding Rcpp
 
 In this example, the basic build (chapter 3) is extended by also using the Rcpp library/package.
 
@@ -1510,7 +1269,7 @@ Figure 21: R logo
 
 What is Rcpp? Rcpp is a package that allows to call C++ code from R
 
-#### Build overview
+### Build overview
 
 The build will be complex I will show the C++ build and the R build separately:
 
@@ -1531,7 +1290,7 @@ test − do_magic.R
 
 Figure 22: Venn diagram of the files uses in this build
 
-#### The Travis file
+### The Travis file
 
 Setting up Travis is done by the following .travis.yml:
 
@@ -1573,13 +1332,13 @@ after_failure:
 
 This .travis.yml file is longer than usual, as it both compiles and runs the C++ and R code.
 
-#### The build bash scripts
+### The build bash scripts
 
 The C++ build script:
 
 Algorithm 43 build_cpp.sh
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\build_cpp.sh"
+--8<-- "travis_qmake_gcc_cpp11_rcpp\build_cpp.sh"
 ```
 ```
 #!/ bin/bash
@@ -1593,20 +1352,19 @@ This R build script installs the required R packages:
 
 Algorithm 44 build_cpp.sh
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\install_r_packages.R"
+--8<-- "travis_qmake_gcc_cpp11_rcpp\install_r_packages.R"
 ```
-install . packages ("Rcpp" , repos = "http :// cran .uk. r−project . org")
-install . packages ("knitr" , repos = "http :// cran .uk. r−project . org")
-install . packages ("testthat" , repos = "http :// cran .uk. r−project . org")
-install . packages ("rmarkdown" , repos = "http :// cran .uk. r−project . org")
 
-#### The Qt Creator project files
+[//]: # (Algorithm matched to file)
+
+### The Qt Creator project files
 
 This single file is compiled with qmake from the following Qt Creator project file:
 
 Algorithm 45 domagic.pro
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\domagic.pro"
+--8<-- "travis_qmake_gcc_cpp11_rcpp\domagic.pro"
+```
 ```
 TEMPLATE = app
 CONFIG += console
@@ -1622,104 +1380,65 @@ main.cpp
 HEADERS += \
 src/do_magic_cpp.h
 LIBS += -lR
+```
 
 The name of the Qt Creator project file is 'domagic' as it follows the same naming as the R project. It add the R and Rcpp and src folders to its include path and links to R.
 
-#### The C++ and R source files
+### The C++ and R source files
 
 Both C++ and R use this function. It is called 'do_magic_cpp'. It is declared in the header file 'do_magic_cpp.h', as shown here:
 
 Algorithm 46 src/do_magic_cpp.h
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\src\do_magic_cpp.h"
-```
-```
-#ifndef DO_MAGIC_CPP_H
-#define DO_MAGIC_CPP_H
-int do_magic_cpp(const int x) ;
-#endif // DO_MAGIC_CPP_H
+--8<-- "travis_qmake_gcc_cpp11_rcpp\src\do_magic_cpp.h"
 ```
 
+[//]: # (Algorithm matched to file)
 The header file consists solely of #include guards and the declaration of the function 'do_magic_cpp'.
 
 The function 'do_magic_cpp' is implemented in the implementation file 'do_magic_cpp.cpp', as shown here:
 
 Algorithm 47 src/do_magic_cpp.cpp
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\src\do_magic_cpp.cpp"
-```
-```
-#include "do_magic_cpp.h"
-// ' Does magic
-// ' @param x Input
-// ' @return Magic value
-// ' @export
-// [[ Rcpp :: export ]]
-int do_magic_cpp(const int x)
-{
-return x ∗ 2;
-}
+--8<-- "travis_qmake_gcc_cpp11_rcpp\src\do_magic_cpp.cpp"
 ```
 
+[//]: # (Algorithm matched to file)
 This implementation file has gotten rather elaborate, thanks to Rcpp and documentation. This is because it has to be callable from both C++ and R and satisfy the requirement from both languages.
 
-#### The C++-only source files
+### The C++-only source files
 
 The C++ program has a normal main function:
 
 Algorithm 48 main.cpp
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\main.cpp"
-```
-```
-#include "do_magic_cpp.h"
-int main()
-{
-if (do_magic_cpp(2) != 4) return 1;
-}
+--8<-- "travis_qmake_gcc_cpp11_rcpp\main.cpp"
 ```
 
+[//]: # (Algorithm matched to file)
 All it does is a simple test of the 'do_magic_cpp' function.
 
-#### The R-only source files
+### The R-only source files
 
 The R function 'do_magic_r' calls the C++ function 'do_magic_cpp':
 
 Algorithm 49 R/do_magic_r.R
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\R\do_magic_r.R"
-```
-```
-#' Does magic
-#' @param x Input
-#' @return Magic value
-#' @export
-#' @useDynLib domagic
-#' @importFrom Rcpp sourceCpp
-do_magic_r <- function(x) {
-return(do_magic_cpp(x))
-}
+--8<-- "travis_qmake_gcc_cpp11_rcpp\R\do_magic_r.R"
 ```
 
+[//]: # (Algorithm matched to file)
 Next to this, it is just Roxygen2 documentation R allows for easy testing using the 'testthat' package. A test file looks as such:
 
 Algorithm 50 tests/testthat/test-do_magic_r.R
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\tests\testthat\test-do_magic.R"
+--8<-- "travis_qmake_gcc_cpp11_rcpp\tests\testthat\test-do_magic.R"
 ```
-context("do_magic")
-test_that("basic use", {
-expect_equal(do_magic_r(2), 4)
-expect_equal(do_magic_r(3), 6)
-expect_equal(do_magic_r(4), 8)
-expect_equal(domagic::do_magic_cpp(2), 4)
-expect_equal(domagic::do_magic_cpp(3), 6)
-expect_equal(domagic::do_magic_cpp(4), 8)
-})
 
+[//]: # (Algorithm matched to file)
 The tests call both the R and C++ functions with certain inputs and checks if the output matches the expectations.
 
-### Adding the SFML library
+## Adding the SFML library
 
 In this example, the basic build (chapter 3) is extended by also using the SFML library. The result will be a simple graphical display as shown in Figure 23:
 
@@ -1733,7 +1452,7 @@ What is SFML? SFML ('Simple and Fast Multimedia Library') is a library intended 
 
 Figure 24: SFML logo
 
-#### The Travis file
+### The Travis file
 
 Setting up Travis is done by the following .travis.yml:
 
@@ -1767,7 +1486,7 @@ Add an apt repository for a fresh version of SFML
 • install : sudo apt−get install libsfml −dev
 This makes Travis install the needed package
 
-#### The build bash scripts
+### The build bash scripts
 
 The bash build script to build this:
 
@@ -1775,15 +1494,11 @@ Algorithm 52 build.sh
 ```
 --8<-- "travis_qmake_gcc_cpp98_sfml\build.sh"
 ```
-```
-#!/ bin/bash
-qmake
-make
-```
 
+[//]: # (Algorithm matched to file)
 The bash script has the same lines as the basic project in chapter 3.
 
-#### The Qt Creator project files
+### The Qt Creator project files
 
 This single file is compiled with qmake from the following Qt Creator project file:
 
@@ -1791,21 +1506,15 @@ Algorithm 53 travis_qmake_gcc_cpp98_sfml.pro
 ```
 --8<-- "travis_qmake_gcc_cpp98_sfml\travis_qmake_gcc_cpp98_sfml.pro"
 ```
-```
-SOURCES += main.cpp
-# Compile with high warning levels, a warning is an error
-QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
-# SFML
-LIBS += -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
-```
 
+[//]: # (Algorithm matched to file)
 The Qt Creator project file has the same lines as the basic project in chapter 3, except for:
 
 • LIBS += −lsfml−graphics −lsfml−window −lsfml−system −lsfml−audio
 
 Link to the SFML libraries
 
-#### The source files
+### The source files
 
 The single C++ source file used is:
 
@@ -1813,74 +1522,37 @@ Algorithm 54 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_sfml\main.cpp"
 ```
-```
-#include <SFML/Graphics .hpp>
-int main() {
-sf : : RenderWindow window(
-sf : : VideoMode(200 , 200) ,
-"travis_qmake_gcc_cpp98_sfml"
-) ;
-double angle = 0.0;
-while (window. isOpen () ) {
-sf : : Event event ;
-while (window. pollEvent ( event ) )
-{
-if ( event . type == sf : : Event : : Closed )
-{
-window. close () ;
-}
-}
-window. clear ( sf : : Color : : Black) ;
-sf : : RectangleShape r ( sf : : Vector2f (100.0 ,100.0) ) ;
-r . setOrigin ( sf : : Vector2f (40.0 ,40.0) ) ;
-r . setPosition (100.0 ,100.0) ;
-r . rotate ( angle ) ;
-r . setFillColor ( sf : : Color (100 , 250 , 50) ) ;
-window. draw( r ) ;
-window. display () ;
-angle += 0.01;
-if ( angle > 100.0) break;
-}
-}
-```
 
+[//]: # (Algorithm matched to file)
 It draws a rotating rectangle by incrementing the variable 'angle'. After this variable reaches a certain value, the application is terminated. The reason the application is terminated, is because it must be run on Travis CI and thus terminate without user input.
 
-### Adding SLOCcount
+## Adding SLOCcount
 
 In this example, the basic build (chapter 3) is extended by also measuring the SLOCcount.
 
 What is SLOCcount? SLOCcount estimates the costs to develop code.
 
-#### The Travis file
+### The Travis file
 
 Setting up Travis is done by the following .travis.yml:
 
 Algorithm 55 .travis.yml
 ```
---8<-- "travis_qmake_gcc_cpp98_sloccount\.travis.yml"
+--8<-- "travis_qmake_gcc_cpp11_sloccount\.travis.yml"
 ```
-language: cpp
-compiler: gcc
-sudo: require
-install:
-- sudo apt-get install sloccount
-script:
-- ./build.sh
-- ./travis_qmake_gcc_cpp98_sloccount
-- cd ..; sloccount --overhead 1 --personcost 22611 travis_qmake_gcc_cpp98_sloccount
 
+[//]: # (Algorithm matched to file)
 This .travis.yml file has one new feature:
 • sudo add−apt install sloccount
 Install the package 'sloccount'
 • cd . . ; sloccount −−overhead 1 −−personcost 22611 travis_qmake_gcc_cpp98_sloccount
 Go up one folder and measure the SLOCcount of this project, knowing it is a solo-project in which the developer makes the Dutch minimum wages
 
-#### The build bash scripts
+### The build bash scripts
 
 The bash build script to build this:
 
-Algorithm 56 build.sh
+Algorithm 56 build.sh - Removed
 ```
 --8<-- "travis_qmake_gcc_cpp98_sloccount\build.sh"
 ```
@@ -1892,34 +1564,30 @@ make
 
 The bash script has the same lines as the basic project in chapter 3.
 
-#### The Qt Creator project files
+### The Qt Creator project files
 
 This single file is compiled with qmake from the following Qt Creator project file:
 
 Algorithm 57 travis_qmake_gcc_cpp98_sloccount.pro
 ```
---8<-- "travis_qmake_gcc_cpp98_sloccount\travis_qmake_gcc_cpp98_sloccount.pro"
+--8<-- "travis_qmake_gcc_cpp11_sloccount\travis_qmake_gcc_cpp11_sloccount.pro"
 ```
-SOURCES += main.cpp
-QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
+
+[//]: # (Algorithm matched to file)
 The Qt Creator project file has the same lines as the basic project in chapter 3.
 
-#### The source files
+### The source files
 
 The single C++ source file used exactly the same as described in chater 3.4:
 
 Algorithm 58 main.cpp
 ```
---8<-- "travis_qmake_gcc_cpp98_sloccount\main.cpp"
-```
-```
-#include <iostream>
-int main() {
-std : : cout << "Hello world\n" ;
-}
+--8<-- "travis_qmake_gcc_cpp11_sloccount\main.cpp"
 ```
 
-### Adding the Urho3D library
+[//]: # (Algorithm matched to file)
+
+## Adding the Urho3D library
 
 In this example, the basic build (chapter 3) is extended by also using the Urho3D library.
 What is Urho3D? Urho3D is a library to create C++ 3D games.
@@ -1928,7 +1596,7 @@ What is Urho3D? Urho3D is a library to create C++ 3D games.
 
 Figure 25: Urho3D logo
 
-#### Build overview
+### Build overview
 
 The files will work together to create the following 3D world:
 
@@ -1936,13 +1604,14 @@ The files will work together to create the following 3D world:
 
 Figure 26: Screenshot of travis_qmake_gcc_cpp98_urho3d
 
-#### The Travis file
+### The Travis file
 
 Setting up Travis is done by the following .travis.yml:
 
 Algorithm 59 .travis.yml
 ```
---8<-- "travis_qmake_gcc_cpp98_urho3d\.travis.yml"
+--8<-- "travis_qmake_gcc_cpp11_urho3d\.travis.yml"
+```
 ```
 sudo: require
 language: cpp
@@ -1964,14 +1633,15 @@ before_script:
 - ./build_urho3d.sh
 script:
 - ./build.sh
+```
 This .travis.yml file has to do many things.
 Note that we do not run the application.
 
-#### The build bash scripts
+### The build bash scripts
 
 The bash build script to build:
 
-Algorithm 60 build.sh
+Algorithm 60 build.sh - Removed
 ```
 --8<-- "travis_qmake_gcc_cpp98_urho3d\build.sh"
 ```
@@ -1983,7 +1653,7 @@ make
 
 The bash script has the same lines as the basic project in chapter 3.
 
-#### The Qt Creator project files
+### The Qt Creator project files
 
 The files are compiled with qmake from the following Qt Creator project file:
 
@@ -2013,7 +1683,7 @@ LIBS += -lpthread -lSDL -ldl -lGL
 The Qt Creator project file lists all source files, uses g++5, suppresses a
 warning , includes and links to multiple libraries.
 
-#### The source files
+### The source files
 
 The C++ source files are too big to show here. Their names are:
 • cameramaster.h
@@ -2023,7 +1693,7 @@ The C++ source files are too big to show here. Their names are:
 • mastercontrol.h
 • mastercontrol.cpp
 
-### Adding the Wt library
+## Adding the Wt library
 
 In this example, the basic build (chapter 3) is extended by also using the Wt library.
 
@@ -2033,13 +1703,14 @@ What is Wt? Wt (pronounce 'witty') is a library to create C++ websites.
 
 Figure 27: Wt logo
 
-#### The Travis file
+### The Travis file
 
 Setting up Travis is done by the following .travis.yml:
 
 Algorithm 62 .travis.yml
 ```
 --8<-- "travis_qmake_gcc_cpp98_wt\.travis.yml"
+```
 ```
 language: cpp
 compiler: gcc
@@ -2048,10 +1719,11 @@ apt:
 packages: libboost-all-dev
 install: sudo apt-get install witty-dev
 script: ./build.sh
+```
 
 This .travis.yml file has uses the package 'libboost-all-dev' and installs 'witty-dev'. It does not run the application.
 
-#### The build bash scripts
+### The build bash scripts
 
 The bash build script to build this:
 
@@ -2059,15 +1731,11 @@ Algorithm 63 build.sh
 ```
 --8<-- "travis_qmake_gcc_cpp98_wt\build.sh"
 ```
-```
-#!/ bin/bash
-qmake
-make
-```
 
+[//]: # (Algorithm matched to file)
 The bash script has the same lines as the basic project in chapter 3.
 
-#### The Qt Creator project files
+### The Qt Creator project files
 
 This single file is compiled with qmake from the following Qt Creator project file:
 
@@ -2075,25 +1743,11 @@ Algorithm 64 travis_qmake_gcc_cpp98_wt.pro
 ```
 --8<-- "travis_qmake_gcc_cpp98_wt\travis_qmake_gcc_cpp98_wt.pro"
 ```
-```
-SOURCES += main.cpp
-# Compile with high warning levels, a warning is an error
-QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
-# Wt
-LIBS += \
--lboost_date_time \
--lboost_filesystem \
--lboost_program_options \
--lboost_regex \
--lboost_signals \
--lboost_system
-LIBS += -lwt -lwthttp
-DEFINES += BOOST_SIGNALS_NO_DEPRECATION_WARNING
-```
 
+[//]: # (Algorithm matched to file)
 The Qt Creator project file has the same lines as the basic project in chapter 3, except for that it links to multiple libraries and suppresses a warning.
 
-#### The source files
+### The source files
 
 The single C++ source file used is:
 
@@ -2158,7 +1812,7 @@ WtWidget ∗ const m_widget;
 
 It starts a web server.
 
-## Extending the build by two steps
+# Extending the build by two steps
 
 You will probably want to combine the single ingredients in the previous chapters. This will also result in more complex project setups. In this chapter, such setups will be described:
 
@@ -2168,11 +1822,11 @@ You will probably want to combine the single ingredients in the previous chapter
 • Use of C++11 and Boost.Test: see chapter 5.4
 • Use of C++14 and Boost: see chapter 5.12
 
-### Use of gcov in debug mode only
+## Use of gcov in debug mode only
 
 In this example, the C++98 build with gcov (chapter 4.7) is extended by using gcov in debug mode only.
 
-#### Build overview
+### Build overview
 
 This will be a more complex build, consisting of two projects:
 
@@ -2196,13 +1850,14 @@ main_gcov.cpp
 
 Figure 28: Venn diagram of the files uses in this build
 
-#### The Travis file
+### The Travis file
 
 Setting up Travis is done by the following .travis.yml:
 
 Algorithm 66 .travis.yml
 ```
 --8<-- "travis_qmake_gcc_cpp98_debug_gcov\.travis.yml"
+```
 ```
 sudo: require
 language: cpp
@@ -2216,6 +1871,7 @@ script:
 - ./clean.sh
 - ./build_release.sh
 - ./travis_qmake_gcc_cpp98_debug_gcov
+```
 
 This .travis.yml file has some new features:
 • sudo : true
@@ -2225,7 +1881,7 @@ Travis will use pip to install codecov using super user rights
 • after_success : codecov
 After the script has run successfully, codecov is called
 
-#### The build bash scripts
+### The build bash scripts
 
 The bash build script to build this, run this and measure the code coverage:
 
@@ -2233,9 +1889,8 @@ Algorithm 67 build_debug
 ```
 --8<-- "travis_qmake_gcc_cpp98_debug_gcov\build_debug"
 ```
-#!/ bin/bash
-qmake travis_qmake_gcc_cpp98_debug_gcov_debug . pro
-make
+
+[//]: # (Algorithm matched to file)
 The new step is ...
 The bash build script to build this, run this and measure the code coverage:
 
@@ -2243,13 +1898,13 @@ Algorithm 68 build_release
 ```
 --8<-- "travis_qmake_gcc_cpp98_debug_gcov\build_release"
 ```
-#!/ bin/bash
+• #!/ bin/bash
 qmake travis_qmake_gcc_cpp98_debug_gcov . pro
 make
 
 This is ...
 
-#### The Qt Creator project files
+### The Qt Creator project files
 
 Release:
 
@@ -2257,10 +1912,12 @@ Algorithm 69 travis_qmake_gcc_cpp98_debug_gcov.pro
 ```
 --8<-- "travis_qmake_gcc_cpp98_debug_gcov\travis_qmake_gcc_cpp98_debug_gcov.pro"
 ```
+```
 SOURCES += do_magic.cpp main.cpp
 HEADERS += do_magic.h
 QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
 Debug with gcov:
+```
 
 Algorithm 70 travis_qmake_gcc_cpp98_gcov.pro
 ```
@@ -2272,7 +1929,7 @@ Let the C++ compiler add coverage information
 • LIBS += −lgcov
 Link against the gcov library
 
-#### The source files
+### The source files
 
 Common files Both builds use the following code:
 
@@ -2280,35 +1937,16 @@ Algorithm 71 do_magic.h
 ```
 --8<-- "travis_qmake_gcc_cpp98_debug_gcov\do_magic.h"
 ```
-```
-#ifndef DO_MAGIC_H
-#define DO_MAGIC_H
-int do_magic(const int x) ;
-#endif // DO_MAGIC_H
-```
 
+[//]: # (Algorithm matched to file)
 And its implementation:
 
 Algorithm 72 do_magic.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_debug_gcov\do_magic.cpp"
 ```
-```
-#include "do_magic .h"
-int do_magic(const int x)
-{
-if (x == 42)
-{
-return 42;
-}
-if (x == 314)
-{
-return 314;
-}
-return x ∗ 2;
-}
-```
 
+[//]: # (Algorithm matched to file)
 Release main function The C++ source file used by the normal build is:
 
 [![Travis_logo](/images/TravisCI.png "Travis Continuous Integration (CI)"){: style="width:200px"}](https://travis-ci.org/)
@@ -2319,14 +1957,8 @@ Algorithm 73 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_debug_gcov\main.cpp"
 ```
-```
-#include "do_magic .h"
-#include <iostream>
-int main() {
-std : : cout << do_magic(123) << '\n ' ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 Debug and gcov main function The C++ source file used by the normal
 build is:
 
@@ -2334,17 +1966,10 @@ Algorithm 74 main_gcov.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_debug_gcov\main_gcov.cpp"
 ```
-```
-#include "do_magic .h"
-int main()
-{
-if (do_magic(2) != 4) return 1;
-if (do_magic(42) != 42) return 1;
-//Forgot to test do_magic(314)
-}
-```
 
-### Qt and QTest
+[//]: # (Algorithm matched to file)
+
+## Qt and QTest
 
 This build is about a Qt dialog that displays an image (using a Qt resource).
 
@@ -2353,17 +1978,17 @@ When the key 'x' is pressed, it should close. The release build is just that app
 In this build, only one dialog is tested. For a build that has more dialogs,
 see chapter .
 
-#### What is QTest?
+### What is QTest?
 
 QTest is the Qt testing framework
 
-#### Do not use Boost.Test to test graphical Qt aplications
+### Do not use Boost.Test to test graphical Qt aplications
 
 The Boost.Test library (see chapter 5.4) works great with console (that is: non-graphical) applications. But is is tedious to let it test graphical Qt classes.
 
 Why is this tedious? Because Qt has its own Qt way, that works best in that way. QTest will process the QApplication event queue and have many privileges. Using Boost.Test will make you responsible to do yourself what Qt normally does for you in the back, such as emptying the QApplication event queue. Next to this, you will have to make some member functions public (e.g. keyPressEvent) to allow your tests to use these.
 
-#### The Travis file
+### The Travis file
 
 Algorithm 75 .travis.yml
 ```
@@ -2389,7 +2014,7 @@ In the script, the testing executable is created and run. The test results will 
 
 After the test, the normal executable is created. The normal executable is not run, as it requires user input. This means that on Travis CI, it would run forever, wouldn't Travis CI detect this and indicate a failure.
 
-#### The build bash scripts
+### The build bash scripts
 
 There need to be two bash scripts, one for building the testing executable, one for building the normal program. Both are as short as can be:
 
@@ -2397,23 +2022,17 @@ Algorithm 76 build_test.sh
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt_qtest\build_test.sh"
 ```
-```
-#!/ bin/bash
-qmake travis_qmake_gcc_cpp98_qt_qtest_test . pro
-make
-```
+
+[//]: # (Algorithm matched to file)
 
 Algorithm 77 build_normal.sh
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt_qtest\build_normal.sh"
 ```
-```
-#!/ bin/bash
-qmake travis_qmake_gcc_cpp98_qt_qtest . pro
-make
-```
 
-#### The Qt Creator project files
+[//]: # (Algorithm matched to file)
+
+### The Qt Creator project files
 
 There need to be two Qt Creator scripts, one for building the testing executable, one for building the normal program. Both are as short as can be. The only difference is that the testing project file uses 'QT += testlib'.
 
@@ -2445,19 +2064,10 @@ Algorithm 79 travis_qmake_gcc_cpp98_qt_qtest.pro
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt_qtest\travis_qmake_gcc_cpp98_qt_qtest.pro"
 ```
-```
-QT += core gui
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-# Shared files
-SOURCES += my_dialog.cpp
-FORMS += my_dialog.ui
-HEADERS += my_dialog.h
-RESOURCES += travis_qmake_gcc_cpp98_qt_qtest.qrc
-# Unique files
-SOURCES += qtmain.cpp
-```
 
-#### The source files
+[//]: # (Algorithm matched to file)
+
+### The source files
 
 The dialog This is the source of dialog:
 
@@ -2465,95 +2075,40 @@ Algorithm 80 my_dialog.h
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt_qtest\my_dialog.h"
 ```
-```
-#ifndef MY_DIALOG_H
-#define MY_DIALOG_H
-#include <QDialog>
-namespace Ui { class my_dialog ; }
-class my_dialog : public QDialog {
-Q_OBJECT
-public :
-explicit my_dialog(QWidget ∗parent = 0) ;
-~my_dialog () ;
-protected :
-void keyPressEvent (QKeyEvent ∗) ;
-private :
-Ui : : my_dialog ∗ui ;
-};
-#endif // MY_DIALOG_H
-```
 
+[//]: # (Algorithm matched to file)
 The only added line, is the 'keyPressEvent'.
 
 Algorithm 81 my_dialog.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt_qtest\my_dialog.cpp"
 ```
-```
-#include "my_dialog .h"
-#include <QKeyEvent>
-#include "ui_my_dialog .h"
-my_dialog : : my_dialog(QWidget ∗parent ) :
-QDialog( parent ) ,
-ui (new Ui : : my_dialog) {
-ui−>setupUi ( this ) ;
-}
-my_dialog ::~ my_dialog () {
-delete ui ;
-}
-void my_dialog : : keyPressEvent (QKeyEvent ∗ e) {
-if (e−>key () == Qt : :Key_X) close () ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 Here we can see that when 'x' is pressed, the application will close. The main function of the normal executable Most graphical Qt applications have this main function:
 
 Algorithm 82 qtmain.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt_qtest\qtmain.cpp"
 ```
-```
-#include <QApplication>
-#include "my_dialog .h"
-int main( int argc , char∗ argv [ ] ) {
-QApplication a(argc , argv ) ;
-my_dialog d;
-d. exec () ;
-return a . exec () ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 This main is given as default when creating a new graphical Qt application. The main function of the testing executable The QTest framework collects all tests and calls these within a QTest-generated main function. This leaves us little left to write (which is awesome):
 
 Algorithm 83 qtmain_test.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt_qtest\qtmain_test.cpp"
 ```
-```
-#include <QtTest/QtTest>
-#include "my_dialog_test .h"
-QTEST_MAIN(my_dialog_test)
-```
 
+[//]: # (Algorithm matched to file)
 The class for the tests Here comes in the QTest architecture: for each test suite we will have to create a class:
 
 Algorithm 84 my_dialog_test.h
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt_qtest\my_dialog_test.h"
 ```
-```
-#ifndef MY_DIALOG_TEST_H
-#define MY_DIALOG_TEST_H
-#include <QtTest/QtTest>
-class my_dialog_test : public QObject
-{
-Q_OBJECT
-private slots :
-void close_with_x () ;
-};
-#endif // MY_DIALOG_TEST_H
-```
 
+[//]: # (Algorithm matched to file)
 Here we create a class called 'my_dialog_test'. The ?t into the QTest framework each test suite
 • must be a derived class from QObject
 • the header file must include the 'QtTest' header file
@@ -2565,22 +2120,11 @@ Algorithm 85 my_dialog_test.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp98_qt_qtest\my_dialog_test.cpp"
 ```
-```
-#include "my_dialog_test .h"
-#include "my_dialog .h"
-void my_dialog_test : : close_with_x ()
-{
-my_dialog d;
-d. show() ;
-QVERIFY(d. isVisible () ) ;
-QTest : : keyClick(&d,Qt : :Key_X,Qt : : NoModifier , 100) ;
-QVERIFY(d. isHidden () ) ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 The 'QVERIFY' macro is used by the QTest framework to do a single check, which will end up in the test report. The QTest has some privileges, as it can directly click keys on the form, also when the 'keyPressEvent' isn't public.
 
-### C++11 and Boost libraries
+## C++11 and Boost libraries
 
 In this example, the basic build (chapter 3) is extended by also using the Boost libraries.
 
@@ -2618,12 +2162,14 @@ Algorithm 87 travis_qmake_gcc_cpp11_boost.pro
 ```
 --8<-- "travis_qmake_gcc_cpp11_boost\travis_qmake_gcc_cpp11_boost.pro"
 ```
+```
 SOURCES += main.cpp
 QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
 QMAKE_CXX = g++-5
 QMAKE_LINK = g++-5
 QMAKE_CC = gcc-5
 QMAKE_CXXFLAGS += -std=c++11
+```
 
 The Qt Creator project file has the same lines as the basic project in chapter 3.
 
@@ -2633,13 +2179,8 @@ Algorithm 88 build.sh
 ```
 --8<-- "travis_qmake_gcc_cpp11_boost\build.sh"
 ```
-```
-#!/ bin/bash
-qmake
-make
-./ travis_qmake_gcc_cpp11_boost
-```
 
+[//]: # (Algorithm matched to file)
 The bash script has the same lines as the basic project in chapter 3.
 
 Setting up Travis is done by the following .travis.yml:
@@ -2647,6 +2188,7 @@ Setting up Travis is done by the following .travis.yml:
 Algorithm 89 .travis.yml
 ```
 --8<-- "travis_qmake_gcc_cpp11_boost\.travis.yml"
+```
 ```
 sudo: true
 language: cpp
@@ -2659,10 +2201,11 @@ addons:
 apt:
 packages: libboost-all-dev
 script: ./build.sh
+```
 
 This .travis.yml file has ...
 
-### C++11 and Boost.Test
+## C++11 and Boost.Test
 
 Boost.Test works great for console applications. If you use a GUI library like
 Qt, using QTest is easier (see chapter 5.2)
@@ -2700,7 +2243,7 @@ Specifics The basic build has the following specs:
 • Code coverage: none
 • Source: multiple files: main.cpp, my_function.h, my_function.cpp, test_my_function.cpp
 
-#### The function
+### The function
 
 First the function that is (1) tested by the test build (2) called by the real build, is shown here:
 
@@ -2708,14 +2251,9 @@ Algorithm 90 my_functions.h
 ```
 --8<-- "travis_qmake_gcc_cpp11_boost_test\my_functions.h"
 ```
-```
-#ifndef MY_FUNCTIONS_H
-#define MY_FUNCTIONS_H
-int add(const int i , const int j ) noexcept ;
-#endif // MY_FUNCTIONS_H
-This header file has the #include guards and the declaration of the function
-'add'. It takes two integer values as an argument and returns an int.
-```
+
+[//]: # (Algorithm matched to file)
+This header file has the #include guards and the declaration of the function 'add'. It takes two integer values as an argument and returns an int.
 
 Its definition is shown here:
 
@@ -2723,17 +2261,11 @@ Algorithm 91 my_functions.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp11_boost_test\my_functions.cpp"
 ```
-```
-#include "my_functions .h"
-int add(const int i , const int j ) noexcept
-{
-return i + j ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 Perhaps it was expected that 'add' adds the two integers
 
-### Test build
+## Test build
 
 The test build' is the build that tests the function. It does not have a 'main.cpp' as the exe build has, but uses 'test_my_functions.cpp' as its main source file.
 
@@ -2802,13 +2334,8 @@ Algorithm 93 main_test.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp11_boost_test\main_test.cpp"
 ```
-```
-#define BOOST_TEST_DYN_LINK
-#define BOOST_TEST_MODULE my_functions_test_module
-#include <boost/ test /unit_test .hpp>
-//No main needed , BOOST_TEST_DYN_LINK creates it
-```
 
+[//]: # (Algorithm matched to file)
 It uses the Boost.Test framework to automatically generate a main function and test suite. An empty file is created, so Travis can verify there has been built both a debug and release mode.
 
 Its main testing file file is shown here:
@@ -2817,21 +2344,11 @@ Algorithm 94 my_functions_test.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp11_boost_test\my_functions_test.cpp"
 ```
-```
-#include <boost/ test /unit_test .hpp>
-#include "my_functions .h"
-BOOST_AUTO_TEST_CASE(add_works)
-{
-BOOST_CHECK(add(1 , 1) == 2) ;
-BOOST_CHECK(add(1 , 2) == 3) ;
-BOOST_CHECK(add(1 , 3) == 4) ;
-BOOST_CHECK(add(1 , 4) == 5) ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 It tests the function 'add'.
 
-#### Exe build
+### Exe build
 
 The 'exe' build' is the build that uses the function.
 
@@ -2839,17 +2356,8 @@ Algorithm 95 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp11_boost_test\main.cpp"
 ```
-```
-#include "my_functions .h"
-#include <iostream>
-#include <vector> //Does this make Travis CI f a i l ?
-int main() {
-std : : cout << add(40 ,2) << '\n ' ;
-std : : vector<int> v;
-std : : cout << v. empty() << '\n ' ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 Next to using the function 'add', also a file is created, so Travis can verify there has been built both a debug and release mode.
 
 This single file is compiled with qmake from the following Qt Creator project file:
@@ -2858,20 +2366,11 @@ Algorithm 96 travis_qmake_gcc_cpp11_boost_test.pro
 ```
 --8<-- "travis_qmake_gcc_cpp11_boost_test\travis_qmake_gcc_cpp11_boost_test.pro"
 ```
-SOURCES += my_functions.cpp main.cpp
-HEADERS += my_functions.h
-CONFIG += console debug_and_release
-CONFIG(release, debug|release) {
-DEFINES += NDEBUG
-}
-QMAKE_CXX = g++-5
-QMAKE_LINK = g++-5
-QMAKE_CC = gcc-5
-QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror -std=c++11
 
+[//]: # (Algorithm matched to file)
 Note how this Qt Creator project file does not link to the Boost unit test framework.
 
-#### Build script
+### Build script
 
 The bash build script to build, test and run this:
 
@@ -2879,25 +2378,11 @@ Algorithm 97 build.sh
 ```
 --8<-- "travis_qmake_gcc_cpp11_boost_test\build.sh"
 ```
-```
-#!/ bin/bash
-qmake travis_qmake_gcc_cpp11_boost_test . pro
-make debug
-./ travis_qmake_gcc_cpp11_boost_test
-qmake travis_qmake_gcc_cpp11_boost_test . pro
-make release
-./ travis_qmake_gcc_cpp11_boost_test
-qmake travis_qmake_gcc_cpp11_boost_test_test . pro
-make debug
-./ travis_qmake_gcc_cpp11_boost_test_test
-qmake travis_qmake_gcc_cpp11_boost_test_test . pro
-make release
-./ travis_qmake_gcc_cpp11_boost_test_test
-```
 
+[//]: # (Algorithm matched to file)
 In this script both projects are compiled in both debug and release mode. All four executables are run.
 
-#### Travis script
+### Travis script
 
 Setting up Travis is done by the following .travis.yml:
 
@@ -2905,21 +2390,11 @@ Algorithm 98 .travis.yml
 ```
 --8<-- "travis_qmake_gcc_cpp11_boost_test\.travis.yml"
 ```
-sudo: true
-language: cpp
-compiler: gcc
-addons:
-apt:
-packages: libboost-all-dev
-before_install:
-- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-- sudo apt-get update -qq
-install: sudo apt-get install -qq g++-5
-script: ./build.sh
 
+[//]: # (Algorithm matched to file)
 This .travis.yml file has ...
 
-### C++11 and clang
+## C++11 and clang
 
 In this example, the basic build (chapter 3) is extended by using clang and C++11.
 
@@ -2937,16 +2412,8 @@ Algorithm 99 main.cpp
 ```
 --8<-- "travis_qmake_clang_cpp11\main.cpp"
 ```
-```
-#include <iostream>
-void f () noexcept {
-std : : cout << "Hello world\n" ;
-}
-int main() {
-f () ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 All the file does is to create an empty graph, from the Boost.Graph library. It will not compile without the Boost libraries absent.
 
 This single file is compiled with qmake from the following Qt Creator project file:
@@ -2955,18 +2422,8 @@ Algorithm 100 travis_qmake_clang_cpp11.pro
 ```
 --8<-- "travis_qmake_clang_cpp11\travis_qmake_clang_cpp11.pro"
 ```
-```
-SOURCES += main.cpp
-# High warning level, warning is error
-QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
-# clang
-QMAKE_CXX = clang++
-QMAKE_LINK = clang++
-QMAKE_CC = clang
-# C++11
-QMAKE_CXXFLAGS += -std=c++11
-```
 
+[//]: # (Algorithm matched to file)
 The Qt Creator project file has the same lines as the basic project in chapter 3.
 
 The bash build script to build and run this:
@@ -2975,13 +2432,8 @@ Algorithm 101 build.sh
 ```
 --8<-- "travis_qmake_clang_cpp11\build.sh"
 ```
-```
-#!/ bin/bash
-qmake
-make
-./ travis_qmake_clang_cpp11
-```
 
+[//]: # (Algorithm matched to file)
 The bash script has the same lines as the basic project in chapter 3.
 
 Setting up Travis is done by the following .travis.yml:
@@ -2990,20 +2442,15 @@ Algorithm 102 .travis.yml
 ```
 --8<-- "travis_qmake_clang_cpp11\.travis.yml"
 ```
-language: cpp
-compiler: gcc
-sudo: true
-install:
-- sudo apt-get install clang
-script:
-- ./build.sh
+
+[//]: # (Algorithm matched to file)
 This .travis.yml file has ...
 
-### C++11 and gcov
+## C++11 and gcov
 
 In this example, the C++98 build with gcov (chapter 4.7) is extended by using C++11.
 
-#### The Travis file
+### The Travis file
 
 Setting up Travis is done by the following .travis.yml:
 
@@ -3043,7 +2490,7 @@ Codecov will call 'gcov', even if it should call 'gcov-5'. With this line, we le
 
 We must run the executable for codecov to be able to do its job.
 
-#### The build bash scripts
+### The build bash scripts
 
 The bash build script to build this is trivial:
 
@@ -3051,26 +2498,16 @@ Algorithm 104 build.sh
 ```
 --8<-- "travis_qmake_gcc_cpp11_gcov\build.sh"
 ```
-```
-#!/ bin/bash
-qmake travis_qmake_gcc_cpp11_gcov . pro
-make
-```
 
+[//]: # (Algorithm matched to file)
 The bash script to obtain the code coverage is new:
 
 Algorithm 105 get_code_cov.sh
 ```
 --8<-- "travis_qmake_gcc_cpp11_gcov\get_code_cov.sh"
 ```
-```
-#!/ bin/bash
-for filename in ` find . | egrep '\.cpp ' `;
-do
-gcov−5 −n −o . $filename > /dev/null ;
-done
-```
 
+[//]: # (Algorithm matched to file)
 The new steps are:
 • for filename in ` find . | egrep '\.cpp ' `;
 do
@@ -3079,7 +2516,7 @@ done
 
 Find all filenames (in this folder and its subfolder) that end with '.cpp'. For each of these filenames, let gcov-5 work on it. The '-n' flag denotes 'no output please'. Because there is still output, this output is sent to the void of '/dev/null'. The '-o .' means that the object files are in the same folder as this script
 
-#### The Qt Creator project files
+### The Qt Creator project files
 
 This Qt Creator project file is a mix from using only gcov (chapter 4.7) and using C++11 (chapter 5.5)
 
@@ -3102,7 +2539,7 @@ QMAKE_CXXFLAGS += -std=c++11
 
 See those chapters for more details.
 
-#### The source files
+### The source files
 
 The C++ source file used:
 
@@ -3110,28 +2547,11 @@ Algorithm 107 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp11_gcov\main.cpp"
 ```
-```
-#include <iostream>
-///Returns the value of x multiplied by 2, except for 42,
-which is multiplied by one
-int do_magic(const int x)
-{
-if (x == 42)
-{
-return 42;
-}
-return x ∗ 2;
-}
-int main()
-{
-std : : cout << do_magic(2) << '\n ' ;
-//Forgot to test do_magic(42)
-}
-```
 
+[//]: # (Algorithm matched to file)
 In this code, the function 'do_magic' is used for a single value, that is displayed on screen. Because the value '42' is not used, not all program flows of 'do_magic' are covered. The code coverage report should inform us about this.
 
-### C++11 and Qt
+## C++11 and Qt
 
 In this example, the basic build (chapter 3) is extended by both adding C++11 and the Qt library.
 
@@ -3149,31 +2569,8 @@ Algorithm 108 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp11_qt\main.cpp"
 ```
-```
-#include <fstream>
-#include <iostream>
-#include <QFile>
-std : : string get_filename () noexcept {
-return "HelloWorld . png" ;
-}
-int main()
-{
-const std : : string filename = get_filename () ;
-QFile f (":/ images/HelloWorld . png") ;
-if (QFile : : exists ( filename . c_str () ) )
-{
-std : : remove( filename . c_str () ) ;
-}
-f . copy("HelloWorld . png") ;
-if (! QFile : : exists ( filename . c_str () ) )
-{
-std : : cerr << "filename '" << filename << " ' must be
-created\n" ;
-return 1;
-}
-}
-```
 
+[//]: # (Algorithm matched to file)
 All the file does ...
 
 This single file is compiled with qmake from the following Qt Creator project file:
@@ -3206,13 +2603,8 @@ Algorithm 110 build.sh
 ```
 --8<-- "travis_qmake_gcc_cpp11_qt\build.sh"
 ```
-```
-#!/ bin/bash
-qmake
-make
-./ travis_qmake_gcc_cpp11_qt
-```
 
+[//]: # (Algorithm matched to file)
 The bash script has the same lines as the basic project in chapter 3.
 
 Setting up Travis is done by the following .travis.yml:
@@ -3220,6 +2612,7 @@ Setting up Travis is done by the following .travis.yml:
 Algorithm 111 .travis.yml
 ```
 --8<-- "travis_qmake_gcc_cpp11_qt\.travis.yml"
+```
 ```
 language: cpp
 compiler: gcc
@@ -3230,10 +2623,11 @@ install:
 - sudo apt-get install -qq g++-5 # C++11
 script:
 - ./build.sh
+```
 
 This .travis.yml file has ...
 
-### C++11 and Rcpp
+## C++11 and Rcpp
 
 In this example, the basic build (chapter 3) is extended by also using the Rcpp library/package.
 
@@ -3265,7 +2659,7 @@ test − do_magic.R
 
 Figure 31: Venn diagram of the files uses in this build
 
-#### C++ and R: the C++ function
+### C++ and R: the C++ function
 
 This Travis CI project is centered around the function 'do_magic_cpp'. I use the extension '_cpp' to indicate it is a C++ function. The function 'do_magic_cpp' is used by both C++ and R. It is declared in the header file 'do_magic_cpp.h', as shown here:
 
@@ -3273,17 +2667,8 @@ Algorithm 112 src/do_magic_cpp.h
 ```
 --8<-- "travis_qmake_gcc_cpp11_rcpp\src\do_magic_cpp.h"
 ```
-```
-#ifndef DO_MAGIC_CPP_H
-#define DO_MAGIC_CPP_H
-// ' Does magic
-// ' @param x Input
-// ' @return Magic value
-// [[ Rcpp :: export ]]
-int do_magic_cpp(const int x) noexcept ;
-#endif // DO_MAGIC_CPP_H
-```
 
+[//]: # (Algorithm matched to file)
 The header file consists solely of #include guards and the declaration of the function 'do_magic_cpp'. The C++11 keyword 'noexcept' will make the build fail to compile under C++98, but will compile under C++11 and later versions of C++.
 
 The function 'do_magic_cpp' is implemented in the implementation file 'do_magic_cpp.cpp', as shown here:
@@ -3292,18 +2677,11 @@ Algorithm 113 src/do_magic_cpp.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp11_rcpp\src\do_magic_cpp.cpp"
 ```
-```
-#include "do_magic_cpp.h"
-//#include <Rcpp.h>
-//using namespace Rcpp;
-int do_magic_cpp(const int x) noexcept {
-return x ∗ 2;
-}
-```
 
+[//]: # (Algorithm matched to file)
 This source file is very simple. Most lines are dedicates to the C++ roxygen2 documentation. Omitting this documentation will fail the R package to build, as this documentation is mandatory . Note that // [ [ Rcpp : : export ] ] needs to written exactly as such.
 
-#### C++: main source file
+### C++: main source file
 
 The C++ program has a normal main function:
 
@@ -3311,16 +2689,11 @@ Algorithm 114 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp11_rcpp\main.cpp"
 ```
-```
-#include "do_magic_cpp.h"
-int main() {
-if (do_magic_cpp(2) != 4) return 1;
-}
-```
 
+[//]: # (Algorithm matched to file)
 All it does is a simple test of the 'do_magic_cpp' function.
 
-#### C++: Qt Creator project file
+### C++: Qt Creator project file
 
 This single file is compiled with qmake from the following Qt Creator project file:
 
@@ -3364,7 +2737,7 @@ These files are shared by the C++11 and R project
 R_HOME = $$system(R RHOME)
 RCPPINCL = $$system($$R_HOME/bin/Rscript −e \"Rcpp : : : CxxFlags \(\)\")
 INCLUDEPATH += RCPPINCL
-# Rcpp does not play nice with −Weffc++
+• # Rcpp does not play nice with −Weffc++
 QMAKE_CXXFLAGS += −Wall −Wextra −Werror
 Let Rcpp be found by and compile cleanly. To do so, the '-We?c++' warnings have to be omitted
 • # C++11−only f i l e s
@@ -3380,16 +2753,11 @@ Algorithm 116 build_cpp.sh
 ```
 --8<-- "travis_qmake_gcc_cpp11_rcpp\build_cpp.sh"
 ```
-```
-#!/ bin/bash
-qmake
-make
-./ domagic
-```
 
+[//]: # (Algorithm matched to file)
 This script is already described in the C++98 and Rcpp chapter (chapter 4.14, Algorithm 43).
 
-#### R: the R function
+### R: the R function
 
 The R function 'do_magic_r' calls the C++ function 'do_magic_cpp':
 
@@ -3397,22 +2765,11 @@ Algorithm 117 R/do_magic_r.R
 ```
 --8<-- "travis_qmake_gcc_cpp11_rcpp\R\do_magic_r.R"
 ```
-```
-#' @useDynLib domagic
-#' @importFrom Rcpp sourceCpp
-NULL
-#' Does magic
-#' @param x Input
-#' @return Magic value
-#' @export
-do_magic_r <- function(x) {
-return(do_magic_cpp(x))
-}
-```
 
+[//]: # (Algorithm matched to file)
 Must lines are dedicated to Roxygen2 documentation. Omitting this documentation will fail the R package to build, as this documentation is mandatory.
 
-#### R: The R tests
+### R: The R tests
 
 R allows for easy testing using the 'testthat' package. A test file looks as such:
 
@@ -3420,39 +2777,21 @@ Algorithm 118 tests/testthat/test-do_magic_r.R
 ```
 --8<-- "travis_qmake_gcc_cpp11_rcpp\tests\testthat\test-do_magic.R"
 ```
-context("do_magic")
-test_that("basic use", {
-expect_equal(do_magic_r(2), 4)
-expect_equal(do_magic_r(3), 6)
-expect_equal(do_magic_r(4), 8)
-expect_equal(do_magic_cpp(2), 4)
-expect_equal(do_magic_cpp(3), 6)
-expect_equal(do_magic_cpp(4), 8)
-})
 
+[//]: # (Algorithm matched to file)
 The tests call both the R and C++ functions with certain inputs and checks if the output matches the expectations. It may be a good idea to only call the R function from here, and move the C++ function tests to a C++ testing suite like Boost.Test.
 
-#### R: script to install packages
+### R: script to install packages
 
 Algorithm 119 install_r_packages.sh
 ```
 --8<-- "travis_qmake_gcc_cpp11_rcpp\install_r_packages.R"
 ```
-```
-#!/ usr/bin/Rscript
-install . packages ("Rcpp" , repos = "http :// cran .uk. r−
-project . org")
-install . packages ("knitr" , repos = "http :// cran .uk. r−
-project . org")
-install . packages ("testthat" , repos = "http :// cran .uk. r−
-project . org")
-install . packages ("rmarkdown" , repos = "http :// cran .uk. r−
-project . org")
-```
 
+[//]: # (Algorithm matched to file)
 To compile the C++ code, Rcpp needs to be installed. The R package needs the other packages to work. An R code repository from the UK was used: without supply an R code repository, Travis will be asked to pick one, which it cannot.
 
-#### The Travis script
+### The Travis script
 
 Setting up Travis is done by the following .travis.yml:
 
@@ -3524,7 +2863,7 @@ knitr) and some R packages
 The script consists out of a build and run of the C++11 code, cleaning
 up for R, then building an R package
 
-### C++11 and SFML
+## C++11 and SFML
 
 In this example, the basic build (chapter 3) is extended by both adding C++11 and the SFML library.
 
@@ -3542,16 +2881,8 @@ Algorithm 121 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp11_sfml\main.cpp"
 ```
-```
-#include <SFML/Graphics/RectangleShape .hpp>
-int main()
-{
-: : sf : : RectangleShape shape ( : : sf : : Vector2f (100.0 ,250.0) )
-;
-if (shape . getSize () .x < 50) return 1;
-}
-```
 
+[//]: # (Algorithm matched to file)
 All the file does ...
 
 This single file is compiled with qmake from the following Qt Creator project file:
@@ -3577,7 +2908,7 @@ The Qt Creator project file has the same lines as the basic project in chapter 3
 
 The bash build script to build this, run this and measure the code coverage:
 
-Algorithm 123 build.sh
+Algorithm 123 build.sh - Removed
 ```
 --8<-- "travis_qmake_gcc_cpp11_sfml\build.sh"
 ```
@@ -3613,7 +2944,7 @@ script:
 
 This .travis.yml file has ...
 
-### C++11 and Urho3D
+## C++11 and Urho3D
 
 In this example, the basic build (chapter 3) is extended by both adding C++11 and the Urho3D library.
 
@@ -3724,7 +3055,7 @@ The Qt Creator project file has the same lines as the basic project in chapter 3
 
 The bash build script to build this, run this and measure the code coverage:
 
-Algorithm 127 build.sh
+Algorithm 127 build.sh - Removed
 ```
 --8<-- "travis_qmake_gcc_cpp11_urho3d\build.sh"
 ```
@@ -3772,7 +3103,7 @@ script:
 
 This .travis.yml file has ...
 
-### C++11 and Wt
+## C++11 and Wt
 
 In this example, the basic build (chapter 3) is extended by both adding C++11 and the Wt library.
 
@@ -3855,6 +3186,7 @@ Algorithm 130 travis_qmake_gcc_cpp11_wt.pro
 ```
 --8<-- "travis_qmake_gcc_cpp11_wt\travis_qmake_gcc_cpp11_wt.pro"
 ```
+```
 QT += core
 QT -= gui
 CONFIG += console
@@ -3875,6 +3207,7 @@ QMAKE_CXX = g++-5
 QMAKE_LINK = g++-5
 QMAKE_CC = gcc-5
 QMAKE_CXXFLAGS += -std=c++11
+```
 
 The Qt Creator project file has the same lines as the basic project in chapter 3.
 
@@ -3917,7 +3250,7 @@ script:
 
 This .travis.yml file has ...
 
-### C++14 and Boost libraries
+## C++14 and Boost libraries
 
 In this example, the basic build (chapter 3) is extended by also using the Boost libraries.
 
@@ -3936,20 +3269,8 @@ Algorithm 132 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp14_boost\main.cpp"
 ```
-```
-#include <boost/graph/adjacency_list .hpp>
-auto f () noexcept
-{
-boost : : adjacency_list<> g ;
-boost : : add_vertex(g) ;
-return boost : : num_vertices(g) ;
-}
-int main()
-{
-if ( f () != 1) return 1;
-}
-```
 
+[//]: # (Algorithm matched to file)
 All the file does is to create an empty graph, from the Boost.Graph library. It will not compile without the Boost libraries absent.
 
 This single file is compiled with qmake from the following Qt Creator project file:
@@ -3958,15 +3279,8 @@ Algorithm 133 travis_qmake_gcc_cpp14_boost.pro
 ```
 --8<-- "travis_qmake_gcc_cpp14_boost\travis_qmake_gcc_cpp14_boost.pro"
 ```
-```
-SOURCES += main.cpp
-# Compile with high warning levels, a warning is an error
-QMAKE_CXXFLAGS += -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -Weffc++ -Werror
-# C++14
-CONFIG += c++14
-QMAKE_CXXFLAGS += -std=c++14
-```
 
+[//]: # (Algorithm matched to file)
 The Qt Creator project file has the same lines as the basic project in chapter 3.
 
 Setting up Travis is done by the following .travis.yml:
@@ -4000,7 +3314,7 @@ script:
 
 This .travis.yml file has ...
 
-### C++14 and Boost.Test
+## C++14 and Boost.Test
 
 This project consists out of two projects:
 
@@ -4045,13 +3359,8 @@ Algorithm 135 my_function.h
 ```
 --8<-- "travis_qmake_gcc_cpp14_boost_test\my_functions.h"
 ```
-```
-#ifndef MY_FUNCTIONS_H
-#define MY_FUNCTIONS_H
-int add(const int i , const int j ) noexcept ;
-#endif // MY_FUNCTIONS_H
-```
 
+[//]: # (Algorithm matched to file)
 This header file has the #include guards and the declaration of the function 'add'. It takes two integer values as an argument and returns an int.
 
 Its definition is shown here:
@@ -4060,17 +3369,11 @@ Algorithm 136 my_function.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp14_boost_test\my_functions.cpp"
 ```
-```
-#include "my_functions .h"
-int add(const int i , const int j ) noexcept
-{
-return i + j + 000 ' 000;
-}
-```
 
+[//]: # (Algorithm matched to file)
 Perhaps it was expected that 'add' adds the two integers
 
-#### Test build
+### Test build
 
 The test build' is the build that tests the function. It does not have a 'main.cpp' as the exe build has, but uses 'test_my_functions.cpp' as its main source file.
 
@@ -4081,29 +3384,8 @@ Algorithm 137 travis_qmake_gcc_cpp14_boost_test_test.pro
 ```
 --8<-- "travis_qmake_gcc_cpp14_boost_test\travis_qmake_gcc_cpp14_boost_test_test.pro"
 ```
-```
-HEADERS += my_functions .h
-SOURCES += my_functions . cpp \
-main_test . cpp \
-my_functions_test . cpp
-# C++14
-CONFIG += c++14
-QMAKE_CXXFLAGS += −std=c++14
-# High warning levels
-QMAKE_CXXFLAGS += −Wall −Wextra −Weffc++ −Werror
-CONFIG += debug_and_release
-CONFIG( release , debug | release ) {
-DEFINES += NDEBUG
-}
-# Qt
-QT −= core gui
-# Boost . Test
-LIBS += −lboost_unit_test_framework
-# gcov
-QMAKE_CXXFLAGS += −fprofile −arcs −ftest −coverage
-LIBS += −lgcov
-```
 
+[//]: # (Algorithm matched to file)
 Note how this Qt Creator project file links to the Boost unit test framework.
 
 Its main source file is shown here:
@@ -4112,13 +3394,8 @@ Algorithm 138 main_test.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp14_boost_test\main_test.cpp"
 ```
-```
-#define BOOST_TEST_DYN_LINK
-#define BOOST_TEST_MODULE my_functions_test_module
-#include <boost/ test /unit_test .hpp>
-//No main needed , BOOST_TEST_DYN_LINK creates it
-```
 
+[//]: # (Algorithm matched to file)
 It uses the Boost.Test framework to automatically generate a main function and test suite. An empty file is created, so Travis can verify there has been built both a debug and release mode.
 
 Its main testing file file is shown here:
@@ -4127,21 +3404,11 @@ Algorithm 139 my_functions_test.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp14_boost_test\my_functions_test.cpp"
 ```
-```
-#include <boost/ test /unit_test .hpp>
-#include "my_functions .h"
-BOOST_AUTO_TEST_CASE(add_works)
-{
-BOOST_CHECK(add(1 , 1) == 2) ;
-BOOST_CHECK(add(1 , 2) == 3) ;
-BOOST_CHECK(add(1 , 3) == 4) ;
-BOOST_CHECK(add(1 , 4) == 5) ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 It tests the function 'add'.
 
-#### Exe build
+### Exe build
 
 The 'exe' build' is the build that uses the function.
 
@@ -4149,14 +3416,8 @@ Algorithm 140 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp14_boost_test\main.cpp"
 ```
-```
-#include "my_functions .h"
-#include <iostream>
-int main() {
-std : : cout << add(40 ,2) << '\n ' ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 Next to using the function 'add', also a file is created, so Travis can verify there has been built both a debug and release mode.
 
 This single file is compiled with qmake from the following Qt Creator project file:
@@ -4165,26 +3426,11 @@ Algorithm 141 travis_qmake_gcc_cpp14_boost_test.pro
 ```
 --8<-- "travis_qmake_gcc_cpp14_boost_test\travis_qmake_gcc_cpp14_boost_test.pro"
 ```
-```
-SOURCES += main.cpp my_functions.cpp
-HEADERS += my_functions.h
-# C++14
-CONFIG += c++14
-QMAKE_CXXFLAGS += -std=c++14
-# High warning levels
-QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
-# Debug and release versions
-CONFIG += console debug_and_release
-CONFIG(release, debug|release) {
-DEFINES += NDEBUG
-}
-# Qt
-QT -= core gui
-```
 
+[//]: # (Algorithm matched to file)
 Note how this Qt Creator project file does not link to the Boost unit test framework.
 
-#### Travis script
+### Travis script
 
 Setting up Travis is done by the following .travis.yml:
 
@@ -4225,21 +3471,21 @@ script:
 
 This .travis.yml file has ...
 
-### C++14 and Rcpp
+## C++14 and Rcpp
 
 Does not work yet.
 
-## Extending the build by multiple steps
+# Extending the build by multiple steps
 
 The following chapter describe how to extend the build in multiple steps. These are:
 
 • Use of C++11, Boost.Test and gcov: see chapter
 
-### C++11 and use of gcov in debug mode only
+## C++11 and use of gcov in debug mode only
 
 In this example, the C++11 build with gcov in debug mode (chapter ???) is extended by using C++11.
 
-#### Build overview
+### Build overview
 
 This will be a more complex build, consisting of two projects:
 
@@ -4265,7 +3511,7 @@ main_gcov.cpp
 
 Figure 33: Venn diagram of the files uses in this build
 
-#### The Travis file
+### The Travis file
 
 Setting up Travis is done by the following .travis.yml:
 
@@ -4273,25 +3519,8 @@ Algorithm 143 .travis.yml
 ```
 --8<-- "travis_qmake_gcc_cpp11_debug_gcov\.travis.yml"
 ```
-sudo: true
-language: cpp
-compiler: gcc
-before_install:
-- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-- sudo apt-get update -qq
-- sudo pip install codecov
-install:
-- sudo apt-get install -qq g++-5
-- sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-5 90
-script:
-- ./build_debug.sh
-- ./travis_qmake_gcc_cpp11_debug_gcov_gcov
-- ./get_code_cov.sh
-- codecov
-- ./clean.sh
-- ./build_release.sh
-- ./travis_qmake_gcc_cpp11_debug_gcov
 
+[//]: # (Algorithm matched to file)
 This .travis.yml file has some new features:
 • sudo : true
 Travis will give super user rights to the script. This will slow the build time, but it is inevitable for the next step
@@ -4300,7 +3529,7 @@ Travis will use pip to install codecov using super user rights
 • after_success : codecov
 After the script has run successfully, codecov is called
 
-#### The Qt Creator project files
+### The Qt Creator project files
 
 Release:
 
@@ -4308,50 +3537,23 @@ Algorithm 144 travis_qmake_gcc_cpp11_debug_gcov.pro
 ```
 --8<-- "travis_qmake_gcc_cpp11_debug_gcov\travis_qmake_gcc_cpp11_debug_gcov.pro"
 ```
-```
-TEMPLATE = app
-CONFIG += console
-CONFIG -= app_bundle qt
-SOURCES += main.cpp do_magic.cpp
-HEADERS += do_magic.h
-QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
-# C++11
-QMAKE_CXX = g++-5
-QMAKE_LINK = g++-5
-QMAKE_CC = gcc-5
-QMAKE_CXXFLAGS += -std=c++11
-```
 
+[//]: # (Algorithm matched to file)
 Debug with gcov:
 
 Algorithm 145 travis_qmake_gcc_cpp11_gcov.pro
 ```
 --8<-- "travis_qmake_gcc_cpp11_debug_gcov\travis_qmake_gcc_cpp11_debug_gcov_gcov.pro"
 ```
-```
-TEMPLATE = app
-CONFIG += console
-CONFIG -= app_bundle qt
-SOURCES += main_gcov.cpp do_magic.cpp
-HEADERS += do_magic.h
-QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
-# gcov
-QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
-LIBS += -lgcov
-# C++11
-QMAKE_CXX = g++-5
-QMAKE_LINK = g++-5
-QMAKE_CC = gcc-5
-QMAKE_CXXFLAGS += -std=c++11
-```
 
+[//]: # (Algorithm matched to file)
 The Qt Creator project file has two new lines:
 • QMAKE_CXXFLAGS += −fprofile −arcs −ftest −coverage
 Let the C++ compiler add coverage information
 • LIBS += −lgcov
 Link against the gcov library
 
-#### The source files
+### The source files
 
 Common files Both builds use the following code:
 
@@ -4359,66 +3561,34 @@ Algorithm 146 do_magic.h
 ```
 --8<-- "travis_qmake_gcc_cpp11_debug_gcov\do_magic.h"
 ```
-```
-#ifndef DO_MAGIC_H
-#define DO_MAGIC_H
-int do_magic(const int x) noexcept ;
-#endif // DO_MAGIC_H
-```
 
+[//]: # (Algorithm matched to file)
 And its implementation:
 
 Algorithm 147 do_magic.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp11_debug_gcov\do_magic.cpp"
 ```
-```
-#include "do_magic .h"
-int do_magic(const int x) noexcept
-{
-if (x == 42)
-{
-return 42;
-}
-if (x == 314)
-{
-return 314;
-}
-return x ∗ 2;
-}
-```
 
+[//]: # (Algorithm matched to file)
 Release main function The C++ source file used by the normal build is:
 
 Algorithm 148 main.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp11_debug_gcov\main.cpp"
 ```
-```
-#include "do_magic .h"
-#include <iostream>
-int main() {
-std : : cout << do_magic(123) << '\n ' ;
-}
-```
 
+[//]: # (Algorithm matched to file)
 Debug and gcov main function The C++ source file used by the normal build is:
 
 Algorithm 149 main_gcov.cpp
 ```
 --8<-- "travis_qmake_gcc_cpp11_debug_gcov\main_gcov.cpp"
 ```
-```
-#include "do_magic .h"
-int main()
-{
-if (do_magic(2) != 4) return 1;
-if (do_magic(42) != 42) return 1;
-//Forgot to test do_magic(314)
-}
-```
 
-### C++11, Boost.Test and gcov
+[//]: # (Algorithm matched to file)
+
+## C++11, Boost.Test and gcov
 
 This project adds code coverage to the previous project and is mostly similar
 
@@ -4449,11 +3619,11 @@ Figure 34: Venn diagram of the files uses in this build
 
 Both of these are compiled both in release and debug mode.
 
-#### The function
+### The function
 
 Same
 
-#### Test build
+### Test build
 
 The test build' is the build that tests the function. It does not have a 'main.cpp' as the exe build has, but uses 'test_my_functions.cpp' as its main source file.
 
@@ -4463,39 +3633,15 @@ Algorithm 150 travis_qmake_gcc_cpp11_boost_test_gcov_test.pro
 ```
 --8<-- "travis_qmake_gcc_cpp11_boost_test_gcov\travis_qmake_gcc_cpp11_boost_test_gcov_test.pro"
 ```
-```
-#CONFIG += console debug_and_release
-CONFIG += console
-CONFIG −= app_bundle
-QT −= core gui
-TEMPLATE = app
-QMAKE_CXXFLAGS += −Wall −Wextra −Weffc++ −Werror
-CONFIG( release , debug | release ) {
-DEFINES += NDEBUG
-}
-HEADERS += my_functions .h
-SOURCES += my_functions . cpp \
-main_test . cpp \
-my_functions_test . cpp
-# C++11
-QMAKE_CXX = g++−5
-QMAKE_LINK = g++−5
-QMAKE_CC = gcc−5
-QMAKE_CXXFLAGS += −std=c++11
-# Boost . Test
-LIBS += −lboost_unit_test_framework
-# gcov
-QMAKE_CXXFLAGS += −fprofile −arcs −ftest −coverage
-LIBS += −lgcov
-```
 
+[//]: # (Algorithm matched to file)
 Note how this Qt Creator project file links to the Boost unit test framework and also add code coverage. Its main source file is identical. Its main testing file file is identical.
 
-#### Normal build
+### Normal build
 
 The normal build is identical.
 
-#### Build script
+### Build script
 
 The bash build script to build, test and run this:
 
@@ -4503,15 +3649,11 @@ Algorithm 151 build_test.sh
 ```
 --8<-- "travis_qmake_gcc_cpp11_boost_test_gcov\build_test.sh"
 ```
-```
-#!/ bin/bash
-qmake travis_qmake_gcc_cpp11_boost_test_gcov_test . pro
-make
-```
 
+[//]: # (Algorithm matched to file)
 In this script both projects are compiled in both debug and release mode. All four executables are run.
 
-#### Travis script
+### Travis script
 
 Setting up Travis is done by the following .travis.yml:
 
@@ -4519,33 +3661,13 @@ Algorithm 152 .travis.yml
 ```
 --8<-- "travis_qmake_gcc_cpp11_boost_test_gcov\.travis.yml"
 ```
-sudo: true
-language: cpp
-compiler: gcc
-addons:
-apt:
-packages: libboost-all-dev
-before_install:
-- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-- sudo apt-get update -qq
-- sudo pip install codecov
-install:
-- sudo apt-get install -qq g++-5
-- sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-5 90
-script:
-- ./build_test.sh
-- ./travis_qmake_gcc_cpp11_boost_test_gcov_test
-- ./build.sh
-- ./get_code_cov.sh
-- codecov
-after_success:
-- bash <(curl -s https://codecov.io/bash)
 
+[//]: # (Algorithm matched to file)
 This .travis.yml file has ...
 
-## Troubleshooting
+# Troubleshooting
 
-### sudo apt-get install gcov-5 failed and exited with during .
+## sudo apt-get install gcov-5 failed and exited with during .
 
 Or in full:
 
@@ -4558,7 +3680,7 @@ Comment out the addons section and add this to the Travis script:
 `apt−cache search "gcov" | egrep "^gcov"`
 One can then observe that 'gcov' is absent. It is part of g++.
 
-### Cannot find the correct version of a package
+## Cannot find the correct version of a package
 
 Comment out the addons section and add this to the Travis script:
 
@@ -4571,7 +3693,7 @@ Comment out the addons section and add this to the Travis script:
 
 This will cause Travis to search the aptitude packages.
 
-### fatal error: Rcpp.h: No such file or directory
+## fatal error: Rcpp.h: No such file or directory
 
 Add these line to the .travis.yml file to ?nd Rcpp.h:
 
