@@ -1352,7 +1352,7 @@ This R build script installs the required R packages:
 
 Algorithm 44 build_cpp.sh
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\install_r_packages.R"
+--8<-- "travis_qmake_gcc_cpp11_rcpp\install_r_packages.R"
 ```
 
 [//]: # (Algorithm matched to file)
@@ -1363,7 +1363,7 @@ This single file is compiled with qmake from the following Qt Creator project fi
 
 Algorithm 45 domagic.pro
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\domagic.pro"
+--8<-- "travis_qmake_gcc_cpp11_rcpp\domagic.pro"
 ```
 ```
 TEMPLATE = app
@@ -1390,7 +1390,7 @@ Both C++ and R use this function. It is called 'do_magic_cpp'. It is declared in
 
 Algorithm 46 src/do_magic_cpp.h
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\src\do_magic_cpp.h"
+--8<-- "travis_qmake_gcc_cpp11_rcpp\src\do_magic_cpp.h"
 ```
 
 [//]: # (Algorithm matched to file)
@@ -1400,7 +1400,7 @@ The function 'do_magic_cpp' is implemented in the implementation file 'do_magic_
 
 Algorithm 47 src/do_magic_cpp.cpp
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\src\do_magic_cpp.cpp"
+--8<-- "travis_qmake_gcc_cpp11_rcpp\src\do_magic_cpp.cpp"
 ```
 
 [//]: # (Algorithm matched to file)
@@ -1412,7 +1412,7 @@ The C++ program has a normal main function:
 
 Algorithm 48 main.cpp
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\main.cpp"
+--8<-- "travis_qmake_gcc_cpp11_rcpp\main.cpp"
 ```
 
 [//]: # (Algorithm matched to file)
@@ -1424,7 +1424,7 @@ The R function 'do_magic_r' calls the C++ function 'do_magic_cpp':
 
 Algorithm 49 R/do_magic_r.R
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\R\do_magic_r.R"
+--8<-- "travis_qmake_gcc_cpp11_rcpp\R\do_magic_r.R"
 ```
 
 [//]: # (Algorithm matched to file)
@@ -1432,7 +1432,7 @@ Next to this, it is just Roxygen2 documentation R allows for easy testing using 
 
 Algorithm 50 tests/testthat/test-do_magic_r.R
 ```
---8<-- "travis_qmake_gcc_cpp98_rcpp\tests\testthat\test-do_magic.R"
+--8<-- "travis_qmake_gcc_cpp11_rcpp\tests\testthat\test-do_magic.R"
 ```
 
 [//]: # (Algorithm matched to file)
@@ -1538,7 +1538,7 @@ Setting up Travis is done by the following .travis.yml:
 
 Algorithm 55 .travis.yml
 ```
---8<-- "travis_qmake_gcc_cpp98_sloccount\.travis.yml"
+--8<-- "travis_qmake_gcc_cpp11_sloccount\.travis.yml"
 ```
 
 [//]: # (Algorithm matched to file)
@@ -1552,7 +1552,7 @@ Go up one folder and measure the SLOCcount of this project, knowing it is a solo
 
 The bash build script to build this:
 
-Algorithm 56 build.sh
+Algorithm 56 build.sh - Removed
 ```
 --8<-- "travis_qmake_gcc_cpp98_sloccount\build.sh"
 ```
@@ -1570,7 +1570,7 @@ This single file is compiled with qmake from the following Qt Creator project fi
 
 Algorithm 57 travis_qmake_gcc_cpp98_sloccount.pro
 ```
---8<-- "travis_qmake_gcc_cpp98_sloccount\travis_qmake_gcc_cpp98_sloccount.pro"
+--8<-- "travis_qmake_gcc_cpp11_sloccount\travis_qmake_gcc_cpp11_sloccount.pro"
 ```
 
 [//]: # (Algorithm matched to file)
@@ -1582,7 +1582,7 @@ The single C++ source file used exactly the same as described in chater 3.4:
 
 Algorithm 58 main.cpp
 ```
---8<-- "travis_qmake_gcc_cpp98_sloccount\main.cpp"
+--8<-- "travis_qmake_gcc_cpp11_sloccount\main.cpp"
 ```
 
 [//]: # (Algorithm matched to file)
@@ -1610,7 +1610,7 @@ Setting up Travis is done by the following .travis.yml:
 
 Algorithm 59 .travis.yml
 ```
---8<-- "travis_qmake_gcc_cpp98_urho3d\.travis.yml"
+--8<-- "travis_qmake_gcc_cpp11_urho3d\.travis.yml"
 ```
 ```
 sudo: require
@@ -1641,7 +1641,7 @@ Note that we do not run the application.
 
 The bash build script to build:
 
-Algorithm 60 build.sh
+Algorithm 60 build.sh - Removed
 ```
 --8<-- "travis_qmake_gcc_cpp98_urho3d\build.sh"
 ```
@@ -2908,7 +2908,7 @@ The Qt Creator project file has the same lines as the basic project in chapter 3
 
 The bash build script to build this, run this and measure the code coverage:
 
-Algorithm 123 build.sh
+Algorithm 123 build.sh - Removed
 ```
 --8<-- "travis_qmake_gcc_cpp11_sfml\build.sh"
 ```
@@ -3055,7 +3055,7 @@ The Qt Creator project file has the same lines as the basic project in chapter 3
 
 The bash build script to build this, run this and measure the code coverage:
 
-Algorithm 127 build.sh
+Algorithm 127 build.sh - Removed
 ```
 --8<-- "travis_qmake_gcc_cpp11_urho3d\build.sh"
 ```
