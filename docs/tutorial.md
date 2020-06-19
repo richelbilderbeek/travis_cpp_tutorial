@@ -154,6 +154,8 @@ Here we finally start working in C++, now that the version control has been disc
 
 **What is Qt Creator?** Qt Creator is a C++ IDE. An IDE (short for 'Intrated Development Environment') is the program in which you program. Other popular C++ IDE's are CLion, Code::Blocks, NetBeans, Visual Studio and Visual Studio Code. Qt Creator works on the three major platforms (Linux, Mac and Windows) and it is free to use for open source development. It uses both the qmake (see paragraph 2.3) and CMake build systems.
 
+**Install IDE** Click the Qt creator logo and go through to download Qt for open source development then install it.
+
 [![Qt_Creator_logo](/images/Qt_Creator_logo.png "Qt Creator - A Cross-platform IDE for Application Development"){: style="height:150px"}](https://www.qt.io/product/development-tools)
 
 Figure 10: Qt creator logo
