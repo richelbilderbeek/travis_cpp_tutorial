@@ -52,7 +52,7 @@ This tutorial is aimed at the beginner.
 
 **Repetitiveness** To allow skimming, most chapters follow the same structure. Sometimes the exact same wording is used. This is counteracted by referring to earlier chapters.
 
-**From Travis to source** Every build, I start from Travis CI its point of view: 'What do I have to do?'. Usually Travis CI has to call at least one build bash script. After describing the Travis file, I will show those build files. Those build files usually invoke Qt Creator project files, which in turn combine source files to executables. It may feel that the best is saved for last, but I'd disagree: this is a Travis tutorial. I also think it makes up for a better narrative, to go from big to small.
+**From Travis to source** This tutorial takes you from the broad concepts to the fine detail. I start with: 'What do I have to do?'. Every build focuses on how to build a project using the Travis continuous integration service. Usually Travis CI has to call at least one build script which is described and then the build files are described. Those build files usually invoke Qt Creator project files, which in turn combine source files to executables. I think this approach builds a better understanding of the process.
 
 ## This tutorial
 
