@@ -91,7 +91,7 @@ This chapter shows how to:
 
 **What is GitHub?** GitHub is a site that creates websites around projects. It is said to host these projects. Each project contains at least one, but usually multiple files. These files can be put on your own hard disc, USB stick, or other storage devices. They could also be put at a central place, which is called a repository, so potentially others can also access these. GitHub is such a file repository. GitHub also keeps track of the history of the project, which is also called version control. GitHub uses git as a version control software. In short: GitHub hosts git repositories.
 
-![Alt text](/images/GitHubHomepage.png)
+![Alt text](/images/GitHubHomepage.png){:style="width:700px"}
 
 Figure 3 shows the GitHub homepage, https://github.com.
 
@@ -99,25 +99,25 @@ Figure 3 shows the GitHub homepage, https://github.com.
 
 From the GitHub homepage, https://github.com (see Figure 3), click the top right button labeled 'Sign up'. This will take you to the 'Join GitHub' page (see Figure 4).
 
-[![Alt text](/images/GitHubJoin.png "GitHub")](https://github.com)
+[![Alt text](/images/GitHubJoin.png "GitHub"){:style="width:700px"}](https://github.com)
 
 Figure 4: The join GitHub page
 
 Filling this in should be as easy. After Filling this in, you are taken to your GitHub profile page (Figure 5).
 
-![Alt text](/images/GitHubProfile.png)
+![Alt text](/images/GitHubProfile.png){:style="width:700px"}
 
 Figure 5: A GitHub profile page
 
 **Creating a repository** From your GitHub profile page (Figure 5), click on the plus ('Create new ...') at the top right, then click 'New repository' (Figure 6).
 
-![Alt text](/images/GitHubCreateRepository.png)
+![Alt text](/images/GitHubCreateRepository.png){:style="width:700px"}
 
 Figure 6: Create a GitHub repository
 
 Do check 'Initialize this repository with a README', add a .gitignore with 'C++' and add a licence like 'GPL 3.0'.
 
-![Alt text](/images/GitHubCreateRepository.png)
+![Alt text](/images/GitHubCreateRepository.png){:style="width:700px"}
 
 Figure 7: Created a GitHub repository
 
@@ -150,13 +150,37 @@ Replace '[username]' and '[repository]' with your GitHub username and the reposi
 
 ## Create a Qt Creator project
 
-**What is Qt Creator?** Qt Creator is a C++ IDE
+Here we finally start working in C++, now that the version control has been discussed. This tutorial uses C++, mostly using the Qt Creator IDE (section 2.3) and the qmake (section 2.3) build system. Examples of using other IDEs or build systems can be found online, but are not covered in this tutorial.
+
+**What is Qt Creator?** Qt Creator is a C++ IDE. An IDE (short for 'Intrated Development Environment') is the program in which you program. Other popular C++ IDE's are CLion, Code::Blocks, NetBeans, Visual Studio and Visual Studio Code. Qt Creator works on the three major platforms (Linux, Mac and Windows) and it is free to use for open source development. It uses both the qmake (see paragraph 2.3) and CMake build systems.
 
 [![Qt_Creator_logo](/images/Qt_Creator_logo.png "Qt Creator - A Cross-platform IDE for Application Development"){: style="height:150px"}](https://www.qt.io/product/development-tools)
 
 Figure 10: Qt creator logo
 
-**Creating a new project** Project will have some defaults: GCC.
+**Creating a new project** Here we create a C++ console application in Qt Creator. Upon loading Qt Creator, the 'Welcome' screen is shows (see figure 11). Here we select 'Create new project' to create a new project.
+
+![Alt text](/images/QtCreatorWelcome.png){:style="width:700px"}
+
+Figure 11: Qt Creator Welcome screen
+
+In the 'Create new project' dialog (figure 12), we pick a C++ console application. There are plenty of other options, but here we choose to show a minimal example.
+
+![Alt text](/images/QtCreatorNewProject.png){:style="width:400px"}
+
+Figure 12: Qt Creator 'New Project' dialog
+
+In the dialogs that follow, there is a 'Define build system' dialog (figure 13) in which we pick qmake (more about qmake in section 2.3). The other build system is CMake. This tutorial does not show CMake examples, but there are some online examples in which CMake is used.
+
+![Alt text](/images/QtCreatorSelectBuildSystem.png){:style="width:400px"}
+
+Figure 13: Qt Creator 'Define Build System' dialog
+
+After some more dialogs, Qt Creator creates a 'Hello world' program for us, as shown in figure 14. In that same picture, at the top-left, we can see a file named 'untitled.pro', which is our Qt Creator project file.
+
+![Alt text](/images/QtCreatorHelloWorld.png){:style="width:700px"}
+
+Figure 14: Qt Creator 'Hello world' code. At the left one can see the 'untitled.pro' Qt Creator project file
 
 **What is a Qt Creator project file?** A Qt Creator project file contains the information how a Qt Creator project must be built. It commonly has the .pro file extension.
 
