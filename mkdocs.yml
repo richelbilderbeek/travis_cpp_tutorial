@@ -22,7 +22,8 @@ extra_css:
     
 plugins:
     - search
-#    - enumerate-headings
+    - enumerate-headings:
+        toc_depth: 4
   
 nav:
     - Tutorial: index.md
