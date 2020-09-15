@@ -28,10 +28,14 @@ after_script:
   # - kpsewhich tkz-graph.sty
 
 
-
 after_success:
   - echo "success"
+  # Download thesis
+  - Rscript -e 'download.file("https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf", tempfile())'
  
 after_failure:
   - echo "failure"
   - kpsewhich tkz-graph.sty
+  # Download thesis
+  - Rscript -e 'download.file("https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf", tempfile())'
+
