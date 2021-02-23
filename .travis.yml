@@ -31,11 +31,11 @@ after_script:
 after_success:
   - echo "success"
   # Download thesis
-  - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf
+  - wget https://pure.rug.nl/ws/files/132028374/Complete_thesis.pdf
  
 after_failure:
   - echo "failure"
   - kpsewhich tkz-graph.sty
   # Download thesis
-  - wget https://www.rug.nl/research/portal/files/132028374/Complete_thesis.pdf
+  - wget https://pure.rug.nl/ws/files/132028374/Complete_thesis.pdf
 
