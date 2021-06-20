@@ -1,10 +1,10 @@
 # travis_cpp_tutorial
 
-Branch   |[![Travis CI logo](docs/images/TravisCI.png)](https://travis-ci.org)                                                                                                    
+Branch   |[![Travis CI logo](docs/images/TravisCI.png)](https://travis-ci.com)                                                                                                    
 ---------|------------------------------------------------------------------------------------------------------------------------------------------------------------
-`master` |[![Build Status](https://travis-ci.org/richelbilderbeek/travis_cpp_tutorial.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_cpp_tutorial)
-`develop`|[![Build Status](https://travis-ci.org/richelbilderbeek/travis_cpp_tutorial.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/travis_cpp_tutorial)
-`richel` |[![Build Status](https://travis-ci.org/richelbilderbeek/travis_cpp_tutorial.svg?branch=richel)](https://travis-ci.org/richelbilderbeek/travis_cpp_tutorial)
+`master` |[![Build Status](https://travis-ci.com/richelbilderbeek/travis_cpp_tutorial.svg?branch=master)](https://travis-ci.com/richelbilderbeek/travis_cpp_tutorial)
+`develop`|[![Build Status](https://travis-ci.com/richelbilderbeek/travis_cpp_tutorial.svg?branch=develop)](https://travis-ci.com/richelbilderbeek/travis_cpp_tutorial)
+`richel` |[![Build Status](https://travis-ci.com/richelbilderbeek/travis_cpp_tutorial.svg?branch=richel)](https://travis-ci.com/richelbilderbeek/travis_cpp_tutorial)
 
 Tutorial how to use Travis CI with C++.
 

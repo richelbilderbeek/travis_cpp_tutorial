@@ -4,7 +4,7 @@
  
 April 29, 2017
 
-[![Travis_logo](/images/TravisCIBig.png "Travis Continuous Integration (CI)"){: style="height:150px"}](https://travis-ci.org/) [![cpp_logo](/images/cpp_logo.png "C++ programming language"){: style="height:150px"}](https://isocpp.org/)
+[![Travis_logo](/images/TravisCIBig.png "Travis Continuous Integration (CI)"){: style="height:150px"}](https://travis-ci.com/) [![cpp_logo](/images/cpp_logo.png "C++ programming language"){: style="height:150px"}](https://isocpp.org/)
 
 ## Introduction
 
@@ -2311,7 +2311,7 @@ return x ∗ 2;
 
 Release main function The C++ source file used by the normal build is:
 
-[![Travis_logo](/images/TravisCI.png "Travis Continuous Integration (CI)"){: style="width:200px"}](https://travis-ci.org/)
+[![Travis_logo](/images/TravisCI.png "Travis Continuous Integration (CI)"){: style="width:200px"}](https://travis-ci.com/)
 
 Figure 29: The application
 
